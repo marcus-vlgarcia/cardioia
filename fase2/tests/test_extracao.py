@@ -3,12 +3,14 @@ import sys
 import tempfile
 import unittest
 import csv
+from unittest.mock import patch
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(RAIZ / "src"))
 from extrair_sintomas import analisar, expressoes_mais_especificas, ler_mapa, montar_frase, salvar_historico
 from preprocessar_texto import preparar_texto
+from extrair_sintomas import main
 
 
 class TestExtracao(unittest.TestCase):
@@ -82,6 +84,35 @@ class TestExtracao(unittest.TestCase):
                 linhas = list(csv.DictReader(arquivo))
         self.assertEqual(len(linhas), 2)
         self.assertIn("coronariana", linhas[0]["associacoes"])
+
+    def test_historico_incompativel_e_preservado(self):
+        with tempfile.TemporaryDirectory() as diretorio:
+            caminho = Path(diretorio) / "historico.csv"
+            caminho.write_text("outra_coluna\nvalor\n", encoding="utf-8")
+            antes = caminho.read_bytes()
+            with self.assertRaises(ValueError):
+                salvar_historico(analisar("palpitações e tontura", self.mapa), caminho)
+            self.assertEqual(caminho.read_bytes(), antes)
+
+    def test_interativo_preserva_relatorios_originais(self):
+        with tempfile.TemporaryDirectory() as diretorio:
+            raiz = Path(diretorio)
+            (raiz / "outputs").mkdir()
+            original = raiz / "outputs/diagnosticos_sugeridos.csv"
+            original.write_text("resultado original\n", encoding="utf-8")
+            argumentos = ["extrair_sintomas.py", "--interativo", "--frases",
+                str(RAIZ / "data/relatos_sintomas.txt"), "--mapa",
+                str(RAIZ / "data/mapa_conhecimento.csv")]
+            with patch("extrair_sintomas.RAIZ", raiz), patch("sys.argv", argumentos), \
+                 patch("extrair_sintomas.coletar_relato_interativo",
+                       return_value="Há dois dias sinto dor no peito e suor frio."), \
+                 patch("builtins.print"):
+                main()
+            self.assertEqual(original.read_text(), "resultado original\n")
+            with (raiz / "outputs/diagnosticos_interativos.csv").open(newline="") as arquivo:
+                self.assertEqual(len(list(csv.DictReader(arquivo))), 11)
+            with (raiz / "outputs/relatos_interativos.csv").open(newline="") as arquivo:
+                self.assertEqual(len(list(csv.DictReader(arquivo))), 1)
 
 
 if __name__ == "__main__":

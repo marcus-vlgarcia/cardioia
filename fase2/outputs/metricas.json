@@ -66,6 +66,7 @@
   "regressao_acuracia": 0.8571428571428571,
   "sha256_dataset": "f7324ca16378f3969c1b60e058927c8340f8d1088bbc857ce06162159d7474aa",
   "sha256_particoes": "34bb845b3424ad180d1f2dc397d53cc4ffdff6f645dbcd4b73a77ef4d7f8fc3c",
+  "sha256_preprocessamento": "eb585c75280b64aa39390a81df7b4acd99067ce6fba0676a524dc828f75d5e0f",
   "python": "3.13.2",
   "sklearn": "1.9.0",
   "numpy": "2.5.3",

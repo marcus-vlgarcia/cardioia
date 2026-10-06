@@ -16,8 +16,10 @@ pressão arterial, tromboembolismo pulmonar e ansiedade. É uma tabela de
 associações didáticas, não uma ontologia clínica formal ou uma lista exaustiva.
 A ocorrência de um par não confirma a condição, e a ausência de correspondência
 não exclui doença. Os 10 relatos incluem início, sintomas e impacto na rotina.
-A opção interativa cria um décimo primeiro relato temporário na saída, a partir
-de três respostas curtas, sem alterar os dez exemplos.
+A opção interativa formula um décimo primeiro relato a partir de três respostas
+curtas, sem alterar os dez exemplos. A análise da execução fica em um CSV local
+separado; cada envio também é acrescentado ao histórico `relatos_interativos.csv`.
+Os dois arquivos interativos são ignorados pelo Git.
 
 ## Critérios dos rótulos
 

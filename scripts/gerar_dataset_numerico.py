@@ -154,6 +154,8 @@ def main():
         ),
     )
     args = parser.parse_args()
+    if args.n_pacientes <= 0:
+        parser.error("A quantidade de registros deve ser maior que zero.")
 
     id_inicial = 1
     df_existente = None

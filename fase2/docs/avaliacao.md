@@ -36,6 +36,12 @@ Para esta simulação de triagem, foi selecionado 0,35: é o menor limiar com
 precisão de alto risco acima de 75% e o maior recall. Isso privilegia evitar
 falsos negativos e, como consequência, pode aumentar falsos positivos.
 
+O código prioriza recall, depois F1 macro e, em caso de empate, o menor limiar
+entre os elegíveis. Se nenhum atingir a precisão mínima, usa 0,50 e informa a
+ressalva. As probabilidades não foram calibradas clinicamente. Como a escolha de
+parâmetros e limiar reutiliza divisões do treino, esses resultados podem ser
+otimistas; são critérios de desenvolvimento, não uma avaliação independente.
+
 ## Resultado no teste final
 
 | Medida | Resultado |
@@ -51,20 +57,26 @@ falsos negativos e, como consequência, pode aumentar falsos positivos.
 A matriz de confusão tem 10 acertos de baixo risco, dois falsos positivos,
 nenhum falso negativo e 12 acertos de alto risco. Os dois falsos positivos são
 as paráfrases do cenário B69: suor após exercício que cessou com descanso. O
-modelo deu maior peso ao termo “suor” do que ao contexto de recuperação.
+erro sugere uma associação lexical com o suor, apesar do contexto de recuperação;
+essa interpretação é uma hipótese, não uma explicação causal validada.
 
 O resultado é promissor para o exercício, mas o teste tem somente 12 cenários e
 cada erro altera a acurácia em 4,17 pontos percentuais. Todos os exemplos são
 sintéticos e produzidos no mesmo projeto. A métrica não representa desempenho
 clínico nem valida uso em atendimento.
 
+A revisão de outubro reexecutou a configuração existente, sem trocar os exemplos,
+os rótulos ou os parâmetros para elevar a pontuação. O teste já foi observado no
+desenvolvimento anterior, portanto sua reprodução não constitui um novo teste
+independente. A próxima melhoria orientada por esses erros exigirá outra avaliação.
+
 ## Regressão e desafios
 
 O conjunto de regressão teve 48 acertos em 56 frases (85,7%). Os 12 desafios
 adicionais tiveram 12 acertos, inclusive os exemplos de negação que antes eram
-classificados como alto risco. A melhoria veio da ampliação de cenários e da
-marcação de negações; ela não elimina falhas em frases mais longas ou fora do
-vocabulário usado na base.
+classificados como alto risco. A revisão combinou ampliação de cenários, marcação
+de negações e mudança de limiar; o experimento não isola a contribuição de cada
+mudança. Ainda há falhas em frases mais longas ou fora do vocabulário da base.
 
 Os arquivos `predicoes_teste.csv`, `predicoes_regressao.csv` e
 `resultados_desafios.csv` guardam cada previsão. `comparacao_limiares.csv`

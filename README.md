@@ -25,7 +25,7 @@ continuam abaixo como registro da preparação dos dados.
 
 ### Vídeo de demonstração
 
-**Pendente para entrega:** publicar o vídeo no YouTube como **não listado** e
+**Pendente para entrega:** publicar um vídeo de até quatro minutos no YouTube como **não listado** e
 incluir o link nesta seção. A gravação de tela e a narração serão feitas pelo
 grupo; sem o link do YouTube, o requisito do vídeo ainda não está concluído.
 
@@ -39,6 +39,18 @@ dois falsos positivos. O conjunto é pequeno e sintético; a [avaliação comple
 registra as limitações, os erros e os próximos passos.
 
 ![Matriz de confusão do teste](fase2/outputs/matriz_confusao.png)
+
+### Complementos e revisão de entrega
+
+Além do mínimo solicitado, a Fase 2 inclui o mapa ampliado, coleta interativa
+com três perguntas, histórico local, tratamento de negações, comparação de
+configurações e limiares, testes de regressão e análise de sensibilidade textual
+à identidade. Esses experimentos não validam uso clínico ou fairness demográfica.
+
+As duas fases podem ser verificadas sem alterar seus dados com
+`python scripts/verificar_entrega.py`: o script confere as quantidades, os hashes
+das imagens, a separação dos cenários e a consistência dos resultados e notebook.
+Os detalhes de execução estão no [README da Fase 2](fase2/README.md).
 
 ## Fase 1 — Batimentos de Dados
 
@@ -127,9 +139,13 @@ cardioia-fase1/
 │       └── link_externo.txt
 ├── docs/
 │   ├── dicionario_de_dados.md
+│   ├── auditoria_dados_fase1.md
+│   ├── feedback_fase1.md
 │   └── fontes.md
 ├── scripts/
 │   ├── gerar_dataset_numerico.py
+│   ├── auditar_dados_fase1.py
+│   ├── verificar_entrega.py
 │   └── gerar_imagens_ecg.py
 ├── requirements.txt
 └── README.md
@@ -351,6 +367,10 @@ ECG.
 
 ## 🗃 Histórico de lançamentos
 
+- `0.2.1` — 06/10/2026: revisão de integridade e execução; proteção dos relatos
+  interativos, validação do histórico, compatibilidade das dependências e correção
+  do gerador sintético complementar. Teste reservado reproduzido sem ajuste de
+  dados ou parâmetros. Vídeo ainda pendente.
 - `0.2.0` — 08/09/2026: implementação das duas partes da Fase 2, notebook
   executado, análise de erros e demonstração preparada; publicação no YouTube
   pendente.

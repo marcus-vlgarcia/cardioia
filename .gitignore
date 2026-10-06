@@ -6,6 +6,7 @@ __pycache__/
 fase2/outputs/*.mp4
 fase2/outputs/video_preview_*.png
 fase2/outputs/relatos_interativos.csv
+fase2/outputs/diagnosticos_interativos.csv
 assets/imagens/ecg_sintetico/
 assets/imagens/exemplos_sinteticos/
 data/numeric/dataset_ampliado.csv
