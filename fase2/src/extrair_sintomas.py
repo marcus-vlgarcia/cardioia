@@ -112,6 +112,12 @@ def coletar_relato_interativo():
     janela.title("CardioIA — novo relato")
     janela.geometry("650x360")
     janela.resizable(False, False)
+    # Em alguns ambientes macOS, janelas Tk podem abrir atrás do VS Code.
+    # Elevar a janela por um instante deixa a coleta visível para quem executa.
+    janela.lift()
+    janela.attributes("-topmost", True)
+    janela.after(250, lambda: janela.attributes("-topmost", False))
+    janela.focus_force()
     tk.Label(janela, text="Novo relato de sintomas", font=("Arial", 16, "bold")).pack(pady=(20, 8))
     tk.Label(janela, text="Use respostas curtas. Ex.: dor no peito e falta de ar.").pack()
     campos = (
