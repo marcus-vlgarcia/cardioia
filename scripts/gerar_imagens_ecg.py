@@ -51,7 +51,7 @@ def gerar_traçado(tipo: str, rng: np.random.Generator, duracao_s: float = 4.0, 
     while tempo_batida < duracao_s:
         amp_r = 1.0
         if tipo == "arritmia_ectopica" and rng.random() < 0.18:
-            tempo_batida += intervalo * 0.55  # extrassístole (batida precoce)
+            tempo_batida -= intervalo * 0.45  # antecipa a batida em relação ao ciclo esperado
             amp_r = 0.75
         sinal += batimento_pqrst(t, offset=tempo_batida, amp_r=amp_r)
         tempo_batida += intervalo
@@ -123,6 +123,8 @@ def main():
         ),
     )
     args = parser.parse_args()
+    if args.n_imagens <= 0:
+        parser.error("A quantidade de imagens deve ser maior que zero.")
 
     os.makedirs(args.out_dir, exist_ok=True)
 

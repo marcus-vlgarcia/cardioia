@@ -20,6 +20,9 @@ def ler_mapa(caminho):
         mapa = list(csv.DictReader(arquivo))
     if not mapa or not {"sintoma_1", "sintoma_2", "doenca_associada"} <= mapa[0].keys():
         raise ValueError("Mapa vazio ou sem as três colunas obrigatórias.")
+    if any(not (linha.get(coluna) or "").strip()
+           for linha in mapa for coluna in ("sintoma_1", "sintoma_2", "doenca_associada")):
+        raise ValueError("O mapa contém sintomas ou associações vazios.")
     return mapa
 
 
@@ -85,6 +88,10 @@ def salvar_historico(resultado, caminho):
     caminho = Path(caminho)
     caminho.parent.mkdir(parents=True, exist_ok=True)
     possui_conteudo = caminho.exists() and caminho.stat().st_size > 0
+    if possui_conteudo:
+        with caminho.open(encoding="utf-8", newline="") as arquivo:
+            if csv.DictReader(arquivo).fieldnames != list(resultado):
+                raise ValueError("O histórico existente possui colunas incompatíveis.")
     with caminho.open("a", encoding="utf-8", newline="") as arquivo:
         writer = csv.DictWriter(arquivo, fieldnames=resultado.keys(), lineterminator="\n")
         if not possui_conteudo:
@@ -139,12 +146,22 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--frases", type=Path, default=RAIZ / "data/relatos_sintomas.txt")
     parser.add_argument("--mapa", type=Path, default=RAIZ / "data/mapa_conhecimento.csv")
-    parser.add_argument("--saida", type=Path, default=RAIZ / "outputs/diagnosticos_sugeridos.csv")
+    parser.add_argument("--saida", type=Path,
+                        help="CSV de resultados; o padrão depende do modo de execução.")
     parser.add_argument("--historico", type=Path, default=RAIZ / "outputs/relatos_interativos.csv",
                         help="CSV local que guarda os relatos enviados no modo interativo.")
     parser.add_argument("--interativo", action="store_true",
                         help="Abre três campos para criar e analisar um relato adicional.")
     args = parser.parse_args()
+    if args.saida is None:
+        nome_saida = "diagnosticos_interativos.csv" if args.interativo else "diagnosticos_sugeridos.csv"
+        args.saida = RAIZ / "outputs" / nome_saida
+    protegidos = {args.frases.resolve(), args.mapa.resolve()}
+    if args.saida.resolve() in protegidos:
+        parser.error("A saída não pode sobrescrever os relatos ou o mapa.")
+    if args.interativo and (args.historico.resolve() in protegidos
+                           or args.historico.resolve() == args.saida.resolve()):
+        parser.error("O histórico deve ser separado dos dados de entrada e da saída.")
     frases = [f.strip() for f in args.frases.read_text(encoding="utf-8").splitlines() if f.strip()]
     if not frases:
         parser.error("O arquivo de relatos está vazio.")

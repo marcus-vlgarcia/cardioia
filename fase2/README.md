@@ -20,7 +20,7 @@ triagem; não realiza diagnóstico médico.
 | Resultados da extração | [diagnosticos_sugeridos.csv](outputs/diagnosticos_sugeridos.csv) |
 | Avaliação do modelo | [metricas.json](outputs/metricas.json) e [predicoes_teste.csv](outputs/predicoes_teste.csv) |
 | Governança e fontes | [dados_e_limites.md](docs/dados_e_limites.md) |
-| Demonstração em vídeo | Publicação no YouTube como **não listado** pendente; o link deve ser inserido no README principal antes da entrega. |
+| Demonstração em vídeo | Vídeo de até quatro minutos no YouTube como **não listado** pendente; incluir o link no README principal. |
 
 ## Execução
 
@@ -33,17 +33,23 @@ python -m pip install -r fase2/requirements.txt
 python fase2/src/extrair_sintomas.py
 python fase2/src/executar_notebook.py
 python -m unittest discover -s fase2/tests -v
+python scripts/verificar_entrega.py
 ```
 
 O primeiro script lê o `.txt` e o mapa e salva as dez associações. É possível
 usar outros arquivos com `--frases`, `--mapa` e `--saida`. Para demonstrar um
 novo relato, execute `python fase2/src/extrair_sintomas.py --interativo`: três
 campos pedem sintomas, impacto na rotina e tempo de início. O programa formula
-a frase no padrão dos relatos e acrescenta sua análise ao CSV de saída, sem
-alterar o arquivo original com os dez exemplos. Cada relato enviado também é
+a frase no padrão dos relatos. No modo interativo, os dez exemplos e o novo relato
+são analisados em `fase2/outputs/diagnosticos_interativos.csv`, sem sobrescrever
+`diagnosticos_sugeridos.csv` ou o arquivo original com os dez exemplos. Cada envio também é
 guardado, junto com sintomas e possíveis associações, em
 `fase2/outputs/relatos_interativos.csv`. Esse histórico fica apenas na máquina
-que executou o programa e não é enviado ao GitHub. O segundo executa
+que executou o programa e, assim como a saída interativa, é ignorado pelo Git.
+O histórico acumula os envios; a saída interativa é recriada em cada execução.
+É possível usar `--historico` e `--saida` para escolher outros caminhos locais,
+desde que separados dos arquivos de entrada e entre si. Use exemplos simulados
+na demonstração. O segundo executa
 todas as células e salva o notebook com tabelas e gráficos, além dos arquivos
 em `outputs`. Também é possível abrir o notebook no VS Code ou Jupyter usando
 o mesmo ambiente e executar todas as células em ordem.
@@ -65,6 +71,8 @@ queixa, como dor no peito relacionada a síndrome coronariana, angina, pericardi
 miocardite, refluxo ou dor musculoesquelética. O mapa contém 83 associações em 14
 grupos de possibilidades. Ele é uma estrutura didática, não uma lista exaustiva
 nem uma ferramenta de diagnóstico.
+
+### Parte 2 — classificação de risco
 
 O classificador usa 208 frases de treino, 24 do teste final e 56 de regressão.
 As partições são fixadas por cenário e as paráfrases ficam juntas. O TF-IDF é

@@ -8,6 +8,7 @@ experimentos nas fases seguintes.
 import csv
 from collections import Counter, defaultdict
 from pathlib import Path
+from statistics import median
 
 
 RAIZ_PROJETO = Path(__file__).resolve().parents[1]
@@ -66,7 +67,7 @@ def main() -> None:
     print(f"Histórico familiar: {distribuicao(dados, 'historico_familiar')}")
     print(f"Glicemia de jejum alta: {distribuicao(dados, 'glicemia_jejum_alta')}")
     print(f"Angina por exercício: {distribuicao(dados, 'angina_exercicio')}")
-    print(f"Idade: {idades[0]} a {idades[-1]} anos; média {sum(idades) / len(idades):.1f}")
+    print(f"Idade: {idades[0]} a {idades[-1]} anos; média {sum(idades) / len(idades):.1f}; mediana {median(idades):g}")
     print(f"Faixas etárias: {distribuicao_faixas_idade(dados)}")
 
     for coluna in ("sexo", "diabetes", "fumante"):
