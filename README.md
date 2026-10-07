@@ -373,10 +373,10 @@ ECG.
 - `0.2.0` — 08/09/2026: implementação das duas partes da Fase 2, notebook
   executado, análise de erros e demonstração preparada; publicação no YouTube
   pendente.
-- `0.1.0` — 02/09/2026: organização e entrega das bases numérica, textual e
-  visual da Fase 1.
 - `0.1.1` — 08/09/2026: atualização de governança e auditoria em resposta à
   avaliação da Fase 1.
+- `0.1.0` — 02/09/2026: organização e entrega das bases numérica, textual e
+  visual da Fase 1.
 
 ## 📋 Licença
 
@@ -384,4 +384,4 @@ ECG.
 
 [MODELO GIT FIAP](https://github.com/agodoi/template) por [Fiap](https://fiap.com.br/) está licenciado sobre [Attribution 4.0 International](http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1).
 
-As fontes e as condições de uso dos dados utilizados no projeto estão registradas em [`docs/fontes.md`](https://github.com/marcus-vlgarcia/cardioia/blob/cardioia-fase1-ajustes/docs/fontes.md).
+As fontes e as condições de uso dos dados utilizados no projeto estão registradas em [`docs/fontes.md`](docs/fontes.md).
