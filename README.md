@@ -114,7 +114,7 @@ projeto: `data` contém o dataset numérico, `assets` reúne os textos e imagens
 de reprodução e geração dos materiais.
 
 ```
-cardioia-fase1/
+cardioia/
 ├── fase2/
 │   ├── data/                     # Relatos, mapa e frases rotuladas
 │   ├── docs/                     # Fontes e avaliação
@@ -384,4 +384,4 @@ ECG.
 
 [MODELO GIT FIAP](https://github.com/agodoi/template) por [Fiap](https://fiap.com.br/) está licenciado sobre [Attribution 4.0 International](http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1).
 
-As fontes e as condições de uso dos dados utilizados no projeto estão registradas em [`docs/fontes.md`](https://github.com/marcus-vlgarcia/cardioia-fase1/blob/cardioia-fase1-ajustes/docs/fontes.md).
+As fontes e as condições de uso dos dados utilizados no projeto estão registradas em [`docs/fontes.md`](https://github.com/marcus-vlgarcia/cardioia/blob/cardioia-fase1-ajustes/docs/fontes.md).
