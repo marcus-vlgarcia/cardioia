@@ -20,7 +20,7 @@ triagem; não realiza diagnóstico médico.
 | Resultados da extração | [diagnosticos_sugeridos.csv](outputs/diagnosticos_sugeridos.csv) |
 | Avaliação do modelo | [metricas.json](outputs/metricas.json) e [predicoes_teste.csv](outputs/predicoes_teste.csv) |
 | Governança e fontes | [dados_e_limites.md](docs/dados_e_limites.md) |
-| Demonstração em vídeo | Vídeo de até quatro minutos no YouTube como **não listado** pendente; incluir o link no README principal. |
+| Demonstração em vídeo | [Vídeo de demonstração](https://youtu.be/L3uZMKG7ZUc) (3min07s, YouTube não listado). |
 
 ## Execução
 

@@ -25,9 +25,8 @@ continuam abaixo como registro da preparação dos dados.
 
 ### Vídeo de demonstração
 
-**Pendente para entrega:** publicar um vídeo de até quatro minutos no YouTube como **não listado** e
-incluir o link nesta seção. A gravação de tela e a narração serão feitas pelo
-grupo; sem o link do YouTube, o requisito do vídeo ainda não está concluído.
+[Assista ao vídeo de demonstração da Fase 2](https://youtu.be/L3uZMKG7ZUc)
+(3min07s, YouTube não listado).
 
 ### Resultados da Fase 2
 
@@ -367,10 +366,10 @@ ECG.
 
 ## 🗃 Histórico de lançamentos
 
-- `0.2.1` — 06/10/2026: revisão de integridade e execução; proteção dos relatos
+- `0.2.1` — 07/10/2026: revisão de integridade e execução; proteção dos relatos
   interativos, validação do histórico, compatibilidade das dependências e correção
   do gerador sintético complementar. Teste reservado reproduzido sem ajuste de
-  dados ou parâmetros. Vídeo ainda pendente.
+  dados ou parâmetros. Vídeo de demonstração publicado.
 - `0.2.0` — 08/09/2026: implementação das duas partes da Fase 2, notebook
   executado, análise de erros e demonstração preparada; publicação no YouTube
   pendente.
