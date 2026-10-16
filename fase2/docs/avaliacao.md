@@ -1,87 +1,87 @@
 # Avaliação do classificador — revisão pós-feedback
 
-## Separação dos dados
+## Separação e método
 
-A base principal contém 416 frases simuladas, 208 por classe, organizadas em
-208 cenários com duas paráfrases. As paráfrases nunca são separadas entre os
-conjuntos.
+A base contém 992 frases sintéticas, 496 por classe. As 416 frases da revisão
+anterior foram mantidas; 576 frases foram criadas de 48 situações-base, com
+duas redações e seis variações por situação. Assim, o número de frases não
+representa o número de pacientes ou de casos independentes. Cada família de
+situações fica integralmente em uma partição. O teste anterior, já conhecido,
+foi movido para regressão.
 
-| Conjunto | Frases | Cenários | Uso |
+| Conjunto | Frases | Grupos de duas redações | Uso |
 | --- | ---: | ---: | --- |
-| Treino | 256 | 128 | seleção e ajuste do TF-IDF e da Regressão Logística |
-| Calibração | 16 | 8 | calibração sigmoide das probabilidades |
-| Teste final | 64 | 32 | avaliação interna da revisão |
-| Regressão | 80 | 40 | preserva testes e erros já vistos nas versões anteriores |
+| Treino | 496 | 248 | seleção e ajuste do classificador |
+| Calibração | 88 | 44 | ajuste sigmoide das probabilidades |
+| Teste final | 264 | 132 | avaliação reservada; 22 famílias novas |
+| Regressão | 144 | 72 | casos conhecidos de versões anteriores |
 
-O teste final cresceu de 24 para 64 frases. Além dele, há 32 exemplos derivados
-de fontes públicas, 32 frases em pares de gravidade e 48 variações sintéticas de
-sexo referido e faixa etária. Nenhum desses três conjuntos entra no treino, na
-seleção de parâmetros ou na calibração.
+Comparamos TF-IDF de palavras (unigramas/bigramas e unigramas até trigramas)
+e uma combinação de palavras e sequências de caracteres, útil para investigar
+erros de escrita. A busca de parâmetros e a validação cruzada com quatro
+partições foram feitas **somente no treino**, agrupadas por família. O melhor
+F1 macro nessa validação escolheu palavras com `C=8`; a opção com caracteres
+foi testada, mas não venceu. O teste final não foi usado para escolher modelo,
+limiar ou exemplos de treinamento.
 
 ## Resultado principal
 
-O modelo selecionado usa unigramas e bigramas, `C=4` e sem peso adicional de
-classe. No teste final ampliado, obteve:
-
 | Medida | Resultado |
 | --- | ---: |
-| Acurácia | 89,1% (57/64) |
-| Baseline | 50,0% |
-| Precisão de alto risco | 85,7% |
-| Recall de alto risco | 93,8% |
+| Acurácia | 89,0% (235/264) |
+| Referência majoritária | 50,0% |
+| Precisão de alto risco | 84,6% |
+| Recall de alto risco | 95,5% |
 | F1 macro | 0,890 |
-| Falsos negativos | 2 |
-| Falsos positivos | 5 |
+| Falsos negativos | 6 |
+| Falsos positivos | 23 |
 
-A matriz de confusão tem 27 acertos e cinco erros de baixo risco, além de 30
-acertos e dois erros de alto risco. O resultado é inferior aos 91,7% da entrega
-avaliada, mas se apoia em um teste maior e mais difícil. Isso oferece uma visão
-mais realista das limitações do classificador.
+A matriz de confusão registra 109 acertos e 23 erros entre frases de baixo
+risco, e 126 acertos e seis erros entre as de alto risco. A acurácia global
+permaneceu próxima da revisão anterior (89,1% em 64 frases), apesar da base
+maior. Isso não é evidência de desempenho clínico. Como as frases são variações
+de poucos enredos redigidos pela equipe, métricas por frase podem superestimar
+generalização. A validação cruzada no treino também foi mais otimista que o
+teste final; os modelos ainda podem aproveitar padrões repetidos de redação.
 
-## Investigação dos falsos positivos anteriores
+No teste há 44 frases com erros ortográficos e 44 coloquiais, cada subconjunto
+com 88,6% de acurácia. Há também variações diretas, temporais, de rotina e
+hesitantes. A tabela completa está em `outputs/metricas_variacoes.csv`. Os
+erros ortográficos testados são controlados; não demonstram resistência a
+qualquer erro de digitação ou dialeto.
 
-As duas frases do cenário `B69` descrevem suor após academia com recuperação.
-Na entrega avaliada, ambas foram classificadas incorretamente como alto risco.
-Elas foram movidas para regressão, pois os erros já eram conhecidos. A revisão
-incluiu exemplos de recuperação após esforço e marcadores contextuais de esforço
-e recuperação. As duas frases agora são classificadas como baixo risco, com
-probabilidades de alto risco de aproximadamente 0,23 e 0,19.
+## Erros e avaliações complementares
 
-O arquivo `outputs/investigacao_erros.csv` também mostra as contribuições locais
-dos termos. Elas explicam o cálculo do modelo linear, não estabelecem causa
-clínica. Os novos erros revelam que expressões como “após”, “normal” ou uma
-negação podem receber pesos inadequados dependendo do vocabulário do treino.
+Os dois falsos positivos do cenário histórico `B69`, sobre suor após academia
+com recuperação, foram preservados no conjunto de regressão e agora são
+classificados como baixo risco. O arquivo `outputs/investigacao_erros.csv`
+registra os erros atuais e termos que favorecem cada classe. São contribuições
+matemáticas do modelo, não explicações clínicas. Há falsos positivos em relatos
+de azia resolvida e falsos negativos em algumas formas de falta de ar ao deitar;
+o contexto ainda não é compreendido de maneira confiável.
 
-## Avaliações complementares
-
-| Avaliação | Casos | Acurácia | Recall alto risco | Observação |
+| Avaliação | Frases | Acurácia | Recall alto risco | Limite |
 | --- | ---: | ---: | ---: | --- |
-| Externa, baseada em fontes | 32 | 84,4% | 100% | cinco falsos positivos; não é padrão-ouro clínico |
-| Pares de gravidade | 32 | 84,4% | 100% | mostra dificuldade com linguagem semelhante em contextos diferentes |
-| Regressão | 80 | 96,3% | 100% | inclui exemplos já observados; não é teste independente |
-| Subgrupos sintéticos | 48 | 100% | 100% | ausência de diferença neste teste não comprova fairness |
+| Baseada em fontes externas | 32 | 96,9% | 100% | frases redigidas para o projeto, sem rótulo clínico validado |
+| Pares de gravidade | 32 | 90,6% | 100% | três falsos positivos |
+| Regressão | 144 | 95,8% | 97,2% | casos conhecidos, não independentes |
+| Subgrupos sintéticos | 48 | 100% | 100% | não comprova equidade populacional |
 
-Os pares de gravidade foram criados para comparar frases com temas parecidos,
-mas com persistência, recuperação, repouso e intensidade diferentes. Cinco
-frases leves ou resolvidas ainda foram classificadas como alto risco. Portanto,
-o modelo reduziu um erro conhecido, mas continua dependente de atalhos lexicais.
+O ganho nos conjuntos complementares não deve ser confundido com evolução
+comprovada em pacientes reais. Frases externas têm fonte documental, mas foram
+escritas pela própria equipe. É necessário coletar relatos independentes,
+legalmente utilizáveis e revisados por profissionais para avaliar generalização.
 
-## Probabilidades
+## Probabilidades e próximos testes
 
-A calibração sigmoide foi ajustada em 16 frases separadas. No teste, o Brier
-score passou de 0,127 para 0,105 e o log loss de 0,425 para 0,340. Valores menores
-são melhores nesses dois indicadores, mas a amostra é pequena. A curva de
-calibração está em `outputs/curva_calibracao.png`.
+A calibração sigmoide foi ajustada em 88 frases separadas. No teste, o Brier
+score passou de 0,096 para 0,070 e o log loss de 0,342 para 0,254. Valores
+menores são melhores nesses indicadores para esta amostra, mas uma saída de
+0,80 **não significa 80% de risco clínico**: faltam sinais vitais, exames,
+prevalência, revisão especializada e validação prospectiva.
 
-Uma saída de 0,80 significa apenas maior confiança do classificador dentro deste
-conjunto. Não significa “80% de chance clínica” de agravamento, não incorpora
-sinais vitais, exames, prevalência ou avaliação profissional e não deve orientar
-atendimento.
-
-## Limite de independência
-
-As frases externas foram redigidas a partir de orientações do Ministério da
-Saúde e da OMS e mantidas fora do desenvolvimento. Elas não são relatos reais
-nem exemplos fornecidos por avaliadores independentes. Uma avaliação externa
-forte ainda exige corpus licenciado, população definida e rótulos revisados por
-profissionais que não participaram da construção do modelo.
+Para melhorar o sistema sem viciar o teste, a próxima iteração deve obter
+novos relatos independentes e rótulos revisados, estudar os erros por família
+e por subgrupo e reservar um novo teste antes de qualquer ajuste. Aumentar
+frases derivadas dos mesmos exemplos ou ajustar o código após olhar os erros
+do teste atual pode elevar a métrica sem melhorar a generalização.

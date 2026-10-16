@@ -13,6 +13,7 @@ from sklearn.calibration import CalibratedClassifierCV, calibration_curve
 from sklearn.dummy import DummyClassifier
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.frozen import FrozenEstimator
+from sklearn.pipeline import FeatureUnion
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import (accuracy_score, brier_score_loss, classification_report,
                              confusion_matrix, ConfusionMatrixDisplay, f1_score, log_loss,
@@ -40,6 +41,24 @@ def criar_modelo():
     ])
 
 
+def candidatos_vetorizacao():
+    palavras_2 = TfidfVectorizer(preprocessor=preparar_texto, lowercase=False, ngram_range=(1, 2))
+    palavras_3 = TfidfVectorizer(preprocessor=preparar_texto, lowercase=False, ngram_range=(1, 3))
+    misto = FeatureUnion([
+        ("palavras", TfidfVectorizer(preprocessor=preparar_texto, lowercase=False,
+                                      ngram_range=(1, 2))),
+        ("caracteres", TfidfVectorizer(preprocessor=preparar_texto, lowercase=False,
+                                        analyzer="char_wb", ngram_range=(3, 5), min_df=2)),
+    ], transformer_weights={"palavras": 1.0, "caracteres": 0.7})
+    return [palavras_2, palavras_3, misto]
+
+
+def nome_vetorizacao(vetor):
+    if isinstance(vetor, FeatureUnion):
+        return "palavras_1_2_e_caracteres_3_5"
+    return f"palavras_{vetor.ngram_range[0]}_{vetor.ngram_range[1]}"
+
+
 def prever(modelo, frases, limiar=0.5):
     probabilidades = modelo.predict_proba(frases)[:, list(modelo.classes_).index("alto risco")]
     return np.where(probabilidades >= limiar, "alto risco", "baixo risco"), probabilidades
@@ -64,7 +83,11 @@ def explicar_frase(modelo_base, frase, limite=8):
     classificador = modelo_base.named_steps["classificador"]
     linha = vetor.transform([frase])
     termos = vetor.get_feature_names_out()
-    contribuicoes = linha.multiply(classificador.coef_[0]).tocoo()
+    # Na ordenação alfabética do sklearn, a classe positiva do coeficiente
+    # binário pode ser "baixo risco". Ajustamos o sinal para sempre explicar
+    # contribuições favoráveis a "alto risco".
+    sinal = 1 if classificador.classes_[1] == "alto risco" else -1
+    contribuicoes = linha.multiply(classificador.coef_[0] * sinal).tocoo()
     itens = sorted(((termos[coluna], valor) for coluna, valor in zip(contribuicoes.col, contribuicoes.data)),
                    key=lambda item: abs(item[1]), reverse=True)[:limite]
     positivos = [f"{termo} ({valor:.3f})" for termo, valor in itens if valor > 0]
@@ -92,20 +115,31 @@ def main():
     dados = dados.merge(particoes, on="grupo", validate="many_to_one")
     conjuntos = {nome: dados[dados.conjunto == nome].copy()
                  for nome in ("treino", "calibracao", "teste", "regressao")}
-    assert tuple(len(conjuntos[n]) for n in conjuntos) == (256, 16, 64, 80)
-    dados[["frase", "situacao", "grupo", "conjunto"]].to_csv(SAIDA / "divisao_dados.csv", index=False)
+    assert tuple(len(conjuntos[n]) for n in conjuntos) == (496, 88, 264, 144)
+    assert all(set(conjuntos[a].familia).isdisjoint(conjuntos[b].familia)
+               for a in conjuntos for b in conjuntos if a < b)
+    dados[["frase", "situacao", "grupo", "conjunto", "familia", "variacao"]].to_csv(
+        SAIDA / "divisao_dados.csv", index=False)
 
     treino = conjuntos["treino"]
     cv = StratifiedGroupKFold(n_splits=4, shuffle=True, random_state=SEED)
     busca = GridSearchCV(criar_modelo(), {
-        "tfidf__ngram_range": [(1, 2), (1, 3)],
-        "classificador__C": [1.0, 4.0],
-        "classificador__class_weight": [None, "balanced"],
+        "tfidf": candidatos_vetorizacao(),
+        "classificador__C": [0.5, 2.0, 8.0],
     }, cv=cv, scoring={"acuracia": "accuracy", "f1_macro": "f1_macro"}, refit="f1_macro")
-    busca.fit(treino.frase, treino.situacao, groups=treino.grupo)
+    busca.fit(treino.frase, treino.situacao, groups=treino.familia)
     base = busca.best_estimator_
-    comparacao = pd.DataFrame(busca.cv_results_)
+    comparacao_bruta = pd.DataFrame(busca.cv_results_)
+    comparacao = pd.DataFrame({
+        "vetorizacao": comparacao_bruta.param_tfidf.map(nome_vetorizacao),
+        "C": comparacao_bruta["param_classificador__C"].astype(float),
+        "f1_macro_cv": comparacao_bruta.mean_test_f1_macro,
+        "acuracia_cv": comparacao_bruta.mean_test_acuracia,
+        "desvio_f1_macro_cv": comparacao_bruta.std_test_f1_macro,
+        "posicao_f1_macro_cv": comparacao_bruta.rank_test_f1_macro,
+    }).sort_values(["posicao_f1_macro_cv", "vetorizacao", "C"])
     comparacao.to_csv(SAIDA / "comparacao_cv.csv", index=False)
+    tipo_vetor = nome_vetorizacao(base.named_steps["tfidf"])
 
     # O calibrador vê apenas o conjunto reservado para calibração. O teste final
     # continua sem participação no treinamento, na seleção ou na calibração.
@@ -113,6 +147,12 @@ def main():
     calibrado.fit(conjuntos["calibracao"].frase, conjuntos["calibracao"].situacao)
 
     teste, met_teste = avaliar_conjunto(calibrado, conjuntos["teste"], "teste")
+    por_variacao = []
+    for variacao, bloco in teste.groupby("variacao"):
+        por_variacao.append({"variacao": variacao, **metricas_binarias(bloco.situacao, bloco.predicao)})
+    tabela_variacoes = pd.DataFrame(por_variacao)
+    tabela_variacoes["matriz_confusao"] = tabela_variacoes.matriz_confusao.map(json.dumps)
+    tabela_variacoes.to_csv(SAIDA / "metricas_variacoes.csv", index=False)
     regressao, met_regressao = avaliar_conjunto(calibrado, conjuntos["regressao"], "regressao")
     externo, met_externo = avaliar_conjunto(calibrado, ler("avaliacao_externa.csv"), "externas")
     pares, met_pares = avaliar_conjunto(calibrado, ler("pares_gravidade.csv"), "pares_gravidade")
@@ -154,7 +194,9 @@ def main():
 
     vetor = base.named_steps["tfidf"]
     classificador = base.named_steps["classificador"]
-    pd.DataFrame({"termo": vetor.get_feature_names_out(), "coeficiente": classificador.coef_[0]}).to_csv(
+    sinal = 1 if classificador.classes_[1] == "alto risco" else -1
+    pd.DataFrame({"termo": vetor.get_feature_names_out(),
+                  "coeficiente_para_alto_risco": classificador.coef_[0] * sinal}).to_csv(
         SAIDA / "coeficientes.csv", index=False)
 
     erros = teste[~teste.acerto].copy()
@@ -190,7 +232,9 @@ def main():
         "quantidades": {nome: len(df) for nome, df in conjuntos.items()},
         "grupos": {nome: int(df.grupo.nunique()) for nome, df in conjuntos.items()},
         "baseline_acuracia": float(baseline),
-        "melhores_parametros": busca.best_params_,
+        "melhores_parametros": {"C": float(busca.best_params_["classificador__C"]),
+                               "vetorizacao": tipo_vetor},
+        "tipo_vetorizacao": tipo_vetor,
         "teste": met_teste,
         "regressao": met_regressao,
         "avaliacao_externa": met_externo,
@@ -198,6 +242,8 @@ def main():
         "desafios_legados": met_desafios,
         "auditoria_subgrupos_geral": met_subgrupos,
         "gaps_subgrupos": gaps,
+        "variacoes_teste": {r["variacao"]: {"n": r["n"], "acuracia": r["acuracia"],
+                          "falsos_negativos": r["falsos_negativos"]} for r in por_variacao},
         "calibracao": calibracao.to_dict(orient="records"),
         "relatorio_teste": classification_report(teste.situacao, teste.predicao, labels=CLASSES,
                                                    output_dict=True, zero_division=0),

@@ -50,6 +50,17 @@ class TestExtracao(unittest.TestCase):
         self.assertIn("palpitacoes", resultado["sintomas"])
         self.assertIn("arritmia", resultado["associacoes"])
 
+    def test_erros_ortograficos_comuns(self):
+        resultado = analisar("Dorr no peitto e sour frio desde cedo.", self.mapa)
+        self.assertIn("dor no peito", resultado["sintomas"])
+        self.assertIn("coronariana", resultado["associacoes"])
+
+    def test_negacao_coloquial_com_erro(self):
+        resultado = analisar("Num to com dorr no peitto, mas tenho palpitações e tontura.", self.mapa)
+        self.assertNotIn("dor no peito", resultado["sintomas"])
+        self.assertIn("dor no peito", resultado["sintomas_negados"])
+        self.assertIn("arritmia", resultado["associacoes"])
+
     def test_contradicao_e_sinalizada(self):
         resultado = analisar("Não sinto dor no peito, mas agora sinto dor no peito e suor frio.", self.mapa)
         self.assertIn("dor no peito", resultado["contradicoes"])

@@ -11,6 +11,15 @@ import unicodedata
 
 CONTRASTES = r"\b(?:mas|porem|contudo|entretanto|so que)\b"
 NEGADORES = r"\b(?:nao|nunca|jamais|sem|nego|nega|negou|nem)\b"
+# Correções delimitadas e auditáveis para erros frequentes do corpus. Não é um
+# corretor ortográfico geral: palavras desconhecidas continuam desconhecidas.
+VARIANTES = {
+    "peitto": "peito", "peitp": "peito", "dorr": "dor",
+    "flata": "falta", "corasao": "coracao", "respriar": "respirar",
+    "sour": "suor", "totnura": "tontura", "presao": "pressao",
+    "batids": "batidas", "fallar": "falar", "repousso": "repouso",
+    "num": "nao", "to": "estou", "ta": "esta",
+}
 PADROES_DUPLA_NEGACAO = (
     r"\bnao\s+(?:e\s+verdade\s+que\s+)?nao\s+(?:tenho|sinto|estou\s+com|apresento)?\s*$",
     r"\bnao\s+(?:deixei|deixo|parei)\s+de\s+(?:ter|sentir|apresentar)\s*$",
@@ -21,7 +30,8 @@ PADROES_DUPLA_NEGACAO = (
 def normalizar(texto):
     texto = unicodedata.normalize("NFKD", texto.casefold())
     texto = "".join(c for c in texto if not unicodedata.combining(c))
-    return re.sub(r"\s+", " ", texto).strip()
+    texto = re.sub(r"\s+", " ", texto).strip()
+    return re.sub(r"\b\w+\b", lambda m: VARIANTES.get(m.group(), m.group()), texto)
 
 
 def separar_trechos(texto):

@@ -13,7 +13,7 @@ um projeto acadêmico: não realiza diagnóstico nem orienta atendimento.
 | 10 relatos completos | [relatos_sintomas.txt](data/relatos_sintomas.txt) |
 | Mapa de conhecimento | [mapa_conhecimento.csv](data/mapa_conhecimento.csv) — 83 associações |
 | Extração de sintomas | [extrair_sintomas.py](src/extrair_sintomas.py) |
-| Frases e rótulos | [frases_risco.csv](data/frases_risco.csv) — 416 frases, 208 por classe |
+| Frases e rótulos | [frases_risco.csv](data/frases_risco.csv) — 992 frases, 496 por classe |
 | Partições por cenário | [particoes.csv](data/particoes.csv) |
 | Notebook TF-IDF e avaliação | [classificador_risco.ipynb](notebooks/classificador_risco.ipynb) |
 | Vídeo da entrega avaliada | [YouTube não listado](https://youtu.be/L3uZMKG7ZUc) — 3min07s |
@@ -27,8 +27,8 @@ implementação e ao limite que ainda permanece.
 
 Principais acréscimos:
 
-- base principal ampliada de 288 para 416 frases;
-- teste final ampliado de 24 para 64 frases;
+- base principal ampliada de 288 para 992 frases, incluindo 576 novos relatos com variações de fala e escrita;
+- teste final ampliado de 24 para 264 frases, separadas por família de cenário;
 - 32 cenários de avaliação baseados em fontes externas;
 - 16 pares de manifestações leves e graves com linguagem semelhante;
 - tratamento de dupla negação e sinalização de relatos contraditórios;
@@ -79,26 +79,31 @@ Para reproduzir também os arquivos de avaliação diretamente:
 python fase2/src/avaliar_classificador.py
 ```
 
+O gerador `expandir_linguagem.py` recria as 576 frases adicionais e o manifesto
+de partições a partir da base anterior; `criar_notebook.py` recria o notebook
+didático antes de executá-lo. Os dois são determinísticos.
+
 ## Resultados da revisão
 
 | Conjunto | Casos | Acurácia | Recall de alto risco |
 | --- | ---: | ---: | ---: |
-| Teste final ampliado | 64 | 89,1% | 93,8% |
-| Avaliação baseada em fontes externas | 32 | 84,4% | 100% |
-| Pares de gravidade | 32 | 84,4% | 100% |
-| Regressão | 80 | 96,3% | 100% |
+| Teste final ampliado | 264 | 89,0% | 95,5% |
+| Avaliação baseada em fontes externas | 32 | 96,9% | 100% |
+| Pares de gravidade | 32 | 90,6% | 100% |
+| Regressão | 144 | 95,8% | 97,2% |
 
-No teste final ocorreram dois falsos negativos e cinco falsos positivos. O teste
-mais difícil reduziu a acurácia em relação à entrega avaliada, mas oferece uma
-medida mais informativa. Os erros não foram escondidos nem usados para reescrever
-o teste. A análise completa está em [avaliacao.md](docs/avaliacao.md).
+No teste final ocorreram seis falsos negativos e 23 falsos positivos. Há 44
+frases com erro ortográfico e 44 com fala coloquial no teste. A acurácia ficou
+em 88,6% em ambos os subconjuntos. As 264 frases são variações de apenas 22
+famílias novas, portanto não equivalem a 264 casos independentes. A análise
+completa está em [avaliacao.md](docs/avaliacao.md).
 
 ![Matriz de confusão ampliada](outputs/matriz_confusao.png)
 
 ## Probabilidades e vieses
 
 A probabilidade produzida é confiança estatística dentro desta base. Não é risco
-clínico. A calibração usa somente 16 frases e serve para estudo; Brier score e
+clínico. A calibração usa 88 frases reservadas e serve para estudo; Brier score e
 log loss não garantem segurança médica.
 
 Os testes de subgrupos não encontraram diferença entre as variações testadas,

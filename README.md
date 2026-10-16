@@ -17,7 +17,7 @@ continuam abaixo como registro da preparação dos dados.
 | 10 relatos completos | [relatos_sintomas.txt](fase2/data/relatos_sintomas.txt) |
 | Mapa de conhecimento com 83 associações | [mapa_conhecimento.csv](fase2/data/mapa_conhecimento.csv) |
 | Código Python de extração | [extrair_sintomas.py](fase2/src/extrair_sintomas.py) |
-| Base simulada com 416 frases rotuladas | [frases_risco.csv](fase2/data/frases_risco.csv) |
+| Base simulada com 992 frases rotuladas | [frases_risco.csv](fase2/data/frases_risco.csv) |
 | Notebook executado: TF-IDF, treinamento e avaliação | [classificador_risco.ipynb](fase2/notebooks/classificador_risco.ipynb) |
 | Instalação e execução | [Guia da Fase 2](fase2/README.md) |
 | Resultados e análise dos erros | [Análise da avaliação](fase2/docs/avaliacao.md) |
@@ -33,11 +33,12 @@ continuam abaixo como registro da preparação dos dados.
 
 A versão que recebeu nota máxima está preservada na branch `fase2-entrega`. A
 revisão atual aplica o feedback antes do desenvolvimento da Fase 3: a base passou
-para 416 frases, o teste final cresceu de 24 para 64 exemplos e foram adicionados
-conjuntos separados para avaliação externa, pares de gravidade, calibração e
-auditoria de subgrupos. No teste ampliado, o modelo atingiu **89,1% (57/64)**,
-com recall de alto risco de 93,8%. A redução em relação aos 91,7% anteriores é
-esperada em uma avaliação maior e mais difícil; os sete erros permanecem
+de 288 para 992 frases (496 por classe), e o teste final cresceu de 24 para 264
+frases. Também foram adicionados conjuntos separados para avaliação baseada em
+fontes, pares de gravidade, calibração e auditoria de subgrupos. No teste atual,
+o modelo atingiu **89,0% (235/264)**, com recall de alto risco de 95,5%.
+As 264 frases vêm de apenas 22 famílias novas de cenários e não equivalem a 264
+pacientes independentes. Os 29 erros permanecem
 documentados na [avaliação completa](fase2/docs/avaliacao.md).
 
 ![Matriz de confusão do teste](fase2/outputs/matriz_confusao.png)

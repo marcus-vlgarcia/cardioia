@@ -151,8 +151,12 @@ def escrever_csv(caminho, campos, linhas):
 def main():
     caminho_base = RAIZ / "data/frases_risco.csv"
     with caminho_base.open(encoding="utf-8", newline="") as arquivo:
-        # Os grupos originais terminam em 72; o filtro torna a geração idempotente.
-        existentes = [r for r in csv.DictReader(arquivo) if int(r["grupo"][1:]) <= 72]
+        linhas_atuais = list(csv.DictReader(arquivo))
+    if any(r["grupo"].startswith(("C", "D")) for r in linhas_atuais):
+        print("A base ampliada já existe. Para reproduzi-la, use expandir_linguagem.py.")
+        return
+    # Os grupos originais terminam em 72; o filtro torna esta etapa idempotente.
+    existentes = [r for r in linhas_atuais if int(r["grupo"][1:]) <= 72]
     novas = []
     particoes_novas = {}
     for prefixo, classe, cenarios in (("A", "alto risco", ALTOS), ("B", "baixo risco", BAIXOS)):

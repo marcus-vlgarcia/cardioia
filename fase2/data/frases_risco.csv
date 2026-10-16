@@ -415,3 +415,579 @@ A dor é na pele do peito por causa de uma picada e coça quando encosto.,baixo 
 "Há uma picada superficial no tórax, com coceira localizada e sem mal-estar.",baixo risco,B103
 Não tive desmaio; apenas cochilei no sofá e acordei normalmente.,baixo risco,B104
 "Eu adormeci por cansaço, não perdi a consciência e não havia outros sintomas.",baixo risco,B104
+Sinto aperto no peito que continua e suor frio.,alto risco,C01-1
+Meu tórax está pressionado há um tempo e estou suando gelado.,alto risco,C01-1
+"Há algumas horas, sinto aperto no peito que continua e suor frio.",alto risco,C01-2
+"Há algumas horas, meu tórax está pressionado há um tempo e estou suando gelado.",alto risco,C01-2
+Percebi isso no meio do dia: sinto aperto no peito que continua e suor frio.,alto risco,C01-3
+Percebi isso no meio do dia: meu tórax está pressionado há um tempo e estou suando gelado.,alto risco,C01-3
+"Olha, tipo assim, sinto aperto no peito que continua e suor frio, sabe?",alto risco,C01-4
+"Olha, tipo assim, meu tórax está pressionado há um tempo e estou suando gelado, sabe?",alto risco,C01-4
+Então... eu acho que sinto aperto no peito que continua e suor frio.,alto risco,C01-5
+Então... eu acho que meu tórax está pressionado há um tempo e estou suando gelado.,alto risco,C01-5
+"Oi, sinto aperto no peitto que continua e suor frio.",alto risco,C01-6
+"Oi, meu torax está pressionado há um tempo e estou suando gelado.",alto risco,C01-6
+A dor no peito desce para o braço e não melhora.,alto risco,C02-1
+O peito dói sem parar e a dor chegou ao braço.,alto risco,C02-1
+"Há algumas horas, a dor no peito desce para o braço e não melhora.",alto risco,C02-2
+"Há algumas horas, o peito dói sem parar e a dor chegou ao braço.",alto risco,C02-2
+Percebi isso no meio do dia: a dor no peito desce para o braço e não melhora.,alto risco,C02-3
+Percebi isso no meio do dia: o peito dói sem parar e a dor chegou ao braço.,alto risco,C02-3
+"Olha, tipo assim, a dor no peito desce para o braço e não melhora, sabe?",alto risco,C02-4
+"Olha, tipo assim, o peito dói sem parar e a dor chegou ao braço, sabe?",alto risco,C02-4
+Então... eu acho que a dor no peito desce para o braço e não melhora.,alto risco,C02-5
+Então... eu acho que o peito dói sem parar e a dor chegou ao braço.,alto risco,C02-5
+"Oi, a dor no peitto desce para o braço e não melhora.",alto risco,C02-6
+"Oi, o peitto dói sem parar e a dor chegou ao braço.",alto risco,C02-6
+Fiquei sem ar em repouso e mal consigo falar.,alto risco,C03-1
+Estou parado e a respiração não deixa terminar uma frase.,alto risco,C03-1
+"Há algumas horas, fiquei sem ar em repouso e mal consigo falar.",alto risco,C03-2
+"Há algumas horas, estou parado e a respiração não deixa terminar uma frase.",alto risco,C03-2
+Percebi isso no meio do dia: fiquei sem ar em repouso e mal consigo falar.,alto risco,C03-3
+Percebi isso no meio do dia: estou parado e a respiração não deixa terminar uma frase.,alto risco,C03-3
+"Olha, tipo assim, fiquei sem ar em repouso e mal consigo falar, sabe?",alto risco,C03-4
+"Olha, tipo assim, estou parado e a respiração não deixa terminar uma frase, sabe?",alto risco,C03-4
+Então... eu acho que fiquei sem ar em repouso e mal consigo falar.,alto risco,C03-5
+Então... eu acho que estou parado e a respiração não deixa terminar uma frase.,alto risco,C03-5
+"Oi, fiuqei sem ar em repouso e mal consigo falar.",alto risco,C03-6
+"Oi, estou paardo e a respiração não deixa terminar uma frase.",alto risco,C03-6
+Meu coração dispara e quase desmaio.,alto risco,C04-1
+As batidas estão muito rápidas e a vista escurece.,alto risco,C04-1
+"Há algumas horas, meu coração dispara e quase desmaio.",alto risco,C04-2
+"Há algumas horas, as batidas estão muito rápidas e a vista escurece.",alto risco,C04-2
+Percebi isso no meio do dia: meu coração dispara e quase desmaio.,alto risco,C04-3
+Percebi isso no meio do dia: as batidas estão muito rápidas e a vista escurece.,alto risco,C04-3
+"Olha, tipo assim, meu coração dispara e quase desmaio, sabe?",alto risco,C04-4
+"Olha, tipo assim, as batidas estão muito rápidas e a vista escurece, sabe?",alto risco,C04-4
+Então... eu acho que meu coração dispara e quase desmaio.,alto risco,C04-5
+Então... eu acho que as batidas estão muito rápidas e a vista escurece.,alto risco,C04-5
+"Oi, meu corasão dispara e quase desmaio.",alto risco,C04-6
+"Oi, as batids estão muito rápidas e a vista escurece.",alto risco,C04-6
+Desmaiei e ainda sinto palpitações.,alto risco,C05-1
+Apaguei por instantes e o coração segue irregular.,alto risco,C05-1
+"Há algumas horas, desmaiei e ainda sinto palpitações.",alto risco,C05-2
+"Há algumas horas, apaguei por instantes e o coração segue irregular.",alto risco,C05-2
+Percebi isso no meio do dia: desmaiei e ainda sinto palpitações.,alto risco,C05-3
+Percebi isso no meio do dia: apaguei por instantes e o coração segue irregular.,alto risco,C05-3
+"Olha, tipo assim, desmaiei e ainda sinto palpitações, sabe?",alto risco,C05-4
+"Olha, tipo assim, apaguei por instantes e o coração segue irregular, sabe?",alto risco,C05-4
+Então... eu acho que desmaiei e ainda sinto palpitações.,alto risco,C05-5
+Então... eu acho que apaguei por instantes e o coração segue irregular.,alto risco,C05-5
+"Oi, demsaiei e ainda sinto palpitações.",alto risco,C05-6
+"Oi, apaguei por instantes e o corasão segue irregular.",alto risco,C05-6
+Uma dor forte começou de repente no peito e nas costas.,alto risco,C06-1
+O tórax e as costas doem como um rasgo súbito.,alto risco,C06-1
+"Há algumas horas, uma dor forte começou de repente no peito e nas costas.",alto risco,C06-2
+"Há algumas horas, o tórax e as costas doem como um rasgo súbito.",alto risco,C06-2
+Percebi isso no meio do dia: uma dor forte começou de repente no peito e nas costas.,alto risco,C06-3
+Percebi isso no meio do dia: o tórax e as costas doem como um rasgo súbito.,alto risco,C06-3
+"Olha, tipo assim, uma dor forte começou de repente no peito e nas costas, sabe?",alto risco,C06-4
+"Olha, tipo assim, o tórax e as costas doem como um rasgo súbito, sabe?",alto risco,C06-4
+Então... eu acho que uma dor forte começou de repente no peito e nas costas.,alto risco,C06-5
+Então... eu acho que o tórax e as costas doem como um rasgo súbito.,alto risco,C06-5
+"Oi, uma dor forte começou de repente no peitto e nas costas.",alto risco,C06-6
+"Oi, o torax e as costas doem como um rasgo súbito.",alto risco,C06-6
+O rosto entortou e perdi a força de um braço.,alto risco,C07-1
+Minha boca ficou torta e um braço não responde.,alto risco,C07-1
+"Há algumas horas, o rosto entortou e perdi a força de um braço.",alto risco,C07-2
+"Há algumas horas, minha boca ficou torta e um braço não responde.",alto risco,C07-2
+Percebi isso no meio do dia: o rosto entortou e perdi a força de um braço.,alto risco,C07-3
+Percebi isso no meio do dia: minha boca ficou torta e um braço não responde.,alto risco,C07-3
+"Olha, tipo assim, o rosto entortou e perdi a força de um braço, sabe?",alto risco,C07-4
+"Olha, tipo assim, minha boca ficou torta e um braço não responde, sabe?",alto risco,C07-4
+Então... eu acho que o rosto entortou e perdi a força de um braço.,alto risco,C07-5
+Então... eu acho que minha boca ficou torta e um braço não responde.,alto risco,C07-5
+"Oi, o rosto entortou e perdi a força de um braco.",alto risco,C07-6
+"Oi, minha boca ficou torta e um braco não responde.",alto risco,C07-6
+Não consigo respirar deitado e preciso sentar.,alto risco,C08-1
+Ao me deitar perco o fôlego e só melhoro sentado.,alto risco,C08-1
+"Há algumas horas, não consigo respirar deitado e preciso sentar.",alto risco,C08-2
+"Há algumas horas, ao me deitar perco o fôlego e só melhoro sentado.",alto risco,C08-2
+Percebi isso no meio do dia: não consigo respirar deitado e preciso sentar.,alto risco,C08-3
+Percebi isso no meio do dia: ao me deitar perco o fôlego e só melhoro sentado.,alto risco,C08-3
+"Olha, tipo assim, não consigo respirar deitado e preciso sentar, sabe?",alto risco,C08-4
+"Olha, tipo assim, ao me deitar perco o fôlego e só melhoro sentado, sabe?",alto risco,C08-4
+Então... eu acho que não consigo respirar deitado e preciso sentar.,alto risco,C08-5
+Então... eu acho que ao me deitar perco o fôlego e só melhoro sentado.,alto risco,C08-5
+"Oi, não consigo respriar deitado e preciso sentar.",alto risco,C08-6
+"Oi, ao me detiar perco o fôlego e só melhoro sentado.",alto risco,C08-6
+"Estou pálido, enjoado e com pressão no peito.",alto risco,C09-1
+O aperto no tórax veio com náusea e palidez.,alto risco,C09-1
+"Há algumas horas, estou pálido, enjoado e com pressão no peito.",alto risco,C09-2
+"Há algumas horas, o aperto no tórax veio com náusea e palidez.",alto risco,C09-2
+"Percebi isso no meio do dia: estou pálido, enjoado e com pressão no peito.",alto risco,C09-3
+Percebi isso no meio do dia: o aperto no tórax veio com náusea e palidez.,alto risco,C09-3
+"Olha, tipo assim, estou pálido, enjoado e com pressão no peito, sabe?",alto risco,C09-4
+"Olha, tipo assim, o aperto no tórax veio com náusea e palidez, sabe?",alto risco,C09-4
+"Então... eu acho que estou pálido, enjoado e com pressão no peito.",alto risco,C09-5
+Então... eu acho que o aperto no tórax veio com náusea e palidez.,alto risco,C09-5
+"Oi, estou pálido, enjoado e com pressão no peitto.",alto risco,C09-6
+"Oi, o aperto no torax veio com náusea e palidez.",alto risco,C09-6
+A dor no peito piora e começou a irradiar para a mandíbula.,alto risco,C10-1
+O tórax aperta cada vez mais e a dor alcança o maxilar.,alto risco,C10-1
+"Há algumas horas, a dor no peito piora e começou a irradiar para a mandíbula.",alto risco,C10-2
+"Há algumas horas, o tórax aperta cada vez mais e a dor alcança o maxilar.",alto risco,C10-2
+Percebi isso no meio do dia: a dor no peito piora e começou a irradiar para a mandíbula.,alto risco,C10-3
+Percebi isso no meio do dia: o tórax aperta cada vez mais e a dor alcança o maxilar.,alto risco,C10-3
+"Olha, tipo assim, a dor no peito piora e começou a irradiar para a mandíbula, sabe?",alto risco,C10-4
+"Olha, tipo assim, o tórax aperta cada vez mais e a dor alcança o maxilar, sabe?",alto risco,C10-4
+Então... eu acho que a dor no peito piora e começou a irradiar para a mandíbula.,alto risco,C10-5
+Então... eu acho que o tórax aperta cada vez mais e a dor alcança o maxilar.,alto risco,C10-5
+"Oi, a dor no peitto piora e começou a irradiar para a mandíbula.",alto risco,C10-6
+"Oi, o torax aperta cada vez mais e a dor alcança o maxilar.",alto risco,C10-6
+A falta de ar começou subitamente junto de dor ao inspirar.,alto risco,C11-1
+Perdi o fôlego de repente e cada respiração dói.,alto risco,C11-1
+"Há algumas horas, a falta de ar começou subitamente junto de dor ao inspirar.",alto risco,C11-2
+"Há algumas horas, perdi o fôlego de repente e cada respiração dói.",alto risco,C11-2
+Percebi isso no meio do dia: a falta de ar começou subitamente junto de dor ao inspirar.,alto risco,C11-3
+Percebi isso no meio do dia: perdi o fôlego de repente e cada respiração dói.,alto risco,C11-3
+"Olha, tipo assim, a falta de ar começou subitamente junto de dor ao inspirar, sabe?",alto risco,C11-4
+"Olha, tipo assim, perdi o fôlego de repente e cada respiração dói, sabe?",alto risco,C11-4
+Então... eu acho que a falta de ar começou subitamente junto de dor ao inspirar.,alto risco,C11-5
+Então... eu acho que perdi o fôlego de repente e cada respiração dói.,alto risco,C11-5
+"Oi, a flata de ar começou subitamente junto de dor ao inspirar.",alto risco,C11-6
+"Oi, perdi o fôelgo de repente e cada respiração dói.",alto risco,C11-6
+Minha fala ficou enrolada e a mão perdeu força de uma vez.,alto risco,C12-1
+As palavras saem confusas e não consigo segurar objetos com uma mão.,alto risco,C12-1
+"Há algumas horas, minha fala ficou enrolada e a mão perdeu força de uma vez.",alto risco,C12-2
+"Há algumas horas, as palavras saem confusas e não consigo segurar objetos com uma mão.",alto risco,C12-2
+Percebi isso no meio do dia: minha fala ficou enrolada e a mão perdeu força de uma vez.,alto risco,C12-3
+Percebi isso no meio do dia: as palavras saem confusas e não consigo segurar objetos com uma mão.,alto risco,C12-3
+"Olha, tipo assim, minha fala ficou enrolada e a mão perdeu força de uma vez, sabe?",alto risco,C12-4
+"Olha, tipo assim, as palavras saem confusas e não consigo segurar objetos com uma mão, sabe?",alto risco,C12-4
+Então... eu acho que minha fala ficou enrolada e a mão perdeu força de uma vez.,alto risco,C12-5
+Então... eu acho que as palavras saem confusas e não consigo segurar objetos com uma mão.,alto risco,C12-5
+"Oi, minha fala ficou enorlada e a mão perdeu força de uma vez.",alto risco,C12-6
+"Oi, as paalvras saem confusas e não consigo segurar objetos com uma mão.",alto risco,C12-6
+O peito aperta mesmo sem esforço e o suor está frio.,alto risco,C13-1
+Em repouso tenho pressão torácica contínua e transpiração gelada.,alto risco,C13-1
+"Há algumas horas, o peito aperta mesmo sem esforço e o suor está frio.",alto risco,C13-2
+"Há algumas horas, em repouso tenho pressão torácica contínua e transpiração gelada.",alto risco,C13-2
+Percebi isso no meio do dia: o peito aperta mesmo sem esforço e o suor está frio.,alto risco,C13-3
+Percebi isso no meio do dia: em repouso tenho pressão torácica contínua e transpiração gelada.,alto risco,C13-3
+"Olha, tipo assim, o peito aperta mesmo sem esforço e o suor está frio, sabe?",alto risco,C13-4
+"Olha, tipo assim, em repouso tenho pressão torácica contínua e transpiração gelada, sabe?",alto risco,C13-4
+Então... eu acho que o peito aperta mesmo sem esforço e o suor está frio.,alto risco,C13-5
+Então... eu acho que em repouso tenho pressão torácica contínua e transpiração gelada.,alto risco,C13-5
+"Oi, o peitto aperta mesmo sem esforço e o suor está frio.",alto risco,C13-6
+"Oi, em repouso tenho presão torácica contínua e transpiração gelada.",alto risco,C13-6
+O coração bate estranho e a tontura está aumentando.,alto risco,C14-1
+Sinto batimentos descompassados e preciso me apoiar para não cair.,alto risco,C14-1
+"Há algumas horas, o coração bate estranho e a tontura está aumentando.",alto risco,C14-2
+"Há algumas horas, sinto batimentos descompassados e preciso me apoiar para não cair.",alto risco,C14-2
+Percebi isso no meio do dia: o coração bate estranho e a tontura está aumentando.,alto risco,C14-3
+Percebi isso no meio do dia: sinto batimentos descompassados e preciso me apoiar para não cair.,alto risco,C14-3
+"Olha, tipo assim, o coração bate estranho e a tontura está aumentando, sabe?",alto risco,C14-4
+"Olha, tipo assim, sinto batimentos descompassados e preciso me apoiar para não cair, sabe?",alto risco,C14-4
+Então... eu acho que o coração bate estranho e a tontura está aumentando.,alto risco,C14-5
+Então... eu acho que sinto batimentos descompassados e preciso me apoiar para não cair.,alto risco,C14-5
+"Oi, o corasão bate estranho e a tontura está aumentando.",alto risco,C14-6
+"Oi, sinto baitmentos descompassados e preciso me apoiar para não cair.",alto risco,C14-6
+Meu lábio ficou roxo e puxar o ar está difícil.,alto risco,C15-1
+A boca está azulada e não recupero a respiração.,alto risco,C15-1
+"Há algumas horas, meu lábio ficou roxo e puxar o ar está difícil.",alto risco,C15-2
+"Há algumas horas, a boca está azulada e não recupero a respiração.",alto risco,C15-2
+Percebi isso no meio do dia: meu lábio ficou roxo e puxar o ar está difícil.,alto risco,C15-3
+Percebi isso no meio do dia: a boca está azulada e não recupero a respiração.,alto risco,C15-3
+"Olha, tipo assim, meu lábio ficou roxo e puxar o ar está difícil, sabe?",alto risco,C15-4
+"Olha, tipo assim, a boca está azulada e não recupero a respiração, sabe?",alto risco,C15-4
+Então... eu acho que meu lábio ficou roxo e puxar o ar está difícil.,alto risco,C15-5
+Então... eu acho que a boca está azulada e não recupero a respiração.,alto risco,C15-5
+"Oi, meu lábio ficou roxo e puxar o ar está diífcil.",alto risco,C15-6
+"Oi, a boca está azluada e não recupero a respiração.",alto risco,C15-6
+O desconforto no peito não cedeu após o descanso.,alto risco,C16-1
+Parei a atividade mas a pressão no tórax continua.,alto risco,C16-1
+"Há algumas horas, o desconforto no peito não cedeu após o descanso.",alto risco,C16-2
+"Há algumas horas, parei a atividade mas a pressão no tórax continua.",alto risco,C16-2
+Percebi isso no meio do dia: o desconforto no peito não cedeu após o descanso.,alto risco,C16-3
+Percebi isso no meio do dia: parei a atividade mas a pressão no tórax continua.,alto risco,C16-3
+"Olha, tipo assim, o desconforto no peito não cedeu após o descanso, sabe?",alto risco,C16-4
+"Olha, tipo assim, parei a atividade mas a pressão no tórax continua, sabe?",alto risco,C16-4
+Então... eu acho que o desconforto no peito não cedeu após o descanso.,alto risco,C16-5
+Então... eu acho que parei a atividade mas a pressão no tórax continua.,alto risco,C16-5
+"Oi, o desconforto no peitto não cedeu após o descanso.",alto risco,C16-6
+"Oi, parei a atividade mas a pressão no torax continua.",alto risco,C16-6
+A dor no peito voltou mais forte depois de eu dizer que tinha passado.,alto risco,C17-1
+"Antes neguei a dor, mas agora o peito aperta sem aliviar.",alto risco,C17-1
+"Há algumas horas, a dor no peito voltou mais forte depois de eu dizer que tinha passado.",alto risco,C17-2
+"Há algumas horas, antes neguei a dor, mas agora o peito aperta sem aliviar.",alto risco,C17-2
+Percebi isso no meio do dia: a dor no peito voltou mais forte depois de eu dizer que tinha passado.,alto risco,C17-3
+"Percebi isso no meio do dia: antes neguei a dor, mas agora o peito aperta sem aliviar.",alto risco,C17-3
+"Olha, tipo assim, a dor no peito voltou mais forte depois de eu dizer que tinha passado, sabe?",alto risco,C17-4
+"Olha, tipo assim, antes neguei a dor, mas agora o peito aperta sem aliviar, sabe?",alto risco,C17-4
+Então... eu acho que a dor no peito voltou mais forte depois de eu dizer que tinha passado.,alto risco,C17-5
+"Então... eu acho que antes neguei a dor, mas agora o peito aperta sem aliviar.",alto risco,C17-5
+"Oi, a dor no peitto voltou mais forte depois de eu dizer que tinha passado.",alto risco,C17-6
+"Oi, antes neguei a dor, mas agora o peitto aperta sem aliviar.",alto risco,C17-6
+Não deixei de sentir falta de ar e agora estou fraco.,alto risco,C18-1
+A dificuldade para respirar persiste e a fraqueza piora.,alto risco,C18-1
+"Há algumas horas, não deixei de sentir falta de ar e agora estou fraco.",alto risco,C18-2
+"Há algumas horas, a dificuldade para respirar persiste e a fraqueza piora.",alto risco,C18-2
+Percebi isso no meio do dia: não deixei de sentir falta de ar e agora estou fraco.,alto risco,C18-3
+Percebi isso no meio do dia: a dificuldade para respirar persiste e a fraqueza piora.,alto risco,C18-3
+"Olha, tipo assim, não deixei de sentir falta de ar e agora estou fraco, sabe?",alto risco,C18-4
+"Olha, tipo assim, a dificuldade para respirar persiste e a fraqueza piora, sabe?",alto risco,C18-4
+Então... eu acho que não deixei de sentir falta de ar e agora estou fraco.,alto risco,C18-5
+Então... eu acho que a dificuldade para respirar persiste e a fraqueza piora.,alto risco,C18-5
+"Oi, não deixei de sentir flata de ar e agora estou fraco.",alto risco,C18-6
+"Oi, a dificuldade para respriar persiste e a fraqueza piora.",alto risco,C18-6
+Tenho enjoo e suor frio com uma pressão estranha no peito.,alto risco,C19-1
+O mal-estar veio com transpiração gelada e aperto torácico.,alto risco,C19-1
+"Há algumas horas, tenho enjoo e suor frio com uma pressão estranha no peito.",alto risco,C19-2
+"Há algumas horas, o mal-estar veio com transpiração gelada e aperto torácico.",alto risco,C19-2
+Percebi isso no meio do dia: tenho enjoo e suor frio com uma pressão estranha no peito.,alto risco,C19-3
+Percebi isso no meio do dia: o mal-estar veio com transpiração gelada e aperto torácico.,alto risco,C19-3
+"Olha, tipo assim, tenho enjoo e suor frio com uma pressão estranha no peito, sabe?",alto risco,C19-4
+"Olha, tipo assim, o mal-estar veio com transpiração gelada e aperto torácico, sabe?",alto risco,C19-4
+Então... eu acho que tenho enjoo e suor frio com uma pressão estranha no peito.,alto risco,C19-5
+Então... eu acho que o mal-estar veio com transpiração gelada e aperto torácico.,alto risco,C19-5
+"Oi, tenho enjoo e suor frio com uma pressão estranha no peitto.",alto risco,C19-6
+"Oi, o mal-estar veio com trnaspiração gelada e aperto torácico.",alto risco,C19-6
+O braço ficou dormente subitamente e minha fala falha.,alto risco,C20-1
+Perdi a sensibilidade de um lado e não falo como antes.,alto risco,C20-1
+"Há algumas horas, o braço ficou dormente subitamente e minha fala falha.",alto risco,C20-2
+"Há algumas horas, perdi a sensibilidade de um lado e não falo como antes.",alto risco,C20-2
+Percebi isso no meio do dia: o braço ficou dormente subitamente e minha fala falha.,alto risco,C20-3
+Percebi isso no meio do dia: perdi a sensibilidade de um lado e não falo como antes.,alto risco,C20-3
+"Olha, tipo assim, o braço ficou dormente subitamente e minha fala falha, sabe?",alto risco,C20-4
+"Olha, tipo assim, perdi a sensibilidade de um lado e não falo como antes, sabe?",alto risco,C20-4
+Então... eu acho que o braço ficou dormente subitamente e minha fala falha.,alto risco,C20-5
+Então... eu acho que perdi a sensibilidade de um lado e não falo como antes.,alto risco,C20-5
+"Oi, o braco ficou dormente subitamente e minha fala falha.",alto risco,C20-6
+"Oi, perdi a sesnibilidade de um lado e não falo como antes.",alto risco,C20-6
+Depois da cirurgia minha perna inchou e fiquei sem ar.,alto risco,C21-1
+Operei há pouco e agora tenho falta de ar súbita com uma perna inchada.,alto risco,C21-1
+"Há algumas horas, depois da cirurgia minha perna inchou e fiquei sem ar.",alto risco,C21-2
+"Há algumas horas, operei há pouco e agora tenho falta de ar súbita com uma perna inchada.",alto risco,C21-2
+Percebi isso no meio do dia: depois da cirurgia minha perna inchou e fiquei sem ar.,alto risco,C21-3
+Percebi isso no meio do dia: operei há pouco e agora tenho falta de ar súbita com uma perna inchada.,alto risco,C21-3
+"Olha, tipo assim, depois da cirurgia minha perna inchou e fiquei sem ar, sabe?",alto risco,C21-4
+"Olha, tipo assim, operei há pouco e agora tenho falta de ar súbita com uma perna inchada, sabe?",alto risco,C21-4
+Então... eu acho que depois da cirurgia minha perna inchou e fiquei sem ar.,alto risco,C21-5
+Então... eu acho que operei há pouco e agora tenho falta de ar súbita com uma perna inchada.,alto risco,C21-5
+"Oi, deopis da cirurgia minha perna inchou e fiquei sem ar.",alto risco,C21-6
+"Oi, operei há pouco e agora tenho flata de ar súbita com uma perna inchada.",alto risco,C21-6
+"O esforço acabou, mas o suor frio e a dor no peito continuam.",alto risco,C22-1
+Já estou descansando e mesmo assim o tórax dói com suor gelado.,alto risco,C22-1
+"Há algumas horas, o esforço acabou, mas o suor frio e a dor no peito continuam.",alto risco,C22-2
+"Há algumas horas, já estou descansando e mesmo assim o tórax dói com suor gelado.",alto risco,C22-2
+"Percebi isso no meio do dia: o esforço acabou, mas o suor frio e a dor no peito continuam.",alto risco,C22-3
+Percebi isso no meio do dia: já estou descansando e mesmo assim o tórax dói com suor gelado.,alto risco,C22-3
+"Olha, tipo assim, o esforço acabou, mas o suor frio e a dor no peito continuam, sabe?",alto risco,C22-4
+"Olha, tipo assim, já estou descansando e mesmo assim o tórax dói com suor gelado, sabe?",alto risco,C22-4
+"Então... eu acho que o esforço acabou, mas o suor frio e a dor no peito continuam.",alto risco,C22-5
+Então... eu acho que já estou descansando e mesmo assim o tórax dói com suor gelado.,alto risco,C22-5
+"Oi, o esforço acabou, mas o suor frio e a dor no peitto continuam.",alto risco,C22-6
+"Oi, já estou descansando e mesmo assim o torax dói com suor gelado.",alto risco,C22-6
+"A dor parece pequena, porém quase apaguei e estou pálido.",alto risco,C23-1
+"O peito incomoda pouco, mas a sensação de desmaio veio com palidez.",alto risco,C23-1
+"Há algumas horas, a dor parece pequena, porém quase apaguei e estou pálido.",alto risco,C23-2
+"Há algumas horas, o peito incomoda pouco, mas a sensação de desmaio veio com palidez.",alto risco,C23-2
+"Percebi isso no meio do dia: a dor parece pequena, porém quase apaguei e estou pálido.",alto risco,C23-3
+"Percebi isso no meio do dia: o peito incomoda pouco, mas a sensação de desmaio veio com palidez.",alto risco,C23-3
+"Olha, tipo assim, a dor parece pequena, porém quase apaguei e estou pálido, sabe?",alto risco,C23-4
+"Olha, tipo assim, o peito incomoda pouco, mas a sensação de desmaio veio com palidez, sabe?",alto risco,C23-4
+"Então... eu acho que a dor parece pequena, porém quase apaguei e estou pálido.",alto risco,C23-5
+"Então... eu acho que o peito incomoda pouco, mas a sensação de desmaio veio com palidez.",alto risco,C23-5
+"Oi, a dor parece pequena, porém quase apaguei e estou palido.",alto risco,C23-6
+"Oi, o peitto incomoda pouco, mas a sensação de desmaio veio com palidez.",alto risco,C23-6
+Não é verdade que não sinto dor no peito; ela persiste.,alto risco,C24-1
+Não posso afirmar que estou sem aperto no tórax; ele continua.,alto risco,C24-1
+"Há algumas horas, não é verdade que não sinto dor no peito; ela persiste.",alto risco,C24-2
+"Há algumas horas, não posso afirmar que estou sem aperto no tórax; ele continua.",alto risco,C24-2
+Percebi isso no meio do dia: não é verdade que não sinto dor no peito; ela persiste.,alto risco,C24-3
+Percebi isso no meio do dia: não posso afirmar que estou sem aperto no tórax; ele continua.,alto risco,C24-3
+"Olha, tipo assim, não é verdade que não sinto dor no peito; ela persiste, sabe?",alto risco,C24-4
+"Olha, tipo assim, não posso afirmar que estou sem aperto no tórax; ele continua, sabe?",alto risco,C24-4
+Então... eu acho que não é verdade que não sinto dor no peito; ela persiste.,alto risco,C24-5
+Então... eu acho que não posso afirmar que estou sem aperto no tórax; ele continua.,alto risco,C24-5
+"Oi, não é verdade que não sinto dor no peitto; ela persiste.",alto risco,C24-6
+"Oi, não posso afirmar que estou sem aperto no torax; ele continua.",alto risco,C24-6
+Suei na caminhada e recuperei totalmente o fôlego ao parar.,baixo risco,D01-1
+A respiração acelerou no passeio e voltou ao normal após descanso.,baixo risco,D01-1
+"Há algumas horas, suei na caminhada e recuperei totalmente o fôlego ao parar.",baixo risco,D01-2
+"Há algumas horas, a respiração acelerou no passeio e voltou ao normal após descanso.",baixo risco,D01-2
+Percebi isso no meio do dia: suei na caminhada e recuperei totalmente o fôlego ao parar.,baixo risco,D01-3
+Percebi isso no meio do dia: a respiração acelerou no passeio e voltou ao normal após descanso.,baixo risco,D01-3
+"Olha, tipo assim, suei na caminhada e recuperei totalmente o fôlego ao parar, sabe?",baixo risco,D01-4
+"Olha, tipo assim, a respiração acelerou no passeio e voltou ao normal após descanso, sabe?",baixo risco,D01-4
+Então... eu acho que suei na caminhada e recuperei totalmente o fôlego ao parar.,baixo risco,D01-5
+Então... eu acho que a respiração acelerou no passeio e voltou ao normal após descanso.,baixo risco,D01-5
+"Oi, suei na caimnhada e recuperei totalmente o fôlego ao parar.",baixo risco,D01-6
+"Oi, a repsiração acelerou no passeio e voltou ao normal após descanso.",baixo risco,D01-6
+A camiseta apertou meu peito e o incômodo sumiu quando a tirei.,baixo risco,D02-1
+O tecido pressionava o tórax; afrouxei a roupa e passou.,baixo risco,D02-1
+"Há algumas horas, a camiseta apertou meu peito e o incômodo sumiu quando a tirei.",baixo risco,D02-2
+"Há algumas horas, o tecido pressionava o tórax; afrouxei a roupa e passou.",baixo risco,D02-2
+Percebi isso no meio do dia: a camiseta apertou meu peito e o incômodo sumiu quando a tirei.,baixo risco,D02-3
+Percebi isso no meio do dia: o tecido pressionava o tórax; afrouxei a roupa e passou.,baixo risco,D02-3
+"Olha, tipo assim, a camiseta apertou meu peito e o incômodo sumiu quando a tirei, sabe?",baixo risco,D02-4
+"Olha, tipo assim, o tecido pressionava o tórax; afrouxei a roupa e passou, sabe?",baixo risco,D02-4
+Então... eu acho que a camiseta apertou meu peito e o incômodo sumiu quando a tirei.,baixo risco,D02-5
+Então... eu acho que o tecido pressionava o tórax; afrouxei a roupa e passou.,baixo risco,D02-5
+"Oi, a camiseta apertou meu peitto e o incômodo sumiu quando a tirei.",baixo risco,D02-6
+"Oi, o tecido pressionava o torax; afrouxei a roupa e passou.",baixo risco,D02-6
+O músculo do peito dói apenas quando aperto o local machucado.,baixo risco,D03-1
+Consigo reproduzir a dor tocando a contusão superficial.,baixo risco,D03-1
+"Há algumas horas, o músculo do peito dói apenas quando aperto o local machucado.",baixo risco,D03-2
+"Há algumas horas, consigo reproduzir a dor tocando a contusão superficial.",baixo risco,D03-2
+Percebi isso no meio do dia: o músculo do peito dói apenas quando aperto o local machucado.,baixo risco,D03-3
+Percebi isso no meio do dia: consigo reproduzir a dor tocando a contusão superficial.,baixo risco,D03-3
+"Olha, tipo assim, o músculo do peito dói apenas quando aperto o local machucado, sabe?",baixo risco,D03-4
+"Olha, tipo assim, consigo reproduzir a dor tocando a contusão superficial, sabe?",baixo risco,D03-4
+Então... eu acho que o músculo do peito dói apenas quando aperto o local machucado.,baixo risco,D03-5
+Então... eu acho que consigo reproduzir a dor tocando a contusão superficial.,baixo risco,D03-5
+"Oi, o músculo do peitto dói apenas quando aperto o local machucado.",baixo risco,D03-6
+"Oi, consigo reproduzir a dorr tocando a contusão superficial.",baixo risco,D03-6
+Meu coração acelerou no susto e normalizou logo depois.,baixo risco,D04-1
+As batidas aumentaram por um instante e já acalmaram.,baixo risco,D04-1
+"Há algumas horas, meu coração acelerou no susto e normalizou logo depois.",baixo risco,D04-2
+"Há algumas horas, as batidas aumentaram por um instante e já acalmaram.",baixo risco,D04-2
+Percebi isso no meio do dia: meu coração acelerou no susto e normalizou logo depois.,baixo risco,D04-3
+Percebi isso no meio do dia: as batidas aumentaram por um instante e já acalmaram.,baixo risco,D04-3
+"Olha, tipo assim, meu coração acelerou no susto e normalizou logo depois, sabe?",baixo risco,D04-4
+"Olha, tipo assim, as batidas aumentaram por um instante e já acalmaram, sabe?",baixo risco,D04-4
+Então... eu acho que meu coração acelerou no susto e normalizou logo depois.,baixo risco,D04-5
+Então... eu acho que as batidas aumentaram por um instante e já acalmaram.,baixo risco,D04-5
+"Oi, meu corasão acelerou no susto e normalizou logo depois.",baixo risco,D04-6
+"Oi, as batids aumentaram por um instante e já acalmaram.",baixo risco,D04-6
+Senti uma pontada ao espirrar que durou um segundo e não voltou.,baixo risco,D05-1
+O peito fisgou só no espirro e estou sem incômodo agora.,baixo risco,D05-1
+"Há algumas horas, senti uma pontada ao espirrar que durou um segundo e não voltou.",baixo risco,D05-2
+"Há algumas horas, o peito fisgou só no espirro e estou sem incômodo agora.",baixo risco,D05-2
+Percebi isso no meio do dia: senti uma pontada ao espirrar que durou um segundo e não voltou.,baixo risco,D05-3
+Percebi isso no meio do dia: o peito fisgou só no espirro e estou sem incômodo agora.,baixo risco,D05-3
+"Olha, tipo assim, senti uma pontada ao espirrar que durou um segundo e não voltou, sabe?",baixo risco,D05-4
+"Olha, tipo assim, o peito fisgou só no espirro e estou sem incômodo agora, sabe?",baixo risco,D05-4
+Então... eu acho que senti uma pontada ao espirrar que durou um segundo e não voltou.,baixo risco,D05-5
+Então... eu acho que o peito fisgou só no espirro e estou sem incômodo agora.,baixo risco,D05-5
+"Oi, senti uma potnada ao espirrar que durou um segundo e não voltou.",baixo risco,D05-6
+"Oi, o peitto fisgou só no espirro e estou sem incômodo agora.",baixo risco,D05-6
+Fiquei sem ar ao correr para o ônibus e recuperei totalmente ao parar.,baixo risco,D06-1
+A corrida me deixou ofegante por pouco tempo; já respiro normalmente.,baixo risco,D06-1
+"Há algumas horas, fiquei sem ar ao correr para o ônibus e recuperei totalmente ao parar.",baixo risco,D06-2
+"Há algumas horas, a corrida me deixou ofegante por pouco tempo; já respiro normalmente.",baixo risco,D06-2
+Percebi isso no meio do dia: fiquei sem ar ao correr para o ônibus e recuperei totalmente ao parar.,baixo risco,D06-3
+Percebi isso no meio do dia: a corrida me deixou ofegante por pouco tempo; já respiro normalmente.,baixo risco,D06-3
+"Olha, tipo assim, fiquei sem ar ao correr para o ônibus e recuperei totalmente ao parar, sabe?",baixo risco,D06-4
+"Olha, tipo assim, a corrida me deixou ofegante por pouco tempo; já respiro normalmente, sabe?",baixo risco,D06-4
+Então... eu acho que fiquei sem ar ao correr para o ônibus e recuperei totalmente ao parar.,baixo risco,D06-5
+Então... eu acho que a corrida me deixou ofegante por pouco tempo; já respiro normalmente.,baixo risco,D06-5
+"Oi, fiuqei sem ar ao correr para o ônibus e recuperei totalmente ao parar.",baixo risco,D06-6
+"Oi, a corrida me deixou ofegante por pouco tempo; já respiro normalmente.",baixo risco,D06-6
+A dor no ombro aparece só quando levanto uma caixa e cessa em repouso.,baixo risco,D07-1
+"O braço fica dolorido ao erguer peso, mas não tenho dor parado.",baixo risco,D07-1
+"Há algumas horas, a dor no ombro aparece só quando levanto uma caixa e cessa em repouso.",baixo risco,D07-2
+"Há algumas horas, o braço fica dolorido ao erguer peso, mas não tenho dor parado.",baixo risco,D07-2
+Percebi isso no meio do dia: a dor no ombro aparece só quando levanto uma caixa e cessa em repouso.,baixo risco,D07-3
+"Percebi isso no meio do dia: o braço fica dolorido ao erguer peso, mas não tenho dor parado.",baixo risco,D07-3
+"Olha, tipo assim, a dor no ombro aparece só quando levanto uma caixa e cessa em repouso, sabe?",baixo risco,D07-4
+"Olha, tipo assim, o braço fica dolorido ao erguer peso, mas não tenho dor parado, sabe?",baixo risco,D07-4
+Então... eu acho que a dor no ombro aparece só quando levanto uma caixa e cessa em repouso.,baixo risco,D07-5
+"Então... eu acho que o braço fica dolorido ao erguer peso, mas não tenho dor parado.",baixo risco,D07-5
+"Oi, a dorr no ombro aparece só quando levanto uma caixa e cessa em repouso.",baixo risco,D07-6
+"Oi, o braco fica dolorido ao erguer peso, mas não tenho dor parado.",baixo risco,D07-6
+Transpirei no sol e o suor cessou ao entrar na sombra.,baixo risco,D08-1
+O calor me fez suar; depois de beber água fiquei bem.,baixo risco,D08-1
+"Há algumas horas, transpirei no sol e o suor cessou ao entrar na sombra.",baixo risco,D08-2
+"Há algumas horas, o calor me fez suar; depois de beber água fiquei bem.",baixo risco,D08-2
+Percebi isso no meio do dia: transpirei no sol e o suor cessou ao entrar na sombra.,baixo risco,D08-3
+Percebi isso no meio do dia: o calor me fez suar; depois de beber água fiquei bem.,baixo risco,D08-3
+"Olha, tipo assim, transpirei no sol e o suor cessou ao entrar na sombra, sabe?",baixo risco,D08-4
+"Olha, tipo assim, o calor me fez suar; depois de beber água fiquei bem, sabe?",baixo risco,D08-4
+Então... eu acho que transpirei no sol e o suor cessou ao entrar na sombra.,baixo risco,D08-5
+Então... eu acho que o calor me fez suar; depois de beber água fiquei bem.,baixo risco,D08-5
+"Oi, transpirei no sol e o sour cessou ao entrar na sombra.",baixo risco,D08-6
+"Oi, o calor me fez suar; deopis de beber água fiquei bem.",baixo risco,D08-6
+A queimação apareceu após comer e passou sem falta de ar.,baixo risco,D09-1
+"Comi depressa, senti azia conhecida e agora estou normal.",baixo risco,D09-1
+"Há algumas horas, a queimação apareceu após comer e passou sem falta de ar.",baixo risco,D09-2
+"Há algumas horas, comi depressa, senti azia conhecida e agora estou normal.",baixo risco,D09-2
+Percebi isso no meio do dia: a queimação apareceu após comer e passou sem falta de ar.,baixo risco,D09-3
+"Percebi isso no meio do dia: comi depressa, senti azia conhecida e agora estou normal.",baixo risco,D09-3
+"Olha, tipo assim, a queimação apareceu após comer e passou sem falta de ar, sabe?",baixo risco,D09-4
+"Olha, tipo assim, comi depressa, senti azia conhecida e agora estou normal, sabe?",baixo risco,D09-4
+Então... eu acho que a queimação apareceu após comer e passou sem falta de ar.,baixo risco,D09-5
+"Então... eu acho que comi depressa, senti azia conhecida e agora estou normal.",baixo risco,D09-5
+"Oi, a queimação apareceu após comer e passou sem flata de ar.",baixo risco,D09-6
+"Oi, comi derpessa, senti azia conhecida e agora estou normal.",baixo risco,D09-6
+O relógio mostrou pulso rápido durante a bicicleta e normal depois.,baixo risco,D10-1
+Meu coração acelerou no exercício e voltou ao habitual no descanso.,baixo risco,D10-1
+"Há algumas horas, o relógio mostrou pulso rápido durante a bicicleta e normal depois.",baixo risco,D10-2
+"Há algumas horas, meu coração acelerou no exercício e voltou ao habitual no descanso.",baixo risco,D10-2
+Percebi isso no meio do dia: o relógio mostrou pulso rápido durante a bicicleta e normal depois.,baixo risco,D10-3
+Percebi isso no meio do dia: meu coração acelerou no exercício e voltou ao habitual no descanso.,baixo risco,D10-3
+"Olha, tipo assim, o relógio mostrou pulso rápido durante a bicicleta e normal depois, sabe?",baixo risco,D10-4
+"Olha, tipo assim, meu coração acelerou no exercício e voltou ao habitual no descanso, sabe?",baixo risco,D10-4
+Então... eu acho que o relógio mostrou pulso rápido durante a bicicleta e normal depois.,baixo risco,D10-5
+Então... eu acho que meu coração acelerou no exercício e voltou ao habitual no descanso.,baixo risco,D10-5
+"Oi, o reólgio mostrou pulso rápido durante a bicicleta e normal depois.",baixo risco,D10-6
+"Oi, meu corasão acelerou no exercício e voltou ao habitual no descanso.",baixo risco,D10-6
+A fala ficou esquisita porque mordi a língua e já melhorou.,baixo risco,D11-1
+"Falei com cuidado por uma feridinha na boca, sem fraqueza.",baixo risco,D11-1
+"Há algumas horas, a fala ficou esquisita porque mordi a língua e já melhorou.",baixo risco,D11-2
+"Há algumas horas, falei com cuidado por uma feridinha na boca, sem fraqueza.",baixo risco,D11-2
+Percebi isso no meio do dia: a fala ficou esquisita porque mordi a língua e já melhorou.,baixo risco,D11-3
+"Percebi isso no meio do dia: falei com cuidado por uma feridinha na boca, sem fraqueza.",baixo risco,D11-3
+"Olha, tipo assim, a fala ficou esquisita porque mordi a língua e já melhorou, sabe?",baixo risco,D11-4
+"Olha, tipo assim, falei com cuidado por uma feridinha na boca, sem fraqueza, sabe?",baixo risco,D11-4
+Então... eu acho que a fala ficou esquisita porque mordi a língua e já melhorou.,baixo risco,D11-5
+"Então... eu acho que falei com cuidado por uma feridinha na boca, sem fraqueza.",baixo risco,D11-5
+"Oi, a fala ficou esuqisita porque mordi a língua e já melhorou.",baixo risco,D11-6
+"Oi, falei com cudiado por uma feridinha na boca, sem fraqueza.",baixo risco,D11-6
+Tive tontura por dois segundos ao levantar e ela não voltou.,baixo risco,D12-1
+"A visão escureceu ao erguer rápido, sentei e fiquei bem.",baixo risco,D12-1
+"Há algumas horas, tive tontura por dois segundos ao levantar e ela não voltou.",baixo risco,D12-2
+"Há algumas horas, a visão escureceu ao erguer rápido, sentei e fiquei bem.",baixo risco,D12-2
+Percebi isso no meio do dia: tive tontura por dois segundos ao levantar e ela não voltou.,baixo risco,D12-3
+"Percebi isso no meio do dia: a visão escureceu ao erguer rápido, sentei e fiquei bem.",baixo risco,D12-3
+"Olha, tipo assim, tive tontura por dois segundos ao levantar e ela não voltou, sabe?",baixo risco,D12-4
+"Olha, tipo assim, a visão escureceu ao erguer rápido, sentei e fiquei bem, sabe?",baixo risco,D12-4
+Então... eu acho que tive tontura por dois segundos ao levantar e ela não voltou.,baixo risco,D12-5
+"Então... eu acho que a visão escureceu ao erguer rápido, sentei e fiquei bem.",baixo risco,D12-5
+"Oi, tive totnura por dois segundos ao levantar e ela não voltou.",baixo risco,D12-6
+"Oi, a visão esucreceu ao erguer rápido, sentei e fiquei bem.",baixo risco,D12-6
+"Minha irmã sentiu falta de ar, mas eu respiro normalmente.",baixo risco,D13-1
+Quem ficou sem fôlego foi outra pessoa; comigo está tudo bem.,baixo risco,D13-1
+"Há algumas horas, minha irmã sentiu falta de ar, mas eu respiro normalmente.",baixo risco,D13-2
+"Há algumas horas, quem ficou sem fôlego foi outra pessoa; comigo está tudo bem.",baixo risco,D13-2
+"Percebi isso no meio do dia: minha irmã sentiu falta de ar, mas eu respiro normalmente.",baixo risco,D13-3
+Percebi isso no meio do dia: quem ficou sem fôlego foi outra pessoa; comigo está tudo bem.,baixo risco,D13-3
+"Olha, tipo assim, minha irmã sentiu falta de ar, mas eu respiro normalmente, sabe?",baixo risco,D13-4
+"Olha, tipo assim, quem ficou sem fôlego foi outra pessoa; comigo está tudo bem, sabe?",baixo risco,D13-4
+"Então... eu acho que minha irmã sentiu falta de ar, mas eu respiro normalmente.",baixo risco,D13-5
+Então... eu acho que quem ficou sem fôlego foi outra pessoa; comigo está tudo bem.,baixo risco,D13-5
+"Oi, minha irmã sentiu flata de ar, mas eu respiro normalmente.",baixo risco,D13-6
+"Oi, quem ficou sem fôelgo foi outra pessoa; comigo está tudo bem.",baixo risco,D13-6
+O cinto apertou o peito e a marca sumiu quando o soltei.,baixo risco,D14-1
+A pressão era só do cinto de segurança e desapareceu.,baixo risco,D14-1
+"Há algumas horas, o cinto apertou o peito e a marca sumiu quando o soltei.",baixo risco,D14-2
+"Há algumas horas, a pressão era só do cinto de segurança e desapareceu.",baixo risco,D14-2
+Percebi isso no meio do dia: o cinto apertou o peito e a marca sumiu quando o soltei.,baixo risco,D14-3
+Percebi isso no meio do dia: a pressão era só do cinto de segurança e desapareceu.,baixo risco,D14-3
+"Olha, tipo assim, o cinto apertou o peito e a marca sumiu quando o soltei, sabe?",baixo risco,D14-4
+"Olha, tipo assim, a pressão era só do cinto de segurança e desapareceu, sabe?",baixo risco,D14-4
+Então... eu acho que o cinto apertou o peito e a marca sumiu quando o soltei.,baixo risco,D14-5
+Então... eu acho que a pressão era só do cinto de segurança e desapareceu.,baixo risco,D14-5
+"Oi, o cinto apertou o peitto e a marca sumiu quando o soltei.",baixo risco,D14-6
+"Oi, a presão era só do cinto de segurança e desapareceu.",baixo risco,D14-6
+O nariz entupiu com poeira mas consigo respirar sem dificuldade.,baixo risco,D15-1
+Espirrei na limpeza e continuo respirando normalmente.,baixo risco,D15-1
+"Há algumas horas, o nariz entupiu com poeira mas consigo respirar sem dificuldade.",baixo risco,D15-2
+"Há algumas horas, espirrei na limpeza e continuo respirando normalmente.",baixo risco,D15-2
+Percebi isso no meio do dia: o nariz entupiu com poeira mas consigo respirar sem dificuldade.,baixo risco,D15-3
+Percebi isso no meio do dia: espirrei na limpeza e continuo respirando normalmente.,baixo risco,D15-3
+"Olha, tipo assim, o nariz entupiu com poeira mas consigo respirar sem dificuldade, sabe?",baixo risco,D15-4
+"Olha, tipo assim, espirrei na limpeza e continuo respirando normalmente, sabe?",baixo risco,D15-4
+Então... eu acho que o nariz entupiu com poeira mas consigo respirar sem dificuldade.,baixo risco,D15-5
+Então... eu acho que espirrei na limpeza e continuo respirando normalmente.,baixo risco,D15-5
+"Oi, o nariz entupiu com poeira mas consigo respriar sem dificuldade.",baixo risco,D15-6
+"Oi, esiprrei na limpeza e continuo respirando normalmente.",baixo risco,D15-6
+Senti o peito sensível onde a mochila bateu e a dor já cessou.,baixo risco,D16-1
+A alça fez uma marca superficial no tórax que passou.,baixo risco,D16-1
+"Há algumas horas, senti o peito sensível onde a mochila bateu e a dor já cessou.",baixo risco,D16-2
+"Há algumas horas, a alça fez uma marca superficial no tórax que passou.",baixo risco,D16-2
+Percebi isso no meio do dia: senti o peito sensível onde a mochila bateu e a dor já cessou.,baixo risco,D16-3
+Percebi isso no meio do dia: a alça fez uma marca superficial no tórax que passou.,baixo risco,D16-3
+"Olha, tipo assim, senti o peito sensível onde a mochila bateu e a dor já cessou, sabe?",baixo risco,D16-4
+"Olha, tipo assim, a alça fez uma marca superficial no tórax que passou, sabe?",baixo risco,D16-4
+Então... eu acho que senti o peito sensível onde a mochila bateu e a dor já cessou.,baixo risco,D16-5
+Então... eu acho que a alça fez uma marca superficial no tórax que passou.,baixo risco,D16-5
+"Oi, senti o peitto sensível onde a mochila bateu e a dor já cessou.",baixo risco,D16-6
+"Oi, a alça fez uma marca superficial no torax que passou.",baixo risco,D16-6
+O café acelerou brevemente as batidas sem tontura ou dor.,baixo risco,D17-1
+Percebi palpitação curta após cafeína e agora me sinto normal.,baixo risco,D17-1
+"Há algumas horas, o café acelerou brevemente as batidas sem tontura ou dor.",baixo risco,D17-2
+"Há algumas horas, percebi palpitação curta após cafeína e agora me sinto normal.",baixo risco,D17-2
+Percebi isso no meio do dia: o café acelerou brevemente as batidas sem tontura ou dor.,baixo risco,D17-3
+Percebi isso no meio do dia: percebi palpitação curta após cafeína e agora me sinto normal.,baixo risco,D17-3
+"Olha, tipo assim, o café acelerou brevemente as batidas sem tontura ou dor, sabe?",baixo risco,D17-4
+"Olha, tipo assim, percebi palpitação curta após cafeína e agora me sinto normal, sabe?",baixo risco,D17-4
+Então... eu acho que o café acelerou brevemente as batidas sem tontura ou dor.,baixo risco,D17-5
+Então... eu acho que percebi palpitação curta após cafeína e agora me sinto normal.,baixo risco,D17-5
+"Oi, o café acelerou brevemente as batidas sem totnura ou dor.",baixo risco,D17-6
+"Oi, pecrebi palpitação curta após cafeína e agora me sinto normal.",baixo risco,D17-6
+A falta de ar que mencionei era modo de falar; respiro bem.,baixo risco,D18-1
+Usei uma expressão exagerada mas não tive dificuldade respiratória.,baixo risco,D18-1
+"Há algumas horas, a falta de ar que mencionei era modo de falar; respiro bem.",baixo risco,D18-2
+"Há algumas horas, usei uma expressão exagerada mas não tive dificuldade respiratória.",baixo risco,D18-2
+Percebi isso no meio do dia: a falta de ar que mencionei era modo de falar; respiro bem.,baixo risco,D18-3
+Percebi isso no meio do dia: usei uma expressão exagerada mas não tive dificuldade respiratória.,baixo risco,D18-3
+"Olha, tipo assim, a falta de ar que mencionei era modo de falar; respiro bem, sabe?",baixo risco,D18-4
+"Olha, tipo assim, usei uma expressão exagerada mas não tive dificuldade respiratória, sabe?",baixo risco,D18-4
+Então... eu acho que a falta de ar que mencionei era modo de falar; respiro bem.,baixo risco,D18-5
+Então... eu acho que usei uma expressão exagerada mas não tive dificuldade respiratória.,baixo risco,D18-5
+"Oi, a flata de ar que mencionei era modo de falar; respiro bem.",baixo risco,D18-6
+"Oi, usei uma exrpessão exagerada mas não tive dificuldade respiratória.",baixo risco,D18-6
+Senti uma fisgada ao girar o tronco e passou quando parei.,baixo risco,D19-1
+A pontada apareceu só no movimento e sumiu logo.,baixo risco,D19-1
+"Há algumas horas, senti uma fisgada ao girar o tronco e passou quando parei.",baixo risco,D19-2
+"Há algumas horas, a pontada apareceu só no movimento e sumiu logo.",baixo risco,D19-2
+Percebi isso no meio do dia: senti uma fisgada ao girar o tronco e passou quando parei.,baixo risco,D19-3
+Percebi isso no meio do dia: a pontada apareceu só no movimento e sumiu logo.,baixo risco,D19-3
+"Olha, tipo assim, senti uma fisgada ao girar o tronco e passou quando parei, sabe?",baixo risco,D19-4
+"Olha, tipo assim, a pontada apareceu só no movimento e sumiu logo, sabe?",baixo risco,D19-4
+Então... eu acho que senti uma fisgada ao girar o tronco e passou quando parei.,baixo risco,D19-5
+Então... eu acho que a pontada apareceu só no movimento e sumiu logo.,baixo risco,D19-5
+"Oi, senti uma figsada ao girar o tronco e passou quando parei.",baixo risco,D19-6
+"Oi, a potnada apareceu só no movimento e sumiu logo.",baixo risco,D19-6
+O suor veio do treino e parou junto com a respiração rápida.,baixo risco,D20-1
+"Depois de descansar do exercício, o suor cessou e fiquei bem.",baixo risco,D20-1
+"Há algumas horas, o suor veio do treino e parou junto com a respiração rápida.",baixo risco,D20-2
+"Há algumas horas, depois de descansar do exercício, o suor cessou e fiquei bem.",baixo risco,D20-2
+Percebi isso no meio do dia: o suor veio do treino e parou junto com a respiração rápida.,baixo risco,D20-3
+"Percebi isso no meio do dia: depois de descansar do exercício, o suor cessou e fiquei bem.",baixo risco,D20-3
+"Olha, tipo assim, o suor veio do treino e parou junto com a respiração rápida, sabe?",baixo risco,D20-4
+"Olha, tipo assim, depois de descansar do exercício, o suor cessou e fiquei bem, sabe?",baixo risco,D20-4
+Então... eu acho que o suor veio do treino e parou junto com a respiração rápida.,baixo risco,D20-5
+"Então... eu acho que depois de descansar do exercício, o suor cessou e fiquei bem.",baixo risco,D20-5
+"Oi, o sour veio do treino e parou junto com a respiração rápida.",baixo risco,D20-6
+"Oi, depois de descansar do exercício, o sour cessou e fiquei bem.",baixo risco,D20-6
+Minha voz saiu arrastada por sono e normalizou após descansar.,baixo risco,D21-1
+Eu estava sonolento e falei devagar; acordei bem e sem fraqueza.,baixo risco,D21-1
+"Há algumas horas, minha voz saiu arrastada por sono e normalizou após descansar.",baixo risco,D21-2
+"Há algumas horas, eu estava sonolento e falei devagar; acordei bem e sem fraqueza.",baixo risco,D21-2
+Percebi isso no meio do dia: minha voz saiu arrastada por sono e normalizou após descansar.,baixo risco,D21-3
+Percebi isso no meio do dia: eu estava sonolento e falei devagar; acordei bem e sem fraqueza.,baixo risco,D21-3
+"Olha, tipo assim, minha voz saiu arrastada por sono e normalizou após descansar, sabe?",baixo risco,D21-4
+"Olha, tipo assim, eu estava sonolento e falei devagar; acordei bem e sem fraqueza, sabe?",baixo risco,D21-4
+Então... eu acho que minha voz saiu arrastada por sono e normalizou após descansar.,baixo risco,D21-5
+Então... eu acho que eu estava sonolento e falei devagar; acordei bem e sem fraqueza.,baixo risco,D21-5
+"Oi, minha voz saiu ararstada por sono e normalizou após descansar.",baixo risco,D21-6
+"Oi, eu esatva sonolento e falei devagar; acordei bem e sem fraqueza.",baixo risco,D21-6
+A pressão no peito era da faixa da mochila e sumiu ao tirá-la.,baixo risco,D22-1
+"A mochila comprimia o tórax, mas sem ela não sinto nada.",baixo risco,D22-1
+"Há algumas horas, a pressão no peito era da faixa da mochila e sumiu ao tirá-la.",baixo risco,D22-2
+"Há algumas horas, a mochila comprimia o tórax, mas sem ela não sinto nada.",baixo risco,D22-2
+Percebi isso no meio do dia: a pressão no peito era da faixa da mochila e sumiu ao tirá-la.,baixo risco,D22-3
+"Percebi isso no meio do dia: a mochila comprimia o tórax, mas sem ela não sinto nada.",baixo risco,D22-3
+"Olha, tipo assim, a pressão no peito era da faixa da mochila e sumiu ao tirá-la, sabe?",baixo risco,D22-4
+"Olha, tipo assim, a mochila comprimia o tórax, mas sem ela não sinto nada, sabe?",baixo risco,D22-4
+Então... eu acho que a pressão no peito era da faixa da mochila e sumiu ao tirá-la.,baixo risco,D22-5
+"Então... eu acho que a mochila comprimia o tórax, mas sem ela não sinto nada.",baixo risco,D22-5
+"Oi, a pressão no peitto era da faixa da mochila e sumiu ao tirá-la.",baixo risco,D22-6
+"Oi, a mochila comprimia o torax, mas sem ela não sinto nada.",baixo risco,D22-6
+O coração disparou na apresentação e acalmou no fim.,baixo risco,D23-1
+Fiquei nervoso ao falar em público e as batidas já normalizaram.,baixo risco,D23-1
+"Há algumas horas, o coração disparou na apresentação e acalmou no fim.",baixo risco,D23-2
+"Há algumas horas, fiquei nervoso ao falar em público e as batidas já normalizaram.",baixo risco,D23-2
+Percebi isso no meio do dia: o coração disparou na apresentação e acalmou no fim.,baixo risco,D23-3
+Percebi isso no meio do dia: fiquei nervoso ao falar em público e as batidas já normalizaram.,baixo risco,D23-3
+"Olha, tipo assim, o coração disparou na apresentação e acalmou no fim, sabe?",baixo risco,D23-4
+"Olha, tipo assim, fiquei nervoso ao falar em público e as batidas já normalizaram, sabe?",baixo risco,D23-4
+Então... eu acho que o coração disparou na apresentação e acalmou no fim.,baixo risco,D23-5
+Então... eu acho que fiquei nervoso ao falar em público e as batidas já normalizaram.,baixo risco,D23-5
+"Oi, o corasão disparou na apresentação e acalmou no fim.",baixo risco,D23-6
+"Oi, fiquei nervoso ao falar em público e as batids já normalizaram.",baixo risco,D23-6
+Não tive dor no peito nem suor frio; só uma coceira leve no braço.,baixo risco,D24-1
+Meu tórax está bem e a única queixa é pele ressecada.,baixo risco,D24-1
+"Há algumas horas, não tive dor no peito nem suor frio; só uma coceira leve no braço.",baixo risco,D24-2
+"Há algumas horas, meu tórax está bem e a única queixa é pele ressecada.",baixo risco,D24-2
+Percebi isso no meio do dia: não tive dor no peito nem suor frio; só uma coceira leve no braço.,baixo risco,D24-3
+Percebi isso no meio do dia: meu tórax está bem e a única queixa é pele ressecada.,baixo risco,D24-3
+"Olha, tipo assim, não tive dor no peito nem suor frio; só uma coceira leve no braço, sabe?",baixo risco,D24-4
+"Olha, tipo assim, meu tórax está bem e a única queixa é pele ressecada, sabe?",baixo risco,D24-4
+Então... eu acho que não tive dor no peito nem suor frio; só uma coceira leve no braço.,baixo risco,D24-5
+Então... eu acho que meu tórax está bem e a única queixa é pele ressecada.,baixo risco,D24-5
+"Oi, não tive dor no peitto nem suor frio; só uma coceira leve no braço.",baixo risco,D24-6
+"Oi, meu torax está bem e a única queixa é pele ressecada.",baixo risco,D24-6

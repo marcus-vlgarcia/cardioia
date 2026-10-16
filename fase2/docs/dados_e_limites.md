@@ -2,15 +2,18 @@
 
 ## O que é simulado
 
-Os dez relatos obrigatórios, as 416 frases da base principal, os desafios, os
+Os dez relatos obrigatórios, as 992 frases da base principal, os desafios, os
 pares de gravidade e a auditoria de subgrupos são exemplos simulados. Não são
-prontuários, transcrições ou registros de atendimento. O balanceamento de 208
+prontuários, transcrições ou registros de atendimento. O balanceamento de 496
 frases por classe foi escolhido para o exercício e não representa prevalência.
 
-Os 128 novos exemplos aumentam a variedade de redação com fala coloquial,
-contexto temporal, relato de terceiros, esforço, recuperação, persistência,
-negações duplas e informações contraditórias. Ainda há autoria compartilhada e
-vocabulário repetido, portanto 416 frases não equivalem a 416 pacientes.
+As 576 frases adicionadas nesta ampliação combinam duas redações de 48 situações
+com seis formas de relato: direto, temporal, cotidiano, coloquial, hesitante e
+com erro ortográfico controlado. As 128 frases da revisão anterior já traziam
+relato de terceiros, esforço, recuperação, persistência, negações duplas e
+contradições. Ainda há autoria compartilhada e vocabulário repetido; 992
+frases não equivalem a 992 pacientes. O teste de 264 frases deriva de apenas
+22 famílias novas de situações.
 
 ## Avaliação baseada em fontes externas
 
@@ -34,8 +37,8 @@ Fontes principais, consultadas em 16/10/2026:
 - `baixo risco`: descrição explicitamente leve, localizada ou completamente
   resolvida no exemplo, sem combinação de alertas. O rótulo não exclui doença e
   não significa que uma pessoa real possa dispensar avaliação.
-- `grupo`: identifica duas paráfrases do mesmo cenário e impede vazamento entre
-  partições.
+- `grupo`: identifica duas redações do mesmo cenário; `familia` reúne também
+  as seis variações. A partição é feita por família para reduzir vazamento.
 
 Os rótulos não vêm do alvo numérico artificial da Fase 1 e não são produzidos
 pelo extrator de sintomas.

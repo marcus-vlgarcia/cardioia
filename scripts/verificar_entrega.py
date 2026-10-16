@@ -50,8 +50,8 @@ def main():
     mapa = ler_csv(fase / "data/mapa_conhecimento.csv")
     exigir(len(mapa) == 83 and all(all(linha.values()) for linha in mapa), "Mapa incompleto.")
     dados = ler_csv(fase / "data/frases_risco.csv")
-    exigir(len(dados) == 416, "Quantidade de frases inesperada.")
-    exigir(Counter(r["situacao"] for r in dados) == {"alto risco": 208, "baixo risco": 208},
+    exigir(len(dados) == 992, "Quantidade de frases inesperada.")
+    exigir(Counter(r["situacao"] for r in dados) == {"alto risco": 496, "baixo risco": 496},
            "Distribuição de classes divergente.")
     exigir(len({r["frase"].casefold().strip() for r in dados}) == len(dados), "Frases duplicadas.")
     grupos = defaultdict(list)
@@ -64,8 +64,15 @@ def main():
     exigir(len(particoes) == len(linhas_particoes) and set(particoes) == set(grupos),
            "Manifesto de partições inconsistente.")
     exigir(Counter(particoes[r["grupo"]] for r in dados) ==
-           {"treino": 256, "calibracao": 16, "teste": 64, "regressao": 80},
+           {"treino": 496, "calibracao": 88, "teste": 264, "regressao": 144},
            "Divisão de treino/teste/regressão divergente.")
+    familias = defaultdict(set)
+    for linha in linhas_particoes:
+        familias[linha["familia"]].add(linha["conjunto"])
+    exigir(all(len(conjuntos) == 1 for conjuntos in familias.values()),
+           "Família de cenários distribuída entre partições.")
+    exigir(len([r for r in linhas_particoes if r["variacao"] == "erro_ortografico" and
+                r["conjunto"] == "teste"]) == 22, "Faltam exemplos com erro ortográfico no teste.")
     externos = ler_csv(fase / "data/avaliacao_externa.csv")
     exigir(len(externos) == 32 and all(r["fonte"].startswith("https://") for r in externos),
            "Avaliação externa incompleta ou sem fontes.")
@@ -101,13 +108,16 @@ def main():
     exigir(matriz == metricas["teste"]["matriz_confusao"], "Matriz de confusão divergente.")
     acuracia = sum(matriz[i][i] for i in range(2)) / len(predicoes)
     exigir(abs(acuracia - metricas["teste"]["acuracia"]) < 1e-12, "Acurácia divergente.")
+    variacoes = ler_csv(fase / "outputs/metricas_variacoes.csv")
+    exigir(len(variacoes) == 6 and sum(int(r["n"]) for r in variacoes) == 264,
+           "Análise por tipo de linguagem incompleta.")
     notebook = json.loads((fase / "notebooks/classificador_risco.ipynb").read_text(encoding="utf-8"))
     for celula in notebook["cells"]:
         if celula["cell_type"] == "code":
             exigir(celula.get("execution_count") is not None, "Notebook sem execução completa.")
             exigir(not any(o["output_type"] == "error" for o in celula["outputs"]), "Notebook com erro.")
     exigir((fase / "outputs/curva_calibracao.png").stat().st_size > 0, "Curva de calibração ausente.")
-    print(f"Fase 2: 10 relatos, 83 associações, 416 frases; teste ampliado, avaliações complementares, notebook e métricas válidos ({acuracia:.2%}).")
+    print(f"Fase 2: 10 relatos, 83 associações, 992 frases; teste de 264 frases, avaliações complementares, notebook e métricas válidos ({acuracia:.2%}).")
     print("O vídeo e o acesso público aos links devem ser conferidos na entrega; este script verifica arquivos locais.")
 
 
