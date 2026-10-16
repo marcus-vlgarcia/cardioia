@@ -17,34 +17,38 @@ continuam abaixo como registro da preparação dos dados.
 | 10 relatos completos | [relatos_sintomas.txt](fase2/data/relatos_sintomas.txt) |
 | Mapa de conhecimento com 83 associações | [mapa_conhecimento.csv](fase2/data/mapa_conhecimento.csv) |
 | Código Python de extração | [extrair_sintomas.py](fase2/src/extrair_sintomas.py) |
-| Base simulada com 288 frases rotuladas | [frases_risco.csv](fase2/data/frases_risco.csv) |
+| Base simulada com 416 frases rotuladas | [frases_risco.csv](fase2/data/frases_risco.csv) |
 | Notebook executado: TF-IDF, treinamento e avaliação | [classificador_risco.ipynb](fase2/notebooks/classificador_risco.ipynb) |
 | Instalação e execução | [Guia da Fase 2](fase2/README.md) |
 | Resultados e análise dos erros | [Análise da avaliação](fase2/docs/avaliacao.md) |
 | Fontes, critérios dos rótulos e vieses | [Dados e limites](fase2/docs/dados_e_limites.md) |
+| Resposta ao feedback | [Evolução após a avaliação](fase2/docs/feedback_fase2.md) |
 
 ### Vídeo de demonstração
 
 [Assista ao vídeo de demonstração da Fase 2](https://youtu.be/L3uZMKG7ZUc)
 (3min07s, YouTube não listado).
 
-### Resultados da Fase 2
+### Evolução da Fase 2 após a avaliação
 
-Após ampliar a base para 288 frases, o modelo usa 208 para treino, 24 para teste
-final e 56 dos testes já analisados como regressão. A configuração e o limiar de
-triagem foram escolhidos somente no treino. No teste final, atingiu **91,7% (22/24)**,
-contra 50% do baseline, com recall de alto risco de 100%, nenhum falso negativo e
-dois falsos positivos. O conjunto é pequeno e sintético; a [avaliação completa](fase2/docs/avaliacao.md)
-registra as limitações, os erros e os próximos passos.
+A versão que recebeu nota máxima está preservada na branch `fase2-entrega`. A
+revisão atual aplica o feedback antes do desenvolvimento da Fase 3: a base passou
+para 416 frases, o teste final cresceu de 24 para 64 exemplos e foram adicionados
+conjuntos separados para avaliação externa, pares de gravidade, calibração e
+auditoria de subgrupos. No teste ampliado, o modelo atingiu **89,1% (57/64)**,
+com recall de alto risco de 93,8%. A redução em relação aos 91,7% anteriores é
+esperada em uma avaliação maior e mais difícil; os sete erros permanecem
+documentados na [avaliação completa](fase2/docs/avaliacao.md).
 
 ![Matriz de confusão do teste](fase2/outputs/matriz_confusao.png)
 
 ### Complementos e revisão de entrega
 
-Além do mínimo solicitado, a Fase 2 inclui o mapa ampliado, coleta interativa
-com três perguntas, histórico local, tratamento de negações, comparação de
-configurações e limiares, testes de regressão e análise de sensibilidade textual
-à identidade. Esses experimentos não validam uso clínico ou fairness demográfica.
+Além do mínimo solicitado, a Fase 2 inclui o mapa ampliado, coleta interativa,
+histórico local, negações complexas, contradições, análise de contribuições dos
+termos, calibração experimental e auditoria por sexo referido e faixa etária.
+A ficha para validação especializada foi criada, mas permanece honestamente
+pendente. Esses experimentos não validam uso clínico ou fairness demográfica.
 
 As duas fases podem ser verificadas sem alterar seus dados com
 `python scripts/verificar_entrega.py`: o script confere as quantidades, os hashes

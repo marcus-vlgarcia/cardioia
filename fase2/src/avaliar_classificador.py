@@ -1,0 +1,217 @@
+"""Treina e avalia a revisão do classificador textual da Fase 2."""
+
+import hashlib
+import json
+import platform
+from pathlib import Path
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import sklearn
+from sklearn.calibration import CalibratedClassifierCV, calibration_curve
+from sklearn.dummy import DummyClassifier
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.frozen import FrozenEstimator
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import (accuracy_score, brier_score_loss, classification_report,
+                             confusion_matrix, ConfusionMatrixDisplay, f1_score, log_loss,
+                             precision_score, recall_score)
+from sklearn.model_selection import GridSearchCV, StratifiedGroupKFold
+from sklearn.pipeline import Pipeline
+
+from preprocessar_texto import preparar_texto
+
+
+RAIZ = Path(__file__).resolve().parents[1]
+SAIDA = RAIZ / "outputs"
+CLASSES = ["baixo risco", "alto risco"]
+SEED = 42
+
+
+def ler(nome):
+    return pd.read_csv(RAIZ / "data" / nome)
+
+
+def criar_modelo():
+    return Pipeline([
+        ("tfidf", TfidfVectorizer(preprocessor=preparar_texto, lowercase=False, ngram_range=(1, 2))),
+        ("classificador", LogisticRegression(max_iter=1500, random_state=SEED)),
+    ])
+
+
+def prever(modelo, frases, limiar=0.5):
+    probabilidades = modelo.predict_proba(frases)[:, list(modelo.classes_).index("alto risco")]
+    return np.where(probabilidades >= limiar, "alto risco", "baixo risco"), probabilidades
+
+
+def metricas_binarias(esperado, previsto):
+    matriz = confusion_matrix(esperado, previsto, labels=CLASSES)
+    return {
+        "n": int(len(esperado)),
+        "acuracia": float(accuracy_score(esperado, previsto)),
+        "precisao_alto_risco": float(precision_score(esperado, previsto, pos_label="alto risco", zero_division=0)),
+        "recall_alto_risco": float(recall_score(esperado, previsto, pos_label="alto risco", zero_division=0)),
+        "f1_macro": float(f1_score(esperado, previsto, average="macro", zero_division=0)),
+        "falsos_negativos": int(matriz[1, 0]),
+        "falsos_positivos": int(matriz[0, 1]),
+        "matriz_confusao": matriz.tolist(),
+    }
+
+
+def explicar_frase(modelo_base, frase, limite=8):
+    vetor = modelo_base.named_steps["tfidf"]
+    classificador = modelo_base.named_steps["classificador"]
+    linha = vetor.transform([frase])
+    termos = vetor.get_feature_names_out()
+    contribuicoes = linha.multiply(classificador.coef_[0]).tocoo()
+    itens = sorted(((termos[coluna], valor) for coluna, valor in zip(contribuicoes.col, contribuicoes.data)),
+                   key=lambda item: abs(item[1]), reverse=True)[:limite]
+    positivos = [f"{termo} ({valor:.3f})" for termo, valor in itens if valor > 0]
+    negativos = [f"{termo} ({valor:.3f})" for termo, valor in itens if valor < 0]
+    return " | ".join(positivos), " | ".join(negativos)
+
+
+def avaliar_conjunto(modelo, dados, nome, campo_esperado="situacao"):
+    resultado = dados.copy()
+    resultado["predicao"], resultado["probabilidade_alto_risco"] = prever(modelo, resultado.frase)
+    resultado["acerto"] = resultado[campo_esperado] == resultado.predicao
+    resultado.to_csv(SAIDA / f"predicoes_{nome}.csv", index=False)
+    return resultado, metricas_binarias(resultado[campo_esperado], resultado.predicao)
+
+
+def main():
+    SAIDA.mkdir(exist_ok=True)
+    dados = ler("frases_risco.csv")
+    particoes = ler("particoes.csv")
+    assert not dados.isna().any().any()
+    assert set(dados.situacao) == set(CLASSES)
+    assert not dados.frase.str.casefold().str.strip().duplicated().any()
+    assert dados.groupby("grupo").situacao.nunique().eq(1).all()
+    assert not particoes.grupo.duplicated().any() and set(particoes.grupo) == set(dados.grupo)
+    dados = dados.merge(particoes, on="grupo", validate="many_to_one")
+    conjuntos = {nome: dados[dados.conjunto == nome].copy()
+                 for nome in ("treino", "calibracao", "teste", "regressao")}
+    assert tuple(len(conjuntos[n]) for n in conjuntos) == (256, 16, 64, 80)
+    dados[["frase", "situacao", "grupo", "conjunto"]].to_csv(SAIDA / "divisao_dados.csv", index=False)
+
+    treino = conjuntos["treino"]
+    cv = StratifiedGroupKFold(n_splits=4, shuffle=True, random_state=SEED)
+    busca = GridSearchCV(criar_modelo(), {
+        "tfidf__ngram_range": [(1, 2), (1, 3)],
+        "classificador__C": [1.0, 4.0],
+        "classificador__class_weight": [None, "balanced"],
+    }, cv=cv, scoring={"acuracia": "accuracy", "f1_macro": "f1_macro"}, refit="f1_macro")
+    busca.fit(treino.frase, treino.situacao, groups=treino.grupo)
+    base = busca.best_estimator_
+    comparacao = pd.DataFrame(busca.cv_results_)
+    comparacao.to_csv(SAIDA / "comparacao_cv.csv", index=False)
+
+    # O calibrador vê apenas o conjunto reservado para calibração. O teste final
+    # continua sem participação no treinamento, na seleção ou na calibração.
+    calibrado = CalibratedClassifierCV(FrozenEstimator(base), method="sigmoid")
+    calibrado.fit(conjuntos["calibracao"].frase, conjuntos["calibracao"].situacao)
+
+    teste, met_teste = avaliar_conjunto(calibrado, conjuntos["teste"], "teste")
+    regressao, met_regressao = avaliar_conjunto(calibrado, conjuntos["regressao"], "regressao")
+    externo, met_externo = avaliar_conjunto(calibrado, ler("avaliacao_externa.csv"), "externas")
+    pares, met_pares = avaliar_conjunto(calibrado, ler("pares_gravidade.csv"), "pares_gravidade")
+    subgrupos, met_subgrupos = avaliar_conjunto(calibrado, ler("avaliacao_subgrupos.csv"), "subgrupos")
+    desafios, met_desafios = avaliar_conjunto(calibrado, ler("desafios.csv").rename(columns={"esperado": "situacao"}),
+                                               "desafios")
+
+    matriz = np.array(met_teste["matriz_confusao"])
+    ConfusionMatrixDisplay(matriz, display_labels=CLASSES).plot(cmap="Blues")
+    plt.title("Teste final ampliado — frases simuladas")
+    plt.xlabel("Classe prevista")
+    plt.ylabel("Classe esperada")
+    plt.tight_layout()
+    plt.savefig(SAIDA / "matriz_confusao.png", dpi=160)
+    plt.close()
+
+    prob_base = base.predict_proba(conjuntos["teste"].frase)[:, list(base.classes_).index("alto risco")]
+    prob_cal = teste.probabilidade_alto_risco.to_numpy()
+    y_bin = (teste.situacao == "alto risco").astype(int).to_numpy()
+    calibracao = pd.DataFrame([
+        {"modelo": "regressao_logistica", "brier": brier_score_loss(y_bin, prob_base),
+         "log_loss": log_loss(y_bin, prob_base)},
+        {"modelo": "regressao_logistica_calibrada", "brier": brier_score_loss(y_bin, prob_cal),
+         "log_loss": log_loss(y_bin, prob_cal)},
+    ])
+    calibracao.to_csv(SAIDA / "metricas_calibracao.csv", index=False)
+    plt.figure(figsize=(6.4, 4.8))
+    for probabilidades, rotulo in ((prob_base, "Sem calibração"), (prob_cal, "Calibração sigmoide")):
+        observado, previsto = calibration_curve(y_bin, probabilidades, n_bins=5, strategy="quantile")
+        plt.plot(previsto, observado, marker="o", label=rotulo)
+    plt.plot([0, 1], [0, 1], "--", color="gray", label="Referência ideal")
+    plt.xlabel("Probabilidade média prevista")
+    plt.ylabel("Fração observada de alto risco")
+    plt.title("Curva de calibração — teste final")
+    plt.legend()
+    plt.tight_layout()
+    plt.savefig(SAIDA / "curva_calibracao.png", dpi=160)
+    plt.close()
+
+    vetor = base.named_steps["tfidf"]
+    classificador = base.named_steps["classificador"]
+    pd.DataFrame({"termo": vetor.get_feature_names_out(), "coeficiente": classificador.coef_[0]}).to_csv(
+        SAIDA / "coeficientes.csv", index=False)
+
+    erros = teste[~teste.acerto].copy()
+    investigados = pd.concat([erros, regressao[regressao.grupo == "B69"]], ignore_index=True).drop_duplicates("frase")
+    explicacoes = [explicar_frase(base, frase) for frase in investigados.frase]
+    investigados["termos_favor_alto_risco"] = [x[0] for x in explicacoes]
+    investigados["termos_favor_baixo_risco"] = [x[1] for x in explicacoes]
+    investigados["observacao"] = np.where(investigados.grupo.eq("B69"),
+        "Falso positivo histórico: suor de exercício já resolvido; verificar peso lexical de suor/treino.",
+        "Erro do teste ampliado; contribuições são explicações locais do modelo, não causas clínicas.")
+    investigados.to_csv(SAIDA / "investigacao_erros.csv", index=False)
+
+    linhas_subgrupo = []
+    for dimensao in ("sexo_referido", "faixa_etaria"):
+        for valor, grupo in subgrupos.groupby(dimensao):
+            linhas_subgrupo.append({"dimensao": dimensao, "grupo": valor,
+                                    **metricas_binarias(grupo.situacao, grupo.predicao)})
+    tabela_subgrupos = pd.DataFrame(linhas_subgrupo)
+    tabela_subgrupos["matriz_confusao"] = tabela_subgrupos.matriz_confusao.map(json.dumps)
+    tabela_subgrupos.to_csv(SAIDA / "metricas_subgrupos.csv", index=False)
+    gaps = {}
+    for dimensao, grupo in tabela_subgrupos.groupby("dimensao"):
+        gaps[dimensao] = {
+            "gap_acuracia": float(grupo.acuracia.max() - grupo.acuracia.min()),
+            "gap_recall_alto_risco": float(grupo.recall_alto_risco.max() - grupo.recall_alto_risco.min()),
+            "gap_falsos_positivos": int(grupo.falsos_positivos.max() - grupo.falsos_positivos.min()),
+        }
+
+    dummy = DummyClassifier(strategy="most_frequent").fit(treino[["grupo"]], treino.situacao)
+    baseline = accuracy_score(conjuntos["teste"].situacao, dummy.predict(conjuntos["teste"][["grupo"]]))
+    metricas = {
+        "seed": SEED,
+        "quantidades": {nome: len(df) for nome, df in conjuntos.items()},
+        "grupos": {nome: int(df.grupo.nunique()) for nome, df in conjuntos.items()},
+        "baseline_acuracia": float(baseline),
+        "melhores_parametros": busca.best_params_,
+        "teste": met_teste,
+        "regressao": met_regressao,
+        "avaliacao_externa": met_externo,
+        "pares_gravidade": met_pares,
+        "desafios_legados": met_desafios,
+        "auditoria_subgrupos_geral": met_subgrupos,
+        "gaps_subgrupos": gaps,
+        "calibracao": calibracao.to_dict(orient="records"),
+        "relatorio_teste": classification_report(teste.situacao, teste.predicao, labels=CLASSES,
+                                                   output_dict=True, zero_division=0),
+        "sha256_dataset": hashlib.sha256((RAIZ / "data/frases_risco.csv").read_bytes()).hexdigest(),
+        "sha256_particoes": hashlib.sha256((RAIZ / "data/particoes.csv").read_bytes()).hexdigest(),
+        "sha256_preprocessamento": hashlib.sha256((RAIZ / "src/preprocessar_texto.py").read_bytes()).hexdigest(),
+        "sha256_contexto": hashlib.sha256((RAIZ / "src/contexto_sintomas.py").read_bytes()).hexdigest(),
+        "python": platform.python_version(), "sklearn": sklearn.__version__,
+        "numpy": np.__version__, "pandas": pd.__version__,
+    }
+    (SAIDA / "metricas.json").write_text(json.dumps(metricas, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(json.dumps({"teste": met_teste, "externo": met_externo, "pares": met_pares,
+                      "subgrupos": met_subgrupos, "gaps": gaps}, ensure_ascii=False, indent=2))
+
+
+if __name__ == "__main__":
+    main()

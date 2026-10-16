@@ -1,0 +1,3 @@
+modelo,brier,log_loss
+regressao_logistica,0.12722815514594232,0.4246205246434335
+regressao_logistica_calibrada,0.105182714375347,0.3399713314579826

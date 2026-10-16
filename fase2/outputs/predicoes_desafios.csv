@@ -1,0 +1,13 @@
+frase,situacao,objetivo,predicao,probabilidade_alto_risco,acerto
+Estou com pressão no peito e suor gelado desde agora.,alto risco,sinônimo,alto risco,0.9993584765189097,True
+Meu peito não dói mas não consigo respirar mesmo parado.,alto risco,negação com contraste,alto risco,0.9923499650871612,True
+Não tenho falta de ar nem dor no peito; só espirrei duas vezes.,baixo risco,negação,baixo risco,0.0843189531232974,True
+Não estou com suor frio mas sinto dor no peito intensa.,alto risco,negação com contraste,alto risco,0.9828856995238702,True
+Só sinto leve cansaço depois da caminhada e já passou.,baixo risco,recuperação,baixo risco,0.005003052343577896,True
+A dor no peito é leve mas começou agora junto de suor frio.,alto risco,leve não exclui alerta,alto risco,0.998953714987331,True
+Tenho tontura intensa e meu coração está disparado.,alto risco,sinônimo,alto risco,0.8762724650869759,True
+Minha garganta arranha um pouco e respiro normalmente.,baixo risco,queixa leve,baixo risco,0.0017095442632135693,True
+Meu tornozelo inchou e estou sem ar até quando descanso.,alto risco,combinação,alto risco,0.9236959022937254,True
+Estou com coriza leve e não sinto dor no peito.,baixo risco,negação ao final,baixo risco,0.21373196278333373,True
+Sinto dor no peito e suor frio mas a dor diminuiu um pouco.,alto risco,alívio parcial,alto risco,0.9085612770825439,True
+Meu braço coça um pouco depois de uma picada de mosquito.,baixo risco,queixa leve,baixo risco,0.030841660430747653,True

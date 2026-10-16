@@ -1,0 +1,33 @@
+par,frase,situacao,contraste,uso,predicao,probabilidade_alto_risco,acerto
+P01,"A dor no peito parece leve, só que veio junto de desmaio.",alto risco,grave,somente_avaliacao,alto risco,0.9766414216603049,True
+P01,A dor no peito durou um segundo ao espirrar e não voltou.,baixo risco,leve_ou_resolvido,somente_avaliacao,baixo risco,0.35585014555201944,True
+P02,"Suei depois do esforço, mas também apareceu pressão no peito que não passou com descanso.",alto risco,grave,somente_avaliacao,alto risco,0.8673250052327653,True
+P02,"Fiquei sem fôlego ao correr para o ônibus, mas recuperei totalmente assim que parei.",baixo risco,leve_ou_resolvido,somente_avaliacao,baixo risco,0.20346492255488458,True
+P03,"Fiquei ofegante ao subir a escada e, mesmo sentado, a falta de ar está piorando.",alto risco,grave,somente_avaliacao,alto risco,0.9168495837107923,True
+P03,Senti o coração bater forte durante um susto e ele acalmou logo depois.,baixo risco,leve_ou_resolvido,somente_avaliacao,alto risco,0.7466116230847168,False
+P04,Meu coração acelerou após o café e agora há dor no peito e sensação de desmaio.,alto risco,grave,somente_avaliacao,alto risco,0.966573936894408,True
+P04,"A queimação veio após uma refeição grande, melhora ao sentar e não há suor frio.",baixo risco,leve_ou_resolvido,somente_avaliacao,alto risco,0.7272137451972429,False
+P05,"Acordei com azia, mas também estou pálido e com pressão forte no peito.",alto risco,grave,somente_avaliacao,alto risco,0.9990295202709315,True
+P05,"O ombro dói quando levanto peso, mas não há dor no peito em repouso.",baixo risco,leve_ou_resolvido,somente_avaliacao,alto risco,0.9521002913043298,False
+P06,"A dor aumenta quando respiro, começou de repente e estou sem ar.",alto risco,grave,somente_avaliacao,alto risco,0.989935727099141,True
+P06,Minha fala ficou estranha porque mordi a língua; a força dos braços está normal.,baixo risco,leve_ou_resolvido,somente_avaliacao,alto risco,0.8994652417058128,False
+P07,Tenho diabetes e hoje apareceu um cansaço súbito com suor frio e enjoo.,alto risco,grave,somente_avaliacao,alto risco,0.9796660489113591,True
+P07,"Ao levantar rápido tive tontura por dois segundos, sentei e fiquei bem.",baixo risco,leve_ou_resolvido,somente_avaliacao,baixo risco,0.06661351589943054,True
+P08,Minha mãe percebeu que estou confuso e eu mal consigo respirar.,alto risco,grave,somente_avaliacao,alto risco,0.7134347141379905,True
+P08,"Estou cansado depois de dormir pouco, mas faço minhas tarefas e respiro normalmente.",baixo risco,leve_ou_resolvido,somente_avaliacao,baixo risco,0.004058677514713005,True
+P09,Faz dez minutos que perdi a visão de um lado e minha fala enrolou.,alto risco,grave,somente_avaliacao,alto risco,0.9546876624747878,True
+P09,Não sinto mais a palpitação mencionada ontem e passei o dia sem sintomas.,baixo risco,leve_ou_resolvido,somente_avaliacao,baixo risco,0.09161716058738245,True
+P10,A batida ficou muito lenta e apaguei enquanto estava sentado.,alto risco,grave,somente_avaliacao,alto risco,0.9873458577414949,True
+P10,A respiração está normal; dizer que fiquei sem ar foi apenas modo de falar.,baixo risco,leve_ou_resolvido,somente_avaliacao,baixo risco,0.3102638910873108,True
+P11,Tenho dor forte no peito depois de usar estimulante e estou muito agitado.,alto risco,grave,somente_avaliacao,alto risco,0.9572658487287538,True
+P11,O suor estava quente por causa do sol e parou quando entrei em um local fresco.,baixo risco,leve_ou_resolvido,somente_avaliacao,baixo risco,0.2856805495208591,True
+P12,A falta de ar veio com lábios arroxeados e não melhora sentado.,alto risco,grave,somente_avaliacao,alto risco,0.9905749740470815,True
+P12,Senti pressão onde o cinto de segurança apertou e ela desapareceu ao soltá-lo.,baixo risco,leve_ou_resolvido,somente_avaliacao,baixo risco,0.3846675313795067,True
+P13,"O desconforto no peito vai e volta desde cedo, mas agora não cede e estou suando frio.",alto risco,grave,somente_avaliacao,alto risco,0.9908858014261603,True
+P13,"Meu coração acelerou na apresentação, mas não houve dor e ele acalmou ao final.",baixo risco,leve_ou_resolvido,somente_avaliacao,baixo risco,0.18683961580000574,True
+P14,Não nego falta de ar: ela começou de repente com pontada no peito.,alto risco,grave,somente_avaliacao,alto risco,0.9786402376949177,True
+P14,Tenho falta de ar somente quando prendo voluntariamente a respiração na natação.,baixo risco,leve_ou_resolvido,somente_avaliacao,alto risco,0.7949550539827657,False
+P15,"Eu disse que estava bem para não preocupar ninguém, mas desmaiei e continuo fraco.",alto risco,grave,somente_avaliacao,alto risco,0.6120565539731493,True
+P15,A dor é na pele do peito por causa de uma picada e coça quando encosto.,baixo risco,leve_ou_resolvido,somente_avaliacao,baixo risco,0.1241722191992578,True
+P16,"A dor parece muscular, porém não muda ao tocar e veio com náusea e suor frio.",alto risco,grave,somente_avaliacao,alto risco,0.9855287540463177,True
+P16,Não tive desmaio; apenas cochilei no sofá e acordei normalmente.,baixo risco,leve_ou_resolvido,somente_avaliacao,baixo risco,0.1717476056876922,True

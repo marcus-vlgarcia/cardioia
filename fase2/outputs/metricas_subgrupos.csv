@@ -1,0 +1,5 @@
+dimensao,grupo,n,acuracia,precisao_alto_risco,recall_alto_risco,f1_macro,falsos_negativos,falsos_positivos,matriz_confusao
+sexo_referido,homem,24,1.0,1.0,1.0,1.0,0,0,"[[12, 0], [0, 12]]"
+sexo_referido,mulher,24,1.0,1.0,1.0,1.0,0,0,"[[12, 0], [0, 12]]"
+faixa_etaria,idosa,24,1.0,1.0,1.0,1.0,0,0,"[[12, 0], [0, 12]]"
+faixa_etaria,jovem,24,1.0,1.0,1.0,1.0,0,0,"[[12, 0], [0, 12]]"

@@ -1,99 +1,73 @@
-# Origem dos dados e limites
+# Dados, fontes e limites
 
-## Construção dos arquivos
+## O que é simulado
 
-Os 10 relatos, as 288 frases rotuladas e os 12 casos de desafio foram escritos
-para esta simulação acadêmica. Não são prontuários, downloads de relatos reais
-ou registros de atendimento. Os textos institucionais da Fase 1 continuam
-preservados, mas não foram transformados em exemplos rotulados de pacientes.
+Os dez relatos obrigatórios, as 416 frases da base principal, os desafios, os
+pares de gravidade e a auditoria de subgrupos são exemplos simulados. Não são
+prontuários, transcrições ou registros de atendimento. O balanceamento de 208
+frases por classe foi escolhido para o exercício e não representa prevalência.
 
-O mapa contém 83 pares de expressões e 14 grupos de possíveis condições. Ele
-registra combinações distintas que podem apontar para mais de uma hipótese, como
-dor no peito relacionada a síndrome coronariana, angina, pericardite, miocardite,
-dissecção de aorta, refluxo ou dor musculoesquelética. Inclui ainda insuficiência
-cardíaca, arritmias, valvulopatias, cardiomiopatia por estresse, alterações de
-pressão arterial, tromboembolismo pulmonar e ansiedade. É uma tabela de
-associações didáticas, não uma ontologia clínica formal ou uma lista exaustiva.
-A ocorrência de um par não confirma a condição, e a ausência de correspondência
-não exclui doença. Os 10 relatos incluem início, sintomas e impacto na rotina.
-A opção interativa formula um décimo primeiro relato a partir de três respostas
-curtas, sem alterar os dez exemplos. A análise da execução fica em um CSV local
-separado; cada envio também é acrescentado ao histórico `relatos_interativos.csv`.
-Os dois arquivos interativos são ignorados pelo Git.
+Os 128 novos exemplos aumentam a variedade de redação com fala coloquial,
+contexto temporal, relato de terceiros, esforço, recuperação, persistência,
+negações duplas e informações contraditórias. Ainda há autoria compartilhada e
+vocabulário repetido, portanto 416 frases não equivalem a 416 pacientes.
 
-## Critérios dos rótulos
+## Avaliação baseada em fontes externas
 
-- `alto risco`: cenário simulado com sintomas agudos preocupantes, como dor
-  torácica persistente com suor frio, dificuldade respiratória importante ou
-  perda de consciência.
-- `baixo risco`: descrição explicitamente leve ou resolvida, sem sinais de
-  alerta relatados no exemplo. Não significa ausência de doença ou dispensa de
-  avaliação médica.
-- `grupo`: cenário de origem das duas paráfrases; não é atributo preditor.
-- `esperado` em `desafios.csv`: rótulo didático para observar comportamento em
-  exemplos adicionais; não é padrão-ouro médico.
+`avaliacao_externa.csv` contém 32 cenários escritos para teste a partir de
+orientações públicas. Cada linha guarda URL e justificativa. O arquivo não foi
+usado para treinar, escolher configuração ou calibrar o modelo. Essa separação
+reduz a influência direta da base de treino, mas não transforma os rótulos em
+padrão-ouro clínico e não torna as frases relatos reais.
 
-Os rótulos não foram validados por profissionais da saúde. Eles não são derivados
-da coluna `doenca_cardiaca` da Fase 1, nem atribuídos pelo extrator. Balanceamento
-de classes foi uma escolha de construção, não uma estimativa de prevalência.
+Fontes principais, consultadas em 16/10/2026:
 
-## Limitações concretas
+- [Ministério da Saúde — Infarto](https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/i/infarto)
+- [Linha de Cuidado — manejo inicial da dor torácica](https://linhasdecuidado.saude.gov.br/portal/dor-toracica/unidade-de-atencao-primaria/manejo-inicial/)
+- [Linha de Cuidado — avaliação e conduta](https://linhasdecuidado.saude.gov.br/portal/dor-toracica/unidade-de-pronto-atendimento/avaliacao-conduta/)
+- [OMS — doenças cardiovasculares](https://www.who.int/health-topics/cardiovascular-diseases)
 
-1. As duas frases de cada cenário são dependentes. Por isso, a divisão e a
-   validação cruzada mantêm os grupos juntos.
-2. Há 144 cenários: 104 de treino, 12 de teste final e 28 de regressão. O teste
-   final tem 24 frases; um erro altera a acurácia em 4,17 pontos percentuais.
-3. Queixas não cardíacas leves predominam em parte da classe de baixo risco.
-   O modelo pode aprender diferença de vocabulário em vez de gravidade.
-4. O pré-processamento marca cinco negações frequentes, mas não resolve ironia,
-   dupla negação, relatos indiretos complexos, erros ortográficos ou sintomas
-   atípicos. Palavras como “leve”, “forte” e “repouso” ainda podem dominar decisões.
-5. O extrator trata apenas negação simples até pontuação ou contraste. Uma frase
-   longa com negações e afirmações misturadas pode produzir erro. Ele exige os
-   dois sintomas da linha e devolve todas as associações compatíveis.
-6. A base não representa uma população por sexo, idade, raça ou região.
-   Trocar identidade mantendo sintomas é um teste de sensibilidade, não uma
-   avaliação suficiente de fairness.
+## Critério dos rótulos
 
-## Ampliação da base textual
+- `alto risco`: combinação didática de sinais agudos ou persistentes que, nas
+  fontes consultadas, demanda atenção imediata.
+- `baixo risco`: descrição explicitamente leve, localizada ou completamente
+  resolvida no exemplo, sem combinação de alertas. O rótulo não exclui doença e
+  não significa que uma pessoa real possa dispensar avaliação.
+- `grupo`: identifica duas paráfrases do mesmo cenário e impede vazamento entre
+  partições.
 
-A revisão preserva as 80 frases originais e acrescenta 208 em 104 novos cenários.
-Inclui negações, contraste com sinais de alerta, relatos de terceiros, escrita
-informal, recuperação após esforço e sintomas de intensidade diferente. As classes
-continuam balanceadas por construção (144 frases cada).
+Os rótulos não vêm do alvo numérico artificial da Fase 1 e não são produzidos
+pelo extrator de sintomas.
 
-Os testes que já foram analisados, A51–A60, B51–B60 e os oito grupos do teste
-inicial, permanecem fora do treino como regressão. O manifesto `data/particoes.csv`
-fixa como teste final os grupos A67–A72 e B67–B72. A seleção de parâmetros e do
-limiar usa apenas previsões dentro do treino. Os 12 desafios também são regressão.
+## Negações e contradições
 
-As paráfrases são próximas e há temas e expressões semelhantes entre grupos.
-A autoria compartilhada e a escolha manual dos cenários limitam a independência
-da avaliação. Muitas queixas leves ainda não são cardíacas. Não há representação
-de prevalência ou revisão clínica independente. Nenhuma regra manual foi usada
-para corrigir os rótulos previstos pelo modelo.
+O extrator separa trechos por pontuação e contraste, diferencia negação simples
+de alguns padrões de dupla negação e registra três listas: sintomas afirmados,
+negados e contraditórios. Quando o mesmo sintoma aparece afirmado e negado, a
+contradição fica visível na saída. Para não perder um possível alerta, a menção
+afirmada continua disponível para o mapa.
 
-Se os erros do teste final atual orientarem uma próxima revisão, ele também deverá
-ser reclassificado como regressão. A próxima versão precisa de uma nova avaliação
-reservada ou externa, além de revisão clínica independente dos rótulos.
+O classificador recebe marcadores de negação, dupla negação, contradição,
+recuperação, persistência, esforço, repouso e relato de terceiros. As regras não
+resolvem ironia, ambiguidade, correferência, todos os tempos verbais ou todas as
+formas regionais do português.
 
-Consulta complementar em 11/09/2026: [Ministério da Saúde — Infarto](https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/i/infarto)
-e [Scikit-learn — GridSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html).
+## Vieses
 
-## Fontes consultadas na versão inicial
+A auditoria usa 12 cenários em quatro versões, combinando sexo referido e faixa
+etária, totalizando 48 frases. Mede acurácia, recall e falsos positivos por grupo.
+Nesta amostra pareada, os resultados foram iguais. Isso mostra apenas que as
+trocas testadas não alteraram as previsões nesses casos.
 
-Acesso em 08/09/2026. As fontes abaixo orientam a contextualização dos sintomas;
-não validam o mapa nem os rótulos produzidos para o exercício.
+Não há dados suficientes para avaliar raça/cor, deficiência, escolaridade,
+território, renda, identidade de gênero, acesso ao sistema de saúde ou diferenças
+de prevalência. Também não há pacientes reais ou desfechos clínicos. Portanto,
+o projeto não demonstra equidade entre populações.
 
-- Síndrome coronariana aguda/infarto: [Ministério da Saúde — Infarto](https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/i/infarto).
-- Insuficiência cardíaca: [Ministério da Saúde — orientações ao paciente](https://linhasdecuidado.saude.gov.br/portal/insuficiencia-cardiaca-%28IC%29-no-adulto/sou-paciente).
-- Angina: [Biblioteca Virtual em Saúde — Angina](https://bvsms.saude.gov.br/angina/).
-- Arritmias: [Secretaria da Saúde do Ceará — sintomas e cuidados](https://www.ce.gov.br/saude/2019/11/06/arritmia-cardiaca-conheca-mais-sobre-a-doenca-e-saiba-como-trata-la-corretamente/).
-- Dor torácica, pericardite e dissecção de aorta: [Linha de Cuidado — avaliação e conduta](https://linhasdecuidado.saude.gov.br/portal/dor-toracica/unidade-hospitalar/avaliacao-conduta/).
-- Valvulopatias: [Secretaria de Saúde de Alagoas — estenose aórtica](https://www.saude.al.gov.br/medico-do-hospital-do-coracao-alagoano-alerta-para-sintomas-da-estenose-aortica/).
-- Cardiomiopatia por estresse: [Biblioteca Virtual em Saúde — síndrome do coração partido](https://bvsms.saude.gov.br/sindrome-do-coracao-partido/).
-- Tromboembolismo pulmonar: [Ministério da Saúde — trombose](https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/t/trombose).
-- Método: [Scikit-learn — prevenção de vazamento de dados](https://scikit-learn.org/stable/common_pitfalls.html).
+## Validação clínica
 
-A base numérica e os ECGs da Fase 1 permanecem disponíveis para continuidade
-do projeto, com suas limitações documentadas em `docs/auditoria_dados_fase1.md`.
+As 83 linhas do mapa possuem fonte documental e campos para revisão profissional
+em `revisao_clinica.csv`. A validação por especialista permanece explicitamente
+pendente. O procedimento necessário está em `validacao_clinica.md`. Nenhum texto
+do projeto deve afirmar que a tabela foi validada clinicamente antes desse passo.

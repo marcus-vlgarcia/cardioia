@@ -1,57 +1,81 @@
-frase,situacao,grupo,palavras,conjunto,predicao,probabilidade_alto_risco,acerto
-Sinto dor intensa no peito que não passa há meia hora.,alto risco,A07,11,regressao,alto risco,0.8097471032154167,True
-Uma dor forte no tórax continua mesmo após parar tudo.,alto risco,A07,10,regressao,alto risco,0.7981083715603996,True
-Estou com lábios arroxeados e dificuldade para respirar.,alto risco,A08,8,regressao,alto risco,0.553258075084317,True
-Minha boca ficou roxa enquanto eu tentava puxar o ar.,alto risco,A08,10,regressao,alto risco,0.6967653476737689,True
-Uma dor súbita muito forte atravessa o peito e as costas.,alto risco,A11,11,regressao,alto risco,0.8129712987797814,True
-Surgiu uma dor intensa no tórax que se espalhou pelas costas.,alto risco,A11,11,regressao,alto risco,0.7795903029905762,True
-A pressão no peito piora e estou quase apagando.,alto risco,A15,9,regressao,alto risco,0.9025144115183258,True
-Sinto aperto crescente no tórax e sensação de desmaio.,alto risco,A15,9,regressao,alto risco,0.8107834853231751,True
-Senti cansaço leve após correr e já passou com descanso.,baixo risco,B01,10,regressao,baixo risco,0.19765961994042236,True
-Fiquei cansado depois do exercício mas me recuperei por completo.,baixo risco,B01,10,regressao,baixo risco,0.2056019129885588,True
-Meu ombro está levemente dolorido após carregar caixas e está melhorando.,baixo risco,B02,11,regressao,baixo risco,0.23605932013901,True
-Depois da mudança fiquei com incômodo no ombro que diminui a cada dia.,baixo risco,B02,13,regressao,alto risco,0.3844351298830341,False
-Meu olho coça levemente depois de ficar em ambiente com poeira.,baixo risco,B12,11,regressao,alto risco,0.397394408038824,False
-Fiquei com irritação discreta no olho após limpar a estante.,baixo risco,B12,10,regressao,alto risco,0.4188780877330125,False
-Sinto leve desconforto na lombar após ficar sentado e melhora ao mudar de posição.,baixo risco,B18,14,regressao,baixo risco,0.34057059740064266,True
-Minhas costas incomodaram um pouco na cadeira e melhoraram após levantar.,baixo risco,B18,11,regressao,baixo risco,0.18910900739061776,True
-Enquanto preparava café senti o tórax comprimido e quase caí de tanta fraqueza.,alto risco,A51,13,regressao,alto risco,0.7636722528977486,True
-Na cozinha veio um aperto no peito com fraqueza que mal me deixa ficar em pé.,alto risco,A51,16,regressao,alto risco,0.7869512790322549,True
-A pressão no peito já dura quarenta minutos e meu rosto está sem cor.,alto risco,A52,14,regressao,alto risco,0.7796047805911555,True
-Estou muito pálido e o peso no tórax continua há quase uma hora.,alto risco,A52,13,regressao,alto risco,0.8118880853870205,True
-Não sinto dor nas costas mas mal consigo respirar e estou ficando sonolento.,alto risco,A53,13,regressao,alto risco,0.4986346665391107,True
-As costas não incomodam; a respiração está muito difícil e tenho dificuldade de me manter acordado.,alto risco,A53,16,regressao,alto risco,0.6542800123291335,True
-Minha garganta arranha um pouco mas agora surgiu uma dor intensa no peito com suor gelado.,alto risco,A54,16,regressao,alto risco,0.7205207261183348,True
-Além da rouquidão leve apareceu pressão torácica forte acompanhada de suor frio.,alto risco,A54,12,regressao,alto risco,0.737441940588403,True
-Meu coração começou a correr e senti o chão sumir antes de cair desacordado.,alto risco,A55,14,regressao,alto risco,0.6306577774006672,True
-Após batidas rápidas no peito apaguei e acordei no chão.,alto risco,A55,10,regressao,alto risco,0.751644950213294,True
-Sentado no ônibus senti um peso no peito que alcançou o braço e não cedeu.,alto risco,A56,15,regressao,alto risco,0.7453512864734306,True
-No trajeto começou uma pressão persistente no tórax irradiando para o braço.,alto risco,A56,12,regressao,alto risco,0.8268104108056681,True
-Não tenho febre nem tosse mas a falta de ar é tanta que não termino uma frase.,alto risco,A57,17,regressao,alto risco,0.6665950792491107,True
-Sem tosse ou febre; estou tão sem fôlego que preciso interromper a fala.,alto risco,A57,13,regressao,alto risco,0.6918329347450165,True
-Tenho dificuldade para puxar o ar e estou com espuma rosada saindo na tosse.,alto risco,A58,14,regressao,alto risco,0.6618323754959511,True
-A respiração ficou muito difícil e comecei a tossir uma secreção espumosa rosada.,alto risco,A58,13,regressao,alto risco,0.8092847654826101,True
-Minha mão perdeu a força de repente e não consigo falar as palavras direito.,alto risco,A59,14,regressao,alto risco,0.7354921789724256,True
-Surgiram de uma vez fraqueza no braço e dificuldade para articular a fala.,alto risco,A59,13,regressao,alto risco,0.5413663568878018,True
-A dor no peito era pequena mas se intensificou e agora estou quase perdendo os sentidos.,alto risco,A60,16,regressao,alto risco,0.7142236890576407,True
-O incômodo no tórax aumentou muito e veio uma sensação forte de desmaio.,alto risco,A60,13,regressao,alto risco,0.8483206536340867,True
-Depois de usar luvas fiquei com uma pequena marca no pulso que já está desaparecendo.,baixo risco,B51,15,regressao,baixo risco,0.15370833180563404,True
-A luva apertou um pouco e deixou o punho marcado mas está voltando ao normal.,baixo risco,B51,15,regressao,baixo risco,0.0957464510103444,True
-Não sinto dor no peito ou desmaio; minha queixa é só a pele do nariz ressecada.,baixo risco,B52,16,regressao,baixo risco,0.06826186121246325,True
-O nariz está ressecado por fora; não tenho aperto torácico nem sensação de apagar.,baixo risco,B52,14,regressao,alto risco,0.38865746142895874,False
-Fiquei com a voz cansada depois da reunião e melhorei com água sem falta de ar.,baixo risco,B53,16,regressao,baixo risco,0.2803249915401157,True
-Falar na reunião ressecou a garganta mas água ajudou e continuo respirando bem.,baixo risco,B53,13,regressao,baixo risco,0.1769763227322534,True
-Meu peito não aperta e não estou suando frio; apenas a etiqueta da roupa arranha a nuca.,baixo risco,B54,17,regressao,alto risco,0.4245932379474836,False
-A nuca ficou irritada pela etiqueta sem pressão no tórax ou suor gelado.,baixo risco,B54,13,regressao,alto risco,0.36999676689521044,False
-A perna ficou marcada pela meia mas a marca sumiu e não tenho dor ou inchaço.,baixo risco,B55,16,regressao,alto risco,0.3786739222401756,False
-Tirei a meia e a marca desapareceu; minhas pernas estão normais e sem desconforto.,baixo risco,B55,14,regressao,alto risco,0.5475686301873093,False
-Não tenho palpitações nem falta de ar; sinto somente coceira discreta na orelha.,baixo risco,B56,13,regressao,baixo risco,0.3055129141416093,True
-Minha orelha coça um pouco mas o coração não dispara e respiro sem esforço.,baixo risco,B56,14,regressao,baixo risco,0.2806819180223261,True
-Depois de caminhar na areia apareceu uma bolha pequena no calcanhar e nada mais.,baixo risco,B57,14,regressao,baixo risco,0.18695576101698874,True
-A caminhada deixou apenas uma pequena bolha superficial no pé; estou me sentindo bem.,baixo risco,B57,14,regressao,baixo risco,0.12214170872994912,True
-Meu irmão relatou suor frio; comigo só aconteceu uma coceira passageira no pescoço.,baixo risco,B58,13,regressao,baixo risco,0.33040848366291065,True
-A transpiração gelada foi do meu irmão; minha queixa é uma coceira que já passou.,baixo risco,B58,15,regressao,baixo risco,0.21254192098072355,True
-A irritação na ponta do nariz melhorou com a pausa no uso do lenço e não tenho outros sintomas.,baixo risco,B59,19,regressao,baixo risco,0.20152733952290391,True
-Assoar muito irritou a pele do nariz mas agora está melhor e estou bem.,baixo risco,B59,14,regressao,baixo risco,0.2001860199885923,True
-Sem dor no peito ou enjoo; só estou com uma mancha de tinta na mão que não causa incômodo.,baixo risco,B60,19,regressao,baixo risco,0.15389092123204728,True
-Não sinto pressão torácica nem náuseas e a única coisa diferente é tinta na pele sem irritação.,baixo risco,B60,17,regressao,baixo risco,0.2959674848299574,True
+frase,situacao,grupo,conjunto,predicao,probabilidade_alto_risco,acerto
+Sinto dor intensa no peito que não passa há meia hora.,alto risco,A07,regressao,alto risco,0.9896646334276846,True
+Uma dor forte no tórax continua mesmo após parar tudo.,alto risco,A07,regressao,alto risco,0.9959672217664999,True
+Estou com lábios arroxeados e dificuldade para respirar.,alto risco,A08,regressao,alto risco,0.6626631956886473,True
+Minha boca ficou roxa enquanto eu tentava puxar o ar.,alto risco,A08,regressao,alto risco,0.9693069708167292,True
+Uma dor súbita muito forte atravessa o peito e as costas.,alto risco,A11,regressao,alto risco,0.9987462801831798,True
+Surgiu uma dor intensa no tórax que se espalhou pelas costas.,alto risco,A11,regressao,alto risco,0.9896476654694573,True
+A pressão no peito piora e estou quase apagando.,alto risco,A15,regressao,alto risco,0.9958920240435809,True
+Sinto aperto crescente no tórax e sensação de desmaio.,alto risco,A15,regressao,alto risco,0.9089328473484368,True
+Senti cansaço leve após correr e já passou com descanso.,baixo risco,B01,regressao,baixo risco,0.040292278555879024,True
+Fiquei cansado depois do exercício mas me recuperei por completo.,baixo risco,B01,regressao,baixo risco,0.033836209870305445,True
+Meu ombro está levemente dolorido após carregar caixas e está melhorando.,baixo risco,B02,regressao,baixo risco,0.07199338359107599,True
+Depois da mudança fiquei com incômodo no ombro que diminui a cada dia.,baixo risco,B02,regressao,baixo risco,0.3215316759963466,True
+Meu olho coça levemente depois de ficar em ambiente com poeira.,baixo risco,B12,regressao,alto risco,0.5064951080195996,False
+Fiquei com irritação discreta no olho após limpar a estante.,baixo risco,B12,regressao,baixo risco,0.4651589339765304,True
+Sinto leve desconforto na lombar após ficar sentado e melhora ao mudar de posição.,baixo risco,B18,regressao,baixo risco,0.2690099941837304,True
+Minhas costas incomodaram um pouco na cadeira e melhoraram após levantar.,baixo risco,B18,regressao,baixo risco,0.11902780025429438,True
+Enquanto preparava café senti o tórax comprimido e quase caí de tanta fraqueza.,alto risco,A51,regressao,alto risco,0.9811479698544696,True
+Na cozinha veio um aperto no peito com fraqueza que mal me deixa ficar em pé.,alto risco,A51,regressao,alto risco,0.9819600358142758,True
+A pressão no peito já dura quarenta minutos e meu rosto está sem cor.,alto risco,A52,regressao,alto risco,0.9677443185430684,True
+Estou muito pálido e o peso no tórax continua há quase uma hora.,alto risco,A52,regressao,alto risco,0.9985556311466481,True
+Não sinto dor nas costas mas mal consigo respirar e estou ficando sonolento.,alto risco,A53,regressao,alto risco,0.7051687494242425,True
+As costas não incomodam; a respiração está muito difícil e tenho dificuldade de me manter acordado.,alto risco,A53,regressao,alto risco,0.9388499399675656,True
+Minha garganta arranha um pouco mas agora surgiu uma dor intensa no peito com suor gelado.,alto risco,A54,regressao,alto risco,0.9805390422684243,True
+Além da rouquidão leve apareceu pressão torácica forte acompanhada de suor frio.,alto risco,A54,regressao,alto risco,0.9835535687266675,True
+Meu coração começou a correr e senti o chão sumir antes de cair desacordado.,alto risco,A55,regressao,alto risco,0.9451828301559503,True
+Após batidas rápidas no peito apaguei e acordei no chão.,alto risco,A55,regressao,alto risco,0.9628668795722136,True
+Sentado no ônibus senti um peso no peito que alcançou o braço e não cedeu.,alto risco,A56,regressao,alto risco,0.9539520810710036,True
+No trajeto começou uma pressão persistente no tórax irradiando para o braço.,alto risco,A56,regressao,alto risco,0.9968351584785826,True
+Não tenho febre nem tosse mas a falta de ar é tanta que não termino uma frase.,alto risco,A57,regressao,alto risco,0.9011914871606723,True
+Sem tosse ou febre; estou tão sem fôlego que preciso interromper a fala.,alto risco,A57,regressao,alto risco,0.9321442880540667,True
+Tenho dificuldade para puxar o ar e estou com espuma rosada saindo na tosse.,alto risco,A58,regressao,alto risco,0.9390545806039622,True
+A respiração ficou muito difícil e comecei a tossir uma secreção espumosa rosada.,alto risco,A58,regressao,alto risco,0.9951123408804744,True
+Minha mão perdeu a força de repente e não consigo falar as palavras direito.,alto risco,A59,regressao,alto risco,0.9878829468841456,True
+Surgiram de uma vez fraqueza no braço e dificuldade para articular a fala.,alto risco,A59,regressao,alto risco,0.9130769467623262,True
+A dor no peito era pequena mas se intensificou e agora estou quase perdendo os sentidos.,alto risco,A60,regressao,alto risco,0.948109118844376,True
+O incômodo no tórax aumentou muito e veio uma sensação forte de desmaio.,alto risco,A60,regressao,alto risco,0.9952997532292798,True
+Depois de usar luvas fiquei com uma pequena marca no pulso que já está desaparecendo.,baixo risco,B51,regressao,baixo risco,0.02007055213246922,True
+A luva apertou um pouco e deixou o punho marcado mas está voltando ao normal.,baixo risco,B51,regressao,baixo risco,0.0024454426893965042,True
+Não sinto dor no peito ou desmaio; minha queixa é só a pele do nariz ressecada.,baixo risco,B52,regressao,baixo risco,0.010919802355436103,True
+O nariz está ressecado por fora; não tenho aperto torácico nem sensação de apagar.,baixo risco,B52,regressao,baixo risco,0.2034956962803125,True
+Fiquei com a voz cansada depois da reunião e melhorei com água sem falta de ar.,baixo risco,B53,regressao,baixo risco,0.08639972638593696,True
+Falar na reunião ressecou a garganta mas água ajudou e continuo respirando bem.,baixo risco,B53,regressao,baixo risco,0.027771951380813786,True
+Meu peito não aperta e não estou suando frio; apenas a etiqueta da roupa arranha a nuca.,baixo risco,B54,regressao,baixo risco,0.39840923584506116,True
+A nuca ficou irritada pela etiqueta sem pressão no tórax ou suor gelado.,baixo risco,B54,regressao,alto risco,0.8561458279550722,False
+A perna ficou marcada pela meia mas a marca sumiu e não tenho dor ou inchaço.,baixo risco,B55,regressao,baixo risco,0.13659819885670665,True
+Tirei a meia e a marca desapareceu; minhas pernas estão normais e sem desconforto.,baixo risco,B55,regressao,alto risco,0.6126101468150331,False
+Não tenho palpitações nem falta de ar; sinto somente coceira discreta na orelha.,baixo risco,B56,regressao,baixo risco,0.046692958505328175,True
+Minha orelha coça um pouco mas o coração não dispara e respiro sem esforço.,baixo risco,B56,regressao,baixo risco,0.1071946807880716,True
+Depois de caminhar na areia apareceu uma bolha pequena no calcanhar e nada mais.,baixo risco,B57,regressao,baixo risco,0.0639304445772978,True
+A caminhada deixou apenas uma pequena bolha superficial no pé; estou me sentindo bem.,baixo risco,B57,regressao,baixo risco,0.007148850046559518,True
+Meu irmão relatou suor frio; comigo só aconteceu uma coceira passageira no pescoço.,baixo risco,B58,regressao,baixo risco,0.22144955716203785,True
+A transpiração gelada foi do meu irmão; minha queixa é uma coceira que já passou.,baixo risco,B58,regressao,baixo risco,0.050083659834399,True
+A irritação na ponta do nariz melhorou com a pausa no uso do lenço e não tenho outros sintomas.,baixo risco,B59,regressao,baixo risco,0.047725658662008286,True
+Assoar muito irritou a pele do nariz mas agora está melhor e estou bem.,baixo risco,B59,regressao,baixo risco,0.029671259785354565,True
+Sem dor no peito ou enjoo; só estou com uma mancha de tinta na mão que não causa incômodo.,baixo risco,B60,regressao,baixo risco,0.0654886388817556,True
+Não sinto pressão torácica nem náuseas e a única coisa diferente é tinta na pele sem irritação.,baixo risco,B60,regressao,baixo risco,0.09058093341281437,True
+"Sem febre, a respiração ficou curta de repente e estou suando frio sem parar.",alto risco,A67,regressao,alto risco,0.9907020799277125,True
+Não estou gripado; comecei a ficar sem ar subitamente e a roupa encharcou de suor frio.,alto risco,A67,regressao,alto risco,0.9912454204454264,True
+"Fui dormir bem, acordei com pressão forte no peito e não consigo voltar a respirar deitado.",alto risco,A68,regressao,alto risco,0.9986145981830314,True
+Durante a madrugada surgiu aperto intenso no tórax e preciso sentar para puxar o ar.,alto risco,A68,regressao,alto risco,0.9965233724176217,True
+"A dor no tórax se espalhou para o braço e fiquei muito pálido, mesmo sem enjoo.",alto risco,A69,regressao,alto risco,0.9993392170397606,True
+"Não sinto náusea, mas a pressão persistente no peito chegou ao braço e tirou minha cor.",alto risco,A69,regressao,alto risco,0.9513014784324427,True
+De repente perdi a força de um braço e minhas palavras saem embaralhadas.,alto risco,A70,regressao,alto risco,0.9906648259018442,True
+Meu braço enfraqueceu do nada e não consigo formar frases como antes.,alto risco,A70,regressao,alto risco,0.9771513644668809,True
+O coração dispara com tontura forte e a sensação de que vou cair aumentou.,alto risco,A71,regressao,alto risco,0.9957804310186403,True
+"As batidas ficaram muito rápidas, comecei a rodar e precisei me apoiar para não apagar.",alto risco,A71,regressao,alto risco,0.9939792926792254,True
+Comecei a ficar sem ar de uma vez e agora cada respiração traz uma dor intensa no peito.,alto risco,A72,regressao,alto risco,0.9989477470641028,True
+Uma falta de ar súbita veio acompanhada de dor no tórax ao inspirar.,alto risco,A72,regressao,alto risco,0.9801381616600912,True
+Não estou com dor no peito nem suor frio; apenas um calo antigo incomoda no sapato.,baixo risco,B67,regressao,baixo risco,0.3116460571609114,True
+Meu tórax não dói e não transpiro gelado; só o calçado apertou um pouco o calcanhar.,baixo risco,B67,regressao,baixo risco,0.10795501780944661,True
+"Minha irmã disse estar sem ar, mas eu só tenho uma pequena irritação na pele do cotovelo.",baixo risco,B68,regressao,baixo risco,0.011640069663755526,True
+A falta de ar é da minha irmã; comigo há apenas uma mancha seca que coça pouco.,baixo risco,B68,regressao,baixo risco,0.02743491526778552,True
+"Suei bastante na academia, parei, bebi água e agora estou sem dor ou tontura.",baixo risco,B69,regressao,baixo risco,0.23282884812106597,True
+O suor veio do treino e já passou; meu coração está calmo e me sinto normal.,baixo risco,B69,regressao,baixo risco,0.18753522530144906,True
+"Não sinto pressão no peito, só um incômodo leve no pulso depois de digitar.",baixo risco,B70,regressao,baixo risco,0.0342536280585356,True
+Meu tórax está bem; o teclado deixou apenas o punho um pouco cansado.,baixo risco,B70,regressao,baixo risco,0.0073201928529323945,True
+Não tenho falta de ar nem palpitações; uma picada pequena deixou meu braço coçando.,baixo risco,B71,regressao,baixo risco,0.07382647527942165,True
+"Respiro bem e o coração não acelerou, só estou com coceira onde um inseto picou.",baixo risco,B71,regressao,baixo risco,0.00914632604573129,True
+"Não estou tonto ou quase desmaiando, apenas com rouquidão após cantar.",baixo risco,B72,regressao,baixo risco,0.08841490868843815,True
+"A voz ficou cansada depois da música, mas não tive tontura nem sensação de apagar.",baixo risco,B72,regressao,baixo risco,0.11512171106696079,True

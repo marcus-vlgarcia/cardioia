@@ -2,17 +2,12 @@
 
 import argparse
 import csv
-import re
-import unicodedata
 from pathlib import Path
+
+from contexto_sintomas import analisar_expressoes, normalizar
 
 RAIZ = Path(__file__).resolve().parents[1]
 AVISO = "Simulação acadêmica: as associações não confirmam nem excluem doenças."
-
-
-def normalizar(texto):
-    texto = unicodedata.normalize("NFKD", texto.casefold())
-    return "".join(c for c in texto if not unicodedata.combining(c))
 
 
 def ler_mapa(caminho):
@@ -27,18 +22,7 @@ def ler_mapa(caminho):
 
 
 def expressoes_afirmadas(texto, expressoes):
-    # Negação simples até a próxima pontuação ou conjunção de contraste.
-    # Não resolve negação dupla, fala de terceiros ou contexto temporal complexo.
-    trechos = re.split(r"[.,;!?]|\b(?:mas|porem|contudo)\b", normalizar(texto))
-    encontrados = set()
-    for expressao in expressoes:
-        padrao = r"(?<!\w)" + re.escape(normalizar(expressao)) + r"(?!\w)"
-        for trecho in trechos:
-            for ocorrencia in re.finditer(padrao, trecho):
-                prefixo = trecho[:ocorrencia.start()]
-                if not re.search(r"\b(?:nao|sem|nego|nega|nem)\b", prefixo):
-                    encontrados.add(expressao)
-    return sorted(encontrados)
+    return analisar_expressoes(texto, expressoes)["afirmadas"]
 
 
 def expressoes_mais_especificas(expressoes):
@@ -55,12 +39,15 @@ def expressoes_mais_especificas(expressoes):
 
 def analisar(frase, mapa):
     expressoes = {r[c] for r in mapa for c in ("sintoma_1", "sintoma_2")}
-    sintomas = expressoes_afirmadas(frase, expressoes)
+    contexto = analisar_expressoes(frase, expressoes)
+    sintomas = contexto["afirmadas"]
     # Os dois sintomas da linha precisam estar presentes. Todas as associações
     # compatíveis são mantidas: uma palavra isolada não define uma doença.
     condicoes = sorted({r["doenca_associada"] for r in mapa
                         if r["sintoma_1"] in sintomas and r["sintoma_2"] in sintomas})
     return {"frase": frase, "sintomas": " | ".join(expressoes_mais_especificas(sintomas)),
+            "sintomas_negados": " | ".join(expressoes_mais_especificas(contexto["negadas"])),
+            "contradicoes": " | ".join(expressoes_mais_especificas(contexto["contraditorias"])),
             "associacoes": " | ".join(condicoes) or "Associação insuficiente no mapa",
             "aviso": AVISO}
 

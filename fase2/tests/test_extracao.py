@@ -10,6 +10,7 @@ RAIZ = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(RAIZ / "src"))
 from extrair_sintomas import analisar, expressoes_mais_especificas, ler_mapa, montar_frase, salvar_historico
 from preprocessar_texto import preparar_texto
+from contexto_sintomas import classificar_expressao
 from extrair_sintomas import main
 
 
@@ -26,6 +27,33 @@ class TestExtracao(unittest.TestCase):
 
     def test_contraste(self):
         self.assertIn("arritmia", analisar("Não sinto dor no peito, mas tenho palpitações e tontura", self.mapa)["associacoes"])
+
+    def test_dupla_negacao_mantem_sintoma_afirmado(self):
+        resultado = analisar("Não é verdade que não sinto dor no peito; também tenho suor frio.", self.mapa)
+        self.assertIn("dor no peito", resultado["sintomas"])
+        self.assertIn("coronariana", resultado["associacoes"])
+
+    def test_nao_deixou_de_sentir_e_afirmacao(self):
+        estado = classificar_expressao("Não deixei de sentir falta de ar desde cedo.", "falta de ar")
+        self.assertTrue(estado["afirmado"])
+        self.assertTrue(estado["dupla_negacao"])
+
+    def test_negacao_coordenada_nao_vira_dupla_negacao(self):
+        resultado = analisar("Não tenho dor no peito nem suor frio.", self.mapa)
+        self.assertEqual(resultado["sintomas"], "")
+        self.assertIn("dor no peito", resultado["sintomas_negados"])
+        self.assertIn("suor frio", resultado["sintomas_negados"])
+
+    def test_negacao_nao_invade_nova_oracao_afirmativa(self):
+        resultado = analisar("Não tenho dor no peito e sinto palpitações com tontura.", self.mapa)
+        self.assertNotIn("dor no peito", resultado["sintomas"])
+        self.assertIn("palpitacoes", resultado["sintomas"])
+        self.assertIn("arritmia", resultado["associacoes"])
+
+    def test_contradicao_e_sinalizada(self):
+        resultado = analisar("Não sinto dor no peito, mas agora sinto dor no peito e suor frio.", self.mapa)
+        self.assertIn("dor no peito", resultado["contradicoes"])
+        self.assertIn("coronariana", resultado["associacoes"])
 
     def test_sintoma_isolado(self):
         self.assertIn("insuficiente", analisar("Tenho falta de ar", self.mapa)["associacoes"])
@@ -73,6 +101,14 @@ class TestExtracao(unittest.TestCase):
         texto = preparar_texto("Não tenho falta de ar, mas sinto dor no peito forte.")
         self.assertIn("neg_dificuldade_respiratoria", texto)
         self.assertIn("dor no peito forte", texto)
+
+    def test_contexto_de_recuperacao_e_persistencia(self):
+        resolvido = preparar_texto("Depois da corrida fiquei ofegante, mas voltei ao normal.")
+        persistente = preparar_texto("O aperto no peito continua e não melhora em repouso.")
+        self.assertIn("contexto_recuperacao_completa", resolvido)
+        self.assertIn("contexto_apos_esforco", resolvido)
+        self.assertIn("contexto_persistencia_ou_piora", persistente)
+        self.assertIn("contexto_em_repouso", persistente)
 
     def test_historico_interativo_acrescenta_resultados(self):
         resultado = analisar("Há dois dias sinto dor no peito e suor frio, e parei de caminhar.", self.mapa)
