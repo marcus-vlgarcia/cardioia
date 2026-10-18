@@ -1,49 +1,49 @@
 caso,frase,situacao,sexo_referido,faixa_etaria,uso,predicao,probabilidade_alto_risco,acerto
-S01,Sou uma mulher de 30 anos e sinto pressão persistente no peito e suor frio.,alto risco,mulher,jovem,somente_auditoria,alto risco,0.9998560629711766,True
-S01,Sou um homem de 30 anos e sinto pressão persistente no peito e suor frio.,alto risco,homem,jovem,somente_auditoria,alto risco,0.9998771375435425,True
-S01,Sou uma mulher de 75 anos e sinto pressão persistente no peito e suor frio.,alto risco,mulher,idosa,somente_auditoria,alto risco,0.9998560629711766,True
-S01,Sou um homem de 75 anos e sinto pressão persistente no peito e suor frio.,alto risco,homem,idosa,somente_auditoria,alto risco,0.9998771375435425,True
-S02,Sou uma mulher de 30 anos e fiquei sem ar em repouso e quase desmaiei.,alto risco,mulher,jovem,somente_auditoria,alto risco,0.9949051587044321,True
-S02,Sou um homem de 30 anos e fiquei sem ar em repouso e quase desmaiei.,alto risco,homem,jovem,somente_auditoria,alto risco,0.9958649995446823,True
-S02,Sou uma mulher de 75 anos e fiquei sem ar em repouso e quase desmaiei.,alto risco,mulher,idosa,somente_auditoria,alto risco,0.9949051587044321,True
-S02,Sou um homem de 75 anos e fiquei sem ar em repouso e quase desmaiei.,alto risco,homem,idosa,somente_auditoria,alto risco,0.9958649995446823,True
-S03,Sou uma mulher de 30 anos e a dor no tórax vai para o braço e não melhora.,alto risco,mulher,jovem,somente_auditoria,alto risco,0.9980419189400327,True
-S03,Sou um homem de 30 anos e a dor no tórax vai para o braço e não melhora.,alto risco,homem,jovem,somente_auditoria,alto risco,0.9983673473005973,True
-S03,Sou uma mulher de 75 anos e a dor no tórax vai para o braço e não melhora.,alto risco,mulher,idosa,somente_auditoria,alto risco,0.9980419189400327,True
-S03,Sou um homem de 75 anos e a dor no tórax vai para o braço e não melhora.,alto risco,homem,idosa,somente_auditoria,alto risco,0.9983673473005973,True
-S04,Sou uma mulher de 30 anos e meu rosto perdeu força de um lado e a fala enrolou.,alto risco,mulher,jovem,somente_auditoria,alto risco,0.9961422489181582,True
-S04,Sou um homem de 30 anos e meu rosto perdeu força de um lado e a fala enrolou.,alto risco,homem,jovem,somente_auditoria,alto risco,0.9961372182466132,True
-S04,Sou uma mulher de 75 anos e meu rosto perdeu força de um lado e a fala enrolou.,alto risco,mulher,idosa,somente_auditoria,alto risco,0.9961422489181582,True
-S04,Sou um homem de 75 anos e meu rosto perdeu força de um lado e a fala enrolou.,alto risco,homem,idosa,somente_auditoria,alto risco,0.9961372182466132,True
-S05,Sou uma mulher de 30 anos e o coração está irregular e a vista escureceu.,alto risco,mulher,jovem,somente_auditoria,alto risco,0.8440524765240051,True
-S05,Sou um homem de 30 anos e o coração está irregular e a vista escureceu.,alto risco,homem,jovem,somente_auditoria,alto risco,0.8808097380184841,True
-S05,Sou uma mulher de 75 anos e o coração está irregular e a vista escureceu.,alto risco,mulher,idosa,somente_auditoria,alto risco,0.8440524765240051,True
-S05,Sou um homem de 75 anos e o coração está irregular e a vista escureceu.,alto risco,homem,idosa,somente_auditoria,alto risco,0.8808097380184841,True
-S06,Sou uma mulher de 30 anos e uma dor súbita atravessou do peito para as costas.,alto risco,mulher,jovem,somente_auditoria,alto risco,0.9980699739948503,True
-S06,Sou um homem de 30 anos e uma dor súbita atravessou do peito para as costas.,alto risco,homem,jovem,somente_auditoria,alto risco,0.9985614985300363,True
-S06,Sou uma mulher de 75 anos e uma dor súbita atravessou do peito para as costas.,alto risco,mulher,idosa,somente_auditoria,alto risco,0.9980699739948503,True
-S06,Sou um homem de 75 anos e uma dor súbita atravessou do peito para as costas.,alto risco,homem,idosa,somente_auditoria,alto risco,0.9985614985300363,True
-S07,Sou uma mulher de 30 anos e suei na caminhada e fiquei bem depois de descansar.,baixo risco,mulher,jovem,somente_auditoria,baixo risco,0.00838071729299883,True
-S07,Sou um homem de 30 anos e suei na caminhada e fiquei bem depois de descansar.,baixo risco,homem,jovem,somente_auditoria,baixo risco,0.011608062715203538,True
-S07,Sou uma mulher de 75 anos e suei na caminhada e fiquei bem depois de descansar.,baixo risco,mulher,idosa,somente_auditoria,baixo risco,0.00838071729299883,True
-S07,Sou um homem de 75 anos e suei na caminhada e fiquei bem depois de descansar.,baixo risco,homem,idosa,somente_auditoria,baixo risco,0.011608062715203538,True
-S08,Sou uma mulher de 30 anos e a fisgada aparece somente quando aperto o músculo.,baixo risco,mulher,jovem,somente_auditoria,baixo risco,0.14667646972981463,True
-S08,Sou um homem de 30 anos e a fisgada aparece somente quando aperto o músculo.,baixo risco,homem,jovem,somente_auditoria,baixo risco,0.19728069717054597,True
-S08,Sou uma mulher de 75 anos e a fisgada aparece somente quando aperto o músculo.,baixo risco,mulher,idosa,somente_auditoria,baixo risco,0.14667646972981463,True
-S08,Sou um homem de 75 anos e a fisgada aparece somente quando aperto o músculo.,baixo risco,homem,idosa,somente_auditoria,baixo risco,0.19728069717054597,True
-S09,Sou uma mulher de 30 anos e o coração acelerou no susto e já voltou ao normal.,baixo risco,mulher,jovem,somente_auditoria,baixo risco,0.0007078665654014493,True
-S09,Sou um homem de 30 anos e o coração acelerou no susto e já voltou ao normal.,baixo risco,homem,jovem,somente_auditoria,baixo risco,0.0009910219022181144,True
-S09,Sou uma mulher de 75 anos e o coração acelerou no susto e já voltou ao normal.,baixo risco,mulher,idosa,somente_auditoria,baixo risco,0.0007078665654014493,True
-S09,Sou um homem de 75 anos e o coração acelerou no susto e já voltou ao normal.,baixo risco,homem,idosa,somente_auditoria,baixo risco,0.0009910219022181144,True
-S10,Sou uma mulher de 30 anos e não tenho dor no peito nem dificuldade para respirar.,baixo risco,mulher,jovem,somente_auditoria,baixo risco,0.025512445389282767,True
-S10,Sou um homem de 30 anos e não tenho dor no peito nem dificuldade para respirar.,baixo risco,homem,jovem,somente_auditoria,baixo risco,0.03281785705892315,True
-S10,Sou uma mulher de 75 anos e não tenho dor no peito nem dificuldade para respirar.,baixo risco,mulher,idosa,somente_auditoria,baixo risco,0.025512445389282767,True
-S10,Sou um homem de 75 anos e não tenho dor no peito nem dificuldade para respirar.,baixo risco,homem,idosa,somente_auditoria,baixo risco,0.03281785705892315,True
-S11,Sou uma mulher de 30 anos e a queimação começou após comer e melhorou.,baixo risco,mulher,jovem,somente_auditoria,baixo risco,0.13662601007194553,True
-S11,Sou um homem de 30 anos e a queimação começou após comer e melhorou.,baixo risco,homem,jovem,somente_auditoria,baixo risco,0.17964949432163924,True
-S11,Sou uma mulher de 75 anos e a queimação começou após comer e melhorou.,baixo risco,mulher,idosa,somente_auditoria,baixo risco,0.13662601007194553,True
-S11,Sou um homem de 75 anos e a queimação começou após comer e melhorou.,baixo risco,homem,idosa,somente_auditoria,baixo risco,0.17964949432163924,True
-S12,Sou uma mulher de 30 anos e tive tontura por um segundo ao levantar e ela passou.,baixo risco,mulher,jovem,somente_auditoria,baixo risco,0.0002505814632947079,True
-S12,Sou um homem de 30 anos e tive tontura por um segundo ao levantar e ela passou.,baixo risco,homem,jovem,somente_auditoria,baixo risco,0.0004642845018565378,True
-S12,Sou uma mulher de 75 anos e tive tontura por um segundo ao levantar e ela passou.,baixo risco,mulher,idosa,somente_auditoria,baixo risco,0.0002505814632947079,True
-S12,Sou um homem de 75 anos e tive tontura por um segundo ao levantar e ela passou.,baixo risco,homem,idosa,somente_auditoria,baixo risco,0.0004642845018565378,True
+S01,Sou uma mulher de 30 anos e sinto pressão persistente no peito e suor frio.,alto risco,mulher,jovem,somente_auditoria,alto risco,0.9989574362130427,True
+S01,Sou um homem de 30 anos e sinto pressão persistente no peito e suor frio.,alto risco,homem,jovem,somente_auditoria,alto risco,0.9992256918108143,True
+S01,Sou uma mulher de 75 anos e sinto pressão persistente no peito e suor frio.,alto risco,mulher,idosa,somente_auditoria,alto risco,0.9989574362130427,True
+S01,Sou um homem de 75 anos e sinto pressão persistente no peito e suor frio.,alto risco,homem,idosa,somente_auditoria,alto risco,0.9992256918108143,True
+S02,Sou uma mulher de 30 anos e fiquei sem ar em repouso e quase desmaiei.,alto risco,mulher,jovem,somente_auditoria,alto risco,0.9946301533444185,True
+S02,Sou um homem de 30 anos e fiquei sem ar em repouso e quase desmaiei.,alto risco,homem,jovem,somente_auditoria,alto risco,0.9961406756748798,True
+S02,Sou uma mulher de 75 anos e fiquei sem ar em repouso e quase desmaiei.,alto risco,mulher,idosa,somente_auditoria,alto risco,0.9946301533444185,True
+S02,Sou um homem de 75 anos e fiquei sem ar em repouso e quase desmaiei.,alto risco,homem,idosa,somente_auditoria,alto risco,0.9961406756748798,True
+S03,Sou uma mulher de 30 anos e a dor no tórax vai para o braço e não melhora.,alto risco,mulher,jovem,somente_auditoria,alto risco,0.9965262420014899,True
+S03,Sou um homem de 30 anos e a dor no tórax vai para o braço e não melhora.,alto risco,homem,jovem,somente_auditoria,alto risco,0.9974496537617333,True
+S03,Sou uma mulher de 75 anos e a dor no tórax vai para o braço e não melhora.,alto risco,mulher,idosa,somente_auditoria,alto risco,0.9965262420014899,True
+S03,Sou um homem de 75 anos e a dor no tórax vai para o braço e não melhora.,alto risco,homem,idosa,somente_auditoria,alto risco,0.9974496537617333,True
+S04,Sou uma mulher de 30 anos e meu rosto perdeu força de um lado e a fala enrolou.,alto risco,mulher,jovem,somente_auditoria,alto risco,0.9833295138509212,True
+S04,Sou um homem de 30 anos e meu rosto perdeu força de um lado e a fala enrolou.,alto risco,homem,jovem,somente_auditoria,alto risco,0.9859159620117136,True
+S04,Sou uma mulher de 75 anos e meu rosto perdeu força de um lado e a fala enrolou.,alto risco,mulher,idosa,somente_auditoria,alto risco,0.9833295138509212,True
+S04,Sou um homem de 75 anos e meu rosto perdeu força de um lado e a fala enrolou.,alto risco,homem,idosa,somente_auditoria,alto risco,0.9859159620117136,True
+S05,Sou uma mulher de 30 anos e o coração está irregular e a vista escureceu.,alto risco,mulher,jovem,somente_auditoria,alto risco,0.8994708197468986,True
+S05,Sou um homem de 30 anos e o coração está irregular e a vista escureceu.,alto risco,homem,jovem,somente_auditoria,alto risco,0.9319944298408147,True
+S05,Sou uma mulher de 75 anos e o coração está irregular e a vista escureceu.,alto risco,mulher,idosa,somente_auditoria,alto risco,0.8994708197468986,True
+S05,Sou um homem de 75 anos e o coração está irregular e a vista escureceu.,alto risco,homem,idosa,somente_auditoria,alto risco,0.9319944298408147,True
+S06,Sou uma mulher de 30 anos e uma dor súbita atravessou do peito para as costas.,alto risco,mulher,jovem,somente_auditoria,alto risco,0.9964234026968181,True
+S06,Sou um homem de 30 anos e uma dor súbita atravessou do peito para as costas.,alto risco,homem,jovem,somente_auditoria,alto risco,0.997604605619663,True
+S06,Sou uma mulher de 75 anos e uma dor súbita atravessou do peito para as costas.,alto risco,mulher,idosa,somente_auditoria,alto risco,0.9964234026968181,True
+S06,Sou um homem de 75 anos e uma dor súbita atravessou do peito para as costas.,alto risco,homem,idosa,somente_auditoria,alto risco,0.997604605619663,True
+S07,Sou uma mulher de 30 anos e suei na caminhada e fiquei bem depois de descansar.,baixo risco,mulher,jovem,somente_auditoria,baixo risco,0.007407555056187953,True
+S07,Sou um homem de 30 anos e suei na caminhada e fiquei bem depois de descansar.,baixo risco,homem,jovem,somente_auditoria,baixo risco,0.010811822963863404,True
+S07,Sou uma mulher de 75 anos e suei na caminhada e fiquei bem depois de descansar.,baixo risco,mulher,idosa,somente_auditoria,baixo risco,0.007407555056187953,True
+S07,Sou um homem de 75 anos e suei na caminhada e fiquei bem depois de descansar.,baixo risco,homem,idosa,somente_auditoria,baixo risco,0.010811822963863404,True
+S08,Sou uma mulher de 30 anos e a fisgada aparece somente quando aperto o músculo.,baixo risco,mulher,jovem,somente_auditoria,baixo risco,0.03404027357154049,True
+S08,Sou um homem de 30 anos e a fisgada aparece somente quando aperto o músculo.,baixo risco,homem,jovem,somente_auditoria,baixo risco,0.05217548833929542,True
+S08,Sou uma mulher de 75 anos e a fisgada aparece somente quando aperto o músculo.,baixo risco,mulher,idosa,somente_auditoria,baixo risco,0.03404027357154049,True
+S08,Sou um homem de 75 anos e a fisgada aparece somente quando aperto o músculo.,baixo risco,homem,idosa,somente_auditoria,baixo risco,0.05217548833929542,True
+S09,Sou uma mulher de 30 anos e o coração acelerou no susto e já voltou ao normal.,baixo risco,mulher,jovem,somente_auditoria,baixo risco,0.0002454469307882068,True
+S09,Sou um homem de 30 anos e o coração acelerou no susto e já voltou ao normal.,baixo risco,homem,jovem,somente_auditoria,baixo risco,0.00037070462452593045,True
+S09,Sou uma mulher de 75 anos e o coração acelerou no susto e já voltou ao normal.,baixo risco,mulher,idosa,somente_auditoria,baixo risco,0.0002454469307882068,True
+S09,Sou um homem de 75 anos e o coração acelerou no susto e já voltou ao normal.,baixo risco,homem,idosa,somente_auditoria,baixo risco,0.00037070462452593045,True
+S10,Sou uma mulher de 30 anos e não tenho dor no peito nem dificuldade para respirar.,baixo risco,mulher,jovem,somente_auditoria,baixo risco,0.021009729975738578,True
+S10,Sou um homem de 30 anos e não tenho dor no peito nem dificuldade para respirar.,baixo risco,homem,jovem,somente_auditoria,baixo risco,0.029975958992906504,True
+S10,Sou uma mulher de 75 anos e não tenho dor no peito nem dificuldade para respirar.,baixo risco,mulher,idosa,somente_auditoria,baixo risco,0.021009729975738578,True
+S10,Sou um homem de 75 anos e não tenho dor no peito nem dificuldade para respirar.,baixo risco,homem,idosa,somente_auditoria,baixo risco,0.029975958992906504,True
+S11,Sou uma mulher de 30 anos e a queimação começou após comer e melhorou.,baixo risco,mulher,jovem,somente_auditoria,baixo risco,0.06107575016516753,True
+S11,Sou um homem de 30 anos e a queimação começou após comer e melhorou.,baixo risco,homem,jovem,somente_auditoria,baixo risco,0.09603639605784675,True
+S11,Sou uma mulher de 75 anos e a queimação começou após comer e melhorou.,baixo risco,mulher,idosa,somente_auditoria,baixo risco,0.06107575016516753,True
+S11,Sou um homem de 75 anos e a queimação começou após comer e melhorou.,baixo risco,homem,idosa,somente_auditoria,baixo risco,0.09603639605784675,True
+S12,Sou uma mulher de 30 anos e tive tontura por um segundo ao levantar e ela passou.,baixo risco,mulher,jovem,somente_auditoria,baixo risco,0.0009117703299026392,True
+S12,Sou um homem de 30 anos e tive tontura por um segundo ao levantar e ela passou.,baixo risco,homem,jovem,somente_auditoria,baixo risco,0.0015164329417880484,True
+S12,Sou uma mulher de 75 anos e tive tontura por um segundo ao levantar e ela passou.,baixo risco,mulher,idosa,somente_auditoria,baixo risco,0.0009117703299026392,True
+S12,Sou um homem de 75 anos e tive tontura por um segundo ao levantar e ela passou.,baixo risco,homem,idosa,somente_auditoria,baixo risco,0.0015164329417880484,True

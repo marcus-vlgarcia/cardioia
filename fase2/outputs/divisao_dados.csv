@@ -991,3 +991,123 @@ Então... eu acho que não tive dor no peito nem suor frio; só uma coceira leve
 Então... eu acho que meu tórax está bem e a única queixa é pele ressecada.,baixo risco,D24-5,treino,D24,hesitacao
 "Oi, não tive dor no peitto nem suor frio; só uma coceira leve no braço.",baixo risco,D24-6,treino,D24,erro_ortografico
 "Oi, meu torax está bem e a única queixa é pele ressecada.",baixo risco,D24-6,treino,D24,erro_ortografico
+Meu peito pesa desde cedo e o suor está gelado,alto risco,N001,treino,N001,caso_adicional
+Aperta aqui no meio do tórax e a dor vai para o maxilar,alto risco,N002,treino,N002,caso_adicional
+Não melhorou depois de meia hora parado e continuo com pressão no peito,alto risco,N003,treino,N003,caso_adicional
+Uma dor forte apareceu do nada no peito junto com enjoo,alto risco,N004,treino,N004,caso_adicional
+Estou com uma pressão no peito e comecei a suar frio sem fazer esforço,alto risco,N005,treino,N005,caso_adicional
+Meu braço esquerdo ficou dolorido junto de um aperto que não passa no peito,alto risco,N006,treino,N006,caso_adicional
+Queima no estômago mas também estou pálido e com falta de ar,alto risco,N007,treino,N007,caso_adicional
+A dor parece indigestão só que veio com suor frio e fraqueza intensa,alto risco,N008,treino,N008,caso_adicional
+Sinto um peso estranho no peito desde o almoço e não consigo caminhar sem parar,alto risco,N009,treino,N009,caso_adicional
+Meu peito está comprimido e a sensação sobe pelo pescoço,alto risco,N010,treino,N010,caso_adicional
+Não é só azia porque estou suando gelado e quase apagando,alto risco,N011,treino,N011,caso_adicional
+O peito aperta mais forte agora e respirar também ficou difícil,alto risco,N012,treino,N012,caso_adicional
+To com dor no peitto há um tempão e ela chegou no braço,alto risco,N013,treino,N013,caso_adicional
+Meu corasão dispara e a vista escurece como se eu fosse cair,alto risco,N014,treino,N014,caso_adicional
+Fiquei com flata de ar parado e preciso parar pra terminar as frases,alto risco,N015,treino,N015,caso_adicional
+O suor é frio e o aperto no tórax não cedeu nem sentado,alto risco,N016,treino,N016,caso_adicional
+A dor começou no centro do peito e agora alcança minhas costas,alto risco,N017,treino,N017,caso_adicional
+Depois de descansar ainda sinto o peito pesado e estou enjoado,alto risco,N018,treino,N018,caso_adicional
+Meu pai percebeu que fiquei branco enquanto segurava o peito,alto risco,N019,treino,N019,caso_adicional
+Falei que era leve mas agora a dor não para e o suor está frio,alto risco,N020,treino,N020,caso_adicional
+Quando me deito parece que o ar acaba e tenho de levantar para respirar,alto risco,N021,treino,N021,caso_adicional
+Precisei dormir sentado porque deitado fiquei muito ofegante,alto risco,N022,treino,N022,caso_adicional
+Acordei à noite sufocado e abrir a janela não resolveu,alto risco,N023,treino,N023,caso_adicional
+Não consigo ficar deitado sem perder o fôlego e meus pés estão inchados,alto risco,N024,treino,N024,caso_adicional
+Estou sentado e mesmo assim não consigo puxar ar direito,alto risco,N025,treino,N025,caso_adicional
+Subir dois degraus me deixa sem ar e hoje isso piorou bastante,alto risco,N026,treino,N026,caso_adicional
+Não tenho dor no peito mas de repente passei a respirar com muita dificuldade,alto risco,N027,treino,N027,caso_adicional
+Eu disse que respirava bem mas agora mal consigo completar uma frase,alto risco,N028,treino,N028,caso_adicional
+Minha perna inchou depois da operação e hoje faltou ar de repente,alto risco,N029,treino,N029,caso_adicional
+Surgiu uma pontada no tórax ao respirar e fiquei subitamente sem fôlego,alto risco,N030,treino,N030,caso_adicional
+Não foi só cansaço do treino porque continuo ofegante meia hora depois,alto risco,N031,treino,N031,caso_adicional
+Mesmo parado no sofá estou respirando rápido e não consigo conversar,alto risco,N032,treino,N032,caso_adicional
+Toda vez que deito para dormir acordo querendo ar e preciso sentar,alto risco,N033,treino,N033,caso_adicional
+Tô sem ar mesmo quieto e minha boca tá ficando roxa,alto risco,N034,treino,N034,caso_adicional
+O ar ficou curto do nada e agora também dói quando inspiro,alto risco,N035,treino,N035,caso_adicional
+Não parei de sentir falta de ar durante a tarde e a fraqueza aumentou,alto risco,N036,treino,N036,caso_adicional
+Minha boca ficou torta de repente e não consigo levantar um braço,alto risco,N037,treino,N037,caso_adicional
+As palavras saem emboladas e minha mão direita perdeu força agora,alto risco,N038,treino,N038,caso_adicional
+De uma hora para outra não entendo o que falam e um lado do rosto caiu,alto risco,N039,treino,N039,caso_adicional
+Minha mãe viu que comecei a andar torto e a fala ficou estranha,alto risco,N040,treino,N040,caso_adicional
+Não é cansaço normal porque um braço simplesmente parou de obedecer,alto risco,N041,treino,N041,caso_adicional
+A visão de um olho apagou de repente e estou com a fala enrolada,alto risco,N042,treino,N042,caso_adicional
+Perdi a força da perna esquerda subitamente e caí ao tentar levantar,alto risco,N043,treino,N043,caso_adicional
+Meu marido diz que minha boca entortou e eu não consigo falar direito,alto risco,N044,treino,N044,caso_adicional
+Apaguei por alguns segundos e desde então sinto o coração batendo irregular,alto risco,N045,treino,N045,caso_adicional
+As batidas ficaram muito rápidas e uma tontura forte não passa,alto risco,N046,treino,N046,caso_adicional
+Parece que o coração sai pela boca e quase desmaiei no ônibus,alto risco,N047,treino,N047,caso_adicional
+Meu pulso ficou estranho junto com falta de ar e dor no peito,alto risco,N048,treino,N048,caso_adicional
+Fiquei zonzo e caí quando as palpitações começaram,alto risco,N049,treino,N049,caso_adicional
+Não posso dizer que as batidas normalizaram porque ainda estou tonto,alto risco,N050,treino,N050,caso_adicional
+O relógio acusou batimento acelerado em repouso e estou perto de apagar,alto risco,N051,treino,N051,caso_adicional
+Meu coração falha umas batidas e a respiração está piorando,alto risco,N052,treino,N052,caso_adicional
+Uma dor como rasgo atravessou meu peito e foi para as costas,alto risco,N053,treino,N053,caso_adicional
+O tórax começou a doer fortíssimo de repente sem eu ter me machucado,alto risco,N054,treino,N054,caso_adicional
+A dor veio abruptamente nas costas e no peito e não consigo ficar em pé,alto risco,N055,treino,N055,caso_adicional
+Estou com pressão torácica e suor frio mesmo sem qualquer exercício,alto risco,N056,treino,N056,caso_adicional
+O incômodo é pequeno mas desmaiei logo depois que ele apareceu,alto risco,N057,treino,N057,caso_adicional
+Neguei dor ontem mas hoje o peito dói continuamente e estou pálido,alto risco,N058,treino,N058,caso_adicional
+Não é verdade que não sinto nada porque estou com aperto forte no tórax,alto risco,N059,treino,N059,caso_adicional
+Tô com o peito apertano e sour gelado faz um tempão,alto risco,N060,treino,N060,caso_adicional
+Suei na caminhada e a respiração voltou ao normal poucos minutos após parar,baixo risco,N061,treino,N061,caso_adicional
+A blusa apertada marcava meu peito e o incômodo sumiu ao trocá-la,baixo risco,N062,treino,N062,caso_adicional
+Consigo provocar a mesma dor apertando o ponto onde bati na mesa,baixo risco,N063,treino,N063,caso_adicional
+Meu relógio mostrou pulso rápido durante a corrida e normal depois,baixo risco,N064,treino,N064,caso_adicional
+Fiquei ofegante por subir correndo a escada mas agora respiro como sempre,baixo risco,N065,treino,N065,caso_adicional
+O suor veio do calor da cozinha e cessou quando saí de lá,baixo risco,N066,treino,N066,caso_adicional
+O peito fisgou um segundo quando espirrei e não aconteceu novamente,baixo risco,N067,treino,N067,caso_adicional
+Senti a alça da mochila pressionar o tórax e passou quando a soltei,baixo risco,N068,treino,N068,caso_adicional
+O braço dói apenas ao esticar o músculo que machuquei ontem,baixo risco,N069,treino,N069,caso_adicional
+Minha respiração acelerou com o susto e voltou completamente ao normal,baixo risco,N070,treino,N070,caso_adicional
+Tive azia igual à habitual após comer e ela passou sem outros sintomas,baixo risco,N071,treino,N071,caso_adicional
+A queimação apareceu quando deitei depois da refeição e melhorou ao levantar,baixo risco,N072,treino,N072,caso_adicional
+O gosto ácido veio depois do jantar e desapareceu sem dor no peito,baixo risco,N073,treino,N073,caso_adicional
+To de boa agora; só suei no treino e melhorei totalmente ao descansar,baixo risco,N074,treino,N074,caso_adicional
+Tava sem fôlego depois da bicicleta mas já respiro normalmente,baixo risco,N075,treino,N075,caso_adicional
+Minha mãe teve falta de ar ontem; eu continuo respirando bem,baixo risco,N076,treino,N076,caso_adicional
+A notícia falou em infarto mas minha única queixa é coceira no braço,baixo risco,N077,treino,N077,caso_adicional
+Eu disse que estava com dor no peito por causa da camisa mas a tirei e passou,baixo risco,N078,treino,N078,caso_adicional
+Não tenho aperto no peito e o suor veio somente da sauna,baixo risco,N079,treino,N079,caso_adicional
+Não sinto falta de ar nem tontura; foi só uma fisgada ao girar o tronco,baixo risco,N080,treino,N080,caso_adicional
+Meu coração acelerou na apresentação e acalmou quando terminei de falar,baixo risco,N081,treino,N081,caso_adicional
+Dei um pulo com o barulho e as batidas já estão no ritmo habitual,baixo risco,N082,treino,N082,caso_adicional
+Percebi uma batida forte após café mas ela cessou e me sinto bem,baixo risco,N083,treino,N083,caso_adicional
+O pulso ficou rápido na bicicleta e caiu normalmente quando parei,baixo risco,N084,treino,N084,caso_adicional
+A pulseira vibrou por erro de leitura mas não tive sintomas,baixo risco,N085,treino,N085,caso_adicional
+A palavra desmaio era sobre outra pessoa; comigo não aconteceu nada,baixo risco,N086,treino,N086,caso_adicional
+Minha voz saiu enrolada porque estava com a boca anestesiada no dentista e já voltou,baixo risco,N087,treino,N087,caso_adicional
+Um lado do meu rosto ficou marcado pelo travesseiro e a marca sumiu,baixo risco,N088,treino,N088,caso_adicional
+Minha mão formigou depois de dormir sobre o braço e voltou ao normal rapidamente,baixo risco,N089,treino,N089,caso_adicional
+Os dedos perderam a sensibilidade com o frio e recuperaram após aquecer,baixo risco,N090,treino,N090,caso_adicional
+Minha fala ficou lenta pelo sono e normalizou quando acordei,baixo risco,N091,treino,N091,caso_adicional
+O pescoço ficou dolorido ao girar depois de carregar caixas e melhora parado,baixo risco,N092,treino,N092,caso_adicional
+Suei muito por estar no sol e fiquei bem ao entrar em casa,baixo risco,N093,treino,N093,caso_adicional
+O peito ficou sensível só onde a fita adesiva irritou a pele,baixo risco,N094,treino,N094,caso_adicional
+A tontura durou dois segundos quando levantei rápido e não voltou,baixo risco,N095,treino,N095,caso_adicional
+A fisgada fica na costela machucada e posso mostrar exatamente o ponto,baixo risco,N096,treino,N096,caso_adicional
+Não senti pressão no peito; a mochila é que pesava nos ombros,baixo risco,N097,treino,N097,caso_adicional
+Meu nariz entupiu com poeira mas consigo respirar sem esforço,baixo risco,N098,treino,N098,caso_adicional
+As batidas aceleraram durante o jogo e hoje já estão normais,baixo risco,N099,treino,N099,caso_adicional
+Depois de cantar senti cansaço na voz e não tive falta de ar,baixo risco,N100,treino,N100,caso_adicional
+A roupa nova apertou o tórax por minutos e tirar a roupa resolveu,baixo risco,N101,treino,N101,caso_adicional
+A dor do ombro vem quando seguro peso e some assim que descanso o braço,baixo risco,N102,treino,N102,caso_adicional
+Senti pontada bem superficial no peito ao tocar uma espinha inflamada,baixo risco,N103,treino,N103,caso_adicional
+A respiração foi rápida após correr para pegar o ônibus e recuperou totalmente,baixo risco,N104,treino,N104,caso_adicional
+Não tenho dor no peito nem suor frio; só garganta arranhando,baixo risco,N105,treino,N105,caso_adicional
+Meu braço ficou cansado depois de treinar e não há perda súbita de força,baixo risco,N106,treino,N106,caso_adicional
+Usei falta de ar como expressão mas estava só cansado e respiro normalmente,baixo risco,N107,treino,N107,caso_adicional
+Eu estava com pressa e falei que ia desmaiar; fiquei bem após sentar,baixo risco,N108,treino,N108,caso_adicional
+O café me deu uma sensação breve de batida forte e já passou,baixo risco,N109,treino,N109,caso_adicional
+Meu suor foi de dançar em uma festa e parou depois que descansei,baixo risco,N110,treino,N110,caso_adicional
+A dor aparece apenas quando aperto a costela onde bati e não tenho falta de ar,baixo risco,N111,treino,N111,caso_adicional
+Falei devagar porque mordi a língua mas agora a fala está normal,baixo risco,N112,treino,N112,caso_adicional
+Meu relógio marcou pulso estranho enquanto estava solto no meu punho,baixo risco,N113,treino,N113,caso_adicional
+A sensação de peito preso era o cinto apertado e sumiu quando o afrouxei,baixo risco,N114,treino,N114,caso_adicional
+Num tô com dorr no peitto nem sour frio; a pele só coça,baixo risco,N115,treino,N115,caso_adicional
+O corasão acelerou na caminhada e voltou ao normal depois,baixo risco,N116,treino,N116,caso_adicional
+A flata de ar foi só modo de dizer que fiquei cansado; respiro bem,baixo risco,N117,treino,N117,caso_adicional
+Minha irmã está pálida e enjoada mas eu não apresento essas queixas,baixo risco,N118,treino,N118,caso_adicional
+A queimação conhecida cessou depois que sentei e não tenho suor frio,baixo risco,N119,treino,N119,caso_adicional
+O peso que senti no peito vinha da sacola apoiada ali e desapareceu,baixo risco,N120,treino,N120,caso_adicional

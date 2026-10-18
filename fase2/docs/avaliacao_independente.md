@@ -2,10 +2,11 @@
 
 ## Por que ainda é necessária
 
-O conjunto `avaliacao_externa.csv` é separado do treino e baseado em fontes
-públicas, mas foi redigido dentro do próprio projeto. Por isso, ele reduz
-vazamento de desenvolvimento, porém não atende sozinho ao conceito mais forte de
-avaliação independente.
+Os conjuntos `avaliacao_externa.csv`, `auditoria_nova.csv` e
+`auditoria_contrastiva.csv` são separados do treino e baseados em fontes
+públicas, mas foram redigidos dentro do próprio projeto. Isso reduz vazamento
+direto entre treino e avaliação, porém não atende sozinho ao conceito mais
+forte de avaliação independente.
 
 ## Procedimento proposto
 

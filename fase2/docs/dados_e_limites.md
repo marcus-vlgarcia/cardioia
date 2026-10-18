@@ -2,18 +2,20 @@
 
 ## O que é simulado
 
-Os dez relatos obrigatórios, as 992 frases da base principal, os desafios, os
+Os dez relatos obrigatórios, as 1.112 frases da base principal, os desafios, os
 pares de gravidade e a auditoria de subgrupos são exemplos simulados. Não são
-prontuários, transcrições ou registros de atendimento. O balanceamento de 496
+prontuários, transcrições ou registros de atendimento. O balanceamento de 556
 frases por classe foi escolhido para o exercício e não representa prevalência.
 
 As 576 frases adicionadas nesta ampliação combinam duas redações de 48 situações
 com seis formas de relato: direto, temporal, cotidiano, coloquial, hesitante e
 com erro ortográfico controlado. As 128 frases da revisão anterior já traziam
 relato de terceiros, esforço, recuperação, persistência, negações duplas e
-contradições. Ainda há autoria compartilhada e vocabulário repetido; 992
-frases não equivalem a 992 pacientes. O teste de 264 frases deriva de apenas
-22 famílias novas de situações.
+contradições. Os 120 casos seguintes foram escritos como situações individuais
+com linguagem cotidiana e pistas de gravidade variadas. Ainda há autoria
+compartilhada e vocabulário repetido; 1.112 frases não equivalem a 1.112
+pacientes. O teste histórico de 264 frases deriva de apenas 22 famílias de
+situações. Há também 80 frases e 20 pares novos fora da base principal.
 
 ## Avaliação baseada em fontes externas
 
@@ -42,6 +44,12 @@ Fontes principais, consultadas em 16/10/2026:
 
 Os rótulos não vêm do alvo numérico artificial da Fase 1 e não são produzidos
 pelo extrator de sintomas.
+
+Os novos arquivos `casos_adicionais.csv`, `auditoria_nova.csv` e
+`auditoria_contrastiva.csv` guardam um identificador de fonte por cenário.
+As fontes orientam os padrões de sintomas, mas não fornecem rótulos individuais
+nem substituem revisão especializada. Consulte
+[fontes_casos_adicionais.md](fontes_casos_adicionais.md).
 
 ## Negações e contradições
 

@@ -1,0 +1,41 @@
+par,frase,situacao,tema,fonte_id,predicao_anterior,probabilidade_anterior,predicao,probabilidade_alto_risco,acerto_anterior,acerto
+K01,O peito continua apertado há trinta minutos e o suor está frio,alto risco,dor_toracica,DOR,alto risco,0.9996887277943999,alto risco,0.9980274422603477,True,True
+K01,O peito ficou apertado pela roupa e o desconforto acabou quando a soltei,baixo risco,dor_toracica,DIF,baixo risco,0.3882290028860741,baixo risco,0.14462870066098865,True,True
+K02,A corrida terminou mas continuo sem ar mesmo depois de descansar,alto risco,falta_de_ar,DOR,baixo risco,0.3602965119146304,alto risco,0.5938736035004795,False,True
+K02,Fiquei sem ar durante a corrida e recuperei completamente após parar,baixo risco,falta_de_ar,DIF,baixo risco,0.007056538747203911,baixo risco,0.01188837927920594,True,True
+K03,Meu coração acelerou em repouso e a tontura quase me derrubou,alto risco,palpitacao,ARR,alto risco,0.9769629035477334,alto risco,0.9516829364686863,True,True
+K03,Meu coração acelerou no susto e a sensação sumiu logo em seguida,baixo risco,palpitacao,ARR,baixo risco,0.4896909740066697,baixo risco,0.23204182270285345,True,True
+K04,Perdi a força de um braço de repente e a fala ficou enrolada,alto risco,neurologico,AVC,alto risco,0.9999002024830264,alto risco,0.9996881415918992,True,True
+K04,O braço ficou dolorido após levantar peso mas a força está normal,baixo risco,neurologico,DIF,baixo risco,0.18920678481971454,baixo risco,0.05479785172924101,True,True
+K05,A queimação veio com palidez e suor frio e não está passando,alto risco,queimacao,INFARTO,alto risco,0.995831009460867,alto risco,0.9779787198364251,True,True
+K05,A queimação conhecida após o jantar desapareceu e não houve outro sintoma,baixo risco,queimacao,DIF,baixo risco,0.04927299337001667,baixo risco,0.013578314528263857,True,True
+K06,Só consigo respirar sentado porque deitado fico sufocado,alto risco,ao_deitar,IC,alto risco,0.7178200893871935,alto risco,0.9233002641332029,True,True
+K06,Usei mais travesseiros para ficar confortável e respiro bem deitado,baixo risco,ao_deitar,DIF,baixo risco,0.12335709384366389,baixo risco,0.14236719005334408,True,True
+K07,Depois da cirurgia minha perna inchou e surgiu falta de ar súbita,alto risco,pos_cirurgia,TROMBOSE,alto risco,0.9417726361092806,alto risco,0.9011388184630604,True,True
+K07,Depois da cirurgia o curativo puxou a pele da perna e a sensação sumiu ao ajeitá-lo,baixo risco,pos_cirurgia,DIF,baixo risco,0.004101099389990259,baixo risco,0.0036855805698415844,True,True
+K08,Minha cabeça doeu muito de repente e comecei a falar sem clareza,alto risco,neurologico,AVC,alto risco,0.9995330499046823,alto risco,0.9990547167663147,True,True
+K08,Falei devagar por sono e agora estou desperto sem dificuldade,baixo risco,neurologico,DIF,baixo risco,0.01414737673892319,baixo risco,0.019490240845622564,True,True
+K09,Uma dor súbita parece rasgar o peito e as costas sem aliviar,alto risco,dor_subita,DOR,alto risco,0.999346288683261,alto risco,0.9984272553995415,True,True
+K09,As costas incomodam apenas quando giro o tronco machucado e melhoram parado,baixo risco,dor_subita,DIF,baixo risco,0.3326545180017293,baixo risco,0.2953056098206457,True,True
+K10,A dor no peito parece fraca mas eu desmaiei logo depois,alto risco,sinal_associado,DOR,alto risco,0.9250692597593668,alto risco,0.9626465913677844,True,True
+K10,Uma pontada de um segundo na pele do peito cessou e não voltou,baixo risco,sinal_associado,DIF,baixo risco,0.0008954090804352832,baixo risco,0.003057651173791087,True,True
+K11,Não deixei de sentir pressão torácica desde que acordei,alto risco,negacao,DOR,alto risco,0.9980290871577904,alto risco,0.9978440504749072,True,True
+K11,Não senti pressão torácica hoje e continuo sem sintomas,baixo risco,negacao,DIF,baixo risco,0.04317930431331596,baixo risco,0.06182406463551304,True,True
+K12,Eu disse que minha irmã estava mal mas agora sou eu que estou sem ar,alto risco,terceiro,IC,alto risco,0.9555002989413247,alto risco,0.908829012374917,True,True
+K12,Minha irmã está sem ar mas eu não apresento essa dificuldade,baixo risco,terceiro,DIF,baixo risco,0.14847236288760368,baixo risco,0.105567227206806,True,True
+K13,Tô zonzo e o peito segue apertando mesmo parado,alto risco,coloquial,DOR,alto risco,0.9990759258724996,alto risco,0.9975201980723679,True,True
+K13,Tô de boa e o peito só marcou onde a mochila encostou,baixo risco,coloquial,DIF,baixo risco,0.006132858548667519,baixo risco,0.009639986499325515,True,True
+K14,To com dorr no peitto e o suor ficou gelado sem esforço,alto risco,erro,INFARTO,alto risco,0.9979369006741116,alto risco,0.9915706535681117,True,True
+K14,A dorr no peitto vinha da camiseta apertada e passou ao tirá-la,baixo risco,erro,DIF,baixo risco,0.21110545431276562,baixo risco,0.02709444620034318,True,True
+K15,Não passou a dor no peito quando interrompi o exercício e sentei,alto risco,persistencia,DOR,alto risco,0.7946276166630769,alto risco,0.5559133187776755,True,True
+K15,A dor muscular do braço parou assim que interrompi o exercício,baixo risco,persistencia,DIF,baixo risco,0.08221603485800966,baixo risco,0.13177269534545,True,True
+K16,Não tenho dor no peito mas estou sem ar mesmo quieto e não consigo falar,alto risco,negacao_contextual,IC,alto risco,0.9958641765440676,alto risco,0.9968593214231677,True,True
+K16,Não tenho dor no peito e respiro normalmente; apenas minha voz está rouca,baixo risco,negacao_contextual,DIF,baixo risco,0.0008319771244582608,baixo risco,0.0004966014912863859,True,True
+K17,Acordo sem ar quando me deito e preciso me sentar para conseguir respirar,alto risco,ao_deitar,IC,alto risco,0.9872223015783761,alto risco,0.9865627389035752,True,True
+K17,Deito com o nariz entupido mas consigo respirar normalmente pela boca,baixo risco,ao_deitar,DIF,baixo risco,0.010852267332820742,baixo risco,0.02755835374540494,True,True
+K18,Fiquei pálido e enjoado junto com uma pressão forte no tórax,alto risco,nausea,INFARTO,alto risco,0.9999593616005286,alto risco,0.9999257005716354,True,True
+K18,Fiquei enjoado depois da refeição e melhorei sem dor torácica,baixo risco,nausea,DIF,baixo risco,0.08074990928468662,baixo risco,0.09736070681330233,True,True
+K19,O relógio marcou pulso acelerado quando eu estava sentado e quase apaguei,alto risco,pulso,ARR,alto risco,0.8716562289115409,baixo risco,0.2961483791811451,True,False
+K19,O relógio marcou pulso acelerado durante a bicicleta e voltou ao normal,baixo risco,pulso,ARR,baixo risco,0.0018033866324302927,baixo risco,0.0005106860948725922,True,True
+K20,Antes passou mas a dor no peito voltou mais forte com suor frio,alto risco,retorno,DOR,alto risco,0.9999518434927253,alto risco,0.9994937782040324,True,True
+K20,A dor superficial da alça da bolsa passou e não aconteceu novamente,baixo risco,retorno,DIF,baixo risco,0.004187837355119628,baixo risco,0.0011304808325180993,True,True

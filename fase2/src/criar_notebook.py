@@ -39,15 +39,17 @@ def main():
         nbf.v4.new_markdown_cell(
             "## Composição e separação\n\n"
             "As frases são sintéticas. Duas redações do mesmo grupo e seis variações da mesma "
-            "família permanecem na mesma partição. O teste final foi reservado antes da busca "
-            "de configurações; a regressão contém casos de versões anteriores."
+            "família permanecem na mesma partição. Foram acrescentados 120 relatos "
+            "individuais ao treino. O teste de 264 frases já foi observado na revisão "
+            "anterior e agora serve como acompanhamento histórico; a regressão contém "
+            "casos ainda mais antigos."
         ),
         nbf.v4.new_code_cell(
             "display(dados.groupby(['conjunto', 'situacao']).agg(" 
             "frases=('frase', 'size'), grupos=('grupo', 'nunique'), familias=('familia', 'nunique')))\n"
             "conjuntos = {n: dados[dados.conjunto == n].copy() "
             "for n in ('treino', 'calibracao', 'teste', 'regressao')}\n"
-            "assert tuple(len(conjuntos[n]) for n in conjuntos) == (496, 88, 264, 144)\n"
+            "assert tuple(len(conjuntos[n]) for n in conjuntos) == (616, 88, 264, 144)\n"
             "assert not dados.frase.str.casefold().str.strip().duplicated().any()\n"
             "for a in conjuntos:\n"
             "    for b in conjuntos:\n"
@@ -59,7 +61,7 @@ def main():
             "Comparamos palavras de 1–2 e 1–3 termos e uma opção combinada de palavras e "
             "caracteres. A validação cruzada usa apenas o treino, agrupado por família, "
             "para escolher a configuração pelo F1 macro. Não escolhemos a configuração "
-            "pela acurácia do teste final."
+            "pela acurácia dos conjuntos de avaliação."
         ),
         nbf.v4.new_code_cell(
             "treino = conjuntos['treino']\n"
@@ -79,10 +81,10 @@ def main():
             "'C=', busca.best_params_['classificador__C'])"
         ),
         nbf.v4.new_markdown_cell(
-            "## Avaliação reservada\n\n"
-            "A calibração sigmoide usa somente 88 frases próprias. O teste tem 264 frases, "
-            "mas apenas 22 famílias novas: variações da mesma família não equivalem a "
-            "pacientes ou casos clínicos independentes."
+            "## Avaliação histórica\n\n"
+            "A calibração sigmoide usa somente 88 frases próprias. O conjunto de 264 "
+            "frases, já conhecido da versão anterior, deriva de apenas 22 famílias. "
+            "A nova auditoria e os pares contrastivos são avaliados separadamente."
         ),
         nbf.v4.new_code_cell(
             "modelo = CalibratedClassifierCV(FrozenEstimator(modelo_base), method='sigmoid')\n"
@@ -105,11 +107,29 @@ def main():
             "'predicao']].head(30))"
         ),
         nbf.v4.new_markdown_cell(
-            "## Conjuntos complementares e limites\n\n"
+            "## Auditorias novas e conjuntos complementares\n\n"
             "As frases externas são redigidas a partir de fontes públicas, não são relatos "
-            "reais nem têm rótulo validado por especialista. Pares de gravidade testam "
-            "vocabulário semelhante em contextos diferentes. As probabilidades representam "
+            "reais nem têm rótulo validado por especialista. O mesmo vale para as 80 "
+            "frases da nova auditoria e os 20 pares contrastivos. As probabilidades representam "
             "a saída do classificador nesta amostra, não risco clínico."
+        ),
+        nbf.v4.new_code_cell(
+            "modelo_anterior = criar_modelo().set_params(classificador__C=8.0)\n"
+            "antigo_treino = treino[treino.variacao != 'caso_adicional']\n"
+            "modelo_anterior.fit(antigo_treino.frase, antigo_treino.situacao)\n"
+            "calibrado_anterior = CalibratedClassifierCV(FrozenEstimator(modelo_anterior), "
+            "method='sigmoid')\n"
+            "calibrado_anterior.fit(conjuntos['calibracao'].frase, "
+            "conjuntos['calibracao'].situacao)\n"
+            "linhas_auditoria = []\n"
+            "for arquivo in ('auditoria_nova.csv', 'auditoria_contrastiva.csv'):\n"
+            "    df = pd.read_csv(RAIZ / 'fase2/data' / arquivo)\n"
+            "    for nome, estimador in [('modelo anterior', calibrado_anterior), "
+            "('modelo ampliado', modelo)]:\n"
+            "        previsto, _ = prever(estimador, df.frase)\n"
+            "        linhas_auditoria.append({'conjunto': arquivo, 'modelo': nome, "
+            "**metricas_binarias(df.situacao, previsto)})\n"
+            "display(pd.DataFrame(linhas_auditoria))"
         ),
         nbf.v4.new_code_cell(
             "linhas = []\n"

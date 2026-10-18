@@ -1,0 +1,121 @@
+id,frase,situacao,grupo,tema,fonte_id
+N001,Meu peito pesa desde cedo e o suor está gelado,alto risco,N001,dor_toracica,INFARTO
+N002,Aperta aqui no meio do tórax e a dor vai para o maxilar,alto risco,N002,dor_toracica,DOR
+N003,Não melhorou depois de meia hora parado e continuo com pressão no peito,alto risco,N003,dor_toracica,DOR
+N004,Uma dor forte apareceu do nada no peito junto com enjoo,alto risco,N004,dor_toracica,INFARTO
+N005,Estou com uma pressão no peito e comecei a suar frio sem fazer esforço,alto risco,N005,dor_toracica,INFARTO
+N006,Meu braço esquerdo ficou dolorido junto de um aperto que não passa no peito,alto risco,N006,dor_toracica,DOR
+N007,Queima no estômago mas também estou pálido e com falta de ar,alto risco,N007,apresentacao_atipica,INFARTO
+N008,A dor parece indigestão só que veio com suor frio e fraqueza intensa,alto risco,N008,apresentacao_atipica,INFARTO
+N009,Sinto um peso estranho no peito desde o almoço e não consigo caminhar sem parar,alto risco,N009,dor_toracica,DOR
+N010,Meu peito está comprimido e a sensação sobe pelo pescoço,alto risco,N010,dor_toracica,DOR
+N011,Não é só azia porque estou suando gelado e quase apagando,alto risco,N011,apresentacao_atipica,INFARTO
+N012,O peito aperta mais forte agora e respirar também ficou difícil,alto risco,N012,dor_toracica,DOR
+N013,To com dor no peitto há um tempão e ela chegou no braço,alto risco,N013,erro_coloquial,DOR
+N014,Meu corasão dispara e a vista escurece como se eu fosse cair,alto risco,N014,erro_coloquial,ARR
+N015,Fiquei com flata de ar parado e preciso parar pra terminar as frases,alto risco,N015,erro_coloquial,IC
+N016,O suor é frio e o aperto no tórax não cedeu nem sentado,alto risco,N016,dor_toracica,INFARTO
+N017,A dor começou no centro do peito e agora alcança minhas costas,alto risco,N017,dor_toracica,DOR
+N018,Depois de descansar ainda sinto o peito pesado e estou enjoado,alto risco,N018,dor_toracica,DOR
+N019,Meu pai percebeu que fiquei branco enquanto segurava o peito,alto risco,N019,relato_terceiro,INFARTO
+N020,Falei que era leve mas agora a dor não para e o suor está frio,alto risco,N020,contradicao,INFARTO
+N021,Quando me deito parece que o ar acaba e tenho de levantar para respirar,alto risco,N021,falta_de_ar,IC
+N022,Precisei dormir sentado porque deitado fiquei muito ofegante,alto risco,N022,falta_de_ar,IC
+N023,Acordei à noite sufocado e abrir a janela não resolveu,alto risco,N023,falta_de_ar,IC
+N024,Não consigo ficar deitado sem perder o fôlego e meus pés estão inchados,alto risco,N024,falta_de_ar,IC
+N025,Estou sentado e mesmo assim não consigo puxar ar direito,alto risco,N025,falta_de_ar,IC
+N026,Subir dois degraus me deixa sem ar e hoje isso piorou bastante,alto risco,N026,falta_de_ar,IC
+N027,Não tenho dor no peito mas de repente passei a respirar com muita dificuldade,alto risco,N027,negacao_contextual,TROMBOSE
+N028,Eu disse que respirava bem mas agora mal consigo completar uma frase,alto risco,N028,contradicao,IC
+N029,Minha perna inchou depois da operação e hoje faltou ar de repente,alto risco,N029,trombose,TROMBOSE
+N030,Surgiu uma pontada no tórax ao respirar e fiquei subitamente sem fôlego,alto risco,N030,trombose,TROMBOSE
+N031,Não foi só cansaço do treino porque continuo ofegante meia hora depois,alto risco,N031,persistencia,DOR
+N032,Mesmo parado no sofá estou respirando rápido e não consigo conversar,alto risco,N032,falta_de_ar,IC
+N033,Toda vez que deito para dormir acordo querendo ar e preciso sentar,alto risco,N033,falta_de_ar,IC
+N034,Tô sem ar mesmo quieto e minha boca tá ficando roxa,alto risco,N034,coloquial,IC
+N035,O ar ficou curto do nada e agora também dói quando inspiro,alto risco,N035,trombose,TROMBOSE
+N036,Não parei de sentir falta de ar durante a tarde e a fraqueza aumentou,alto risco,N036,dupla_negacao,IC
+N037,Minha boca ficou torta de repente e não consigo levantar um braço,alto risco,N037,neurologico,AVC
+N038,As palavras saem emboladas e minha mão direita perdeu força agora,alto risco,N038,neurologico,AVC
+N039,De uma hora para outra não entendo o que falam e um lado do rosto caiu,alto risco,N039,neurologico,AVC
+N040,Minha mãe viu que comecei a andar torto e a fala ficou estranha,alto risco,N040,neurologico,AVC
+N041,Não é cansaço normal porque um braço simplesmente parou de obedecer,alto risco,N041,neurologico,AVC
+N042,A visão de um olho apagou de repente e estou com a fala enrolada,alto risco,N042,neurologico,AVC
+N043,Perdi a força da perna esquerda subitamente e caí ao tentar levantar,alto risco,N043,neurologico,AVC
+N044,Meu marido diz que minha boca entortou e eu não consigo falar direito,alto risco,N044,neurologico,AVC
+N045,Apaguei por alguns segundos e desde então sinto o coração batendo irregular,alto risco,N045,palpitacao,ARR
+N046,As batidas ficaram muito rápidas e uma tontura forte não passa,alto risco,N046,palpitacao,ARR
+N047,Parece que o coração sai pela boca e quase desmaiei no ônibus,alto risco,N047,coloquial,ARR
+N048,Meu pulso ficou estranho junto com falta de ar e dor no peito,alto risco,N048,palpitacao,ARR
+N049,Fiquei zonzo e caí quando as palpitações começaram,alto risco,N049,coloquial,ARR
+N050,Não posso dizer que as batidas normalizaram porque ainda estou tonto,alto risco,N050,negacao_contextual,ARR
+N051,O relógio acusou batimento acelerado em repouso e estou perto de apagar,alto risco,N051,palpitacao,ARR
+N052,Meu coração falha umas batidas e a respiração está piorando,alto risco,N052,palpitacao,ARR
+N053,Uma dor como rasgo atravessou meu peito e foi para as costas,alto risco,N053,dor_subita,DOR
+N054,O tórax começou a doer fortíssimo de repente sem eu ter me machucado,alto risco,N054,dor_subita,DOR
+N055,A dor veio abruptamente nas costas e no peito e não consigo ficar em pé,alto risco,N055,dor_subita,DOR
+N056,Estou com pressão torácica e suor frio mesmo sem qualquer exercício,alto risco,N056,dor_toracica,INFARTO
+N057,O incômodo é pequeno mas desmaiei logo depois que ele apareceu,alto risco,N057,sinal_associado,DOR
+N058,Neguei dor ontem mas hoje o peito dói continuamente e estou pálido,alto risco,N058,contradicao,INFARTO
+N059,Não é verdade que não sinto nada porque estou com aperto forte no tórax,alto risco,N059,dupla_negacao,DOR
+N060,Tô com o peito apertano e sour gelado faz um tempão,alto risco,N060,erro_coloquial,INFARTO
+N061,Suei na caminhada e a respiração voltou ao normal poucos minutos após parar,baixo risco,N061,exercicio,DIF
+N062,A blusa apertada marcava meu peito e o incômodo sumiu ao trocá-la,baixo risco,N062,parede_toracica,DIF
+N063,Consigo provocar a mesma dor apertando o ponto onde bati na mesa,baixo risco,N063,parede_toracica,DIF
+N064,Meu relógio mostrou pulso rápido durante a corrida e normal depois,baixo risco,N064,exercicio,ARR
+N065,Fiquei ofegante por subir correndo a escada mas agora respiro como sempre,baixo risco,N065,exercicio,DIF
+N066,O suor veio do calor da cozinha e cessou quando saí de lá,baixo risco,N066,calor,DIF
+N067,O peito fisgou um segundo quando espirrei e não aconteceu novamente,baixo risco,N067,parede_toracica,DIF
+N068,Senti a alça da mochila pressionar o tórax e passou quando a soltei,baixo risco,N068,parede_toracica,DIF
+N069,O braço dói apenas ao esticar o músculo que machuquei ontem,baixo risco,N069,musculo,DIF
+N070,Minha respiração acelerou com o susto e voltou completamente ao normal,baixo risco,N070,emocao,DIF
+N071,Tive azia igual à habitual após comer e ela passou sem outros sintomas,baixo risco,N071,refluxo,DIF
+N072,A queimação apareceu quando deitei depois da refeição e melhorou ao levantar,baixo risco,N072,refluxo,DIF
+N073,O gosto ácido veio depois do jantar e desapareceu sem dor no peito,baixo risco,N073,refluxo,DIF
+N074,To de boa agora; só suei no treino e melhorei totalmente ao descansar,baixo risco,N074,coloquial,DIF
+N075,Tava sem fôlego depois da bicicleta mas já respiro normalmente,baixo risco,N075,coloquial,DIF
+N076,Minha mãe teve falta de ar ontem; eu continuo respirando bem,baixo risco,N076,relato_terceiro,DIF
+N077,A notícia falou em infarto mas minha única queixa é coceira no braço,baixo risco,N077,relato_terceiro,DIF
+N078,Eu disse que estava com dor no peito por causa da camisa mas a tirei e passou,baixo risco,N078,retificacao,DIF
+N079,Não tenho aperto no peito e o suor veio somente da sauna,baixo risco,N079,negacao_contextual,DIF
+N080,Não sinto falta de ar nem tontura; foi só uma fisgada ao girar o tronco,baixo risco,N080,negacao_contextual,DIF
+N081,Meu coração acelerou na apresentação e acalmou quando terminei de falar,baixo risco,N081,emocao,ARR
+N082,Dei um pulo com o barulho e as batidas já estão no ritmo habitual,baixo risco,N082,emocao,ARR
+N083,Percebi uma batida forte após café mas ela cessou e me sinto bem,baixo risco,N083,cafeina,ARR
+N084,O pulso ficou rápido na bicicleta e caiu normalmente quando parei,baixo risco,N084,exercicio,ARR
+N085,A pulseira vibrou por erro de leitura mas não tive sintomas,baixo risco,N085,dispositivo,DIF
+N086,A palavra desmaio era sobre outra pessoa; comigo não aconteceu nada,baixo risco,N086,relato_terceiro,DIF
+N087,Minha voz saiu enrolada porque estava com a boca anestesiada no dentista e já voltou,baixo risco,N087,explicacao_local,DIF
+N088,Um lado do meu rosto ficou marcado pelo travesseiro e a marca sumiu,baixo risco,N088,explicacao_local,DIF
+N089,Minha mão formigou depois de dormir sobre o braço e voltou ao normal rapidamente,baixo risco,N089,explicacao_local,DIF
+N090,Os dedos perderam a sensibilidade com o frio e recuperaram após aquecer,baixo risco,N090,explicacao_local,DIF
+N091,Minha fala ficou lenta pelo sono e normalizou quando acordei,baixo risco,N091,explicacao_local,DIF
+N092,O pescoço ficou dolorido ao girar depois de carregar caixas e melhora parado,baixo risco,N092,musculo,DIF
+N093,Suei muito por estar no sol e fiquei bem ao entrar em casa,baixo risco,N093,calor,DIF
+N094,O peito ficou sensível só onde a fita adesiva irritou a pele,baixo risco,N094,pele,DIF
+N095,A tontura durou dois segundos quando levantei rápido e não voltou,baixo risco,N095,episodio_breve,DIF
+N096,A fisgada fica na costela machucada e posso mostrar exatamente o ponto,baixo risco,N096,parede_toracica,DIF
+N097,Não senti pressão no peito; a mochila é que pesava nos ombros,baixo risco,N097,negacao_contextual,DIF
+N098,Meu nariz entupiu com poeira mas consigo respirar sem esforço,baixo risco,N098,irritacao,DIF
+N099,As batidas aceleraram durante o jogo e hoje já estão normais,baixo risco,N099,exercicio,ARR
+N100,Depois de cantar senti cansaço na voz e não tive falta de ar,baixo risco,N100,voz,DIF
+N101,A roupa nova apertou o tórax por minutos e tirar a roupa resolveu,baixo risco,N101,parede_toracica,DIF
+N102,A dor do ombro vem quando seguro peso e some assim que descanso o braço,baixo risco,N102,musculo,DIF
+N103,Senti pontada bem superficial no peito ao tocar uma espinha inflamada,baixo risco,N103,pele,DIF
+N104,A respiração foi rápida após correr para pegar o ônibus e recuperou totalmente,baixo risco,N104,exercicio,DIF
+N105,Não tenho dor no peito nem suor frio; só garganta arranhando,baixo risco,N105,negacao_contextual,DIF
+N106,Meu braço ficou cansado depois de treinar e não há perda súbita de força,baixo risco,N106,exercicio,DIF
+N107,Usei falta de ar como expressão mas estava só cansado e respiro normalmente,baixo risco,N107,metafora,DIF
+N108,Eu estava com pressa e falei que ia desmaiar; fiquei bem após sentar,baixo risco,N108,metafora,DIF
+N109,O café me deu uma sensação breve de batida forte e já passou,baixo risco,N109,cafeina,ARR
+N110,Meu suor foi de dançar em uma festa e parou depois que descansei,baixo risco,N110,exercicio,DIF
+N111,A dor aparece apenas quando aperto a costela onde bati e não tenho falta de ar,baixo risco,N111,parede_toracica,DIF
+N112,Falei devagar porque mordi a língua mas agora a fala está normal,baixo risco,N112,explicacao_local,DIF
+N113,Meu relógio marcou pulso estranho enquanto estava solto no meu punho,baixo risco,N113,dispositivo,DIF
+N114,A sensação de peito preso era o cinto apertado e sumiu quando o afrouxei,baixo risco,N114,parede_toracica,DIF
+N115,Num tô com dorr no peitto nem sour frio; a pele só coça,baixo risco,N115,erro_coloquial,DIF
+N116,O corasão acelerou na caminhada e voltou ao normal depois,baixo risco,N116,erro_coloquial,ARR
+N117,A flata de ar foi só modo de dizer que fiquei cansado; respiro bem,baixo risco,N117,erro_coloquial,DIF
+N118,Minha irmã está pálida e enjoada mas eu não apresento essas queixas,baixo risco,N118,relato_terceiro,DIF
+N119,A queimação conhecida cessou depois que sentei e não tenho suor frio,baixo risco,N119,refluxo,DIF
+N120,O peso que senti no peito vinha da sacola apoiada ali e desapareceu,baixo risco,N120,parede_toracica,DIF

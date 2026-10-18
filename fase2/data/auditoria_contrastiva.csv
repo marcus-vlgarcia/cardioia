@@ -1,0 +1,41 @@
+par,frase,situacao,tema,fonte_id
+K01,O peito continua apertado há trinta minutos e o suor está frio,alto risco,dor_toracica,DOR
+K01,O peito ficou apertado pela roupa e o desconforto acabou quando a soltei,baixo risco,dor_toracica,DIF
+K02,A corrida terminou mas continuo sem ar mesmo depois de descansar,alto risco,falta_de_ar,DOR
+K02,Fiquei sem ar durante a corrida e recuperei completamente após parar,baixo risco,falta_de_ar,DIF
+K03,Meu coração acelerou em repouso e a tontura quase me derrubou,alto risco,palpitacao,ARR
+K03,Meu coração acelerou no susto e a sensação sumiu logo em seguida,baixo risco,palpitacao,ARR
+K04,Perdi a força de um braço de repente e a fala ficou enrolada,alto risco,neurologico,AVC
+K04,O braço ficou dolorido após levantar peso mas a força está normal,baixo risco,neurologico,DIF
+K05,A queimação veio com palidez e suor frio e não está passando,alto risco,queimacao,INFARTO
+K05,A queimação conhecida após o jantar desapareceu e não houve outro sintoma,baixo risco,queimacao,DIF
+K06,Só consigo respirar sentado porque deitado fico sufocado,alto risco,ao_deitar,IC
+K06,Usei mais travesseiros para ficar confortável e respiro bem deitado,baixo risco,ao_deitar,DIF
+K07,Depois da cirurgia minha perna inchou e surgiu falta de ar súbita,alto risco,pos_cirurgia,TROMBOSE
+K07,Depois da cirurgia o curativo puxou a pele da perna e a sensação sumiu ao ajeitá-lo,baixo risco,pos_cirurgia,DIF
+K08,Minha cabeça doeu muito de repente e comecei a falar sem clareza,alto risco,neurologico,AVC
+K08,Falei devagar por sono e agora estou desperto sem dificuldade,baixo risco,neurologico,DIF
+K09,Uma dor súbita parece rasgar o peito e as costas sem aliviar,alto risco,dor_subita,DOR
+K09,As costas incomodam apenas quando giro o tronco machucado e melhoram parado,baixo risco,dor_subita,DIF
+K10,A dor no peito parece fraca mas eu desmaiei logo depois,alto risco,sinal_associado,DOR
+K10,Uma pontada de um segundo na pele do peito cessou e não voltou,baixo risco,sinal_associado,DIF
+K11,Não deixei de sentir pressão torácica desde que acordei,alto risco,negacao,DOR
+K11,Não senti pressão torácica hoje e continuo sem sintomas,baixo risco,negacao,DIF
+K12,Eu disse que minha irmã estava mal mas agora sou eu que estou sem ar,alto risco,terceiro,IC
+K12,Minha irmã está sem ar mas eu não apresento essa dificuldade,baixo risco,terceiro,DIF
+K13,Tô zonzo e o peito segue apertando mesmo parado,alto risco,coloquial,DOR
+K13,Tô de boa e o peito só marcou onde a mochila encostou,baixo risco,coloquial,DIF
+K14,To com dorr no peitto e o suor ficou gelado sem esforço,alto risco,erro,INFARTO
+K14,A dorr no peitto vinha da camiseta apertada e passou ao tirá-la,baixo risco,erro,DIF
+K15,Não passou a dor no peito quando interrompi o exercício e sentei,alto risco,persistencia,DOR
+K15,A dor muscular do braço parou assim que interrompi o exercício,baixo risco,persistencia,DIF
+K16,Não tenho dor no peito mas estou sem ar mesmo quieto e não consigo falar,alto risco,negacao_contextual,IC
+K16,Não tenho dor no peito e respiro normalmente; apenas minha voz está rouca,baixo risco,negacao_contextual,DIF
+K17,Acordo sem ar quando me deito e preciso me sentar para conseguir respirar,alto risco,ao_deitar,IC
+K17,Deito com o nariz entupido mas consigo respirar normalmente pela boca,baixo risco,ao_deitar,DIF
+K18,Fiquei pálido e enjoado junto com uma pressão forte no tórax,alto risco,nausea,INFARTO
+K18,Fiquei enjoado depois da refeição e melhorei sem dor torácica,baixo risco,nausea,DIF
+K19,O relógio marcou pulso acelerado quando eu estava sentado e quase apaguei,alto risco,pulso,ARR
+K19,O relógio marcou pulso acelerado durante a bicicleta e voltou ao normal,baixo risco,pulso,ARR
+K20,Antes passou mas a dor no peito voltou mais forte com suor frio,alto risco,retorno,DOR
+K20,A dor superficial da alça da bolsa passou e não aconteceu novamente,baixo risco,retorno,DIF

@@ -13,7 +13,7 @@ um projeto acadêmico: não realiza diagnóstico nem orienta atendimento.
 | 10 relatos completos | [relatos_sintomas.txt](data/relatos_sintomas.txt) |
 | Mapa de conhecimento | [mapa_conhecimento.csv](data/mapa_conhecimento.csv) — 83 associações |
 | Extração de sintomas | [extrair_sintomas.py](src/extrair_sintomas.py) |
-| Frases e rótulos | [frases_risco.csv](data/frases_risco.csv) — 992 frases, 496 por classe |
+| Frases e rótulos | [frases_risco.csv](data/frases_risco.csv) — 1.112 frases, 556 por classe |
 | Partições por cenário | [particoes.csv](data/particoes.csv) |
 | Notebook TF-IDF e avaliação | [classificador_risco.ipynb](notebooks/classificador_risco.ipynb) |
 | Vídeo da entrega avaliada | [YouTube não listado](https://youtu.be/L3uZMKG7ZUc) — 3min07s |
@@ -27,8 +27,9 @@ implementação e ao limite que ainda permanece.
 
 Principais acréscimos:
 
-- base principal ampliada de 288 para 992 frases, incluindo 576 novos relatos com variações de fala e escrita;
+- base principal ampliada de 288 para 1.112 frases, incluindo 576 variações da etapa anterior e 120 casos individuais novos;
 - teste final ampliado de 24 para 264 frases, separadas por família de cenário;
+- duas auditorias novas, com 80 frases variadas e 20 pares de gravidade;
 - 32 cenários de avaliação baseados em fontes externas;
 - 16 pares de manifestações leves e graves com linguagem semelhante;
 - tratamento de dupla negação e sinalização de relatos contraditórios;
@@ -80,23 +81,29 @@ python fase2/src/avaliar_classificador.py
 ```
 
 O gerador `expandir_linguagem.py` recria as 576 frases adicionais e o manifesto
-de partições a partir da base anterior; `criar_notebook.py` recria o notebook
-didático antes de executá-lo. Os dois são determinísticos.
+de partições a partir da base anterior e acrescenta os 120 casos de
+`casos_adicionais.csv` somente ao treino. `criar_notebook.py` recria o notebook
+didático antes de executá-lo. Os dois são determinísticos. As
+[fontes dos casos novos](docs/fontes_casos_adicionais.md) estão registradas.
 
 ## Resultados da revisão
 
 | Conjunto | Casos | Acurácia | Recall de alto risco |
 | --- | ---: | ---: | ---: |
-| Teste final ampliado | 264 | 89,0% | 95,5% |
+| Teste de 264 frases, agora histórico | 264 | 94,7% | 95,5% |
+| Auditoria nova, modelo anterior / atual | 80 | 97,5% / 97,5% | 100% / 100% |
+| Pares novos, modelo anterior / atual | 40 | 97,5% / 97,5% | 95% / 95% |
 | Avaliação baseada em fontes externas | 32 | 96,9% | 100% |
-| Pares de gravidade | 32 | 90,6% | 100% |
-| Regressão | 144 | 95,8% | 97,2% |
+| Pares de gravidade anteriores | 32 | 93,8% | 100% |
+| Regressão | 144 | 97,9% | 100% |
 
-No teste final ocorreram seis falsos negativos e 23 falsos positivos. Há 44
-frases com erro ortográfico e 44 com fala coloquial no teste. A acurácia ficou
-em 88,6% em ambos os subconjuntos. As 264 frases são variações de apenas 22
-famílias novas, portanto não equivalem a 264 casos independentes. A análise
-completa está em [avaliacao.md](docs/avaliacao.md).
+No conjunto histórico de 264 frases ocorreram seis falsos negativos e oito
+falsos positivos. A acurácia foi de 95,5% nas 44 frases com erros ortográficos
+e nas 44 coloquiais. Nas auditorias novas, os modelos anterior e atual tiveram
+os mesmos três erros: dois falsos positivos entre as 80 frases e um falso
+negativo entre os 20 pares. Todos os exemplos e rótulos foram redigidos para o
+projeto e não receberam validação clínica. A análise completa está em
+[avaliacao.md](docs/avaliacao.md).
 
 ![Matriz de confusão ampliada](outputs/matriz_confusao.png)
 

@@ -1,265 +1,265 @@
 frase,situacao,grupo,conjunto,familia,variacao,predicao,probabilidade_alto_risco,acerto
-Sinto aperto no peito que continua e suor frio.,alto risco,C01-1,teste,C01,direto,alto risco,0.9994823071778187,True
-Meu tórax está pressionado há um tempo e estou suando gelado.,alto risco,C01-1,teste,C01,direto,alto risco,0.9502548371070373,True
-"Há algumas horas, sinto aperto no peito que continua e suor frio.",alto risco,C01-2,teste,C01,tempo,alto risco,0.9990283181802952,True
-"Há algumas horas, meu tórax está pressionado há um tempo e estou suando gelado.",alto risco,C01-2,teste,C01,tempo,alto risco,0.9410073999673327,True
-Percebi isso no meio do dia: sinto aperto no peito que continua e suor frio.,alto risco,C01-3,teste,C01,rotina,alto risco,0.9983522871247923,True
-Percebi isso no meio do dia: meu tórax está pressionado há um tempo e estou suando gelado.,alto risco,C01-3,teste,C01,rotina,alto risco,0.9341578996581411,True
-"Olha, tipo assim, sinto aperto no peito que continua e suor frio, sabe?",alto risco,C01-4,teste,C01,coloquial,alto risco,0.9991958183155106,True
-"Olha, tipo assim, meu tórax está pressionado há um tempo e estou suando gelado, sabe?",alto risco,C01-4,teste,C01,coloquial,alto risco,0.9447329542206921,True
-Então... eu acho que sinto aperto no peito que continua e suor frio.,alto risco,C01-5,teste,C01,hesitacao,alto risco,0.9986951426403209,True
-Então... eu acho que meu tórax está pressionado há um tempo e estou suando gelado.,alto risco,C01-5,teste,C01,hesitacao,alto risco,0.9395222562102151,True
-"Oi, sinto aperto no peitto que continua e suor frio.",alto risco,C01-6,teste,C01,erro_ortografico,alto risco,0.9993239551208131,True
-"Oi, meu torax está pressionado há um tempo e estou suando gelado.",alto risco,C01-6,teste,C01,erro_ortografico,alto risco,0.9498876510705183,True
-Fiquei sem ar em repouso e mal consigo falar.,alto risco,C03-1,teste,C03,direto,alto risco,0.9749574273794654,True
-Estou parado e a respiração não deixa terminar uma frase.,alto risco,C03-1,teste,C03,direto,alto risco,0.9960604643960509,True
-"Há algumas horas, fiquei sem ar em repouso e mal consigo falar.",alto risco,C03-2,teste,C03,tempo,alto risco,0.9646400769958622,True
-"Há algumas horas, estou parado e a respiração não deixa terminar uma frase.",alto risco,C03-2,teste,C03,tempo,alto risco,0.9950121816334672,True
-Percebi isso no meio do dia: fiquei sem ar em repouso e mal consigo falar.,alto risco,C03-3,teste,C03,rotina,alto risco,0.9558621926294099,True
-Percebi isso no meio do dia: estou parado e a respiração não deixa terminar uma frase.,alto risco,C03-3,teste,C03,rotina,alto risco,0.9924040048468521,True
-"Olha, tipo assim, fiquei sem ar em repouso e mal consigo falar, sabe?",alto risco,C03-4,teste,C03,coloquial,alto risco,0.9735898741172553,True
-"Olha, tipo assim, estou parado e a respiração não deixa terminar uma frase, sabe?",alto risco,C03-4,teste,C03,coloquial,alto risco,0.9947700561500777,True
-Então... eu acho que fiquei sem ar em repouso e mal consigo falar.,alto risco,C03-5,teste,C03,hesitacao,alto risco,0.9608136686399742,True
-Então... eu acho que estou parado e a respiração não deixa terminar uma frase.,alto risco,C03-5,teste,C03,hesitacao,alto risco,0.9958840294452275,True
-"Oi, fiuqei sem ar em repouso e mal consigo falar.",alto risco,C03-6,teste,C03,erro_ortografico,alto risco,0.9537918665485263,True
-"Oi, estou paardo e a respiração não deixa terminar uma frase.",alto risco,C03-6,teste,C03,erro_ortografico,alto risco,0.9939952610658709,True
-Meu coração dispara e quase desmaio.,alto risco,C04-1,teste,C04,direto,alto risco,0.9942355449682968,True
-As batidas estão muito rápidas e a vista escurece.,alto risco,C04-1,teste,C04,direto,alto risco,0.9860975467591792,True
-"Há algumas horas, meu coração dispara e quase desmaio.",alto risco,C04-2,teste,C04,tempo,alto risco,0.9900010670505897,True
-"Há algumas horas, as batidas estão muito rápidas e a vista escurece.",alto risco,C04-2,teste,C04,tempo,alto risco,0.9840131809464664,True
-Percebi isso no meio do dia: meu coração dispara e quase desmaio.,alto risco,C04-3,teste,C04,rotina,alto risco,0.9853911044446485,True
-Percebi isso no meio do dia: as batidas estão muito rápidas e a vista escurece.,alto risco,C04-3,teste,C04,rotina,alto risco,0.979788487794748,True
-"Olha, tipo assim, meu coração dispara e quase desmaio, sabe?",alto risco,C04-4,teste,C04,coloquial,alto risco,0.989592377214526,True
-"Olha, tipo assim, as batidas estão muito rápidas e a vista escurece, sabe?",alto risco,C04-4,teste,C04,coloquial,alto risco,0.9838900344959324,True
-Então... eu acho que meu coração dispara e quase desmaio.,alto risco,C04-5,teste,C04,hesitacao,alto risco,0.9884210163184168,True
-Então... eu acho que as batidas estão muito rápidas e a vista escurece.,alto risco,C04-5,teste,C04,hesitacao,alto risco,0.9822453132255877,True
-"Oi, meu corasão dispara e quase desmaio.",alto risco,C04-6,teste,C04,erro_ortografico,alto risco,0.9925672823923133,True
-"Oi, as batids estão muito rápidas e a vista escurece.",alto risco,C04-6,teste,C04,erro_ortografico,alto risco,0.9859139963784151,True
-Desmaiei e ainda sinto palpitações.,alto risco,C05-1,teste,C05,direto,alto risco,0.8828832707363345,True
-Apaguei por instantes e o coração segue irregular.,alto risco,C05-1,teste,C05,direto,alto risco,0.6158400517135612,True
-"Há algumas horas, desmaiei e ainda sinto palpitações.",alto risco,C05-2,teste,C05,tempo,alto risco,0.88705122622378,True
-"Há algumas horas, apaguei por instantes e o coração segue irregular.",alto risco,C05-2,teste,C05,tempo,alto risco,0.6698622426124831,True
-Percebi isso no meio do dia: desmaiei e ainda sinto palpitações.,alto risco,C05-3,teste,C05,rotina,alto risco,0.8627535064478076,True
-Percebi isso no meio do dia: apaguei por instantes e o coração segue irregular.,alto risco,C05-3,teste,C05,rotina,alto risco,0.6512636360565599,True
-"Olha, tipo assim, desmaiei e ainda sinto palpitações, sabe?",alto risco,C05-4,teste,C05,coloquial,alto risco,0.8881818726681715,True
-"Olha, tipo assim, apaguei por instantes e o coração segue irregular, sabe?",alto risco,C05-4,teste,C05,coloquial,alto risco,0.6805747773291957,True
-Então... eu acho que desmaiei e ainda sinto palpitações.,alto risco,C05-5,teste,C05,hesitacao,alto risco,0.8749357297889957,True
-Então... eu acho que apaguei por instantes e o coração segue irregular.,alto risco,C05-5,teste,C05,hesitacao,alto risco,0.6547474563166876,True
-"Oi, demsaiei e ainda sinto palpitações.",alto risco,C05-6,teste,C05,erro_ortografico,alto risco,0.7741971095085801,True
-"Oi, apaguei por instantes e o corasão segue irregular.",alto risco,C05-6,teste,C05,erro_ortografico,alto risco,0.6486037642091507,True
-O rosto entortou e perdi a força de um braço.,alto risco,C07-1,teste,C07,direto,alto risco,0.9960191014786918,True
-Minha boca ficou torta e um braço não responde.,alto risco,C07-1,teste,C07,direto,alto risco,0.8045492738031643,True
-"Há algumas horas, o rosto entortou e perdi a força de um braço.",alto risco,C07-2,teste,C07,tempo,alto risco,0.9945438032959041,True
-"Há algumas horas, minha boca ficou torta e um braço não responde.",alto risco,C07-2,teste,C07,tempo,alto risco,0.8325897080407204,True
-Percebi isso no meio do dia: o rosto entortou e perdi a força de um braço.,alto risco,C07-3,teste,C07,rotina,alto risco,0.991131314566855,True
-Percebi isso no meio do dia: minha boca ficou torta e um braço não responde.,alto risco,C07-3,teste,C07,rotina,alto risco,0.8167781021804263,True
-"Olha, tipo assim, o rosto entortou e perdi a força de um braço, sabe?",alto risco,C07-4,teste,C07,coloquial,alto risco,0.9907702564308614,True
-"Olha, tipo assim, minha boca ficou torta e um braço não responde, sabe?",alto risco,C07-4,teste,C07,coloquial,alto risco,0.8365459427990355,True
-Então... eu acho que o rosto entortou e perdi a força de um braço.,alto risco,C07-5,teste,C07,hesitacao,alto risco,0.9933169818958945,True
-Então... eu acho que minha boca ficou torta e um braço não responde.,alto risco,C07-5,teste,C07,hesitacao,alto risco,0.8230143870266928,True
-"Oi, o rosto entortou e perdi a força de um braco.",alto risco,C07-6,teste,C07,erro_ortografico,alto risco,0.9960206713571416,True
-"Oi, minha boca ficou torta e um braco não responde.",alto risco,C07-6,teste,C07,erro_ortografico,alto risco,0.8358366741834828,True
-Não consigo respirar deitado e preciso sentar.,alto risco,C08-1,teste,C08,direto,alto risco,0.9969471745590017,True
-Ao me deitar perco o fôlego e só melhoro sentado.,alto risco,C08-1,teste,C08,direto,baixo risco,0.2378826389016946,False
-"Há algumas horas, não consigo respirar deitado e preciso sentar.",alto risco,C08-2,teste,C08,tempo,alto risco,0.9955114904211806,True
-"Há algumas horas, ao me deitar perco o fôlego e só melhoro sentado.",alto risco,C08-2,teste,C08,tempo,baixo risco,0.32034360447125787,False
-Percebi isso no meio do dia: não consigo respirar deitado e preciso sentar.,alto risco,C08-3,teste,C08,rotina,alto risco,0.9929517734431511,True
-Percebi isso no meio do dia: ao me deitar perco o fôlego e só melhoro sentado.,alto risco,C08-3,teste,C08,rotina,baixo risco,0.33518976407921475,False
-"Olha, tipo assim, não consigo respirar deitado e preciso sentar, sabe?",alto risco,C08-4,teste,C08,coloquial,alto risco,0.9953663052304742,True
-"Olha, tipo assim, ao me deitar perco o fôlego e só melhoro sentado, sabe?",alto risco,C08-4,teste,C08,coloquial,baixo risco,0.3389657245530353,False
-Então... eu acho que não consigo respirar deitado e preciso sentar.,alto risco,C08-5,teste,C08,hesitacao,alto risco,0.9969444192236351,True
-Então... eu acho que ao me deitar perco o fôlego e só melhoro sentado.,alto risco,C08-5,teste,C08,hesitacao,baixo risco,0.3174821428539141,False
-"Oi, não consigo respriar deitado e preciso sentar.",alto risco,C08-6,teste,C08,erro_ortografico,alto risco,0.9966597689460807,True
-"Oi, ao me detiar perco o fôlego e só melhoro sentado.",alto risco,C08-6,teste,C08,erro_ortografico,baixo risco,0.09258670105940647,False
-"Estou pálido, enjoado e com pressão no peito.",alto risco,C09-1,teste,C09,direto,alto risco,0.9999468478862946,True
-O aperto no tórax veio com náusea e palidez.,alto risco,C09-1,teste,C09,direto,alto risco,0.9992597185930171,True
-"Há algumas horas, estou pálido, enjoado e com pressão no peito.",alto risco,C09-2,teste,C09,tempo,alto risco,0.9998069558848616,True
-"Há algumas horas, o aperto no tórax veio com náusea e palidez.",alto risco,C09-2,teste,C09,tempo,alto risco,0.9988861259989908,True
-"Percebi isso no meio do dia: estou pálido, enjoado e com pressão no peito.",alto risco,C09-3,teste,C09,rotina,alto risco,0.9993273619443308,True
-Percebi isso no meio do dia: o aperto no tórax veio com náusea e palidez.,alto risco,C09-3,teste,C09,rotina,alto risco,0.9979048046457952,True
-"Olha, tipo assim, estou pálido, enjoado e com pressão no peito, sabe?",alto risco,C09-4,teste,C09,coloquial,alto risco,0.999563700512069,True
-"Olha, tipo assim, o aperto no tórax veio com náusea e palidez, sabe?",alto risco,C09-4,teste,C09,coloquial,alto risco,0.9987904592953403,True
-"Então... eu acho que estou pálido, enjoado e com pressão no peito.",alto risco,C09-5,teste,C09,hesitacao,alto risco,0.9997597708648179,True
-Então... eu acho que o aperto no tórax veio com náusea e palidez.,alto risco,C09-5,teste,C09,hesitacao,alto risco,0.9986050309668221,True
-"Oi, estou pálido, enjoado e com pressão no peitto.",alto risco,C09-6,teste,C09,erro_ortografico,alto risco,0.999932712452801,True
-"Oi, o aperto no torax veio com náusea e palidez.",alto risco,C09-6,teste,C09,erro_ortografico,alto risco,0.9992407814724059,True
-A dor no peito piora e começou a irradiar para a mandíbula.,alto risco,C10-1,teste,C10,direto,alto risco,0.9994705650575691,True
-O tórax aperta cada vez mais e a dor alcança o maxilar.,alto risco,C10-1,teste,C10,direto,alto risco,0.9990541035498123,True
-"Há algumas horas, a dor no peito piora e começou a irradiar para a mandíbula.",alto risco,C10-2,teste,C10,tempo,alto risco,0.9990665680509992,True
-"Há algumas horas, o tórax aperta cada vez mais e a dor alcança o maxilar.",alto risco,C10-2,teste,C10,tempo,alto risco,0.9983523947064784,True
-Percebi isso no meio do dia: a dor no peito piora e começou a irradiar para a mandíbula.,alto risco,C10-3,teste,C10,rotina,alto risco,0.9984728542381939,True
-Percebi isso no meio do dia: o tórax aperta cada vez mais e a dor alcança o maxilar.,alto risco,C10-3,teste,C10,rotina,alto risco,0.9974633745464995,True
-"Olha, tipo assim, a dor no peito piora e começou a irradiar para a mandíbula, sabe?",alto risco,C10-4,teste,C10,coloquial,alto risco,0.9990134974710994,True
-"Olha, tipo assim, o tórax aperta cada vez mais e a dor alcança o maxilar, sabe?",alto risco,C10-4,teste,C10,coloquial,alto risco,0.9982652829862477,True
-Então... eu acho que a dor no peito piora e começou a irradiar para a mandíbula.,alto risco,C10-5,teste,C10,hesitacao,alto risco,0.9988940094960924,True
-Então... eu acho que o tórax aperta cada vez mais e a dor alcança o maxilar.,alto risco,C10-5,teste,C10,hesitacao,alto risco,0.9980385480379061,True
-"Oi, a dor no peitto piora e começou a irradiar para a mandíbula.",alto risco,C10-6,teste,C10,erro_ortografico,alto risco,0.9992849081065345,True
-"Oi, o torax aperta cada vez mais e a dor alcança o maxilar.",alto risco,C10-6,teste,C10,erro_ortografico,alto risco,0.9987328823537622,True
-O braço ficou dormente subitamente e minha fala falha.,alto risco,C20-1,teste,C20,direto,alto risco,0.9916824883093834,True
-Perdi a sensibilidade de um lado e não falo como antes.,alto risco,C20-1,teste,C20,direto,alto risco,0.9843825386761033,True
-"Há algumas horas, o braço ficou dormente subitamente e minha fala falha.",alto risco,C20-2,teste,C20,tempo,alto risco,0.987908041736365,True
-"Há algumas horas, perdi a sensibilidade de um lado e não falo como antes.",alto risco,C20-2,teste,C20,tempo,alto risco,0.9804936998451416,True
-Percebi isso no meio do dia: o braço ficou dormente subitamente e minha fala falha.,alto risco,C20-3,teste,C20,rotina,alto risco,0.979686073048134,True
-Percebi isso no meio do dia: perdi a sensibilidade de um lado e não falo como antes.,alto risco,C20-3,teste,C20,rotina,alto risco,0.9746082280948726,True
-"Olha, tipo assim, o braço ficou dormente subitamente e minha fala falha, sabe?",alto risco,C20-4,teste,C20,coloquial,alto risco,0.9870975625775981,True
-"Olha, tipo assim, perdi a sensibilidade de um lado e não falo como antes, sabe?",alto risco,C20-4,teste,C20,coloquial,alto risco,0.9803505553281128,True
-Então... eu acho que o braço ficou dormente subitamente e minha fala falha.,alto risco,C20-5,teste,C20,hesitacao,alto risco,0.9848700447995883,True
-Então... eu acho que perdi a sensibilidade de um lado e não falo como antes.,alto risco,C20-5,teste,C20,hesitacao,alto risco,0.9780404278438132,True
-"Oi, o braco ficou dormente subitamente e minha fala falha.",alto risco,C20-6,teste,C20,erro_ortografico,alto risco,0.991635419584554,True
-"Oi, perdi a sesnibilidade de um lado e não falo como antes.",alto risco,C20-6,teste,C20,erro_ortografico,alto risco,0.9968579815517993,True
-Depois da cirurgia minha perna inchou e fiquei sem ar.,alto risco,C21-1,teste,C21,direto,alto risco,0.6332451086856801,True
-Operei há pouco e agora tenho falta de ar súbita com uma perna inchada.,alto risco,C21-1,teste,C21,direto,alto risco,0.9792082331949329,True
-"Há algumas horas, depois da cirurgia minha perna inchou e fiquei sem ar.",alto risco,C21-2,teste,C21,tempo,alto risco,0.6754847090901548,True
-"Há algumas horas, operei há pouco e agora tenho falta de ar súbita com uma perna inchada.",alto risco,C21-2,teste,C21,tempo,alto risco,0.9761107706556021,True
-Percebi isso no meio do dia: depois da cirurgia minha perna inchou e fiquei sem ar.,alto risco,C21-3,teste,C21,rotina,alto risco,0.6634795938492986,True
-Percebi isso no meio do dia: operei há pouco e agora tenho falta de ar súbita com uma perna inchada.,alto risco,C21-3,teste,C21,rotina,alto risco,0.97190420028981,True
-"Olha, tipo assim, depois da cirurgia minha perna inchou e fiquei sem ar, sabe?",alto risco,C21-4,teste,C21,coloquial,alto risco,0.6844044472523938,True
-"Olha, tipo assim, operei há pouco e agora tenho falta de ar súbita com uma perna inchada, sabe?",alto risco,C21-4,teste,C21,coloquial,alto risco,0.9779278417304382,True
-Então... eu acho que depois da cirurgia minha perna inchou e fiquei sem ar.,alto risco,C21-5,teste,C21,hesitacao,alto risco,0.6648572706120248,True
-Então... eu acho que operei há pouco e agora tenho falta de ar súbita com uma perna inchada.,alto risco,C21-5,teste,C21,hesitacao,alto risco,0.9755220486778725,True
-"Oi, deopis da cirurgia minha perna inchou e fiquei sem ar.",alto risco,C21-6,teste,C21,erro_ortografico,alto risco,0.8595969769025412,True
-"Oi, operei há pouco e agora tenho flata de ar súbita com uma perna inchada.",alto risco,C21-6,teste,C21,erro_ortografico,alto risco,0.9802020199950638,True
-"A dor parece pequena, porém quase apaguei e estou pálido.",alto risco,C23-1,teste,C23,direto,alto risco,0.992259097396466,True
-"O peito incomoda pouco, mas a sensação de desmaio veio com palidez.",alto risco,C23-1,teste,C23,direto,alto risco,0.9324486921026311,True
-"Há algumas horas, a dor parece pequena, porém quase apaguei e estou pálido.",alto risco,C23-2,teste,C23,tempo,alto risco,0.9902145389084103,True
-"Há algumas horas, o peito incomoda pouco, mas a sensação de desmaio veio com palidez.",alto risco,C23-2,teste,C23,tempo,alto risco,0.9347167558097617,True
-"Percebi isso no meio do dia: a dor parece pequena, porém quase apaguei e estou pálido.",alto risco,C23-3,teste,C23,rotina,alto risco,0.9870610661884553,True
-"Percebi isso no meio do dia: o peito incomoda pouco, mas a sensação de desmaio veio com palidez.",alto risco,C23-3,teste,C23,rotina,alto risco,0.9226666289778379,True
-"Olha, tipo assim, a dor parece pequena, porém quase apaguei e estou pálido, sabe?",alto risco,C23-4,teste,C23,coloquial,alto risco,0.9900434569549459,True
-"Olha, tipo assim, o peito incomoda pouco, mas a sensação de desmaio veio com palidez, sabe?",alto risco,C23-4,teste,C23,coloquial,alto risco,0.9352519816607576,True
-"Então... eu acho que a dor parece pequena, porém quase apaguei e estou pálido.",alto risco,C23-5,teste,C23,hesitacao,alto risco,0.9890012324594419,True
-"Então... eu acho que o peito incomoda pouco, mas a sensação de desmaio veio com palidez.",alto risco,C23-5,teste,C23,hesitacao,alto risco,0.928950427888628,True
-"Oi, a dor parece pequena, porém quase apaguei e estou palido.",alto risco,C23-6,teste,C23,erro_ortografico,alto risco,0.9913983897498065,True
-"Oi, o peitto incomoda pouco, mas a sensação de desmaio veio com palidez.",alto risco,C23-6,teste,C23,erro_ortografico,alto risco,0.9367283932482489,True
-Suei na caminhada e recuperei totalmente o fôlego ao parar.,baixo risco,D01-1,teste,D01,direto,baixo risco,0.0009562989494114049,True
-A respiração acelerou no passeio e voltou ao normal após descanso.,baixo risco,D01-1,teste,D01,direto,baixo risco,0.004319309305618413,True
-"Há algumas horas, suei na caminhada e recuperei totalmente o fôlego ao parar.",baixo risco,D01-2,teste,D01,tempo,baixo risco,0.0021670317556642393,True
-"Há algumas horas, a respiração acelerou no passeio e voltou ao normal após descanso.",baixo risco,D01-2,teste,D01,tempo,baixo risco,0.009705323907418406,True
-Percebi isso no meio do dia: suei na caminhada e recuperei totalmente o fôlego ao parar.,baixo risco,D01-3,teste,D01,rotina,baixo risco,0.0034199474710316924,True
-Percebi isso no meio do dia: a respiração acelerou no passeio e voltou ao normal após descanso.,baixo risco,D01-3,teste,D01,rotina,baixo risco,0.01521751685088768,True
-"Olha, tipo assim, suei na caminhada e recuperei totalmente o fôlego ao parar, sabe?",baixo risco,D01-4,teste,D01,coloquial,baixo risco,0.0028979690849283424,True
-"Olha, tipo assim, a respiração acelerou no passeio e voltou ao normal após descanso, sabe?",baixo risco,D01-4,teste,D01,coloquial,baixo risco,0.01603513592003558,True
-Então... eu acho que suei na caminhada e recuperei totalmente o fôlego ao parar.,baixo risco,D01-5,teste,D01,hesitacao,baixo risco,0.0024498014858712613,True
-Então... eu acho que a respiração acelerou no passeio e voltou ao normal após descanso.,baixo risco,D01-5,teste,D01,hesitacao,baixo risco,0.010762384350829879,True
-"Oi, suei na caimnhada e recuperei totalmente o fôlego ao parar.",baixo risco,D01-6,teste,D01,erro_ortografico,baixo risco,0.0005114824773497784,True
-"Oi, a repsiração acelerou no passeio e voltou ao normal após descanso.",baixo risco,D01-6,teste,D01,erro_ortografico,baixo risco,0.0013943093818687968,True
-O músculo do peito dói apenas quando aperto o local machucado.,baixo risco,D03-1,teste,D03,direto,baixo risco,0.14069772448325535,True
-Consigo reproduzir a dor tocando a contusão superficial.,baixo risco,D03-1,teste,D03,direto,baixo risco,0.07651900385541366,True
-"Há algumas horas, o músculo do peito dói apenas quando aperto o local machucado.",baixo risco,D03-2,teste,D03,tempo,baixo risco,0.22329605425911558,True
-"Há algumas horas, consigo reproduzir a dor tocando a contusão superficial.",baixo risco,D03-2,teste,D03,tempo,baixo risco,0.1365729955736139,True
-Percebi isso no meio do dia: o músculo do peito dói apenas quando aperto o local machucado.,baixo risco,D03-3,teste,D03,rotina,baixo risco,0.2540457258298989,True
-Percebi isso no meio do dia: consigo reproduzir a dor tocando a contusão superficial.,baixo risco,D03-3,teste,D03,rotina,baixo risco,0.16224497164710927,True
-"Olha, tipo assim, o músculo do peito dói apenas quando aperto o local machucado, sabe?",baixo risco,D03-4,teste,D03,coloquial,baixo risco,0.24290702660974894,True
-"Olha, tipo assim, consigo reproduzir a dor tocando a contusão superficial, sabe?",baixo risco,D03-4,teste,D03,coloquial,baixo risco,0.15212987058726568,True
-Então... eu acho que o músculo do peito dói apenas quando aperto o local machucado.,baixo risco,D03-5,teste,D03,hesitacao,baixo risco,0.22477142344364165,True
-Então... eu acho que consigo reproduzir a dor tocando a contusão superficial.,baixo risco,D03-5,teste,D03,hesitacao,baixo risco,0.140359717308156,True
-"Oi, o músculo do peitto dói apenas quando aperto o local machucado.",baixo risco,D03-6,teste,D03,erro_ortografico,baixo risco,0.17045950891202766,True
-"Oi, consigo reproduzir a dorr tocando a contusão superficial.",baixo risco,D03-6,teste,D03,erro_ortografico,baixo risco,0.09581756341282588,True
-Meu coração acelerou no susto e normalizou logo depois.,baixo risco,D04-1,teste,D04,direto,baixo risco,0.015738875164173494,True
-As batidas aumentaram por um instante e já acalmaram.,baixo risco,D04-1,teste,D04,direto,baixo risco,0.005065680720821031,True
-"Há algumas horas, meu coração acelerou no susto e normalizou logo depois.",baixo risco,D04-2,teste,D04,tempo,baixo risco,0.039957883201864774,True
-"Há algumas horas, as batidas aumentaram por um instante e já acalmaram.",baixo risco,D04-2,teste,D04,tempo,baixo risco,0.027607330845831668,True
-Percebi isso no meio do dia: meu coração acelerou no susto e normalizou logo depois.,baixo risco,D04-3,teste,D04,rotina,baixo risco,0.05362320592687242,True
-Percebi isso no meio do dia: as batidas aumentaram por um instante e já acalmaram.,baixo risco,D04-3,teste,D04,rotina,baixo risco,0.04035233025900775,True
-"Olha, tipo assim, meu coração acelerou no susto e normalizou logo depois, sabe?",baixo risco,D04-4,teste,D04,coloquial,baixo risco,0.03810611658028973,True
-"Olha, tipo assim, as batidas aumentaram por um instante e já acalmaram, sabe?",baixo risco,D04-4,teste,D04,coloquial,baixo risco,0.032695197051872515,True
-Então... eu acho que meu coração acelerou no susto e normalizou logo depois.,baixo risco,D04-5,teste,D04,hesitacao,baixo risco,0.040283460019674644,True
-Então... eu acho que as batidas aumentaram por um instante e já acalmaram.,baixo risco,D04-5,teste,D04,hesitacao,baixo risco,0.03041324564179848,True
-"Oi, meu corasão acelerou no susto e normalizou logo depois.",baixo risco,D04-6,teste,D04,erro_ortografico,baixo risco,0.02903188807661783,True
-"Oi, as batids aumentaram por um instante e já acalmaram.",baixo risco,D04-6,teste,D04,erro_ortografico,baixo risco,0.016471886787985945,True
-Senti uma pontada ao espirrar que durou um segundo e não voltou.,baixo risco,D05-1,teste,D05,direto,baixo risco,0.00020584854611871428,True
-O peito fisgou só no espirro e estou sem incômodo agora.,baixo risco,D05-1,teste,D05,direto,baixo risco,0.15765155813500786,True
-"Há algumas horas, senti uma pontada ao espirrar que durou um segundo e não voltou.",baixo risco,D05-2,teste,D05,tempo,baixo risco,0.0009483197738913152,True
-"Há algumas horas, o peito fisgou só no espirro e estou sem incômodo agora.",baixo risco,D05-2,teste,D05,tempo,baixo risco,0.2569154988384722,True
-Percebi isso no meio do dia: senti uma pontada ao espirrar que durou um segundo e não voltou.,baixo risco,D05-3,teste,D05,rotina,baixo risco,0.001752016990301808,True
-Percebi isso no meio do dia: o peito fisgou só no espirro e estou sem incômodo agora.,baixo risco,D05-3,teste,D05,rotina,baixo risco,0.286163837255039,True
-"Olha, tipo assim, senti uma pontada ao espirrar que durou um segundo e não voltou, sabe?",baixo risco,D05-4,teste,D05,coloquial,baixo risco,0.0017237172219745078,True
-"Olha, tipo assim, o peito fisgou só no espirro e estou sem incômodo agora, sabe?",baixo risco,D05-4,teste,D05,coloquial,baixo risco,0.27944503305043844,True
-Então... eu acho que senti uma pontada ao espirrar que durou um segundo e não voltou.,baixo risco,D05-5,teste,D05,hesitacao,baixo risco,0.0013094820498286142,True
-Então... eu acho que o peito fisgou só no espirro e estou sem incômodo agora.,baixo risco,D05-5,teste,D05,hesitacao,baixo risco,0.2577994317357195,True
-"Oi, senti uma potnada ao espirrar que durou um segundo e não voltou.",baixo risco,D05-6,teste,D05,erro_ortografico,baixo risco,0.0009433529561170273,True
-"Oi, o peitto fisgou só no espirro e estou sem incômodo agora.",baixo risco,D05-6,teste,D05,erro_ortografico,baixo risco,0.19431091323931893,True
-A dor no ombro aparece só quando levanto uma caixa e cessa em repouso.,baixo risco,D07-1,teste,D07,direto,alto risco,0.583828583794443,False
-"O braço fica dolorido ao erguer peso, mas não tenho dor parado.",baixo risco,D07-1,teste,D07,direto,baixo risco,0.010744804676971254,True
-"Há algumas horas, a dor no ombro aparece só quando levanto uma caixa e cessa em repouso.",baixo risco,D07-2,teste,D07,tempo,alto risco,0.6523529151521996,False
-"Há algumas horas, o braço fica dolorido ao erguer peso, mas não tenho dor parado.",baixo risco,D07-2,teste,D07,tempo,baixo risco,0.020231828482550007,True
-Percebi isso no meio do dia: a dor no ombro aparece só quando levanto uma caixa e cessa em repouso.,baixo risco,D07-3,teste,D07,rotina,alto risco,0.643753707909315,False
-"Percebi isso no meio do dia: o braço fica dolorido ao erguer peso, mas não tenho dor parado.",baixo risco,D07-3,teste,D07,rotina,baixo risco,0.027120898157972917,True
-"Olha, tipo assim, a dor no ombro aparece só quando levanto uma caixa e cessa em repouso, sabe?",baixo risco,D07-4,teste,D07,coloquial,alto risco,0.6120474247796512,False
-"Olha, tipo assim, o braço fica dolorido ao erguer peso, mas não tenho dor parado, sabe?",baixo risco,D07-4,teste,D07,coloquial,baixo risco,0.023093608317357184,True
-Então... eu acho que a dor no ombro aparece só quando levanto uma caixa e cessa em repouso.,baixo risco,D07-5,teste,D07,hesitacao,alto risco,0.6445276092931592,False
-"Então... eu acho que o braço fica dolorido ao erguer peso, mas não tenho dor parado.",baixo risco,D07-5,teste,D07,hesitacao,baixo risco,0.021652963606423326,True
-"Oi, a dorr no ombro aparece só quando levanto uma caixa e cessa em repouso.",baixo risco,D07-6,teste,D07,erro_ortografico,alto risco,0.6319219831558648,False
-"Oi, o braco fica dolorido ao erguer peso, mas não tenho dor parado.",baixo risco,D07-6,teste,D07,erro_ortografico,baixo risco,0.013314923441876125,True
-Transpirei no sol e o suor cessou ao entrar na sombra.,baixo risco,D08-1,teste,D08,direto,baixo risco,0.0026368551596740453,True
-O calor me fez suar; depois de beber água fiquei bem.,baixo risco,D08-1,teste,D08,direto,baixo risco,0.003075584590983338,True
-"Há algumas horas, transpirei no sol e o suor cessou ao entrar na sombra.",baixo risco,D08-2,teste,D08,tempo,baixo risco,0.008166300754460676,True
-"Há algumas horas, o calor me fez suar; depois de beber água fiquei bem.",baixo risco,D08-2,teste,D08,tempo,baixo risco,0.005739255384371589,True
-Percebi isso no meio do dia: transpirei no sol e o suor cessou ao entrar na sombra.,baixo risco,D08-3,teste,D08,rotina,baixo risco,0.014913548947675936,True
-Percebi isso no meio do dia: o calor me fez suar; depois de beber água fiquei bem.,baixo risco,D08-3,teste,D08,rotina,baixo risco,0.00796779670643677,True
-"Olha, tipo assim, transpirei no sol e o suor cessou ao entrar na sombra, sabe?",baixo risco,D08-4,teste,D08,coloquial,baixo risco,0.009352926158062158,True
-"Olha, tipo assim, o calor me fez suar; depois de beber água fiquei bem, sabe?",baixo risco,D08-4,teste,D08,coloquial,baixo risco,0.006298446134538782,True
-Então... eu acho que transpirei no sol e o suor cessou ao entrar na sombra.,baixo risco,D08-5,teste,D08,hesitacao,baixo risco,0.009499978281776289,True
-Então... eu acho que o calor me fez suar; depois de beber água fiquei bem.,baixo risco,D08-5,teste,D08,hesitacao,baixo risco,0.00622101899254468,True
-"Oi, transpirei no sol e o sour cessou ao entrar na sombra.",baixo risco,D08-6,teste,D08,erro_ortografico,baixo risco,0.003808091673734859,True
-"Oi, o calor me fez suar; deopis de beber água fiquei bem.",baixo risco,D08-6,teste,D08,erro_ortografico,baixo risco,0.015430278140071585,True
-A queimação apareceu após comer e passou sem falta de ar.,baixo risco,D09-1,teste,D09,direto,baixo risco,0.0019760999153938252,True
-"Comi depressa, senti azia conhecida e agora estou normal.",baixo risco,D09-1,teste,D09,direto,alto risco,0.5619652679040827,False
-"Há algumas horas, a queimação apareceu após comer e passou sem falta de ar.",baixo risco,D09-2,teste,D09,tempo,baixo risco,0.004131618676170623,True
-"Há algumas horas, comi depressa, senti azia conhecida e agora estou normal.",baixo risco,D09-2,teste,D09,tempo,alto risco,0.6272968263923941,False
-Percebi isso no meio do dia: a queimação apareceu após comer e passou sem falta de ar.,baixo risco,D09-3,teste,D09,rotina,baixo risco,0.006139286812136602,True
-"Percebi isso no meio do dia: comi depressa, senti azia conhecida e agora estou normal.",baixo risco,D09-3,teste,D09,rotina,alto risco,0.6117170961615612,False
-"Olha, tipo assim, a queimação apareceu após comer e passou sem falta de ar, sabe?",baixo risco,D09-4,teste,D09,coloquial,baixo risco,0.012255879709853423,True
-"Olha, tipo assim, comi depressa, senti azia conhecida e agora estou normal, sabe?",baixo risco,D09-4,teste,D09,coloquial,alto risco,0.5904352085306704,False
-Então... eu acho que a queimação apareceu após comer e passou sem falta de ar.,baixo risco,D09-5,teste,D09,hesitacao,baixo risco,0.004577730661200263,True
-"Então... eu acho que comi depressa, senti azia conhecida e agora estou normal.",baixo risco,D09-5,teste,D09,hesitacao,alto risco,0.6124584616208608,False
-"Oi, a queimação apareceu após comer e passou sem flata de ar.",baixo risco,D09-6,teste,D09,erro_ortografico,baixo risco,0.0024991147105740685,True
-"Oi, comi derpessa, senti azia conhecida e agora estou normal.",baixo risco,D09-6,teste,D09,erro_ortografico,alto risco,0.5993450186650632,False
-O relógio mostrou pulso rápido durante a bicicleta e normal depois.,baixo risco,D10-1,teste,D10,direto,baixo risco,0.008876590762141756,True
-Meu coração acelerou no exercício e voltou ao habitual no descanso.,baixo risco,D10-1,teste,D10,direto,baixo risco,0.23685643284933355,True
-"Há algumas horas, o relógio mostrou pulso rápido durante a bicicleta e normal depois.",baixo risco,D10-2,teste,D10,tempo,baixo risco,0.037208410183566354,True
-"Há algumas horas, meu coração acelerou no exercício e voltou ao habitual no descanso.",baixo risco,D10-2,teste,D10,tempo,baixo risco,0.31897978493730417,True
-Percebi isso no meio do dia: o relógio mostrou pulso rápido durante a bicicleta e normal depois.,baixo risco,D10-3,teste,D10,rotina,baixo risco,0.0613928104594369,True
-Percebi isso no meio do dia: meu coração acelerou no exercício e voltou ao habitual no descanso.,baixo risco,D10-3,teste,D10,rotina,baixo risco,0.3343425631192074,True
-"Olha, tipo assim, o relógio mostrou pulso rápido durante a bicicleta e normal depois, sabe?",baixo risco,D10-4,teste,D10,coloquial,baixo risco,0.04675051354335358,True
-"Olha, tipo assim, meu coração acelerou no exercício e voltou ao habitual no descanso, sabe?",baixo risco,D10-4,teste,D10,coloquial,baixo risco,0.38682433044418396,True
-Então... eu acho que o relógio mostrou pulso rápido durante a bicicleta e normal depois.,baixo risco,D10-5,teste,D10,hesitacao,baixo risco,0.04287191088420006,True
-Então... eu acho que meu coração acelerou no exercício e voltou ao habitual no descanso.,baixo risco,D10-5,teste,D10,hesitacao,baixo risco,0.31026196211371937,True
-"Oi, o reólgio mostrou pulso rápido durante a bicicleta e normal depois.",baixo risco,D10-6,teste,D10,erro_ortografico,baixo risco,0.014881754845369022,True
-"Oi, meu corasão acelerou no exercício e voltou ao habitual no descanso.",baixo risco,D10-6,teste,D10,erro_ortografico,baixo risco,0.29494984395345847,True
-O suor veio do treino e parou junto com a respiração rápida.,baixo risco,D20-1,teste,D20,direto,alto risco,0.9894794596367477,False
-"Depois de descansar do exercício, o suor cessou e fiquei bem.",baixo risco,D20-1,teste,D20,direto,baixo risco,0.0004394035738741753,True
-"Há algumas horas, o suor veio do treino e parou junto com a respiração rápida.",baixo risco,D20-2,teste,D20,tempo,alto risco,0.9879967158001629,False
-"Há algumas horas, depois de descansar do exercício, o suor cessou e fiquei bem.",baixo risco,D20-2,teste,D20,tempo,baixo risco,0.0011195031113695464,True
-Percebi isso no meio do dia: o suor veio do treino e parou junto com a respiração rápida.,baixo risco,D20-3,teste,D20,rotina,alto risco,0.9819176396489008,False
-"Percebi isso no meio do dia: depois de descansar do exercício, o suor cessou e fiquei bem.",baixo risco,D20-3,teste,D20,rotina,baixo risco,0.0021808641051818123,True
-"Olha, tipo assim, o suor veio do treino e parou junto com a respiração rápida, sabe?",baixo risco,D20-4,teste,D20,coloquial,alto risco,0.9876768494118415,False
-"Olha, tipo assim, depois de descansar do exercício, o suor cessou e fiquei bem, sabe?",baixo risco,D20-4,teste,D20,coloquial,baixo risco,0.0019950891394634462,True
-Então... eu acho que o suor veio do treino e parou junto com a respiração rápida.,baixo risco,D20-5,teste,D20,hesitacao,alto risco,0.9861519360987557,False
-"Então... eu acho que depois de descansar do exercício, o suor cessou e fiquei bem.",baixo risco,D20-5,teste,D20,hesitacao,baixo risco,0.0013000434624319546,True
-"Oi, o sour veio do treino e parou junto com a respiração rápida.",baixo risco,D20-6,teste,D20,erro_ortografico,alto risco,0.9898418045171397,False
-"Oi, depois de descansar do exercício, o sour cessou e fiquei bem.",baixo risco,D20-6,teste,D20,erro_ortografico,baixo risco,0.0005848231587282093,True
-Minha voz saiu arrastada por sono e normalizou após descansar.,baixo risco,D21-1,teste,D21,direto,baixo risco,0.000819974597218498,True
-Eu estava sonolento e falei devagar; acordei bem e sem fraqueza.,baixo risco,D21-1,teste,D21,direto,baixo risco,0.04759540185319877,True
-"Há algumas horas, minha voz saiu arrastada por sono e normalizou após descansar.",baixo risco,D21-2,teste,D21,tempo,baixo risco,0.003799751611564872,True
-"Há algumas horas, eu estava sonolento e falei devagar; acordei bem e sem fraqueza.",baixo risco,D21-2,teste,D21,tempo,baixo risco,0.08186400416390582,True
-Percebi isso no meio do dia: minha voz saiu arrastada por sono e normalizou após descansar.,baixo risco,D21-3,teste,D21,rotina,baixo risco,0.005948633639315304,True
-Percebi isso no meio do dia: eu estava sonolento e falei devagar; acordei bem e sem fraqueza.,baixo risco,D21-3,teste,D21,rotina,baixo risco,0.0994255970089527,True
-"Olha, tipo assim, minha voz saiu arrastada por sono e normalizou após descansar, sabe?",baixo risco,D21-4,teste,D21,coloquial,baixo risco,0.0041950523537792606,True
-"Olha, tipo assim, eu estava sonolento e falei devagar; acordei bem e sem fraqueza, sabe?",baixo risco,D21-4,teste,D21,coloquial,baixo risco,0.08961444271852281,True
-Então... eu acho que minha voz saiu arrastada por sono e normalizou após descansar.,baixo risco,D21-5,teste,D21,hesitacao,baixo risco,0.004286367513926859,True
-Então... eu acho que eu estava sonolento e falei devagar; acordei bem e sem fraqueza.,baixo risco,D21-5,teste,D21,hesitacao,baixo risco,0.06956321944692911,True
-"Oi, minha voz saiu ararstada por sono e normalizou após descansar.",baixo risco,D21-6,teste,D21,erro_ortografico,baixo risco,0.0022996201345755196,True
-"Oi, eu esatva sonolento e falei devagar; acordei bem e sem fraqueza.",baixo risco,D21-6,teste,D21,erro_ortografico,baixo risco,0.03230223992642833,True
-O coração disparou na apresentação e acalmou no fim.,baixo risco,D23-1,teste,D23,direto,baixo risco,0.4331580569002388,True
-Fiquei nervoso ao falar em público e as batidas já normalizaram.,baixo risco,D23-1,teste,D23,direto,baixo risco,0.008580430874792211,True
-"Há algumas horas, o coração disparou na apresentação e acalmou no fim.",baixo risco,D23-2,teste,D23,tempo,alto risco,0.599766847926336,False
-"Há algumas horas, fiquei nervoso ao falar em público e as batidas já normalizaram.",baixo risco,D23-2,teste,D23,tempo,baixo risco,0.02203057872027181,True
-Percebi isso no meio do dia: o coração disparou na apresentação e acalmou no fim.,baixo risco,D23-3,teste,D23,rotina,alto risco,0.5875791518153548,False
-Percebi isso no meio do dia: fiquei nervoso ao falar em público e as batidas já normalizaram.,baixo risco,D23-3,teste,D23,rotina,baixo risco,0.02992267561556794,True
-"Olha, tipo assim, o coração disparou na apresentação e acalmou no fim, sabe?",baixo risco,D23-4,teste,D23,coloquial,alto risco,0.6210573677933441,False
-"Olha, tipo assim, fiquei nervoso ao falar em público e as batidas já normalizaram, sabe?",baixo risco,D23-4,teste,D23,coloquial,baixo risco,0.03382926729253466,True
-Então... eu acho que o coração disparou na apresentação e acalmou no fim.,baixo risco,D23-5,teste,D23,hesitacao,alto risco,0.5853353763839797,False
-Então... eu acho que fiquei nervoso ao falar em público e as batidas já normalizaram.,baixo risco,D23-5,teste,D23,hesitacao,baixo risco,0.02367988262289944,True
-"Oi, o corasão disparou na apresentação e acalmou no fim.",baixo risco,D23-6,teste,D23,erro_ortografico,alto risco,0.5602544406781897,False
-"Oi, fiquei nervoso ao falar em público e as batids já normalizaram.",baixo risco,D23-6,teste,D23,erro_ortografico,baixo risco,0.011243394619988578,True
+Sinto aperto no peito que continua e suor frio.,alto risco,C01-1,teste,C01,direto,alto risco,0.9977476052882084,True
+Meu tórax está pressionado há um tempo e estou suando gelado.,alto risco,C01-1,teste,C01,direto,alto risco,0.9732258737381143,True
+"Há algumas horas, sinto aperto no peito que continua e suor frio.",alto risco,C01-2,teste,C01,tempo,alto risco,0.9962547604507893,True
+"Há algumas horas, meu tórax está pressionado há um tempo e estou suando gelado.",alto risco,C01-2,teste,C01,tempo,alto risco,0.9655226617525279,True
+Percebi isso no meio do dia: sinto aperto no peito que continua e suor frio.,alto risco,C01-3,teste,C01,rotina,alto risco,0.9945460316115047,True
+Percebi isso no meio do dia: meu tórax está pressionado há um tempo e estou suando gelado.,alto risco,C01-3,teste,C01,rotina,alto risco,0.9633014567907116,True
+"Olha, tipo assim, sinto aperto no peito que continua e suor frio, sabe?",alto risco,C01-4,teste,C01,coloquial,alto risco,0.9968907347167472,True
+"Olha, tipo assim, meu tórax está pressionado há um tempo e estou suando gelado, sabe?",alto risco,C01-4,teste,C01,coloquial,alto risco,0.9677765715542583,True
+Então... eu acho que sinto aperto no peito que continua e suor frio.,alto risco,C01-5,teste,C01,hesitacao,alto risco,0.9956356685300682,True
+Então... eu acho que meu tórax está pressionado há um tempo e estou suando gelado.,alto risco,C01-5,teste,C01,hesitacao,alto risco,0.9684314753329631,True
+"Oi, sinto aperto no peitto que continua e suor frio.",alto risco,C01-6,teste,C01,erro_ortografico,alto risco,0.9971972498042119,True
+"Oi, meu torax está pressionado há um tempo e estou suando gelado.",alto risco,C01-6,teste,C01,erro_ortografico,alto risco,0.9719569716311325,True
+Fiquei sem ar em repouso e mal consigo falar.,alto risco,C03-1,teste,C03,direto,alto risco,0.98174299532045,True
+Estou parado e a respiração não deixa terminar uma frase.,alto risco,C03-1,teste,C03,direto,alto risco,0.9970651738904206,True
+"Há algumas horas, fiquei sem ar em repouso e mal consigo falar.",alto risco,C03-2,teste,C03,tempo,alto risco,0.97386173517527,True
+"Há algumas horas, estou parado e a respiração não deixa terminar uma frase.",alto risco,C03-2,teste,C03,tempo,alto risco,0.9960420877353494,True
+Percebi isso no meio do dia: fiquei sem ar em repouso e mal consigo falar.,alto risco,C03-3,teste,C03,rotina,alto risco,0.968971778198922,True
+Percebi isso no meio do dia: estou parado e a respiração não deixa terminar uma frase.,alto risco,C03-3,teste,C03,rotina,alto risco,0.99411173426887,True
+"Olha, tipo assim, fiquei sem ar em repouso e mal consigo falar, sabe?",alto risco,C03-4,teste,C03,coloquial,alto risco,0.9782960029865688,True
+"Olha, tipo assim, estou parado e a respiração não deixa terminar uma frase, sabe?",alto risco,C03-4,teste,C03,coloquial,alto risco,0.9957345933614592,True
+Então... eu acho que fiquei sem ar em repouso e mal consigo falar.,alto risco,C03-5,teste,C03,hesitacao,alto risco,0.9770597787228974,True
+Então... eu acho que estou parado e a respiração não deixa terminar uma frase.,alto risco,C03-5,teste,C03,hesitacao,alto risco,0.996507305334771,True
+"Oi, fiuqei sem ar em repouso e mal consigo falar.",alto risco,C03-6,teste,C03,erro_ortografico,alto risco,0.9650723653360536,True
+"Oi, estou paardo e a respiração não deixa terminar uma frase.",alto risco,C03-6,teste,C03,erro_ortografico,alto risco,0.9956909481837547,True
+Meu coração dispara e quase desmaio.,alto risco,C04-1,teste,C04,direto,alto risco,0.9900032815143094,True
+As batidas estão muito rápidas e a vista escurece.,alto risco,C04-1,teste,C04,direto,alto risco,0.9830631950698677,True
+"Há algumas horas, meu coração dispara e quase desmaio.",alto risco,C04-2,teste,C04,tempo,alto risco,0.9830166607596731,True
+"Há algumas horas, as batidas estão muito rápidas e a vista escurece.",alto risco,C04-2,teste,C04,tempo,alto risco,0.9795964351088104,True
+Percebi isso no meio do dia: meu coração dispara e quase desmaio.,alto risco,C04-3,teste,C04,rotina,alto risco,0.9773077565534027,True
+Percebi isso no meio do dia: as batidas estão muito rápidas e a vista escurece.,alto risco,C04-3,teste,C04,rotina,alto risco,0.9756739483136007,True
+"Olha, tipo assim, meu coração dispara e quase desmaio, sabe?",alto risco,C04-4,teste,C04,coloquial,alto risco,0.9821751801536522,True
+"Olha, tipo assim, as batidas estão muito rápidas e a vista escurece, sabe?",alto risco,C04-4,teste,C04,coloquial,alto risco,0.9791953757366054,True
+Então... eu acho que meu coração dispara e quase desmaio.,alto risco,C04-5,teste,C04,hesitacao,alto risco,0.9826844918854303,True
+Então... eu acho que as batidas estão muito rápidas e a vista escurece.,alto risco,C04-5,teste,C04,hesitacao,alto risco,0.9834761815811025,True
+"Oi, meu corasão dispara e quase desmaio.",alto risco,C04-6,teste,C04,erro_ortografico,alto risco,0.9871946956450067,True
+"Oi, as batids estão muito rápidas e a vista escurece.",alto risco,C04-6,teste,C04,erro_ortografico,alto risco,0.9821848634598352,True
+Desmaiei e ainda sinto palpitações.,alto risco,C05-1,teste,C05,direto,alto risco,0.9730354200551801,True
+Apaguei por instantes e o coração segue irregular.,alto risco,C05-1,teste,C05,direto,alto risco,0.7927924319644573,True
+"Há algumas horas, desmaiei e ainda sinto palpitações.",alto risco,C05-2,teste,C05,tempo,alto risco,0.9674274054473515,True
+"Há algumas horas, apaguei por instantes e o coração segue irregular.",alto risco,C05-2,teste,C05,tempo,alto risco,0.8138720844111758,True
+Percebi isso no meio do dia: desmaiei e ainda sinto palpitações.,alto risco,C05-3,teste,C05,rotina,alto risco,0.9560278029931664,True
+Percebi isso no meio do dia: apaguei por instantes e o coração segue irregular.,alto risco,C05-3,teste,C05,rotina,alto risco,0.8044641484692239,True
+"Olha, tipo assim, desmaiei e ainda sinto palpitações, sabe?",alto risco,C05-4,teste,C05,coloquial,alto risco,0.9657748724118455,True
+"Olha, tipo assim, apaguei por instantes e o coração segue irregular, sabe?",alto risco,C05-4,teste,C05,coloquial,alto risco,0.8156977859609162,True
+Então... eu acho que desmaiei e ainda sinto palpitações.,alto risco,C05-5,teste,C05,hesitacao,alto risco,0.965772472553564,True
+Então... eu acho que apaguei por instantes e o coração segue irregular.,alto risco,C05-5,teste,C05,hesitacao,alto risco,0.8178153104264488,True
+"Oi, demsaiei e ainda sinto palpitações.",alto risco,C05-6,teste,C05,erro_ortografico,alto risco,0.9178345506363682,True
+"Oi, apaguei por instantes e o corasão segue irregular.",alto risco,C05-6,teste,C05,erro_ortografico,alto risco,0.81205026682446,True
+O rosto entortou e perdi a força de um braço.,alto risco,C07-1,teste,C07,direto,alto risco,0.9944129754898412,True
+Minha boca ficou torta e um braço não responde.,alto risco,C07-1,teste,C07,direto,alto risco,0.883058609229988,True
+"Há algumas horas, o rosto entortou e perdi a força de um braço.",alto risco,C07-2,teste,C07,tempo,alto risco,0.9930400684856393,True
+"Há algumas horas, minha boca ficou torta e um braço não responde.",alto risco,C07-2,teste,C07,tempo,alto risco,0.8901372871856784,True
+Percebi isso no meio do dia: o rosto entortou e perdi a força de um braço.,alto risco,C07-3,teste,C07,rotina,alto risco,0.9902742137665893,True
+Percebi isso no meio do dia: minha boca ficou torta e um braço não responde.,alto risco,C07-3,teste,C07,rotina,alto risco,0.8819334025999336,True
+"Olha, tipo assim, o rosto entortou e perdi a força de um braço, sabe?",alto risco,C07-4,teste,C07,coloquial,alto risco,0.9892678152190988,True
+"Olha, tipo assim, minha boca ficou torta e um braço não responde, sabe?",alto risco,C07-4,teste,C07,coloquial,alto risco,0.8906239341428727,True
+Então... eu acho que o rosto entortou e perdi a força de um braço.,alto risco,C07-5,teste,C07,hesitacao,alto risco,0.9925834540817192,True
+Então... eu acho que minha boca ficou torta e um braço não responde.,alto risco,C07-5,teste,C07,hesitacao,alto risco,0.9121147330913492,True
+"Oi, o rosto entortou e perdi a força de um braco.",alto risco,C07-6,teste,C07,erro_ortografico,alto risco,0.9946040400818643,True
+"Oi, minha boca ficou torta e um braco não responde.",alto risco,C07-6,teste,C07,erro_ortografico,alto risco,0.8957748893932155,True
+Não consigo respirar deitado e preciso sentar.,alto risco,C08-1,teste,C08,direto,alto risco,0.9958741727356357,True
+Ao me deitar perco o fôlego e só melhoro sentado.,alto risco,C08-1,teste,C08,direto,baixo risco,0.2607158096384671,False
+"Há algumas horas, não consigo respirar deitado e preciso sentar.",alto risco,C08-2,teste,C08,tempo,alto risco,0.9939629372754503,True
+"Há algumas horas, ao me deitar perco o fôlego e só melhoro sentado.",alto risco,C08-2,teste,C08,tempo,baixo risco,0.3482504179542658,False
+Percebi isso no meio do dia: não consigo respirar deitado e preciso sentar.,alto risco,C08-3,teste,C08,rotina,alto risco,0.9914272132143143,True
+Percebi isso no meio do dia: ao me deitar perco o fôlego e só melhoro sentado.,alto risco,C08-3,teste,C08,rotina,baixo risco,0.3787674056521211,False
+"Olha, tipo assim, não consigo respirar deitado e preciso sentar, sabe?",alto risco,C08-4,teste,C08,coloquial,alto risco,0.9941110809751729,True
+"Olha, tipo assim, ao me deitar perco o fôlego e só melhoro sentado, sabe?",alto risco,C08-4,teste,C08,coloquial,baixo risco,0.363102110939059,False
+Então... eu acho que não consigo respirar deitado e preciso sentar.,alto risco,C08-5,teste,C08,hesitacao,alto risco,0.9962864134558742,True
+Então... eu acho que ao me deitar perco o fôlego e só melhoro sentado.,alto risco,C08-5,teste,C08,hesitacao,baixo risco,0.36972951582590996,False
+"Oi, não consigo respriar deitado e preciso sentar.",alto risco,C08-6,teste,C08,erro_ortografico,alto risco,0.9954249578965991,True
+"Oi, ao me detiar perco o fôlego e só melhoro sentado.",alto risco,C08-6,teste,C08,erro_ortografico,baixo risco,0.14794705923552132,False
+"Estou pálido, enjoado e com pressão no peito.",alto risco,C09-1,teste,C09,direto,alto risco,0.9997822692057561,True
+O aperto no tórax veio com náusea e palidez.,alto risco,C09-1,teste,C09,direto,alto risco,0.9959732821559522,True
+"Há algumas horas, estou pálido, enjoado e com pressão no peito.",alto risco,C09-2,teste,C09,tempo,alto risco,0.9995363710215736,True
+"Há algumas horas, o aperto no tórax veio com náusea e palidez.",alto risco,C09-2,teste,C09,tempo,alto risco,0.9947187364158155,True
+"Percebi isso no meio do dia: estou pálido, enjoado e com pressão no peito.",alto risco,C09-3,teste,C09,rotina,alto risco,0.9989503854377046,True
+Percebi isso no meio do dia: o aperto no tórax veio com náusea e palidez.,alto risco,C09-3,teste,C09,rotina,alto risco,0.9918703335769727,True
+"Olha, tipo assim, estou pálido, enjoado e com pressão no peito, sabe?",alto risco,C09-4,teste,C09,coloquial,alto risco,0.9991620184396067,True
+"Olha, tipo assim, o aperto no tórax veio com náusea e palidez, sabe?",alto risco,C09-4,teste,C09,coloquial,alto risco,0.9943407816294654,True
+"Então... eu acho que estou pálido, enjoado e com pressão no peito.",alto risco,C09-5,teste,C09,hesitacao,alto risco,0.9994989811018602,True
+Então... eu acho que o aperto no tórax veio com náusea e palidez.,alto risco,C09-5,teste,C09,hesitacao,alto risco,0.9943020097430949,True
+"Oi, estou pálido, enjoado e com pressão no peitto.",alto risco,C09-6,teste,C09,erro_ortografico,alto risco,0.9997633987949024,True
+"Oi, o aperto no torax veio com náusea e palidez.",alto risco,C09-6,teste,C09,erro_ortografico,alto risco,0.9960717363681956,True
+A dor no peito piora e começou a irradiar para a mandíbula.,alto risco,C10-1,teste,C10,direto,alto risco,0.9981397806633077,True
+O tórax aperta cada vez mais e a dor alcança o maxilar.,alto risco,C10-1,teste,C10,direto,alto risco,0.9981376060270659,True
+"Há algumas horas, a dor no peito piora e começou a irradiar para a mandíbula.",alto risco,C10-2,teste,C10,tempo,alto risco,0.9970559576738581,True
+"Há algumas horas, o tórax aperta cada vez mais e a dor alcança o maxilar.",alto risco,C10-2,teste,C10,tempo,alto risco,0.9967873633944153,True
+Percebi isso no meio do dia: a dor no peito piora e começou a irradiar para a mandíbula.,alto risco,C10-3,teste,C10,rotina,alto risco,0.9957839694771039,True
+Percebi isso no meio do dia: o tórax aperta cada vez mais e a dor alcança o maxilar.,alto risco,C10-3,teste,C10,rotina,alto risco,0.9954899700954168,True
+"Olha, tipo assim, a dor no peito piora e começou a irradiar para a mandíbula, sabe?",alto risco,C10-4,teste,C10,coloquial,alto risco,0.9968952506400809,True
+"Olha, tipo assim, o tórax aperta cada vez mais e a dor alcança o maxilar, sabe?",alto risco,C10-4,teste,C10,coloquial,alto risco,0.9965939081519118,True
+Então... eu acho que a dor no peito piora e começou a irradiar para a mandíbula.,alto risco,C10-5,teste,C10,hesitacao,alto risco,0.996886305874567,True
+Então... eu acho que o tórax aperta cada vez mais e a dor alcança o maxilar.,alto risco,C10-5,teste,C10,hesitacao,alto risco,0.9965621039999076,True
+"Oi, a dor no peitto piora e começou a irradiar para a mandíbula.",alto risco,C10-6,teste,C10,erro_ortografico,alto risco,0.9976476267240296,True
+"Oi, o torax aperta cada vez mais e a dor alcança o maxilar.",alto risco,C10-6,teste,C10,erro_ortografico,alto risco,0.9975084150711456,True
+O braço ficou dormente subitamente e minha fala falha.,alto risco,C20-1,teste,C20,direto,alto risco,0.9199352434990926,True
+Perdi a sensibilidade de um lado e não falo como antes.,alto risco,C20-1,teste,C20,direto,alto risco,0.9518823376102606,True
+"Há algumas horas, o braço ficou dormente subitamente e minha fala falha.",alto risco,C20-2,teste,C20,tempo,alto risco,0.9179754551374466,True
+"Há algumas horas, perdi a sensibilidade de um lado e não falo como antes.",alto risco,C20-2,teste,C20,tempo,alto risco,0.9471436799934747,True
+Percebi isso no meio do dia: o braço ficou dormente subitamente e minha fala falha.,alto risco,C20-3,teste,C20,rotina,alto risco,0.9021866157899507,True
+Percebi isso no meio do dia: perdi a sensibilidade de um lado e não falo como antes.,alto risco,C20-3,teste,C20,rotina,alto risco,0.9402525639074104,True
+"Olha, tipo assim, o braço ficou dormente subitamente e minha fala falha, sabe?",alto risco,C20-4,teste,C20,coloquial,alto risco,0.9164589411505035,True
+"Olha, tipo assim, perdi a sensibilidade de um lado e não falo como antes, sabe?",alto risco,C20-4,teste,C20,coloquial,alto risco,0.9469312405494582,True
+Então... eu acho que o braço ficou dormente subitamente e minha fala falha.,alto risco,C20-5,teste,C20,hesitacao,alto risco,0.9170340996780533,True
+Então... eu acho que perdi a sensibilidade de um lado e não falo como antes.,alto risco,C20-5,teste,C20,hesitacao,alto risco,0.9470842700842468,True
+"Oi, o braco ficou dormente subitamente e minha fala falha.",alto risco,C20-6,teste,C20,erro_ortografico,alto risco,0.9268573724173781,True
+"Oi, perdi a sesnibilidade de um lado e não falo como antes.",alto risco,C20-6,teste,C20,erro_ortografico,alto risco,0.9895228999590177,True
+Depois da cirurgia minha perna inchou e fiquei sem ar.,alto risco,C21-1,teste,C21,direto,alto risco,0.7125265717197218,True
+Operei há pouco e agora tenho falta de ar súbita com uma perna inchada.,alto risco,C21-1,teste,C21,direto,alto risco,0.9368544593593063,True
+"Há algumas horas, depois da cirurgia minha perna inchou e fiquei sem ar.",alto risco,C21-2,teste,C21,tempo,alto risco,0.7460725241260611,True
+"Há algumas horas, operei há pouco e agora tenho falta de ar súbita com uma perna inchada.",alto risco,C21-2,teste,C21,tempo,alto risco,0.9339372409821518,True
+Percebi isso no meio do dia: depois da cirurgia minha perna inchou e fiquei sem ar.,alto risco,C21-3,teste,C21,rotina,alto risco,0.7444232540555151,True
+Percebi isso no meio do dia: operei há pouco e agora tenho falta de ar súbita com uma perna inchada.,alto risco,C21-3,teste,C21,rotina,alto risco,0.9310110354020311,True
+"Olha, tipo assim, depois da cirurgia minha perna inchou e fiquei sem ar, sabe?",alto risco,C21-4,teste,C21,coloquial,alto risco,0.7502444696352902,True
+"Olha, tipo assim, operei há pouco e agora tenho falta de ar súbita com uma perna inchada, sabe?",alto risco,C21-4,teste,C21,coloquial,alto risco,0.9383331230998699,True
+Então... eu acho que depois da cirurgia minha perna inchou e fiquei sem ar.,alto risco,C21-5,teste,C21,hesitacao,alto risco,0.7530986053667107,True
+Então... eu acho que operei há pouco e agora tenho falta de ar súbita com uma perna inchada.,alto risco,C21-5,teste,C21,hesitacao,alto risco,0.9387933538218718,True
+"Oi, deopis da cirurgia minha perna inchou e fiquei sem ar.",alto risco,C21-6,teste,C21,erro_ortografico,alto risco,0.8805619966184968,True
+"Oi, operei há pouco e agora tenho flata de ar súbita com uma perna inchada.",alto risco,C21-6,teste,C21,erro_ortografico,alto risco,0.9417834849950201,True
+"A dor parece pequena, porém quase apaguei e estou pálido.",alto risco,C23-1,teste,C23,direto,alto risco,0.9949746890092191,True
+"O peito incomoda pouco, mas a sensação de desmaio veio com palidez.",alto risco,C23-1,teste,C23,direto,alto risco,0.75017162986497,True
+"Há algumas horas, a dor parece pequena, porém quase apaguei e estou pálido.",alto risco,C23-2,teste,C23,tempo,alto risco,0.9932218911801706,True
+"Há algumas horas, o peito incomoda pouco, mas a sensação de desmaio veio com palidez.",alto risco,C23-2,teste,C23,tempo,alto risco,0.7783772302832218,True
+"Percebi isso no meio do dia: a dor parece pequena, porém quase apaguei e estou pálido.",alto risco,C23-3,teste,C23,rotina,alto risco,0.9914098273614326,True
+"Percebi isso no meio do dia: o peito incomoda pouco, mas a sensação de desmaio veio com palidez.",alto risco,C23-3,teste,C23,rotina,alto risco,0.774287297244797,True
+"Olha, tipo assim, a dor parece pequena, porém quase apaguei e estou pálido, sabe?",alto risco,C23-4,teste,C23,coloquial,alto risco,0.9929772013611693,True
+"Olha, tipo assim, o peito incomoda pouco, mas a sensação de desmaio veio com palidez, sabe?",alto risco,C23-4,teste,C23,coloquial,alto risco,0.7816227834132026,True
+"Então... eu acho que a dor parece pequena, porém quase apaguei e estou pálido.",alto risco,C23-5,teste,C23,hesitacao,alto risco,0.9929863050015186,True
+"Então... eu acho que o peito incomoda pouco, mas a sensação de desmaio veio com palidez.",alto risco,C23-5,teste,C23,hesitacao,alto risco,0.7841169080098234,True
+"Oi, a dor parece pequena, porém quase apaguei e estou palido.",alto risco,C23-6,teste,C23,erro_ortografico,alto risco,0.9942086728208208,True
+"Oi, o peitto incomoda pouco, mas a sensação de desmaio veio com palidez.",alto risco,C23-6,teste,C23,erro_ortografico,alto risco,0.7710339155898752,True
+Suei na caminhada e recuperei totalmente o fôlego ao parar.,baixo risco,D01-1,teste,D01,direto,baixo risco,0.0005990652468185198,True
+A respiração acelerou no passeio e voltou ao normal após descanso.,baixo risco,D01-1,teste,D01,direto,baixo risco,0.0005826461341172928,True
+"Há algumas horas, suei na caminhada e recuperei totalmente o fôlego ao parar.",baixo risco,D01-2,teste,D01,tempo,baixo risco,0.001334628993216458,True
+"Há algumas horas, a respiração acelerou no passeio e voltou ao normal após descanso.",baixo risco,D01-2,teste,D01,tempo,baixo risco,0.0015973378777405234,True
+Percebi isso no meio do dia: suei na caminhada e recuperei totalmente o fôlego ao parar.,baixo risco,D01-3,teste,D01,rotina,baixo risco,0.002233431870546143,True
+Percebi isso no meio do dia: a respiração acelerou no passeio e voltou ao normal após descanso.,baixo risco,D01-3,teste,D01,rotina,baixo risco,0.0031488480360025717,True
+"Olha, tipo assim, suei na caminhada e recuperei totalmente o fôlego ao parar, sabe?",baixo risco,D01-4,teste,D01,coloquial,baixo risco,0.0019483210520530037,True
+"Olha, tipo assim, a respiração acelerou no passeio e voltou ao normal após descanso, sabe?",baixo risco,D01-4,teste,D01,coloquial,baixo risco,0.00318300352441514,True
+Então... eu acho que suei na caminhada e recuperei totalmente o fôlego ao parar.,baixo risco,D01-5,teste,D01,hesitacao,baixo risco,0.0016365825880160223,True
+Então... eu acho que a respiração acelerou no passeio e voltou ao normal após descanso.,baixo risco,D01-5,teste,D01,hesitacao,baixo risco,0.002043882303170985,True
+"Oi, suei na caimnhada e recuperei totalmente o fôlego ao parar.",baixo risco,D01-6,teste,D01,erro_ortografico,baixo risco,0.0004397835468823441,True
+"Oi, a repsiração acelerou no passeio e voltou ao normal após descanso.",baixo risco,D01-6,teste,D01,erro_ortografico,baixo risco,0.00019117374840937895,True
+O músculo do peito dói apenas quando aperto o local machucado.,baixo risco,D03-1,teste,D03,direto,baixo risco,0.1303003124589316,True
+Consigo reproduzir a dor tocando a contusão superficial.,baixo risco,D03-1,teste,D03,direto,baixo risco,0.10457988366841986,True
+"Há algumas horas, o músculo do peito dói apenas quando aperto o local machucado.",baixo risco,D03-2,teste,D03,tempo,baixo risco,0.1763959996620269,True
+"Há algumas horas, consigo reproduzir a dor tocando a contusão superficial.",baixo risco,D03-2,teste,D03,tempo,baixo risco,0.17782419851144937,True
+Percebi isso no meio do dia: o músculo do peito dói apenas quando aperto o local machucado.,baixo risco,D03-3,teste,D03,rotina,baixo risco,0.20284594653283217,True
+Percebi isso no meio do dia: consigo reproduzir a dor tocando a contusão superficial.,baixo risco,D03-3,teste,D03,rotina,baixo risco,0.2167854388066428,True
+"Olha, tipo assim, o músculo do peito dói apenas quando aperto o local machucado, sabe?",baixo risco,D03-4,teste,D03,coloquial,baixo risco,0.18570821413351313,True
+"Olha, tipo assim, consigo reproduzir a dor tocando a contusão superficial, sabe?",baixo risco,D03-4,teste,D03,coloquial,baixo risco,0.1926377361517726,True
+Então... eu acho que o músculo do peito dói apenas quando aperto o local machucado.,baixo risco,D03-5,teste,D03,hesitacao,baixo risco,0.18959155166613395,True
+Então... eu acho que consigo reproduzir a dor tocando a contusão superficial.,baixo risco,D03-5,teste,D03,hesitacao,baixo risco,0.19858024623816295,True
+"Oi, o músculo do peitto dói apenas quando aperto o local machucado.",baixo risco,D03-6,teste,D03,erro_ortografico,baixo risco,0.14882340171213027,True
+"Oi, consigo reproduzir a dorr tocando a contusão superficial.",baixo risco,D03-6,teste,D03,erro_ortografico,baixo risco,0.13190049570797735,True
+Meu coração acelerou no susto e normalizou logo depois.,baixo risco,D04-1,teste,D04,direto,baixo risco,0.0285869624348285,True
+As batidas aumentaram por um instante e já acalmaram.,baixo risco,D04-1,teste,D04,direto,baixo risco,0.007962458500230585,True
+"Há algumas horas, meu coração acelerou no susto e normalizou logo depois.",baixo risco,D04-2,teste,D04,tempo,baixo risco,0.05450076430548545,True
+"Há algumas horas, as batidas aumentaram por um instante e já acalmaram.",baixo risco,D04-2,teste,D04,tempo,baixo risco,0.037941233558158816,True
+Percebi isso no meio do dia: meu coração acelerou no susto e normalizou logo depois.,baixo risco,D04-3,teste,D04,rotina,baixo risco,0.07063154310036324,True
+Percebi isso no meio do dia: as batidas aumentaram por um instante e já acalmaram.,baixo risco,D04-3,teste,D04,rotina,baixo risco,0.057738332144176896,True
+"Olha, tipo assim, meu coração acelerou no susto e normalizou logo depois, sabe?",baixo risco,D04-4,teste,D04,coloquial,baixo risco,0.05144414699735522,True
+"Olha, tipo assim, as batidas aumentaram por um instante e já acalmaram, sabe?",baixo risco,D04-4,teste,D04,coloquial,baixo risco,0.04386075021858604,True
+Então... eu acho que meu coração acelerou no susto e normalizou logo depois.,baixo risco,D04-5,teste,D04,hesitacao,baixo risco,0.05984288056785103,True
+Então... eu acho que as batidas aumentaram por um instante e já acalmaram.,baixo risco,D04-5,teste,D04,hesitacao,baixo risco,0.05891080400262705,True
+"Oi, meu corasão acelerou no susto e normalizou logo depois.",baixo risco,D04-6,teste,D04,erro_ortografico,baixo risco,0.043155937819985835,True
+"Oi, as batids aumentaram por um instante e já acalmaram.",baixo risco,D04-6,teste,D04,erro_ortografico,baixo risco,0.023218328019925516,True
+Senti uma pontada ao espirrar que durou um segundo e não voltou.,baixo risco,D05-1,teste,D05,direto,baixo risco,0.0012237033065366498,True
+O peito fisgou só no espirro e estou sem incômodo agora.,baixo risco,D05-1,teste,D05,direto,baixo risco,0.1986650311613779,True
+"Há algumas horas, senti uma pontada ao espirrar que durou um segundo e não voltou.",baixo risco,D05-2,teste,D05,tempo,baixo risco,0.0028463197087291725,True
+"Há algumas horas, o peito fisgou só no espirro e estou sem incômodo agora.",baixo risco,D05-2,teste,D05,tempo,baixo risco,0.2808276603469433,True
+Percebi isso no meio do dia: senti uma pontada ao espirrar que durou um segundo e não voltou.,baixo risco,D05-3,teste,D05,rotina,baixo risco,0.004340764011012466,True
+Percebi isso no meio do dia: o peito fisgou só no espirro e estou sem incômodo agora.,baixo risco,D05-3,teste,D05,rotina,baixo risco,0.315699483512472,True
+"Olha, tipo assim, senti uma pontada ao espirrar que durou um segundo e não voltou, sabe?",baixo risco,D05-4,teste,D05,coloquial,baixo risco,0.004356643115470016,True
+"Olha, tipo assim, o peito fisgou só no espirro e estou sem incômodo agora, sabe?",baixo risco,D05-4,teste,D05,coloquial,baixo risco,0.29571909379882544,True
+Então... eu acho que senti uma pontada ao espirrar que durou um segundo e não voltou.,baixo risco,D05-5,teste,D05,hesitacao,baixo risco,0.0029070365786629804,True
+Então... eu acho que o peito fisgou só no espirro e estou sem incômodo agora.,baixo risco,D05-5,teste,D05,hesitacao,baixo risco,0.30210014072424174,True
+"Oi, senti uma potnada ao espirrar que durou um segundo e não voltou.",baixo risco,D05-6,teste,D05,erro_ortografico,baixo risco,0.0014818028998803134,True
+"Oi, o peitto fisgou só no espirro e estou sem incômodo agora.",baixo risco,D05-6,teste,D05,erro_ortografico,baixo risco,0.23404096138133945,True
+A dor no ombro aparece só quando levanto uma caixa e cessa em repouso.,baixo risco,D07-1,teste,D07,direto,baixo risco,0.3333479432310944,True
+"O braço fica dolorido ao erguer peso, mas não tenho dor parado.",baixo risco,D07-1,teste,D07,direto,baixo risco,0.0070116387206011765,True
+"Há algumas horas, a dor no ombro aparece só quando levanto uma caixa e cessa em repouso.",baixo risco,D07-2,teste,D07,tempo,baixo risco,0.42729992703850217,True
+"Há algumas horas, o braço fica dolorido ao erguer peso, mas não tenho dor parado.",baixo risco,D07-2,teste,D07,tempo,baixo risco,0.013062645605673273,True
+Percebi isso no meio do dia: a dor no ombro aparece só quando levanto uma caixa e cessa em repouso.,baixo risco,D07-3,teste,D07,rotina,baixo risco,0.4480552634431274,True
+"Percebi isso no meio do dia: o braço fica dolorido ao erguer peso, mas não tenho dor parado.",baixo risco,D07-3,teste,D07,rotina,baixo risco,0.018739219883686542,True
+"Olha, tipo assim, a dor no ombro aparece só quando levanto uma caixa e cessa em repouso, sabe?",baixo risco,D07-4,teste,D07,coloquial,baixo risco,0.3952104705612626,True
+"Olha, tipo assim, o braço fica dolorido ao erguer peso, mas não tenho dor parado, sabe?",baixo risco,D07-4,teste,D07,coloquial,baixo risco,0.014667826470051382,True
+Então... eu acho que a dor no ombro aparece só quando levanto uma caixa e cessa em repouso.,baixo risco,D07-5,teste,D07,hesitacao,baixo risco,0.4442240316032178,True
+"Então... eu acho que o braço fica dolorido ao erguer peso, mas não tenho dor parado.",baixo risco,D07-5,teste,D07,hesitacao,baixo risco,0.015259705979292604,True
+"Oi, a dorr no ombro aparece só quando levanto uma caixa e cessa em repouso.",baixo risco,D07-6,teste,D07,erro_ortografico,baixo risco,0.3940108361515713,True
+"Oi, o braco fica dolorido ao erguer peso, mas não tenho dor parado.",baixo risco,D07-6,teste,D07,erro_ortografico,baixo risco,0.00874925930759285,True
+Transpirei no sol e o suor cessou ao entrar na sombra.,baixo risco,D08-1,teste,D08,direto,baixo risco,0.0022494845359969373,True
+O calor me fez suar; depois de beber água fiquei bem.,baixo risco,D08-1,teste,D08,direto,baixo risco,0.0051105151262024195,True
+"Há algumas horas, transpirei no sol e o suor cessou ao entrar na sombra.",baixo risco,D08-2,teste,D08,tempo,baixo risco,0.00474815386703531,True
+"Há algumas horas, o calor me fez suar; depois de beber água fiquei bem.",baixo risco,D08-2,teste,D08,tempo,baixo risco,0.009171411378488314,True
+Percebi isso no meio do dia: transpirei no sol e o suor cessou ao entrar na sombra.,baixo risco,D08-3,teste,D08,rotina,baixo risco,0.007792499826848709,True
+Percebi isso no meio do dia: o calor me fez suar; depois de beber água fiquei bem.,baixo risco,D08-3,teste,D08,rotina,baixo risco,0.013016467489001204,True
+"Olha, tipo assim, transpirei no sol e o suor cessou ao entrar na sombra, sabe?",baixo risco,D08-4,teste,D08,coloquial,baixo risco,0.005283049315178756,True
+"Olha, tipo assim, o calor me fez suar; depois de beber água fiquei bem, sabe?",baixo risco,D08-4,teste,D08,coloquial,baixo risco,0.009966672903707452,True
+Então... eu acho que transpirei no sol e o suor cessou ao entrar na sombra.,baixo risco,D08-5,teste,D08,hesitacao,baixo risco,0.005724068689852868,True
+Então... eu acho que o calor me fez suar; depois de beber água fiquei bem.,baixo risco,D08-5,teste,D08,hesitacao,baixo risco,0.010643602222479065,True
+"Oi, transpirei no sol e o sour cessou ao entrar na sombra.",baixo risco,D08-6,teste,D08,erro_ortografico,baixo risco,0.002898662079432457,True
+"Oi, o calor me fez suar; deopis de beber água fiquei bem.",baixo risco,D08-6,teste,D08,erro_ortografico,baixo risco,0.020530570201144904,True
+A queimação apareceu após comer e passou sem falta de ar.,baixo risco,D09-1,teste,D09,direto,baixo risco,0.0016711301088455643,True
+"Comi depressa, senti azia conhecida e agora estou normal.",baixo risco,D09-1,teste,D09,direto,baixo risco,0.40495807781460946,True
+"Há algumas horas, a queimação apareceu após comer e passou sem falta de ar.",baixo risco,D09-2,teste,D09,tempo,baixo risco,0.00337152560991949,True
+"Há algumas horas, comi depressa, senti azia conhecida e agora estou normal.",baixo risco,D09-2,teste,D09,tempo,baixo risco,0.4977577047896773,True
+Percebi isso no meio do dia: a queimação apareceu após comer e passou sem falta de ar.,baixo risco,D09-3,teste,D09,rotina,baixo risco,0.0052253798948558305,True
+"Percebi isso no meio do dia: comi depressa, senti azia conhecida e agora estou normal.",baixo risco,D09-3,teste,D09,rotina,alto risco,0.5154038470766007,False
+"Olha, tipo assim, a queimação apareceu após comer e passou sem falta de ar, sabe?",baixo risco,D09-4,teste,D09,coloquial,baixo risco,0.008960584985329034,True
+"Olha, tipo assim, comi depressa, senti azia conhecida e agora estou normal, sabe?",baixo risco,D09-4,teste,D09,coloquial,baixo risco,0.46725848681768334,True
+Então... eu acho que a queimação apareceu após comer e passou sem falta de ar.,baixo risco,D09-5,teste,D09,hesitacao,baixo risco,0.004030871155307647,True
+"Então... eu acho que comi depressa, senti azia conhecida e agora estou normal.",baixo risco,D09-5,teste,D09,hesitacao,alto risco,0.5175303034187491,False
+"Oi, a queimação apareceu após comer e passou sem flata de ar.",baixo risco,D09-6,teste,D09,erro_ortografico,baixo risco,0.002116859528550674,True
+"Oi, comi derpessa, senti azia conhecida e agora estou normal.",baixo risco,D09-6,teste,D09,erro_ortografico,baixo risco,0.4563087920989456,True
+O relógio mostrou pulso rápido durante a bicicleta e normal depois.,baixo risco,D10-1,teste,D10,direto,baixo risco,0.007573453504140848,True
+Meu coração acelerou no exercício e voltou ao habitual no descanso.,baixo risco,D10-1,teste,D10,direto,baixo risco,0.05800817065305508,True
+"Há algumas horas, o relógio mostrou pulso rápido durante a bicicleta e normal depois.",baixo risco,D10-2,teste,D10,tempo,baixo risco,0.012970749451193253,True
+"Há algumas horas, meu coração acelerou no exercício e voltou ao habitual no descanso.",baixo risco,D10-2,teste,D10,tempo,baixo risco,0.1041111972242258,True
+Percebi isso no meio do dia: o relógio mostrou pulso rápido durante a bicicleta e normal depois.,baixo risco,D10-3,teste,D10,rotina,baixo risco,0.017798867917541705,True
+Percebi isso no meio do dia: meu coração acelerou no exercício e voltou ao habitual no descanso.,baixo risco,D10-3,teste,D10,rotina,baixo risco,0.1304048329918691,True
+"Olha, tipo assim, o relógio mostrou pulso rápido durante a bicicleta e normal depois, sabe?",baixo risco,D10-4,teste,D10,coloquial,baixo risco,0.01436099734361218,True
+"Olha, tipo assim, meu coração acelerou no exercício e voltou ao habitual no descanso, sabe?",baixo risco,D10-4,teste,D10,coloquial,baixo risco,0.13974737226993672,True
+Então... eu acho que o relógio mostrou pulso rápido durante a bicicleta e normal depois.,baixo risco,D10-5,teste,D10,hesitacao,baixo risco,0.014876873415719083,True
+Então... eu acho que meu coração acelerou no exercício e voltou ao habitual no descanso.,baixo risco,D10-5,teste,D10,hesitacao,baixo risco,0.11332082356878226,True
+"Oi, o reólgio mostrou pulso rápido durante a bicicleta e normal depois.",baixo risco,D10-6,teste,D10,erro_ortografico,baixo risco,0.009674480786346473,True
+"Oi, meu corasão acelerou no exercício e voltou ao habitual no descanso.",baixo risco,D10-6,teste,D10,erro_ortografico,baixo risco,0.08518563028776782,True
+O suor veio do treino e parou junto com a respiração rápida.,baixo risco,D20-1,teste,D20,direto,alto risco,0.9328804603168543,False
+"Depois de descansar do exercício, o suor cessou e fiquei bem.",baixo risco,D20-1,teste,D20,direto,baixo risco,0.0012200691264451224,True
+"Há algumas horas, o suor veio do treino e parou junto com a respiração rápida.",baixo risco,D20-2,teste,D20,tempo,alto risco,0.9353921259858083,False
+"Há algumas horas, depois de descansar do exercício, o suor cessou e fiquei bem.",baixo risco,D20-2,teste,D20,tempo,baixo risco,0.002817994705885063,True
+Percebi isso no meio do dia: o suor veio do treino e parou junto com a respiração rápida.,baixo risco,D20-3,teste,D20,rotina,alto risco,0.9242890315994133,False
+"Percebi isso no meio do dia: depois de descansar do exercício, o suor cessou e fiquei bem.",baixo risco,D20-3,teste,D20,rotina,baixo risco,0.005191375732691794,True
+"Olha, tipo assim, o suor veio do treino e parou junto com a respiração rápida, sabe?",baixo risco,D20-4,teste,D20,coloquial,alto risco,0.935073580907894,False
+"Olha, tipo assim, depois de descansar do exercício, o suor cessou e fiquei bem, sabe?",baixo risco,D20-4,teste,D20,coloquial,baixo risco,0.0047625746149903,True
+Então... eu acho que o suor veio do treino e parou junto com a respiração rápida.,baixo risco,D20-5,teste,D20,hesitacao,alto risco,0.9355771634410456,False
+"Então... eu acho que depois de descansar do exercício, o suor cessou e fiquei bem.",baixo risco,D20-5,teste,D20,hesitacao,baixo risco,0.0034710104740696135,True
+"Oi, o sour veio do treino e parou junto com a respiração rápida.",baixo risco,D20-6,teste,D20,erro_ortografico,alto risco,0.9381341245798502,False
+"Oi, depois de descansar do exercício, o sour cessou e fiquei bem.",baixo risco,D20-6,teste,D20,erro_ortografico,baixo risco,0.0016111659841724357,True
+Minha voz saiu arrastada por sono e normalizou após descansar.,baixo risco,D21-1,teste,D21,direto,baixo risco,0.00038886421395312176,True
+Eu estava sonolento e falei devagar; acordei bem e sem fraqueza.,baixo risco,D21-1,teste,D21,direto,baixo risco,0.01665467353914518,True
+"Há algumas horas, minha voz saiu arrastada por sono e normalizou após descansar.",baixo risco,D21-2,teste,D21,tempo,baixo risco,0.0014315718611612738,True
+"Há algumas horas, eu estava sonolento e falei devagar; acordei bem e sem fraqueza.",baixo risco,D21-2,teste,D21,tempo,baixo risco,0.030268521729059583,True
+Percebi isso no meio do dia: minha voz saiu arrastada por sono e normalizou após descansar.,baixo risco,D21-3,teste,D21,rotina,baixo risco,0.0023374882019084886,True
+Percebi isso no meio do dia: eu estava sonolento e falei devagar; acordei bem e sem fraqueza.,baixo risco,D21-3,teste,D21,rotina,baixo risco,0.041751206035294364,True
+"Olha, tipo assim, minha voz saiu arrastada por sono e normalizou após descansar, sabe?",baixo risco,D21-4,teste,D21,coloquial,baixo risco,0.001655884925366391,True
+"Olha, tipo assim, eu estava sonolento e falei devagar; acordei bem e sem fraqueza, sabe?",baixo risco,D21-4,teste,D21,coloquial,baixo risco,0.034606193950247444,True
+Então... eu acho que minha voz saiu arrastada por sono e normalizou após descansar.,baixo risco,D21-5,teste,D21,hesitacao,baixo risco,0.002066118242755044,True
+Então... eu acho que eu estava sonolento e falei devagar; acordei bem e sem fraqueza.,baixo risco,D21-5,teste,D21,hesitacao,baixo risco,0.03038213357043218,True
+"Oi, minha voz saiu ararstada por sono e normalizou após descansar.",baixo risco,D21-6,teste,D21,erro_ortografico,baixo risco,0.0008990048029746678,True
+"Oi, eu esatva sonolento e falei devagar; acordei bem e sem fraqueza.",baixo risco,D21-6,teste,D21,erro_ortografico,baixo risco,0.0338047882334761,True
+O coração disparou na apresentação e acalmou no fim.,baixo risco,D23-1,teste,D23,direto,baixo risco,0.10587777385448227,True
+Fiquei nervoso ao falar em público e as batidas já normalizaram.,baixo risco,D23-1,teste,D23,direto,baixo risco,0.011365160538555963,True
+"Há algumas horas, o coração disparou na apresentação e acalmou no fim.",baixo risco,D23-2,teste,D23,tempo,baixo risco,0.20757232822147265,True
+"Há algumas horas, fiquei nervoso ao falar em público e as batidas já normalizaram.",baixo risco,D23-2,teste,D23,tempo,baixo risco,0.02622643866373542,True
+Percebi isso no meio do dia: o coração disparou na apresentação e acalmou no fim.,baixo risco,D23-3,teste,D23,rotina,baixo risco,0.24412896535088002,True
+Percebi isso no meio do dia: fiquei nervoso ao falar em público e as batidas já normalizaram.,baixo risco,D23-3,teste,D23,rotina,baixo risco,0.03689013215584247,True
+"Olha, tipo assim, o coração disparou na apresentação e acalmou no fim, sabe?",baixo risco,D23-4,teste,D23,coloquial,baixo risco,0.22353404826413314,True
+"Olha, tipo assim, fiquei nervoso ao falar em público e as batidas já normalizaram, sabe?",baixo risco,D23-4,teste,D23,coloquial,baixo risco,0.035440762314636,True
+Então... eu acho que o coração disparou na apresentação e acalmou no fim.,baixo risco,D23-5,teste,D23,hesitacao,baixo risco,0.26214753072387753,True
+Então... eu acho que fiquei nervoso ao falar em público e as batidas já normalizaram.,baixo risco,D23-5,teste,D23,hesitacao,baixo risco,0.03350981186311741,True
+"Oi, o corasão disparou na apresentação e acalmou no fim.",baixo risco,D23-6,teste,D23,erro_ortografico,baixo risco,0.16596493270432477,True
+"Oi, fiquei nervoso ao falar em público e as batids já normalizaram.",baixo risco,D23-6,teste,D23,erro_ortografico,baixo risco,0.014842883317962796,True

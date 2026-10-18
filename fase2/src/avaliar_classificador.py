@@ -115,7 +115,7 @@ def main():
     dados = dados.merge(particoes, on="grupo", validate="many_to_one")
     conjuntos = {nome: dados[dados.conjunto == nome].copy()
                  for nome in ("treino", "calibracao", "teste", "regressao")}
-    assert tuple(len(conjuntos[n]) for n in conjuntos) == (496, 88, 264, 144)
+    assert tuple(len(conjuntos[n]) for n in conjuntos) == (616, 88, 264, 144)
     assert all(set(conjuntos[a].familia).isdisjoint(conjuntos[b].familia)
                for a in conjuntos for b in conjuntos if a < b)
     dados[["frase", "situacao", "grupo", "conjunto", "familia", "variacao"]].to_csv(
@@ -146,6 +146,49 @@ def main():
     calibrado = CalibratedClassifierCV(FrozenEstimator(base), method="sigmoid")
     calibrado.fit(conjuntos["calibracao"].frase, conjuntos["calibracao"].situacao)
 
+    # Reproduz a configuração publicada na revisão anterior com as 496 frases
+    # disponíveis então. A nova auditoria não participa de nenhum ajuste.
+    treino_anterior = treino[treino.variacao != "caso_adicional"]
+    assert len(treino_anterior) == 496
+    base_anterior = criar_modelo().set_params(classificador__C=8.0)
+    base_anterior.fit(treino_anterior.frase, treino_anterior.situacao)
+    calibrado_anterior = CalibratedClassifierCV(FrozenEstimator(base_anterior), method="sigmoid")
+    calibrado_anterior.fit(conjuntos["calibracao"].frase, conjuntos["calibracao"].situacao)
+
+    auditoria = ler("auditoria_nova.csv")
+    frases_base = set(dados.frase.str.casefold().str.strip())
+    assert len(auditoria) == 80 and not any(
+        frase.casefold().strip() in frases_base for frase in auditoria.frase)
+    assert auditoria.situacao.value_counts().to_dict() == {"alto risco": 40, "baixo risco": 40}
+    auditoria["predicao_anterior"], auditoria["probabilidade_anterior"] = prever(
+        calibrado_anterior, auditoria.frase)
+    auditoria["predicao"], auditoria["probabilidade_alto_risco"] = prever(calibrado, auditoria.frase)
+    auditoria["acerto_anterior"] = auditoria.situacao.eq(auditoria.predicao_anterior)
+    auditoria["acerto"] = auditoria.situacao.eq(auditoria.predicao)
+    auditoria.to_csv(SAIDA / "predicoes_auditoria_nova.csv", index=False)
+    met_auditoria_anterior = metricas_binarias(auditoria.situacao, auditoria.predicao_anterior)
+    met_auditoria = metricas_binarias(auditoria.situacao, auditoria.predicao)
+    por_tema = []
+    for tema, bloco in auditoria.groupby("tema"):
+        por_tema.append({"tema": tema, "n": len(bloco),
+                         "acuracia_anterior": float(bloco.acerto_anterior.mean()),
+                         "acuracia_atual": float(bloco.acerto.mean())})
+    pd.DataFrame(por_tema).to_csv(SAIDA / "metricas_auditoria_temas.csv", index=False)
+
+    contrastiva = ler("auditoria_contrastiva.csv")
+    assert len(contrastiva) == 40 and contrastiva.par.nunique() == 20
+    assert contrastiva.groupby("par").situacao.nunique().eq(2).all()
+    assert not any(frase.casefold().strip() in frases_base for frase in contrastiva.frase)
+    contrastiva["predicao_anterior"], contrastiva["probabilidade_anterior"] = prever(
+        calibrado_anterior, contrastiva.frase)
+    contrastiva["predicao"], contrastiva["probabilidade_alto_risco"] = prever(
+        calibrado, contrastiva.frase)
+    contrastiva["acerto_anterior"] = contrastiva.situacao.eq(contrastiva.predicao_anterior)
+    contrastiva["acerto"] = contrastiva.situacao.eq(contrastiva.predicao)
+    contrastiva.to_csv(SAIDA / "predicoes_auditoria_contrastiva.csv", index=False)
+    met_contrastiva_anterior = metricas_binarias(contrastiva.situacao, contrastiva.predicao_anterior)
+    met_contrastiva = metricas_binarias(contrastiva.situacao, contrastiva.predicao)
+
     teste, met_teste = avaliar_conjunto(calibrado, conjuntos["teste"], "teste")
     por_variacao = []
     for variacao, bloco in teste.groupby("variacao"):
@@ -162,7 +205,7 @@ def main():
 
     matriz = np.array(met_teste["matriz_confusao"])
     ConfusionMatrixDisplay(matriz, display_labels=CLASSES).plot(cmap="Blues")
-    plt.title("Teste final ampliado — frases simuladas")
+    plt.title("Teste histórico de 264 frases simuladas")
     plt.xlabel("Classe prevista")
     plt.ylabel("Classe esperada")
     plt.tight_layout()
@@ -235,6 +278,10 @@ def main():
         "melhores_parametros": {"C": float(busca.best_params_["classificador__C"]),
                                "vetorizacao": tipo_vetor},
         "tipo_vetorizacao": tipo_vetor,
+        "auditoria_nova": met_auditoria,
+        "auditoria_nova_modelo_anterior": met_auditoria_anterior,
+        "auditoria_contrastiva": met_contrastiva,
+        "auditoria_contrastiva_modelo_anterior": met_contrastiva_anterior,
         "teste": met_teste,
         "regressao": met_regressao,
         "avaliacao_externa": met_externo,
@@ -249,13 +296,20 @@ def main():
                                                    output_dict=True, zero_division=0),
         "sha256_dataset": hashlib.sha256((RAIZ / "data/frases_risco.csv").read_bytes()).hexdigest(),
         "sha256_particoes": hashlib.sha256((RAIZ / "data/particoes.csv").read_bytes()).hexdigest(),
+        "sha256_casos_adicionais": hashlib.sha256((RAIZ / "data/casos_adicionais.csv").read_bytes()).hexdigest(),
+        "sha256_auditoria_nova": hashlib.sha256((RAIZ / "data/auditoria_nova.csv").read_bytes()).hexdigest(),
+        "sha256_auditoria_contrastiva": hashlib.sha256((RAIZ / "data/auditoria_contrastiva.csv").read_bytes()).hexdigest(),
         "sha256_preprocessamento": hashlib.sha256((RAIZ / "src/preprocessar_texto.py").read_bytes()).hexdigest(),
         "sha256_contexto": hashlib.sha256((RAIZ / "src/contexto_sintomas.py").read_bytes()).hexdigest(),
         "python": platform.python_version(), "sklearn": sklearn.__version__,
         "numpy": np.__version__, "pandas": pd.__version__,
     }
     (SAIDA / "metricas.json").write_text(json.dumps(metricas, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(json.dumps({"teste": met_teste, "externo": met_externo, "pares": met_pares,
+    print(json.dumps({"auditoria_nova": met_auditoria,
+                      "auditoria_anterior": met_auditoria_anterior,
+                      "auditoria_contrastiva": met_contrastiva,
+                      "contrastiva_anterior": met_contrastiva_anterior,
+                      "teste_historico": met_teste, "externo": met_externo, "pares": met_pares,
                       "subgrupos": met_subgrupos, "gaps": gaps}, ensure_ascii=False, indent=2))
 
 

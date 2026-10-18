@@ -114,8 +114,8 @@ def gravar_csv(caminho, campos, linhas):
 def main():
     caminho_dados = RAIZ / "data/frases_risco.csv"
     caminho_particoes = RAIZ / "data/particoes.csv"
-    antigos = [r for r in ler_csv(caminho_dados) if not r["grupo"].startswith(("C", "D"))]
-    manifestos = [r for r in ler_csv(caminho_particoes) if not r["grupo"].startswith(("C", "D"))]
+    antigos = [r for r in ler_csv(caminho_dados) if r["grupo"].startswith(("A", "B"))]
+    manifestos = [r for r in ler_csv(caminho_particoes) if r["grupo"].startswith(("A", "B"))]
     if len(antigos) != 416 or len(manifestos) != 208:
         raise ValueError("A expansão espera a base anterior de 416 frases e 208 grupos.")
 
@@ -141,6 +141,16 @@ def main():
                     novos.append({"frase": frase[0].upper() + frase[1:], "situacao": classe, "grupo": grupo})
                 manifestos.append({"grupo": grupo, "conjunto": particao[i],
                                    "familia": familia, "variacao": variacao})
+
+    complementares = ler_csv(RAIZ / "data/casos_adicionais.csv")
+    if len(complementares) != 120 or len({r["grupo"] for r in complementares}) != 120:
+        raise ValueError("Os 120 cenários adicionais devem ter grupos exclusivos.")
+    for linha in complementares:
+        if linha["situacao"] not in {"alto risco", "baixo risco"}:
+            raise ValueError(f"Rótulo desconhecido no cenário {linha['id']}.")
+        novos.append({chave: linha[chave] for chave in ("frase", "situacao", "grupo")})
+        manifestos.append({"grupo": linha["grupo"], "conjunto": "treino",
+                           "familia": linha["grupo"], "variacao": "caso_adicional"})
 
     todas = antigos + novos
     normalizadas = [r["frase"].casefold().strip() for r in todas]
