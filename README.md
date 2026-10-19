@@ -20,6 +20,8 @@ clínicos e os alertas não devem ser usados para decisões de saúde.
 | Fluxo do Node-RED | [flows_cardioia.json](fase3/node-red/flows_cardioia.json) |
 | Relatório Edge Computing | [Relatório Edge](fase3/docs/relatorio_edge.md) |
 | Relatório MQTT e dashboard | [Relatório MQTT](fase3/docs/relatorio_mqtt_dashboard.md) |
+| Relatórios paginados | [PDFs da Fase 3](fase3/output/pdf/) |
+| Checklist completo do enunciado | [Checklist da Fase 3](fase3/docs/checklist_enunciado.md) |
 | Segurança, privacidade e limites | [Documento de governança](fase3/docs/seguranca_privacidade.md) |
 | Roteiro de evidências | [Guia de demonstração](fase3/docs/roteiro_evidencias.md) |
 

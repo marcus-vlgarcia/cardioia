@@ -20,8 +20,10 @@ constexpr uint8_t PINO_REDE = 19;
 constexpr uint8_t PINO_LED_REDE = 2;
 constexpr uint32_t INTERVALO_LEITURA_MS = 5000;
 constexpr uint32_t JANELA_BPM_MS = 10000;
+constexpr uint32_t INTERVALO_RECONEXAO_WIFI_MS = 5000;
 constexpr uint16_t LIMITE_TEMPERATURA_ALERTA = 38;
 constexpr uint16_t LIMITE_BPM_ALERTA = 120;
+constexpr uint16_t TAMANHO_BUFFER_MQTT = 512;
 
 // Capacidade equivalente a cerca de 83 minutos de leituras a cada 5 segundos.
 // Quando cheia, a amostra mais antiga é substituída para preservar o dado atual.
@@ -36,6 +38,7 @@ WiFiClient clienteMqtt;
 PubSubClient mqtt(clienteMqtt);
 
 struct Amostra {
+  uint32_t sequencia;
   uint32_t instanteMs;
   float temperatura;
   float umidade;
@@ -47,6 +50,7 @@ Amostra fila[MAX_AMOSTRAS_OFFLINE];
 uint16_t inicioFila = 0;
 uint16_t tamanhoFila = 0;
 uint32_t amostrasDescartadas = 0;
+uint32_t proximaSequencia = 1;
 
 bool conectividadeAtiva = true;
 bool ultimoEstadoPulso = HIGH;
@@ -55,6 +59,7 @@ uint32_t ultimoCliquePulso = 0;
 uint32_t ultimoCliqueRede = 0;
 uint32_t inicioJanelaBpm = 0;
 uint32_t ultimaLeitura = 0;
+uint32_t ultimaTentativaWifi = 0;
 uint16_t pulsosNaJanela = 0;
 uint16_t bpmAtual = 0;
 
@@ -77,15 +82,21 @@ void adicionarNaFila(const Amostra& amostra) {
 }
 
 bool montarPayload(const Amostra& amostra, char* destino, size_t tamanhoDestino) {
+  // A mensagem atual ainda ocupa a cabeça da fila. O painel recebe a
+  // quantidade que restará caso esta publicação seja aceita pelo cliente MQTT.
+  const uint16_t pendentesAposEnvio = tamanhoFila > 0 ? tamanhoFila - 1 : 0;
   const int escrito = snprintf(
       destino, tamanhoDestino,
-      "{\"projeto\":\"CardioIA\",\"paciente_id\":\"%s\",\"instante_ms\":%lu,"
+      "{\"projeto\":\"CardioIA\",\"paciente_id\":\"%s\",\"sequencia\":%lu,"
+      "\"instante_ms\":%lu,"
       "\"temperatura_c\":%.2f,\"umidade_pct\":%.2f,\"bpm\":%u,"
       "\"pulso_detectado\":%s,\"alerta\":%s,\"fila_offline\":%u,"
-      "\"origem\":\"edge_esp32\"}",
-      ID_PACIENTE, static_cast<unsigned long>(amostra.instanteMs), amostra.temperatura,
+      "\"amostras_descartadas\":%lu,\"origem\":\"edge_esp32\"}",
+      ID_PACIENTE, static_cast<unsigned long>(amostra.sequencia),
+      static_cast<unsigned long>(amostra.instanteMs), amostra.temperatura,
       amostra.umidade, amostra.bpm, amostra.bpm > 0 ? "true" : "false",
-      amostra.alerta ? "true" : "false", tamanhoFila);
+      amostra.alerta ? "true" : "false", pendentesAposEnvio,
+      static_cast<unsigned long>(amostrasDescartadas));
   return escrito > 0 && static_cast<size_t>(escrito) < tamanhoDestino;
 }
 
@@ -113,17 +124,24 @@ bool conectarMqtt() {
 #endif
 
   Serial.printf("[MQTT] Conectando em %s:%d...\n", MQTT_HOST, MQTT_PORT);
+  char idCliente[64];
+  const uint64_t chipId = ESP.getEfuseMac();
+  snprintf(idCliente, sizeof(idCliente), "%s-%04llX", MQTT_CLIENTE_PREFIXO,
+           static_cast<unsigned long long>(chipId & 0xFFFF));
   const bool conectado = strlen(MQTT_USUARIO) == 0
-      ? mqtt.connect(MQTT_CLIENTE_ID)
-      : mqtt.connect(MQTT_CLIENTE_ID, MQTT_USUARIO, MQTT_SENHA);
+      ? mqtt.connect(idCliente)
+      : mqtt.connect(idCliente, MQTT_USUARIO, MQTT_SENHA);
   if (!conectado) Serial.printf("[MQTT] Estado de conexão: %d\n", mqtt.state());
   return conectado;
 }
 
 void conectarWifiSeNecessario() {
   if (!conectividadeAtiva || WiFi.status() == WL_CONNECTED) return;
+  if (ultimaTentativaWifi != 0 &&
+      millis() - ultimaTentativaWifi < INTERVALO_RECONEXAO_WIFI_MS) return;
+  ultimaTentativaWifi = millis();
   Serial.printf("[WIFI] Conectando à rede %s...\n", WIFI_SSID);
-  WiFi.begin(WIFI_SSID, WIFI_SENHA);
+  WiFi.begin(WIFI_SSID, WIFI_SENHA, WIFI_CANAL);
 }
 
 void sincronizarPendentes() {
@@ -137,7 +155,7 @@ void sincronizarPendentes() {
     inicioFila = (inicioFila + 1) % MAX_AMOSTRAS_OFFLINE;
     tamanhoFila--;
   }
-  registrarNoSerial("Fila sincronizada e limpa após confirmação MQTT");
+  registrarNoSerial("Fila enviada e limpa após aceitação local das publicações MQTT");
 }
 
 void atualizarLed() {
@@ -199,7 +217,7 @@ void coletarEProcessar() {
   }
 
   const Amostra amostra = {
-      millis(), temperatura, umidade, bpmAtual,
+      proximaSequencia++, millis(), temperatura, umidade, bpmAtual,
       temperatura >= LIMITE_TEMPERATURA_ALERTA || bpmAtual >= LIMITE_BPM_ALERTA};
   adicionarNaFila(amostra);
   Serial.printf("[SENSOR] temp=%.1f C | umidade=%.1f %% | bpm=%u | alerta=%s\n",
@@ -222,6 +240,8 @@ void setup() {
   }
 #endif
   mqtt.setServer(MQTT_HOST, MQTT_PORT);
+  mqtt.setBufferSize(TAMANHO_BUFFER_MQTT);
+  mqtt.setKeepAlive(30);
   inicioJanelaBpm = millis();
   conectarWifiSeNecessario();
   Serial.println("[CARDIOIA] Monitor vestível iniciado. Botão PULSO registra batida; botão ONLINE/OFFLINE alterna conectividade.");

@@ -1,8 +1,9 @@
-"""Confere arquivos, rastreabilidade e resultados das duas fases sem modificá-los."""
+"""Confere arquivos, rastreabilidade e resultados das três fases sem modificá-los."""
 
 import csv
 import hashlib
 import json
+import runpy
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -153,7 +154,8 @@ def main():
             exigir(not any(o["output_type"] == "error" for o in celula["outputs"]), "Notebook com erro.")
     exigir((fase / "outputs/curva_calibracao.png").stat().st_size > 0, "Curva de calibração ausente.")
     print(f"Fase 2: 10 relatos, 83 associações, 1112 frases; teste histórico de 264 frases e duas auditorias novas válidas ({acuracia:.2%} no histórico).")
-    print("O vídeo e o acesso público aos links devem ser conferidos na entrega; este script verifica arquivos locais.")
+    runpy.run_path(str(RAIZ / "fase3/scripts/verificar_fase3.py"), run_name="__main__")
+    print("Vídeos, capturas e acesso público aos links devem ser conferidos na entrega; este script verifica arquivos locais.")
 
 
 if __name__ == "__main__":

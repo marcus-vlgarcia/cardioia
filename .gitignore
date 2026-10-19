@@ -4,6 +4,8 @@ fase3/esp32-cardioia/include/config.local.h
 *.py[cod]
 .venv/
 .ipynb_checkpoints/
+.pio/
+tmp/
 fase2/outputs/*.mp4
 fase2/outputs/video_preview_*.png
 fase2/outputs/relatos_interativos.csv

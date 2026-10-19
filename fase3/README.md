@@ -19,8 +19,13 @@ publica mensagens MQTT e as exibe em um dashboard Node-RED.
 | Instruções do Node-RED | [README do dashboard](node-red/README.md) |
 | Relatório Edge Computing | [relatorio_edge.md](docs/relatorio_edge.md) |
 | Relatório MQTT e dashboard | [relatorio_mqtt_dashboard.md](docs/relatorio_mqtt_dashboard.md) |
+| Relatórios paginados para entrega | [Edge (PDF)](output/pdf/relatorio_edge_computing.pdf) e [MQTT/dashboard (PDF)](output/pdf/relatorio_mqtt_dashboard.pdf) |
+| Checklist do enunciado | [checklist_enunciado.md](docs/checklist_enunciado.md) |
 | Segurança, privacidade e limites | [seguranca_privacidade.md](docs/seguranca_privacidade.md) |
 | Roteiro de evidências | [roteiro_evidencias.md](docs/roteiro_evidencias.md) |
+| Pasta para capturas reais | [evidencias](evidencias/) |
+| Verificação automática | `python fase3/scripts/verificar_fase3.py` |
+| Resultado da compilação | [validacao_tecnica.md](docs/validacao_tecnica.md) |
 
 ## Arquitetura e fluxo
 
@@ -51,9 +56,11 @@ mais antiga para preservar o estado mais recente do paciente e impedir falta de
 memória.
 
 Quando a rede volta, o ESP32 tenta enviar a primeira mensagem pendente. Ela é
-removida da fila **somente** depois que `mqtt.publish()` confirma a publicação.
-Se houver falha, o restante é preservado para a próxima tentativa. O Monitor
-Serial mostra o tamanho da fila e as leituras transmitidas.
+removida da fila **somente** depois que `mqtt.publish()` aceita a mensagem para
+transmissão. Se houver falha local, o restante é preservado para a próxima
+tentativa. Como a biblioteca usa QoS 0, esse retorno não é uma confirmação de
+armazenamento pelo broker. O Monitor Serial mostra o tamanho da fila e as
+leituras transmitidas.
 
 No Wokwi, esta fila fica em RAM porque o SPIFFS do simulador não oferece a
 persistência necessária entre execuções. Em uma placa real, a mesma interface
@@ -75,15 +82,19 @@ limitação e a escolha são detalhadas no [relatório Edge](docs/relatorio_edge
 
 O [formato do circuito do Wokwi](https://docs.wokwi.com/diagram-format) e a
 [configuração de projetos com VS Code](https://docs.wokwi.com/vscode/project-config)
-foram consultados para estruturar os arquivos do simulador.
+foram consultados para estruturar os arquivos do simulador. A conexão usa a
+rede aberta `Wokwi-GUEST` e o canal 6 conforme o
+[guia de Wi-Fi do ESP32 no Wokwi](https://docs.wokwi.com/guides/esp32-wifi).
 
 ### Broker MQTT
 
 Por padrão, o protótipo usa `broker.hivemq.com:1883`, sem dados pessoais, para
 uma demonstração simples e pública. Antes de apresentar a versão final em uma
 conta própria, substitua as configurações por HiveMQ Cloud ou outro broker
-privado com TLS. O arquivo [config.h.example](esp32-cardioia/include/config.h.example)
-mostra os campos necessários; credenciais reais não devem entrar no Git.
+privado com TLS. Copie
+[config.h.example](esp32-cardioia/include/config.h.example) para
+`config.local.h` e preencha os campos. Esse arquivo local é ignorado pelo Git;
+credenciais reais não devem entrar no repositório.
 
 O HiveMQ documenta a configuração de cluster Cloud na porta 8883 e o uso de
 TLS para proteger a conexão; veja a [documentação de bridge MQTT](https://docs.hivemq.com/hivemq-edge/mqtt-bridging.html)
@@ -101,6 +112,10 @@ Importe [flows_cardioia.json](node-red/flows_cardioia.json) conforme o
 - quantidade de mensagens aguardando sincronização no Edge;
 - painel Debug para conferir o JSON original.
 
+O export também inclui dois botões de teste no editor do Node-RED. Eles enviam
+uma leitura normal e uma leitura em alerta diretamente ao painel, permitindo
+validar os widgets antes de conectar o Wokwi.
+
 ## Formato da mensagem
 
 Exemplo de payload publicado no tópico `cardioia/pulseia/v1/telemetria`:
@@ -109,6 +124,7 @@ Exemplo de payload publicado no tópico `cardioia/pulseia/v1/telemetria`:
 {
   "projeto": "CardioIA",
   "paciente_id": "PACIENTE_DEMO_001",
+  "sequencia": 3,
   "instante_ms": 15000,
   "temperatura_c": 36.7,
   "umidade_pct": 52.1,
@@ -116,6 +132,7 @@ Exemplo de payload publicado no tópico `cardioia/pulseia/v1/telemetria`:
   "pulso_detectado": true,
   "alerta": false,
   "fila_offline": 0,
+  "amostras_descartadas": 0,
   "origem": "edge_esp32"
 }
 ```
@@ -129,3 +146,15 @@ equivale à entrega clínica garantida. Para uso real seriam necessários sensor
 validados, armazenamento persistente, autenticação, TLS, controle de acesso,
 monitoramento operacional e validação profissional. Consulte
 [segurança e privacidade](docs/seguranca_privacidade.md).
+
+## Situação da entrega
+
+O código, o circuito, o export do dashboard e os relatórios estão no
+repositório. Permanecem como ações externas obrigatórias: executar o protótipo,
+publicar o link do Wokwi e salvar as capturas reais da aplicação. O
+[checklist do enunciado](docs/checklist_enunciado.md) separa claramente o que já
+está comprovado nos arquivos e o que depende dessa execução.
+
+Os PDFs podem ser regenerados depois de qualquer mudança nos textos com
+`pip install -r fase3/requirements-dev.txt` e
+`python fase3/scripts/gerar_relatorios_pdf.py`.

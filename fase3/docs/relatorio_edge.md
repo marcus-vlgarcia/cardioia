@@ -26,8 +26,10 @@ devem ser usados para decisões clínicas.
    circular local.
 4. Se a conectividade estiver ativa, o ESP32 se conecta ao Wi-Fi e ao MQTT e
    tenta publicar as amostras na ordem em que foram coletadas.
-5. A amostra é excluída apenas após `mqtt.publish()` retornar sucesso. Uma
-   falha encerra a sincronização e mantém a amostra na fila.
+5. A amostra é excluída apenas após `mqtt.publish()` aceitar localmente a
+   mensagem para transmissão. Uma falha encerra a sincronização e mantém a
+   amostra na fila. Como o protótipo usa QoS 0, esse retorno não comprova que o
+   broker persistiu ou entregou a mensagem.
 6. O LED fica aceso com MQTT conectado e pisca sem conexão. O Monitor Serial
    informa leituras, tamanho da fila, modo offline e tentativas de envio.
 
@@ -46,6 +48,13 @@ que são mais úteis para uma visualização imediata. Quando a capacidade é
 atingida, a leitura mais antiga é substituída e o contador `amostrasDescartadas`
 é registrado no Serial. Em produto real, essa perda teria de gerar auditoria e
 política de retenção apropriada.
+
+Cada amostra também recebe um número sequencial. O painel consegue perceber
+saltos nessa sequência, enquanto o campo `amostras_descartadas` torna visível
+uma eventual perda por falta de espaço. O identificador do cliente MQTT inclui
+um sufixo derivado do ESP32, reduzindo colisões entre duas simulações abertas.
+As tentativas de Wi-Fi são espaçadas em cinco segundos para que uma queda de
+rede não bloqueie o processamento nem reinicie a conexão continuamente.
 
 ## Persistência e limites do simulador
 
