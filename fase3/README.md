@@ -12,7 +12,7 @@ publica mensagens MQTT e as exibe em um dashboard Node-RED.
 | Item | Arquivo / acesso |
 | --- | --- |
 | Projeto ESP32 + Wokwi | [esp32-cardioia](esp32-cardioia/) |
-| Link público do Wokwi | A publicar após a execução no simulador |
+| Link público do Wokwi | [Abrir projeto no Wokwi](https://wokwi.com/projects/478351016184515585) |
 | Código C++ comentado | [main.cpp](esp32-cardioia/src/main.cpp) |
 | Circuito do simulador | [diagram.json](esp32-cardioia/diagram.json) |
 | Fluxo importável do dashboard | [flows_cardioia.json](node-red/flows_cardioia.json) |
@@ -88,8 +88,8 @@ rede aberta `Wokwi-GUEST` e o canal 6 conforme o
 
 ### Broker MQTT
 
-Por padrão, o protótipo usa `broker.hivemq.com:1883`, sem dados pessoais, para
-uma demonstração simples e pública. Antes de apresentar a versão final em uma
+Na demonstração publicada no Wokwi, o protótipo usa `broker.hivemq.com:1883`,
+sem dados pessoais, para uma demonstração simples e pública. Antes de apresentar a versão final em uma
 conta própria, substitua as configurações por HiveMQ Cloud ou outro broker
 privado com TLS. Copie
 [config.h.example](esp32-cardioia/include/config.h.example) para
