@@ -1,0 +1,20 @@
+// Copie este arquivo para config.h caso queira substituir a configuração de demonstração.
+// No HiveMQ Cloud, use o endereço do seu cluster, porta 8883 e TLS habilitado.
+
+#pragma once
+
+#define WIFI_SSID "Wokwi-GUEST"
+#define WIFI_SENHA ""
+
+#define MQTT_HOST "SEU_CLUSTER.s1.eu.hivemq.cloud"
+#define MQTT_PORT 8883
+#define MQTT_USAR_TLS 1
+#define MQTT_USUARIO "SEU_USUARIO"
+#define MQTT_SENHA "SUA_SENHA"
+// Cole aqui o certificado PEM da autoridade certificadora do seu cluster.
+// Exemplo: #define MQTT_CERTIFICADO_RAIZ R"EOF(-----BEGIN CERTIFICATE-----\n...\n-----END CERTIFICATE-----)EOF"
+#define MQTT_CERTIFICADO_RAIZ nullptr
+
+#define MQTT_TOPICO_TELEMETRIA "cardioia/pulseia/v1/telemetria"
+#define MQTT_CLIENTE_ID "cardioia-pulseia-esp32-001"
+#define ID_PACIENTE "PACIENTE_DEMO_001"

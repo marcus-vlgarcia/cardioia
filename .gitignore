@@ -1,5 +1,6 @@
 .DS_Store
 __pycache__/
+fase3/esp32-cardioia/include/config.local.h
 *.py[cod]
 .venv/
 .ipynb_checkpoints/

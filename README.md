@@ -6,6 +6,23 @@
 
 # CardioIA — PulseIA
 
+## Fase 3 — Monitoramento Contínuo: IoT no Pulso do Paciente
+
+Esta etapa adiciona um protótipo de monitoramento IoT com ESP32 no Wokwi,
+DHT22, sensor de pulsos por botão, fila offline, publicação MQTT e dashboard
+Node-RED com alertas. A estrutura, os códigos e os relatórios estão em
+[fase3/](fase3/). Como se trata de uma simulação acadêmica, os dados não são
+clínicos e os alertas não devem ser usados para decisões de saúde.
+
+| Entregável da Fase 3 | Acesso |
+| --- | --- |
+| Código ESP32 e circuito Wokwi | [esp32-cardioia](fase3/esp32-cardioia/) |
+| Fluxo do Node-RED | [flows_cardioia.json](fase3/node-red/flows_cardioia.json) |
+| Relatório Edge Computing | [Relatório Edge](fase3/docs/relatorio_edge.md) |
+| Relatório MQTT e dashboard | [Relatório MQTT](fase3/docs/relatorio_mqtt_dashboard.md) |
+| Segurança, privacidade e limites | [Documento de governança](fase3/docs/seguranca_privacidade.md) |
+| Roteiro de evidências | [Guia de demonstração](fase3/docs/roteiro_evidencias.md) |
+
 ## Fase 2 — Diagnóstico Automatizado: IA no Estetoscópio Digital
 
 O módulo da Fase 2 associa sintomas a possíveis condições e classifica frases
