@@ -31,6 +31,8 @@ def main():
         "docs/relatorio_mqtt_dashboard.md",
         "docs/seguranca_privacidade.md",
         "docs/checklist_enunciado.md",
+        "docs/registro_execucao.md",
+        "node-red/README.md",
         "output/pdf/relatorio_edge_computing.pdf",
         "output/pdf/relatorio_mqtt_dashboard.pdf",
     ]
@@ -79,6 +81,10 @@ def main():
     topico_codigo = re.search(r'MQTT_TOPICO_TELEMETRIA\s+"([^"]+)"', config)
     exigir(topico_codigo and topico_codigo.group(1) == topico_fluxo,
            "Tópicos MQTT diferentes entre ESP32 e Node-RED.")
+    host_codigo = re.search(r'MQTT_HOST\s+"([^"]+)"', config)
+    host_fluxo = next(no["broker"] for no in fluxo if no["type"] == "mqtt-broker")
+    exigir(host_codigo and host_codigo.group(1) == host_fluxo,
+           "Hosts MQTT diferentes entre ESP32 e Node-RED.")
 
     edge = (FASE3 / "docs/relatorio_edge.md").read_text(encoding="utf-8")
     mqtt = (FASE3 / "docs/relatorio_mqtt_dashboard.md").read_text(encoding="utf-8")
@@ -86,10 +92,17 @@ def main():
     exigir(len(mqtt.split()) >= 750, "Relatório MQTT curto para duas páginas.")
 
     readme = (FASE3 / "README.md").read_text(encoding="utf-8")
-    link_pendente = "A publicar após" in readme
+    exigir("https://wokwi.com/projects/478351016184515585" in readme,
+           "Link público do Wokwi ausente do README.")
+    exigir("broker.hivemq.com:1883" in readme,
+           "Broker da demonstração ausente do README.")
+    checklist = (FASE3 / "docs/checklist_enunciado.md").read_text(encoding="utf-8")
+    exigir("Link público Wokwi | Atendido" in checklist,
+           "Checklist ainda não registra a publicação do Wokwi.")
+    exigir((FASE3 / "node-red/.gitignore").read_text(encoding="utf-8").strip() == ".runtime/",
+           "Ambiente local do Node-RED deve permanecer ignorado pelo Git.")
     print("Fase 3: circuito, resiliência, MQTT, dashboard e relatórios consistentes.")
-    if link_pendente:
-        print("PENDÊNCIA EXTERNA: publicar o projeto no Wokwi e substituir o marcador do link.")
+    print("Demonstração Wokwi, broker MQTT e dashboard documentados.")
 
 
 if __name__ == "__main__":

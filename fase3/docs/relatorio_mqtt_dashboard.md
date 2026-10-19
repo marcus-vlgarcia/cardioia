@@ -73,11 +73,11 @@ a interface e demonstrar suas regras. A sequência mais recente é mantida no
 contexto do fluxo; se a próxima mensagem saltar números, o indicador do Edge
 informa quantas amostras estão ausentes.
 
-O alerta aparece como `ALERTA: verificar leitura simulada` quando BPM é maior
-ou igual a 120 ou temperatura é maior ou igual a 38 °C. Caso contrário, exibe
-`Sem alerta pelos limites configurados`. A mensagem foi escrita como orientação
-de verificação e não como diagnóstico: leitura isolada, sensor simulado e limite
-fixo não permitem inferir condição médica.
+O alerta aparece como `ALERTA SIMULADO: <BPM> BPM | <temperatura> °C` quando
+BPM é maior ou igual a 120 ou temperatura é maior ou igual a 38 °C. Caso
+contrário, exibe `Sem alerta pelos limites`. A mensagem foi escrita como
+orientação de verificação e não como diagnóstico: leitura isolada, sensor
+simulado e limite fixo não permitem inferir condição médica.
 
 Para executar, instala-se o pacote `node-red-dashboard`, importa-se o arquivo,
 confere-se host, porta e tópico, faz-se Deploy e abre-se `/ui`. O arquivo

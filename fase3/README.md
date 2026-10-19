@@ -24,7 +24,9 @@ publica mensagens MQTT e as exibe em um dashboard Node-RED.
 | Segurança, privacidade e limites | [seguranca_privacidade.md](docs/seguranca_privacidade.md) |
 | Roteiro de evidências | [roteiro_evidencias.md](docs/roteiro_evidencias.md) |
 | Pasta para capturas reais | [evidencias](evidencias/) |
+| Registro da demonstração integrada | [registro_execucao.md](docs/registro_execucao.md) |
 | Verificação automática | `python fase3/scripts/verificar_fase3.py` |
+| Teste da regra do dashboard | `node fase3/scripts/testar_fluxo_nodered.js` |
 | Resultado da compilação | [validacao_tecnica.md](docs/validacao_tecnica.md) |
 
 ## Arquitetura e fluxo
@@ -71,7 +73,8 @@ limitação e a escolha são detalhadas no [relatório Edge](docs/relatorio_edge
 
 ### Wokwi
 
-1. Abra a pasta `fase3/esp32-cardioia` no VS Code com a extensão Wokwi e o
+1. Abra o [projeto público no Wokwi](https://wokwi.com/projects/478351016184515585)
+   ou a pasta `fase3/esp32-cardioia` no VS Code com a extensão Wokwi e o
    PlatformIO instalados.
 2. Compile o projeto e inicie o simulador. O circuito está definido em
    `diagram.json` e os parâmetros em `wokwi.toml`.
@@ -89,9 +92,9 @@ rede aberta `Wokwi-GUEST` e o canal 6 conforme o
 ### Broker MQTT
 
 Na demonstração publicada no Wokwi, o protótipo usa `broker.hivemq.com:1883`,
-sem dados pessoais, para uma demonstração simples e pública. Antes de apresentar a versão final em uma
-conta própria, substitua as configurações por HiveMQ Cloud ou outro broker
-privado com TLS. Copie
+sem dados pessoais, para uma demonstração simples e pública. Em uma conta
+própria, as configurações devem ser substituídas por HiveMQ Cloud ou outro
+broker privado com TLS. Copie
 [config.h.example](esp32-cardioia/include/config.h.example) para
 `config.local.h` e preencha os campos. Esse arquivo local é ignorado pelo Git;
 credenciais reais não devem entrar no repositório.
@@ -149,11 +152,18 @@ monitoramento operacional e validação profissional. Consulte
 
 ## Situação da entrega
 
-O código, o circuito, o export do dashboard e os relatórios estão no
-repositório. Permanecem como ações externas obrigatórias: executar o protótipo,
-publicar o link do Wokwi e salvar as capturas reais da aplicação. O
-[checklist do enunciado](docs/checklist_enunciado.md) separa claramente o que já
-está comprovado nos arquivos e o que depende dessa execução.
+O circuito público, o firmware, o export do dashboard e os relatórios estão no
+repositório. A demonstração integrada foi executada em 19/10/2026: o Wokwi
+publicou telemetria no broker MQTT e o Node-RED recebeu as mensagens no mesmo
+tópico, atualizando gráfico, gauges, estado de alerta e indicador de fila. O
+[registro de execução](docs/registro_execucao.md) diferencia o que foi
+confirmado na integração dos testes locais de interface.
+
+O export do Node-RED já atende à alternativa de "prints ou export" do
+enunciado. Ainda assim, recomenda-se adicionar as capturas reais descritas em
+[roteiro de evidências](docs/roteiro_evidencias.md) antes da entrega, pois elas
+deixam o funcionamento mais fácil de avaliar. O
+[checklist do enunciado](docs/checklist_enunciado.md) registra essa situação.
 
 Os PDFs podem ser regenerados depois de qualquer mudança nos textos com
 `pip install -r fase3/requirements-dev.txt` e

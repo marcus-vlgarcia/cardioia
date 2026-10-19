@@ -1,12 +1,11 @@
 # Checklist do enunciado e evidências
 
 Este quadro relaciona cada requisito da Fase 3 à evidência presente no projeto.
-Itens que dependem de serviços externos só podem ser concluídos após a execução
-e publicação pelo grupo.
+Ele foi atualizado após a demonstração integrada realizada em 19/10/2026.
 
 | Requisito | Situação | Evidência |
 | --- | --- | --- |
-| ESP32 no Wokwi | Implementado; falta publicar o link | `esp32-cardioia/diagram.json` e `wokwi.toml` |
+| ESP32 no Wokwi | Atendido e demonstrado | [Projeto público](https://wokwi.com/projects/478351016184515585), `diagram.json` e `wokwi.toml` |
 | DHT22 para temperatura e umidade | Atendido | DHT22 no circuito e leitura em `main.cpp` |
 | Segundo sensor de livre escolha | Atendido | Botão `PULSO`, contagem em janela e cálculo de BPM |
 | Conectividade simulada por variável booleana | Atendido | `conectividadeAtiva` e botão `ONLINE/OFFLINE` |
@@ -14,14 +13,14 @@ e publicação pelo grupo.
 | Coleta contínua sem conexão | Atendido | Toda amostra entra primeiro na fila circular |
 | Sincronização após retorno da rede | Atendido | Publicação em ordem e remoção após aceitação local |
 | Estratégia de armazenamento limitado | Atendido | 1.000 amostras; cerca de 83 minutos; substituição da mais antiga |
-| Link público Wokwi | Pendente de ação externa | Publicar na conta do grupo e atualizar o README |
+| Link público Wokwi | Atendido | [Projeto público](https://wokwi.com/projects/478351016184515585) e link no README |
 | Código C++ comentado | Atendido | `esp32-cardioia/src/main.cpp` |
 | Relatório Edge de pelo menos uma página | Atendido | Markdown em `docs/` e PDF de 2 páginas em `output/pdf/` |
-| Envio MQTT para broker | Implementado; evidência visual pendente | PubSubClient, broker público demonstrativo e configuração Cloud/TLS |
+| Envio MQTT para broker | Atendido e demonstrado | Wokwi publicou no HiveMQ público; Node-RED recebeu telemetria no tópico configurado |
 | Gráfico de sinal vital | Atendido | Gráfico temporal de BPM no fluxo Node-RED |
 | Gauge de outro parâmetro | Atendido | Gauges de temperatura e umidade |
 | Alerta automático | Atendido | BPM >= 120 ou temperatura simulada >= 38 °C |
-| Export ou prints do dashboard | Export atendido; prints pendentes | `node-red/flows_cardioia.json` e roteiro de capturas |
+| Export ou prints do dashboard | Atendido pelo export; capturas recomendadas | `node-red/flows_cardioia.json` e roteiro de capturas |
 | Relatório MQTT/dashboard de pelo menos duas páginas | Atendido | Markdown em `docs/` e PDF de 2 páginas em `output/pdf/` |
 | Grafana Cloud | Não realizado; opcional | Node-RED atende integralmente ao item obrigatório |
 
@@ -36,10 +35,11 @@ e publicação pelo grupo.
 - verificador automático da estrutura da Fase 3;
 - compilação real do firmware, com consumo de RAM e flash registrado;
 - documento separado sobre segurança, privacidade e limites clínicos.
+- registro datado da execução ponta a ponta, distinguindo telemetria real do
+  simulador e testes locais de interface.
 
-## O que ainda precisa ser feito pelo grupo
+## Próximo passo recomendado
 
-1. Executar o circuito e confirmar a publicação no broker escolhido.
-2. Publicar o projeto no Wokwi e substituir o marcador pelo link público.
-3. Importar o fluxo no Node-RED e produzir as capturas indicadas no roteiro.
-4. Registrar no README o broker utilizado na demonstração, sem expor senha.
+Salvar as capturas reais indicadas em `evidencias/` e registrá-las em um
+commit. Elas não substituem o export já entregue, mas oferecem evidência visual
+direta de sensores, fila offline, sincronização, painel normal e alerta.
