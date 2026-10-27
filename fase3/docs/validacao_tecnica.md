@@ -1,7 +1,7 @@
 # Validação técnica e demonstração integrada
 
-As verificações locais e a demonstração integrada foram realizadas em
-19/10/2026.
+A compilação e a demonstração integrada foram realizadas em 19/10/2026. O
+fluxo revisado e seus testes automatizados foram verificados em 27/10/2026.
 
 ## Firmware
 
@@ -30,9 +30,15 @@ O comando `python fase3/scripts/verificar_fase3.py` confirmou:
 
 A função JavaScript exportada no fluxo também é exercitada por
 `node fase3/scripts/testar_fluxo_nodered.js`, sem depender de Wokwi ou broker.
-O teste cobre quatro cenários: leitura normal, leitura em alerta, salto de
-sequência e payload inválido. Os quatro comportamentos esperados foram
-confirmados.
+O teste cobre dez cenários: leitura normal, leitura em alerta, salto de
+sequência, zero BPM com e sem alerta de temperatura e cinco tipos de payload
+inválido. Os dez comportamentos esperados foram confirmados.
+
+O export revisado também foi carregado em uma instância temporária do
+Node-RED 5.0.8 com `node-red-dashboard` 3.6.6. O fluxo iniciou sem erro, o
+nó MQTT se conectou ao broker configurado e a rota `/ui` respondeu. Essa
+verificação confirma a importação e a conexão, mas não substitui as capturas
+de tela da simulação com sensores e fila offline.
 
 O verificador geral `python scripts/verificar_entrega.py` também terminou sem
 erros para as Fases 1, 2 e 3.

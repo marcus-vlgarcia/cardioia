@@ -1,7 +1,8 @@
 # Checklist do enunciado e evidências
 
 Este quadro relaciona cada requisito da Fase 3 à evidência presente no projeto.
-Ele foi atualizado após a demonstração integrada realizada em 19/10/2026.
+Ele foi atualizado após a demonstração integrada de 19/10/2026 e a revisão
+do fluxo em 27/10/2026.
 
 | Requisito | Situação | Evidência |
 | --- | --- | --- |
@@ -34,9 +35,11 @@ Ele foi atualizado após a demonstração integrada realizada em 19/10/2026.
 - bloqueio da conexão TLS sem certificado raiz;
 - verificador automático da estrutura da Fase 3;
 - compilação real do firmware, com consumo de RAM e flash registrado;
-- documento separado sobre segurança, privacidade e limites clínicos.
+- documento separado sobre segurança, privacidade e limites clínicos;
 - registro datado da execução ponta a ponta, distinguindo telemetria real do
-  simulador e testes locais de interface.
+  simulador e testes locais de interface;
+- tratamento explícito de `0 BPM` como ausência de toques no botão, sem inferência clínica;
+- validação da origem e das faixas dos valores recebidos no broker público.
 
 ## Próximo passo recomendado
 

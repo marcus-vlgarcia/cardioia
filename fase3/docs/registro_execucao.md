@@ -33,6 +33,13 @@ Esse resultado confirma a comunicação Wokwi → broker MQTT → Node-RED e a
 atualização dos widgets a partir de telemetria do simulador, não de valores
 digitados manualmente no painel.
 
+Na revisão de 27/10/2026, a regra do painel para `0 BPM` foi corrigida: ela
+passou a informar ausência de toques no botão, sem sugerir ausência de
+batimentos em uma pessoa. O teste automatizado cobre essa regra e a validação
+das mensagens recebidas; o registro acima descreve a execução integrada
+anterior à revisão. O fluxo revisado também foi importado em uma instância
+temporária do Node-RED, que iniciou o dashboard e conectou ao broker.
+
 ## Teste de alerta e escopo
 
 O fluxo também foi validado pelo seu nó de teste de alerta: o payload com

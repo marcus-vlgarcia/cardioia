@@ -3,6 +3,7 @@
 import re
 from html import escape
 from pathlib import Path
+from pypdf import PdfReader
 
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER
@@ -64,7 +65,7 @@ def estilos():
             leading=15,
             alignment=TA_CENTER,
             textColor=colors.HexColor("#555555"),
-            spaceAfter=20,
+            spaceAfter=16,
         ),
         "h2": ParagraphStyle(
             "H2",
@@ -73,7 +74,7 @@ def estilos():
             fontSize=14,
             leading=18,
             textColor=colors.HexColor("#ad1245"),
-            spaceBefore=13,
+            spaceBefore=12,
             spaceAfter=7,
         ),
         "h3": ParagraphStyle(
@@ -84,7 +85,7 @@ def estilos():
             leading=14,
             textColor=colors.HexColor("#333333"),
             spaceBefore=9,
-            spaceAfter=5,
+            spaceAfter=4,
         ),
         "corpo": ParagraphStyle(
             "Corpo",
@@ -94,7 +95,7 @@ def estilos():
             leading=12.5,
             textColor=colors.HexColor("#222222"),
             alignment=4,
-            spaceAfter=5,
+            spaceAfter=3.5,
         ),
         "lista": ParagraphStyle(
             "Lista",
@@ -104,7 +105,7 @@ def estilos():
             textColor=colors.HexColor("#222222"),
             leftIndent=12,
             firstLineIndent=-9,
-            spaceAfter=3,
+            spaceAfter=2,
         ),
     }
 
@@ -198,10 +199,15 @@ def gerar(entrada, saida, titulo, minimo_paginas):
 
     documento = SimpleDocTemplate(
         str(saida), pagesize=A4, rightMargin=2 * cm, leftMargin=2 * cm,
-        topMargin=1.8 * cm, bottomMargin=2 * cm,
+        topMargin=1.6 * cm, bottomMargin=1.8 * cm,
         title=titulo, author="Grupo PulseIA",
     )
     documento.build(historia, onFirstPage=rodape, onLaterPages=rodape)
+    paginas = len(PdfReader(str(saida)).pages)
+    if paginas < minimo_paginas:
+        raise ValueError(
+            f"{saida.name}: {paginas} página(s); mínimo exigido: {minimo_paginas}."
+        )
 
 
 def main():

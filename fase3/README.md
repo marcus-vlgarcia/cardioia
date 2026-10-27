@@ -49,6 +49,10 @@ dez segundos é convertida para BPM. O botão `ONLINE/OFFLINE` não é sensor
 clínico: ele controla uma variável booleana para reproduzir perda e retorno de
 conectividade.
 
+A temperatura do DHT22 é uma variável ambiental simulada no Wokwi. O limiar
+de 38 °C serve apenas para demonstrar o alerta e não deve ser interpretado
+como medição de febre ou de temperatura corporal.
+
 ## Resiliência no Edge
 
 Uma amostra é feita a cada cinco segundos. Toda leitura entra em uma fila
@@ -119,6 +123,11 @@ O export também inclui dois botões de teste no editor do Node-RED. Eles enviam
 uma leitura normal e uma leitura em alerta diretamente ao painel, permitindo
 validar os widgets antes de conectar o Wokwi.
 
+Se ninguém apertar o botão durante a janela de dez segundos, o valor calculado
+será `0 BPM`. Isso significa **nenhum pulso simulado registrado**, não ausência
+de batimentos cardíacos. O dashboard exibe esse estado separadamente de uma
+leitura sem alerta.
+
 ## Formato da mensagem
 
 Exemplo de payload publicado no tópico `cardioia/pulseia/v1/telemetria`:
@@ -140,11 +149,15 @@ Exemplo de payload publicado no tópico `cardioia/pulseia/v1/telemetria`:
 }
 ```
 
+O campo `pulso_detectado` indica se houve algum toque na última janela de
+cálculo do BPM. Ele é derivado de `bpm > 0` e não descreve o instante exato da
+amostra.
+
 ## Limites do protótipo
 
 Os sensores e os dados do Wokwi são simulados. O botão não substitui um sensor
 de frequência cardíaca, e os limites configurados são apenas parâmetros de
-demonstração. A publicação MQTT confirma aceitação pelo cliente/broker, não
+demonstração. A publicação MQTT confirma aceitação local pelo cliente, não
 equivale à entrega clínica garantida. Para uso real seriam necessários sensores
 validados, armazenamento persistente, autenticação, TLS, controle de acesso,
 monitoramento operacional e validação profissional. Consulte

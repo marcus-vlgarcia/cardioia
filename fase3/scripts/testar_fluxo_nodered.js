@@ -30,6 +30,8 @@ function executar(payload) {
 }
 
 const normal = executar({
+  projeto: "CardioIA",
+  origem: "edge_esp32",
   paciente_id: "TESTE_AUTOMATICO",
   sequencia: 1,
   temperatura_c: 36.7,
@@ -44,6 +46,8 @@ assert.equal(normal[0].payload, 72, "BPM normal não foi encaminhado.");
 assert.match(normal[3].payload, /Sem alerta/, "Leitura normal gerou alerta incorreto.");
 
 const alerta = executar({
+  projeto: "CardioIA",
+  origem: "edge_esp32",
   paciente_id: "TESTE_ALERTA",
   sequencia: 1,
   temperatura_c: 38.2,
@@ -57,6 +61,8 @@ assert.match(alerta[3].payload, /ALERTA SIMULADO/, "Regra de alerta não foi aci
 assert.match(alerta[4].payload, /Fila Edge: 3/, "Fila Edge não foi exibida.");
 
 const comLacuna = executar({
+  projeto: "CardioIA",
+  origem: "edge_esp32",
   paciente_id: "TESTE_AUTOMATICO",
   sequencia: 4,
   temperatura_c: 36.8,
@@ -68,7 +74,45 @@ const comLacuna = executar({
 });
 assert.match(comLacuna[4].payload, /lacuna detectada: 2/, "Lacuna de sequência não foi sinalizada.");
 
-assert.equal(executar({ bpm: "invalido" }), null, "Payload inválido deveria ser descartado.");
-assert.equal(avisos.length, 1, "Payload inválido deveria gerar um aviso.");
+const semToques = executar({
+  projeto: "CardioIA",
+  origem: "edge_esp32",
+  paciente_id: "TESTE_AUTOMATICO",
+  sequencia: 5,
+  temperatura_c: 36.7,
+  umidade_pct: 55,
+  bpm: 0,
+  alerta: false,
+});
+assert.match(semToques[3].payload, /Sem pulsos simulados/, "Zero BPM foi tratado como leitura normal.");
 
-console.log("Teste do fluxo Node-RED: 4 cenários aprovados.");
+const temperaturaAltaSemToques = executar({
+  projeto: "CardioIA",
+  origem: "edge_esp32",
+  paciente_id: "TESTE_AUTOMATICO",
+  sequencia: 6,
+  temperatura_c: 38.2,
+  umidade_pct: 55,
+  bpm: 0,
+  alerta: true,
+});
+assert.match(temperaturaAltaSemToques[3].payload, /ALERTA SIMULADO: sem pulsos no botão/,
+  "Alerta de temperatura com zero BPM deve explicar a ausência de toques.");
+
+for (const payload of [
+  { projeto: "Outro", origem: "edge_esp32", paciente_id: "TESTE", sequencia: 1,
+    temperatura_c: 36.7, umidade_pct: 55, bpm: 72 },
+  { projeto: "CardioIA", origem: "edge_esp32", paciente_id: "TESTE", sequencia: 1,
+    temperatura_c: 36.7, umidade_pct: 55, bpm: "72" },
+  { projeto: "CardioIA", origem: "edge_esp32", paciente_id: "TESTE", sequencia: 1,
+    temperatura_c: 36.7, umidade_pct: 150, bpm: 72 },
+  { projeto: "CardioIA", origem: "edge_esp32", paciente_id: "TESTE", sequencia: null,
+    temperatura_c: 36.7, umidade_pct: 55, bpm: 72 },
+  { projeto: "CardioIA", origem: "edge_esp32", paciente_id: "TESTE", sequencia: 1,
+    temperatura_c: 36.7, umidade_pct: 55, bpm: 72, fila_offline: -1 },
+]) {
+  assert.equal(executar(payload), null, "Payload inválido deveria ser descartado.");
+}
+assert.equal(avisos.length, 5, "Cada payload inválido deveria gerar um aviso.");
+
+console.log("Teste do fluxo Node-RED: 10 cenários aprovados.");

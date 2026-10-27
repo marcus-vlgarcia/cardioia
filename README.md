@@ -17,6 +17,7 @@ clínicos e os alertas não devem ser usados para decisões de saúde.
 | Entregável da Fase 3 | Acesso |
 | --- | --- |
 | Código ESP32 e circuito Wokwi | [esp32-cardioia](fase3/esp32-cardioia/) |
+| Projeto público no Wokwi | [Abrir simulação](https://wokwi.com/projects/478351016184515585) |
 | Fluxo do Node-RED | [flows_cardioia.json](fase3/node-red/flows_cardioia.json) |
 | Relatório Edge Computing | [Relatório Edge](fase3/docs/relatorio_edge.md) |
 | Relatório MQTT e dashboard | [Relatório MQTT](fase3/docs/relatorio_mqtt_dashboard.md) |
@@ -24,6 +25,12 @@ clínicos e os alertas não devem ser usados para decisões de saúde.
 | Checklist completo do enunciado | [Checklist da Fase 3](fase3/docs/checklist_enunciado.md) |
 | Segurança, privacidade e limites | [Documento de governança](fase3/docs/seguranca_privacidade.md) |
 | Roteiro de evidências | [Guia de demonstração](fase3/docs/roteiro_evidencias.md) |
+| Registro da execução integrada | [Resultados observados](fase3/docs/registro_execucao.md) |
+
+O export do Node-RED atende à opção de entrega prevista no enunciado. As
+capturas reais do circuito, da fila offline e do dashboard ainda devem ser
+adicionadas a [evidências](fase3/evidencias/) para documentar visualmente a
+demonstração.
 
 ## Fase 2 — Diagnóstico Automatizado: IA no Estetoscópio Digital
 
@@ -72,7 +79,7 @@ termos, calibração experimental e auditoria por sexo referido e faixa etária.
 A ficha para validação especializada foi criada, mas permanece honestamente
 pendente. Esses experimentos não validam uso clínico ou fairness demográfica.
 
-As duas fases podem ser verificadas sem alterar seus dados com
+As três fases podem ser verificadas sem alterar seus dados com
 `python scripts/verificar_entrega.py`: o script confere as quantidades, os hashes
 das imagens, a separação dos cenários e a consistência dos resultados e notebook.
 Os detalhes de execução estão no [README da Fase 2](fase2/README.md).
@@ -141,6 +148,13 @@ de reprodução e geração dos materiais.
 
 ```
 cardioia/
+├── fase3/
+│   ├── esp32-cardioia/           # Circuito e firmware do simulador
+│   ├── node-red/                 # Fluxo e instruções do dashboard
+│   ├── docs/                     # Relatórios e validação
+│   ├── evidencias/               # Guia e espaço para capturas reais
+│   ├── output/pdf/               # Relatórios paginados
+│   └── README.md
 ├── fase2/
 │   ├── data/                     # Relatos, mapa e frases rotuladas
 │   ├── docs/                     # Fontes e avaliação
@@ -392,6 +406,9 @@ ECG.
 
 ## 🗃 Histórico de lançamentos
 
+- `0.3.0` — 27/10/2026: protótipo da Fase 3 publicado no Wokwi, dashboard
+  Node-RED integrado ao broker MQTT, relatórios e revisão de validação e
+  documentação. Capturas de tela da execução ainda serão anexadas.
 - `0.2.1` — 07/10/2026: revisão de integridade e execução; proteção dos relatos
   interativos, validação do histórico, compatibilidade das dependências e correção
   do gerador sintético complementar. Teste reservado reproduzido sem ajuste de

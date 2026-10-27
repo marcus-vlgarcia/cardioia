@@ -31,6 +31,7 @@ neste projeto.
 | `temperatura_c` | Medidor de temperatura e regra de alerta |
 | `umidade_pct` | Medidor complementar para contexto ambiental |
 | `bpm` | Gráfico temporal e regra de alerta |
+| `pulso_detectado` | Indica se houve toque na última janela de cálculo do BPM; não é medição instantânea |
 | `alerta` | Sinalização no painel |
 | `fila_offline` | Evidência da resiliência no Edge |
 | `sequencia` | Ordem das amostras e apoio à identificação de lacunas |
@@ -65,9 +66,10 @@ as propriedades e componentes do pacote `node-red-dashboard`. O fluxo tem um
 gráfico de BPM, um gauge de temperatura, um gauge de umidade, um texto de alerta
 e um texto que informa quantas amostras aguardam na fila local.
 
-Antes de distribuir os valores, a função do Node-RED verifica se o payload é um
-objeto e se BPM, temperatura e umidade são números válidos. Mensagens inválidas
-são descartadas com aviso no editor. Dois nós de teste permitem enviar uma
+Antes de distribuir os valores, a função do Node-RED confere projeto, origem,
+identificador, sequência e faixas de BPM, temperatura e umidade. Mensagens
+inválidas são descartadas com aviso no editor. Essa filtragem reduz ruído no
+broker público, mas não autentica o remetente. Dois nós de teste permitem enviar uma
 leitura normal e outra em alerta sem depender do ESP32, o que facilita validar
 a interface e demonstrar suas regras. A sequência mais recente é mantida no
 contexto do fluxo; se a próxima mensagem saltar números, o indicador do Edge
@@ -75,7 +77,10 @@ informa quantas amostras estão ausentes.
 
 O alerta aparece como `ALERTA SIMULADO: <BPM> BPM | <temperatura> °C` quando
 BPM é maior ou igual a 120 ou temperatura é maior ou igual a 38 °C. Caso
-contrário, exibe `Sem alerta pelos limites`. A mensagem foi escrita como
+contrário, exibe `Sem alerta pelos limites` para BPM positivo, ou `Sem pulsos
+simulados no botão` para 0 BPM. Zero significa falta de toques na janela de
+medição, não ausência de batimentos cardíacos. A temperatura do DHT22 é
+ambiental e simulada; 38 °C não representa diagnóstico de febre. A mensagem foi escrita como
 orientação de verificação e não como diagnóstico: leitura isolada, sensor
 simulado e limite fixo não permitem inferir condição médica.
 

@@ -12,5 +12,5 @@ Arquivos sugeridos:
 - `04-dashboard-normal.png` — gráfico e medidores recebendo dados do ESP32;
 - `05-dashboard-alerta.png` — indicador visual acima do limite configurado.
 
-Na versão final da entrega, esta pasta deve conter as capturas reais e o README
-da Fase 3 deve apresentar o link público do Wokwi.
+O [README da Fase 3](../README.md) já apresenta o link público do Wokwi. As
+capturas ainda precisam ser produzidas durante a execução e adicionadas aqui.

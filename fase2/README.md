@@ -21,7 +21,9 @@ um projeto acadêmico: não realiza diagnóstico nem orienta atendimento.
 ## Revisão após a avaliação
 
 A entrega recebeu nota máxima e foi preservada na branch `fase2-entrega`. Esta
-branch aplica todas as recomendações do professor antes do início da Fase 3.
+branch aplica as melhorias técnicas viáveis antes do início da Fase 3 e
+registra separadamente o que ainda depende de avaliação externa ou revisão
+profissional.
 O [quadro de mudanças](docs/feedback_fase2.md) relaciona cada recomendação à
 implementação e ao limite que ainda permanece.
 

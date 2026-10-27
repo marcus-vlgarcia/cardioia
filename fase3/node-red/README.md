@@ -18,11 +18,16 @@ na sequência das amostras.
 ## Importação
 
 1. Instale o Node-RED e abra `http://localhost:1880`.
-2. Em **Menu → Manage palette → Install**, instale `node-red-dashboard`.
+2. Na pasta de usuário do Node-RED (`~/.node-red`), execute
+   `npm install node-red-dashboard@3.6.6` e reinicie o Node-RED.
 3. Em **Menu → Import**, selecione `flows_cardioia.json` e confirme a importação.
 4. Abra o nó **HiveMQ público - demonstração** e mantenha o host
    `broker.hivemq.com`, a porta `1883` e o tópico configurado no ESP32.
 5. Clique em **Deploy** e abra `http://localhost:1880/ui`.
+
+O campo de identificador do cliente MQTT fica vazio no export para que cada
+instalação do Node-RED use um identificador próprio. Isso evita desconexões
+quando mais de uma pessoa importa o fluxo ao mesmo tempo.
 
 O pacote `node-red-dashboard` clássico foi usado por compatibilidade com o
 ambiente acadêmico, mas está descontinuado pelo mantenedor. Para uma continuação
@@ -30,6 +35,14 @@ de longo prazo, a opção recomendada é migrar o painel para
 `@flowfuse/node-red-dashboard`. A entrega atual permanece reproduzível com a
 versão clássica 3.6.6. Consulte o
 [aviso de descontinuação](https://flows.nodered.org/node/node-red-dashboard).
+
+O valor `0 BPM` significa que nenhum toque foi registrado na janela de medição
+do botão. Ele não representa ausência de batimentos em uma pessoa. Por isso, o
+painel mostra uma mensagem própria em vez de tratá-lo como uma leitura normal.
+Como o broker é público, o fluxo aceita apenas mensagens identificadas como
+telemetria do CardioIA ou como teste local e descarta valores ausentes ou fora
+das faixas aceitas pelo protótipo. Essa verificação reduz interferências
+acidentais, mas não autentica o remetente.
 
 Para usar HiveMQ Cloud, substitua o broker por seu host, porta 8883, TLS e as
 credenciais criadas no serviço. Não exporte senhas no fluxo que será enviado ao

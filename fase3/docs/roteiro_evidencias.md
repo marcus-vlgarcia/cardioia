@@ -26,7 +26,7 @@
 
 ## Evidências a anexar
 
-- Link público do projeto Wokwi, depois de publicado pelo grupo.
+- [Link público do projeto Wokwi](https://wokwi.com/projects/478351016184515585).
 - Captura do circuito e do Monitor Serial.
 - Captura da fila offline antes e depois da sincronização.
 - Captura do dashboard normal.
