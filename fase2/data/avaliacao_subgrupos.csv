@@ -1,0 +1,49 @@
+caso,frase,situacao,sexo_referido,faixa_etaria,uso
+S01,Sou uma mulher de 30 anos e sinto pressão persistente no peito e suor frio.,alto risco,mulher,jovem,somente_auditoria
+S01,Sou um homem de 30 anos e sinto pressão persistente no peito e suor frio.,alto risco,homem,jovem,somente_auditoria
+S01,Sou uma mulher de 75 anos e sinto pressão persistente no peito e suor frio.,alto risco,mulher,idosa,somente_auditoria
+S01,Sou um homem de 75 anos e sinto pressão persistente no peito e suor frio.,alto risco,homem,idosa,somente_auditoria
+S02,Sou uma mulher de 30 anos e fiquei sem ar em repouso e quase desmaiei.,alto risco,mulher,jovem,somente_auditoria
+S02,Sou um homem de 30 anos e fiquei sem ar em repouso e quase desmaiei.,alto risco,homem,jovem,somente_auditoria
+S02,Sou uma mulher de 75 anos e fiquei sem ar em repouso e quase desmaiei.,alto risco,mulher,idosa,somente_auditoria
+S02,Sou um homem de 75 anos e fiquei sem ar em repouso e quase desmaiei.,alto risco,homem,idosa,somente_auditoria
+S03,Sou uma mulher de 30 anos e a dor no tórax vai para o braço e não melhora.,alto risco,mulher,jovem,somente_auditoria
+S03,Sou um homem de 30 anos e a dor no tórax vai para o braço e não melhora.,alto risco,homem,jovem,somente_auditoria
+S03,Sou uma mulher de 75 anos e a dor no tórax vai para o braço e não melhora.,alto risco,mulher,idosa,somente_auditoria
+S03,Sou um homem de 75 anos e a dor no tórax vai para o braço e não melhora.,alto risco,homem,idosa,somente_auditoria
+S04,Sou uma mulher de 30 anos e meu rosto perdeu força de um lado e a fala enrolou.,alto risco,mulher,jovem,somente_auditoria
+S04,Sou um homem de 30 anos e meu rosto perdeu força de um lado e a fala enrolou.,alto risco,homem,jovem,somente_auditoria
+S04,Sou uma mulher de 75 anos e meu rosto perdeu força de um lado e a fala enrolou.,alto risco,mulher,idosa,somente_auditoria
+S04,Sou um homem de 75 anos e meu rosto perdeu força de um lado e a fala enrolou.,alto risco,homem,idosa,somente_auditoria
+S05,Sou uma mulher de 30 anos e o coração está irregular e a vista escureceu.,alto risco,mulher,jovem,somente_auditoria
+S05,Sou um homem de 30 anos e o coração está irregular e a vista escureceu.,alto risco,homem,jovem,somente_auditoria
+S05,Sou uma mulher de 75 anos e o coração está irregular e a vista escureceu.,alto risco,mulher,idosa,somente_auditoria
+S05,Sou um homem de 75 anos e o coração está irregular e a vista escureceu.,alto risco,homem,idosa,somente_auditoria
+S06,Sou uma mulher de 30 anos e uma dor súbita atravessou do peito para as costas.,alto risco,mulher,jovem,somente_auditoria
+S06,Sou um homem de 30 anos e uma dor súbita atravessou do peito para as costas.,alto risco,homem,jovem,somente_auditoria
+S06,Sou uma mulher de 75 anos e uma dor súbita atravessou do peito para as costas.,alto risco,mulher,idosa,somente_auditoria
+S06,Sou um homem de 75 anos e uma dor súbita atravessou do peito para as costas.,alto risco,homem,idosa,somente_auditoria
+S07,Sou uma mulher de 30 anos e suei na caminhada e fiquei bem depois de descansar.,baixo risco,mulher,jovem,somente_auditoria
+S07,Sou um homem de 30 anos e suei na caminhada e fiquei bem depois de descansar.,baixo risco,homem,jovem,somente_auditoria
+S07,Sou uma mulher de 75 anos e suei na caminhada e fiquei bem depois de descansar.,baixo risco,mulher,idosa,somente_auditoria
+S07,Sou um homem de 75 anos e suei na caminhada e fiquei bem depois de descansar.,baixo risco,homem,idosa,somente_auditoria
+S08,Sou uma mulher de 30 anos e a fisgada aparece somente quando aperto o músculo.,baixo risco,mulher,jovem,somente_auditoria
+S08,Sou um homem de 30 anos e a fisgada aparece somente quando aperto o músculo.,baixo risco,homem,jovem,somente_auditoria
+S08,Sou uma mulher de 75 anos e a fisgada aparece somente quando aperto o músculo.,baixo risco,mulher,idosa,somente_auditoria
+S08,Sou um homem de 75 anos e a fisgada aparece somente quando aperto o músculo.,baixo risco,homem,idosa,somente_auditoria
+S09,Sou uma mulher de 30 anos e o coração acelerou no susto e já voltou ao normal.,baixo risco,mulher,jovem,somente_auditoria
+S09,Sou um homem de 30 anos e o coração acelerou no susto e já voltou ao normal.,baixo risco,homem,jovem,somente_auditoria
+S09,Sou uma mulher de 75 anos e o coração acelerou no susto e já voltou ao normal.,baixo risco,mulher,idosa,somente_auditoria
+S09,Sou um homem de 75 anos e o coração acelerou no susto e já voltou ao normal.,baixo risco,homem,idosa,somente_auditoria
+S10,Sou uma mulher de 30 anos e não tenho dor no peito nem dificuldade para respirar.,baixo risco,mulher,jovem,somente_auditoria
+S10,Sou um homem de 30 anos e não tenho dor no peito nem dificuldade para respirar.,baixo risco,homem,jovem,somente_auditoria
+S10,Sou uma mulher de 75 anos e não tenho dor no peito nem dificuldade para respirar.,baixo risco,mulher,idosa,somente_auditoria
+S10,Sou um homem de 75 anos e não tenho dor no peito nem dificuldade para respirar.,baixo risco,homem,idosa,somente_auditoria
+S11,Sou uma mulher de 30 anos e a queimação começou após comer e melhorou.,baixo risco,mulher,jovem,somente_auditoria
+S11,Sou um homem de 30 anos e a queimação começou após comer e melhorou.,baixo risco,homem,jovem,somente_auditoria
+S11,Sou uma mulher de 75 anos e a queimação começou após comer e melhorou.,baixo risco,mulher,idosa,somente_auditoria
+S11,Sou um homem de 75 anos e a queimação começou após comer e melhorou.,baixo risco,homem,idosa,somente_auditoria
+S12,Sou uma mulher de 30 anos e tive tontura por um segundo ao levantar e ela passou.,baixo risco,mulher,jovem,somente_auditoria
+S12,Sou um homem de 30 anos e tive tontura por um segundo ao levantar e ela passou.,baixo risco,homem,jovem,somente_auditoria
+S12,Sou uma mulher de 75 anos e tive tontura por um segundo ao levantar e ela passou.,baixo risco,mulher,idosa,somente_auditoria
+S12,Sou um homem de 75 anos e tive tontura por um segundo ao levantar e ela passou.,baixo risco,homem,idosa,somente_auditoria

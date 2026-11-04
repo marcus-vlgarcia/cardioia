@@ -6,6 +6,30 @@
 
 # CardioIA — PulseIA
 
+## Fase 3 — Monitoramento Contínuo: IoT no Pulso do Paciente
+
+Esta etapa adiciona um protótipo de monitoramento IoT com ESP32 no Wokwi,
+DHT22, sensor de pulsos por botão, fila offline, publicação MQTT e dashboard
+Node-RED com alertas. A estrutura, os códigos e os relatórios estão em
+[fase3/](fase3/). Como se trata de uma simulação acadêmica, os dados não são
+clínicos e os alertas não devem ser usados para decisões de saúde.
+
+| Entregável da Fase 3 | Acesso |
+| --- | --- |
+| Código ESP32 e circuito Wokwi | [esp32-cardioia](fase3/esp32-cardioia/) |
+| Projeto público no Wokwi | [Abrir simulação](https://wokwi.com/projects/478351016184515585) |
+| Fluxo do Node-RED | [flows_cardioia.json](fase3/node-red/flows_cardioia.json) |
+| Relatório Edge Computing | [Relatório Edge](fase3/docs/relatorio_edge.md) |
+| Relatório MQTT e dashboard | [Relatório MQTT](fase3/docs/relatorio_mqtt_dashboard.md) |
+| Relatórios paginados | [PDFs da Fase 3](fase3/output/pdf/) |
+| Checklist completo do enunciado | [Checklist da Fase 3](fase3/docs/checklist_enunciado.md) |
+| Segurança, privacidade e limites | [Documento de governança](fase3/docs/seguranca_privacidade.md) |
+| Roteiro de evidências | [Guia de demonstração](fase3/docs/roteiro_evidencias.md) |
+| Registro da execução integrada | [Resultados observados](fase3/docs/registro_execucao.md) |
+
+O export do Node-RED e as [capturas da demonstração](fase3/evidencias/)
+permitem consultar o circuito, a fila offline, a sincronização e o dashboard.
+
 ## Fase 2 — Diagnóstico Automatizado: IA no Estetoscópio Digital
 
 O módulo da Fase 2 associa sintomas a possíveis condições e classifica frases
@@ -17,36 +41,43 @@ continuam abaixo como registro da preparação dos dados.
 | 10 relatos completos | [relatos_sintomas.txt](fase2/data/relatos_sintomas.txt) |
 | Mapa de conhecimento com 83 associações | [mapa_conhecimento.csv](fase2/data/mapa_conhecimento.csv) |
 | Código Python de extração | [extrair_sintomas.py](fase2/src/extrair_sintomas.py) |
-| Base simulada com 288 frases rotuladas | [frases_risco.csv](fase2/data/frases_risco.csv) |
+| Base simulada com 1.112 frases rotuladas | [frases_risco.csv](fase2/data/frases_risco.csv) |
 | Notebook executado: TF-IDF, treinamento e avaliação | [classificador_risco.ipynb](fase2/notebooks/classificador_risco.ipynb) |
 | Instalação e execução | [Guia da Fase 2](fase2/README.md) |
 | Resultados e análise dos erros | [Análise da avaliação](fase2/docs/avaliacao.md) |
 | Fontes, critérios dos rótulos e vieses | [Dados e limites](fase2/docs/dados_e_limites.md) |
+| Resposta ao feedback | [Evolução após a avaliação](fase2/docs/feedback_fase2.md) |
 
 ### Vídeo de demonstração
 
 [Assista ao vídeo de demonstração da Fase 2](https://youtu.be/L3uZMKG7ZUc)
 (3min07s, YouTube não listado).
 
-### Resultados da Fase 2
+### Evolução da Fase 2 após a avaliação
 
-Após ampliar a base para 288 frases, o modelo usa 208 para treino, 24 para teste
-final e 56 dos testes já analisados como regressão. A configuração e o limiar de
-triagem foram escolhidos somente no treino. No teste final, atingiu **91,7% (22/24)**,
-contra 50% do baseline, com recall de alto risco de 100%, nenhum falso negativo e
-dois falsos positivos. O conjunto é pequeno e sintético; a [avaliação completa](fase2/docs/avaliacao.md)
-registra as limitações, os erros e os próximos passos.
+A versão que recebeu nota máxima está preservada na branch `fase2-entrega`. A
+revisão atual aplica o feedback antes do desenvolvimento da Fase 3: a base passou
+de 288 para 1.112 frases (556 por classe). As 120 frases mais recentes foram
+escritas como situações individuais, com variações de linguagem, ortografia e
+gravidade. Há duas auditorias adicionais: 80 frases novas e 20 pares de frases
+leves e graves. O conjunto de 264 frases já havia sido observado na revisão
+anterior e agora acompanha a evolução: a acurácia passou de 89,0% para 94,7%
+nele. Nas duas auditorias novas, **o resultado permaneceu em 97,5%** tanto no
+modelo anterior quanto no ampliado. O aumento de acurácia no conjunto conhecido
+não demonstra, por si só, melhora de generalização. Os resultados e erros estão
+na [avaliação completa](fase2/docs/avaliacao.md).
 
 ![Matriz de confusão do teste](fase2/outputs/matriz_confusao.png)
 
 ### Complementos e revisão de entrega
 
-Além do mínimo solicitado, a Fase 2 inclui o mapa ampliado, coleta interativa
-com três perguntas, histórico local, tratamento de negações, comparação de
-configurações e limiares, testes de regressão e análise de sensibilidade textual
-à identidade. Esses experimentos não validam uso clínico ou fairness demográfica.
+Além do mínimo solicitado, a Fase 2 inclui o mapa ampliado, coleta interativa,
+histórico local, negações complexas, contradições, análise de contribuições dos
+termos, calibração experimental e auditoria por sexo referido e faixa etária.
+A ficha para validação especializada foi criada, mas permanece honestamente
+pendente. Esses experimentos não validam uso clínico ou fairness demográfica.
 
-As duas fases podem ser verificadas sem alterar seus dados com
+As três fases podem ser verificadas sem alterar seus dados com
 `python scripts/verificar_entrega.py`: o script confere as quantidades, os hashes
 das imagens, a separação dos cenários e a consistência dos resultados e notebook.
 Os detalhes de execução estão no [README da Fase 2](fase2/README.md).
@@ -115,6 +146,13 @@ de reprodução e geração dos materiais.
 
 ```
 cardioia/
+├── fase3/
+│   ├── esp32-cardioia/           # Circuito e firmware do simulador
+│   ├── node-red/                 # Fluxo e instruções do dashboard
+│   ├── docs/                     # Relatórios e validação
+│   ├── evidencias/               # Capturas da demonstração
+│   ├── output/pdf/               # Relatórios paginados
+│   └── README.md
 ├── fase2/
 │   ├── data/                     # Relatos, mapa e frases rotuladas
 │   ├── docs/                     # Fontes e avaliação
@@ -366,6 +404,11 @@ ECG.
 
 ## 🗃 Histórico de lançamentos
 
+- `0.3.1` — 04/11/2026: inclusão das capturas de execução e atualização do
+  registro das evidências da Fase 3.
+- `0.3.0` — 27/10/2026: protótipo da Fase 3 publicado no Wokwi, dashboard
+  Node-RED integrado ao broker MQTT, relatórios e revisão de validação e
+  documentação.
 - `0.2.1` — 07/10/2026: revisão de integridade e execução; proteção dos relatos
   interativos, validação do histórico, compatibilidade das dependências e correção
   do gerador sintético complementar. Teste reservado reproduzido sem ajuste de

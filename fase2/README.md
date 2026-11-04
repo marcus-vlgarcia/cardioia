@@ -2,25 +2,50 @@
 
 ## Diagnóstico Automatizado — IA no Estetoscópio Digital
 
-O módulo possui duas partes independentes: associação de sintomas a possíveis
-condições por regras e classificação de frases em alto ou baixo risco com
-TF-IDF e Regressão Logística. O projeto é uma simulação acadêmica de apoio à
-triagem; não realiza diagnóstico médico.
+O módulo associa sintomas a possíveis condições por regras e classifica frases
+simuladas em `alto risco` ou `baixo risco` com TF-IDF e Regressão Logística. É
+um projeto acadêmico: não realiza diagnóstico nem orienta atendimento.
 
-## Entregáveis
+## Entregáveis originais
 
-| Critério do enunciado | Arquivo |
+| Critério | Arquivo |
 | --- | --- |
-| 10 relatos completos de sintomas | [relatos_sintomas.txt](data/relatos_sintomas.txt) |
-| Mapa de conhecimento | [mapa_conhecimento.csv](data/mapa_conhecimento.csv) — 83 associações possíveis |
-| Código de extração funcional | [extrair_sintomas.py](src/extrair_sintomas.py) |
-| Base de frases e rótulos | [frases_risco.csv](data/frases_risco.csv) — 288 frases, 144 por classe |
-| Partições fixas por cenário | [particoes.csv](data/particoes.csv) — treino, teste final e regressão |
-| Notebook com TF-IDF, treinamento e avaliação | [classificador_risco.ipynb](notebooks/classificador_risco.ipynb) |
-| Resultados da extração | [diagnosticos_sugeridos.csv](outputs/diagnosticos_sugeridos.csv) |
-| Avaliação do modelo | [metricas.json](outputs/metricas.json) e [predicoes_teste.csv](outputs/predicoes_teste.csv) |
-| Governança e fontes | [dados_e_limites.md](docs/dados_e_limites.md) |
-| Demonstração em vídeo | [Vídeo de demonstração](https://youtu.be/L3uZMKG7ZUc) (3min07s, YouTube não listado). |
+| 10 relatos completos | [relatos_sintomas.txt](data/relatos_sintomas.txt) |
+| Mapa de conhecimento | [mapa_conhecimento.csv](data/mapa_conhecimento.csv) — 83 associações |
+| Extração de sintomas | [extrair_sintomas.py](src/extrair_sintomas.py) |
+| Frases e rótulos | [frases_risco.csv](data/frases_risco.csv) — 1.112 frases, 556 por classe |
+| Partições por cenário | [particoes.csv](data/particoes.csv) |
+| Notebook TF-IDF e avaliação | [classificador_risco.ipynb](notebooks/classificador_risco.ipynb) |
+| Vídeo da entrega avaliada | [YouTube não listado](https://youtu.be/L3uZMKG7ZUc) — 3min07s |
+
+## Revisão após a avaliação
+
+A entrega recebeu nota máxima e foi preservada na branch `fase2-entrega`. Esta
+branch aplica as melhorias técnicas viáveis antes do início da Fase 3 e
+registra separadamente o que ainda depende de avaliação externa ou revisão
+profissional.
+O [quadro de mudanças](docs/feedback_fase2.md) relaciona cada recomendação à
+implementação e ao limite que ainda permanece.
+
+Principais acréscimos:
+
+- base principal ampliada de 288 para 1.112 frases, incluindo 576 variações da etapa anterior e 120 casos individuais novos;
+- teste final ampliado de 24 para 264 frases, separadas por família de cenário;
+- duas auditorias novas, com 80 frases variadas e 20 pares de gravidade;
+- 32 cenários de avaliação baseados em fontes externas;
+- 16 pares de manifestações leves e graves com linguagem semelhante;
+- tratamento de dupla negação e sinalização de relatos contraditórios;
+- investigação por termos dos erros, inclusive os dois falsos positivos antigos;
+- auditoria com 48 variações sintéticas de sexo referido e faixa etária;
+- calibração experimental das probabilidades e curva de confiabilidade;
+- ficha de revisão clínica para todas as 83 associações.
+
+A validação por profissional de saúde não foi inventada: ela continua marcada
+como `pendente` em [revisao_clinica.csv](data/revisao_clinica.csv), com o
+[procedimento de validação](docs/validacao_clinica.md) preparado. Pelo mesmo
+motivo, a avaliação baseada em fontes não é chamada de independente; o
+[protocolo para coleta externa](docs/avaliacao_independente.md) registra como
+essa etapa deverá ser concluída sem vazamento.
 
 ## Execução
 
@@ -36,67 +61,62 @@ python -m unittest discover -s fase2/tests -v
 python scripts/verificar_entrega.py
 ```
 
-O primeiro script lê o `.txt` e o mapa e salva as dez associações. É possível
-usar outros arquivos com `--frases`, `--mapa` e `--saida`. Para demonstrar um
-novo relato, execute `python fase2/src/extrair_sintomas.py --interativo`: três
-campos pedem sintomas, impacto na rotina e tempo de início. O programa formula
-a frase no padrão dos relatos. No modo interativo, os dez exemplos e o novo relato
-são analisados em `fase2/outputs/diagnosticos_interativos.csv`, sem sobrescrever
-`diagnosticos_sugeridos.csv` ou o arquivo original com os dez exemplos. Cada envio também é
-guardado, junto com sintomas e possíveis associações, em
-`fase2/outputs/relatos_interativos.csv`. Esse histórico fica apenas na máquina
-que executou o programa e, assim como a saída interativa, é ignorado pelo Git.
-O histórico acumula os envios; a saída interativa é recriada em cada execução.
-É possível usar `--historico` e `--saida` para escolher outros caminhos locais,
-desde que separados dos arquivos de entrada e entre si. Use exemplos simulados
-na demonstração. O segundo executa
-todas as células e salva o notebook com tabelas e gráficos, além dos arquivos
-em `outputs`. Também é possível abrir o notebook no VS Code ou Jupyter usando
-o mesmo ambiente e executar todas as células em ordem.
+`extrair_sintomas.py` lê os dez relatos, procura expressões do mapa e salva
+`outputs/diagnosticos_sugeridos.csv`. A saída agora separa sintomas afirmados,
+negados e contraditórios. Cada linha do mapa exige a presença dos dois sintomas;
+uma frase pode receber mais de uma associação.
 
-## Como funciona
+O modo interativo continua disponível:
 
-O extrator normaliza acentos e maiúsculas, procura expressões inteiras e verifica
-negação simples. Cada linha do mapa exige os dois sintomas. Não havendo um par
-compatível, retorna “Associação insuficiente no mapa”. O mapa foi ampliado para
-registrar mais de uma possibilidade para sintomas parecidos. Um relato pode
-receber mais de uma associação; nenhuma delas é um diagnóstico confirmado.
+```bash
+python fase2/src/extrair_sintomas.py --interativo
+```
 
-### Parte 1 — mapa de conhecimento ampliado
+Três campos coletam sintomas, impacto na rotina e tempo de início. O envio fica
+em arquivos locais ignorados pelo Git, sem alterar os dez relatos obrigatórios.
 
-O arquivo segue as três colunas propostas no enunciado: `sintoma_1`, `sintoma_2`
-e `doenca_associada`. Cada linha exige a presença das duas expressões. Repetir um
-sintoma em linhas diferentes permite apresentar hipóteses distintas para uma mesma
-queixa, como dor no peito relacionada a síndrome coronariana, angina, pericardite,
-miocardite, refluxo ou dor musculoesquelética. O mapa contém 83 associações em 14
-grupos de possibilidades. Ele é uma estrutura didática, não uma lista exaustiva
-nem uma ferramenta de diagnóstico.
+`executar_notebook.py` executa todas as células e atualiza as tabelas e figuras.
+Para reproduzir também os arquivos de avaliação diretamente:
 
-### Parte 2 — classificação de risco
+```bash
+python fase2/src/avaliar_classificador.py
+```
 
-O classificador usa 208 frases de treino, 24 do teste final e 56 de regressão.
-As partições são fixadas por cenário e as paráfrases ficam juntas. O TF-IDF é
-ajustado apenas no treino. Antes da avaliação, a validação cruzada escolhe entre
-quatro configurações pelo F1 macro e compara quatro limiares de decisão. A versão
-selecionada atingiu 91,7% (22/24) no teste final, com recall de alto risco de 100%
-e dois falsos positivos. A comparação e os erros estão em [avaliacao.md](docs/avaliacao.md).
+O gerador `expandir_linguagem.py` recria as 576 frases adicionais e o manifesto
+de partições a partir da base anterior e acrescenta os 120 casos de
+`casos_adicionais.csv` somente ao treino. `criar_notebook.py` recria o notebook
+didático antes de executá-lo. Os dois são determinísticos. As
+[fontes dos casos novos](docs/fontes_casos_adicionais.md) estão registradas.
 
-O notebook apresenta acurácia, precisão, recall e F1 por classe, matriz de
-confusão, baseline e erros individuais. Também inspeciona termos aprendidos e
-testa os 12 desafios antigos como regressão. Todos os rótulos são simulados. A análise detalhada
-de limitações inclui vieses lexicais e a falta de representatividade demográfica.
+## Resultados da revisão
 
-## Próxima melhoria registrada
+| Conjunto | Casos | Acurácia | Recall de alto risco |
+| --- | ---: | ---: | ---: |
+| Teste de 264 frases, agora histórico | 264 | 94,7% | 95,5% |
+| Auditoria nova, modelo anterior / atual | 80 | 97,5% / 97,5% | 100% / 100% |
+| Pares novos, modelo anterior / atual | 40 | 97,5% / 97,5% | 95% / 95% |
+| Avaliação baseada em fontes externas | 32 | 96,9% | 100% |
+| Pares de gravidade anteriores | 32 | 93,8% | 100% |
+| Regressão | 144 | 97,9% | 100% |
 
-Se uma nova revisão for feita, os 24 exemplos do teste final atual devem passar
-para regressão e uma nova avaliação reservada deverá ser criada. Os próximos
-passos incluem revisão clínica independente dos rótulos, relatos reais autorizados
-e anonimizados, maior diversidade de linguagem e avaliação externa. A expansão da
-base atual não equivale a validação clínica.
+No conjunto histórico de 264 frases ocorreram seis falsos negativos e oito
+falsos positivos. A acurácia foi de 95,5% nas 44 frases com erros ortográficos
+e nas 44 coloquiais. Nas auditorias novas, os modelos anterior e atual tiveram
+os mesmos três erros: dois falsos positivos entre as 80 frases e um falso
+negativo entre os 20 pares. Todos os exemplos e rótulos foram redigidos para o
+projeto e não receberam validação clínica. A análise completa está em
+[avaliacao.md](docs/avaliacao.md).
 
-## Continuidade da Fase 1
+![Matriz de confusão ampliada](outputs/matriz_confusao.png)
 
-A auditoria da Fase 1 orientou a divisão por grupos, a identificação explícita
-dos rótulos sintéticos e a análise de erros. A variável numérica artificial não
-é usada como alvo deste classificador textual. O portal e a MLP são atividades
-opcionais posteriores.
+## Probabilidades e vieses
+
+A probabilidade produzida é confiança estatística dentro desta base. Não é risco
+clínico. A calibração usa 88 frases reservadas e serve para estudo; Brier score e
+log loss não garantem segurança médica.
+
+Os testes de subgrupos não encontraram diferença entre as variações testadas,
+mas usam frases sintéticas pareadas. Eles não avaliam representatividade,
+prevalência, raça/cor, território, renda ou desfechos de pacientes e não
+demonstram fairness. Fontes e limitações estão em
+[dados_e_limites.md](docs/dados_e_limites.md).

@@ -1,0 +1,81 @@
+id,frase,situacao,tema,fonte_id
+Q001,Há quarenta minutos sinto um tijolo no meio do peito e comecei a transpirar gelado,alto risco,dor_toracica,DOR
+Q002,O aperto não foi embora com o descanso e agora sinto náusea,alto risco,dor_toracica,DOR
+Q003,A dor no tórax correu para o queixo enquanto eu estava sentado,alto risco,dor_toracica,DOR
+Q004,Meu peito pesa sem parar e fiquei muito pálida de repente,alto risco,dor_toracica,INFARTO
+Q005,Não é só a comida: a queimação veio junto de falta de ar e suor frio,alto risco,apresentacao_atipica,INFARTO
+Q006,Estou sem dor forte mas o peito incomoda e parece que vou perder os sentidos,alto risco,sinal_associado,INFARTO
+Q007,Não consigo falar a frase inteira porque a respiração falha mesmo sentado,alto risco,falta_de_ar,IC
+Q008,Quando abaixo a cabeça para deitar sinto que estou sufocando,alto risco,falta_de_ar,IC
+Q009,Precisei empilhar travesseiros pois falta ar assim que fico de costas na cama,alto risco,falta_de_ar,IC
+Q010,Acordei na madrugada procurando ar e meus tornozelos estão inchados,alto risco,falta_de_ar,IC
+Q011,Mesmo parado à mesa respiro com dificuldade e a situação piora,alto risco,falta_de_ar,IC
+Q012,Minha perna ficou inchada após dias imobilizado e agora falta ar de uma vez,alto risco,trombose,TROMBOSE
+Q013,Dói puxar o ar e a falta de fôlego apareceu subitamente hoje,alto risco,trombose,TROMBOSE
+Q014,O peito dói ao respirar e comecei a tossir sangue junto com falta de ar,alto risco,trombose,DOR
+Q015,O treino terminou faz tempo e ainda estou muito ofegante e tonto,alto risco,persistencia,DOR
+Q016,Eu disse que estava recuperado mas agora o peito aperta mais do que antes,alto risco,contradicao,DOR
+Q017,Não deixei de sentir pressão no peito desde a manhã,alto risco,dupla_negacao,DOR
+Q018,Não é verdade que não tenho desconforto torácico; ele está aumentando,alto risco,dupla_negacao,DOR
+Q019,Tô com uma prensada no peito e um suor frio que não acaba,alto risco,coloquial,INFARTO
+Q020,Minha respiração tá ruim de verdade mesmo sem eu sair do lugar,alto risco,coloquial,IC
+Q021,O peito dói e o braco esquerdo ficou pesado do nada,alto risco,erro_ortografico,DOR
+Q022,To com presão no tórax e totnura que só piora,alto risco,erro_ortografico,DOR
+Q023,Minha boca ficou torta agora e uma mão não segura mais o copo,alto risco,neurologico,AVC
+Q024,Não consigo pronunciar direito as palavras e minha perna esquerda falhou,alto risco,neurologico,AVC
+Q025,Minha filha notou que meu rosto caiu de um lado durante o jantar,alto risco,neurologico,AVC
+Q026,A visão sumiu de repente em um olho e comecei a andar sem equilíbrio,alto risco,neurologico,AVC
+Q027,Perdi a força de um lado sem aviso e não compreendo o que me dizem,alto risco,neurologico,AVC
+Q028,Uma dor de cabeça fortíssima apareceu subitamente junto com dificuldade para falar,alto risco,neurologico,AVC
+Q029,Meu pulso disparou enquanto eu estava parado e logo depois quase caí,alto risco,palpitacao,ARR
+Q030,As batidas parecem irregulares e estou ficando muito tonto,alto risco,palpitacao,ARR
+Q031,Desmaiei na fila e desde então meu coração bate de um jeito estranho,alto risco,palpitacao,ARR
+Q032,A palpitação veio acompanhada de falta de ar que não melhora,alto risco,palpitacao,ARR
+Q033,Uma dor brutal surgiu entre o peito e as costas em poucos segundos,alto risco,dor_subita,DOR
+Q034,Uma sensação de rasgo no tórax apareceu do nada e me derrubou,alto risco,dor_subita,DOR
+Q035,Não sinto aperto no peito mas minha fala mudou e um braço perdeu força,alto risco,negacao_contextual,AVC
+Q036,Não tenho febre nem tosse; o problema é a falta de ar que começou agora,alto risco,negacao_contextual,IC
+Q037,Meu peito começou a apertar enquanto eu lia e o suor ficou frio,alto risco,dor_toracica,INFARTO
+Q038,Tenho diabetes e senti uma fraqueza súbita com enjoo e suor gelado,alto risco,apresentacao_atipica,INFARTO
+Q039,Subi a escada e a dor no peito continuou forte mesmo depois que parei,alto risco,persistencia,DOR
+Q040,Achei que fosse uma dor muscular mas apertar o local não muda nada e estou pálido,alto risco,apresentacao_atipica,DOR
+Q041,Dei uma corrida curta e só suei durante o esforço; depois fiquei bem,baixo risco,exercicio,DIF
+Q042,O incômodo no peito é exatamente onde a alça da bolsa apertou e já sumiu,baixo risco,parede_toracica,DIF
+Q043,Posso repetir a pontada quando pressiono a costela machucada,baixo risco,parede_toracica,DIF
+Q044,A respiração ficou rápida após pedalar e se normalizou em poucos minutos,baixo risco,exercicio,DIF
+Q045,O suor apareceu porque estava em uma sala muito quente e cessou ao sair,baixo risco,calor,DIF
+Q046,O pulso do relógio subiu na subida de bicicleta e voltou ao normal no descanso,baixo risco,exercicio,ARR
+Q047,Minha camisa estava me comprimindo; desabotoei e o aperto desapareceu,baixo risco,parede_toracica,DIF
+Q048,Senti um gosto ácido depois do café e a sensação cessou sem outros sintomas,baixo risco,refluxo,DIF
+Q049,A azia habitual veio após comer depressa e melhorou completamente,baixo risco,refluxo,DIF
+Q050,A fisgada surgiu só ao espirrar e agora não sinto nada,baixo risco,parede_toracica,DIF
+Q051,Uma área roxa no peito dói quando aperto com o dedo e apenas ali,baixo risco,parede_toracica,DIF
+Q052,Fiquei sem fôlego correndo para o ônibus e já me recuperei totalmente,baixo risco,exercicio,DIF
+Q053,Na academia suei e fiquei ofegante; depois do banho estou normal,baixo risco,exercicio,DIF
+Q054,Meu coração acelerou quando levei um susto e acalmou logo depois,baixo risco,emocao,ARR
+Q055,As batidas ficaram fortes por segundos ao subir a ladeira e normalizaram,baixo risco,exercicio,ARR
+Q056,Falei que ia cair de sono mas não tive tontura ou desmaio de verdade,baixo risco,metafora,DIF
+Q057,Minha esposa falou que está sem ar; eu continuo respirando normalmente,baixo risco,relato_terceiro,DIF
+Q058,A palavra dor no peito apareceu na TV e não descreve algo que sinto,baixo risco,relato_terceiro,DIF
+Q059,Meu braço formigou porque dormi apoiado nele e a sensação já passou,baixo risco,explicacao_local,DIF
+Q060,A boca parecia torta na selfie pelo ângulo; no espelho meu rosto está normal,baixo risco,explicacao_local,DIF
+Q061,Mordi a língua no almoço e por isso falei estranho por alguns minutos,baixo risco,explicacao_local,DIF
+Q062,To tranquilo agora; fiquei arfando só enquanto carregava as compras,baixo risco,coloquial,DIF
+Q063,O suor foi do sol e parou quando entrei na sombra,baixo risco,calor,DIF
+Q064,Senti uma pontada curta ao virar o corpo e posso apontar onde fica,baixo risco,parede_toracica,DIF
+Q065,Meu peito ficou sensível na pele onde uma etiqueta arranhou,baixo risco,pele,DIF
+Q066,O incômodo cessou assim que afrouxei o cinto de segurança,baixo risco,parede_toracica,DIF
+Q067,Não sinto dor no peito nem falta de ar; minha queixa é uma leve coceira,baixo risco,negacao_contextual,DIF
+Q068,Não desmaiei e não tive palpitações; apenas fiquei com sono no ônibus,baixo risco,negacao_contextual,DIF
+Q069,A falta de ar foi modo de dizer que estava cansado; agora respiro normalmente,baixo risco,metafora,DIF
+Q070,Usei a frase coração saindo pela boca porque fiquei emocionado; já passou,baixo risco,metafora,DIF
+Q071,Meu relógio soltou no treino e marcou batidas erradas sem que eu sentisse algo,baixo risco,dispositivo,DIF
+Q072,A fala saiu abafada porque meu nariz estava entupido e depois normalizou,baixo risco,explicacao_local,DIF
+Q073,Levantei muito rápido e tive um escurecimento de segundos que não voltou,baixo risco,episodio_breve,DIF
+Q074,A dor no ombro só aparece quando ergo o peso e some ao descansar,baixo risco,musculo,DIF
+Q075,O cheiro forte me fez respirar rápido por instantes e melhorei fora do ambiente,baixo risco,irritacao,DIF
+Q076,Meu corasão acelerou correndo mas agora tá normal e sem tontura,baixo risco,erro_ortografico,ARR
+Q077,Não to com flata de ar; apenas meu nariz ficou entupido com pó,baixo risco,erro_ortografico,DIF
+Q078,Minha irmã teve tontura e palidez ontem; comigo não ocorreu,baixo risco,relato_terceiro,DIF
+Q079,O peso no tórax era a mochila na frente do corpo e passou quando a tirei,baixo risco,parede_toracica,DIF
+Q080,A região das costelas dói só ao tocar o machucado e consigo respirar bem,baixo risco,parede_toracica,DIF

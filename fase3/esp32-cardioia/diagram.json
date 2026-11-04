@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "author": "Grupo PulseIA",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht", "top": -94, "left": 263, "attrs": { "temperature": "36.7", "humidity": "55" } },
+    { "type": "wokwi-pushbutton", "id": "btnPulso", "top": 92, "left": 274, "attrs": { "color": "red", "label": "PULSO" } },
+    { "type": "wokwi-pushbutton", "id": "btnRede", "top": 173, "left": 274, "attrs": { "color": "blue", "label": "ONLINE/OFFLINE" } },
+    { "type": "wokwi-led", "id": "ledRede", "top": -102, "left": -141, "attrs": { "color": "green", "label": "NUVEM" } },
+    { "type": "wokwi-resistor", "id": "resistorLed", "top": -58, "left": -139, "rotate": 90, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "dht:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "dht:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "dht:SDA", "esp:15", "green", [ "h-63", "v0" ] ],
+    [ "btnPulso:1.l", "esp:18", "green", [ "h-86", "v0" ] ],
+    [ "btnPulso:2.l", "esp:GND.1", "black", [ "h-65", "v0" ] ],
+    [ "btnRede:1.l", "esp:19", "blue", [ "h-76", "v0" ] ],
+    [ "btnRede:2.l", "esp:GND.1", "black", [ "h-55", "v0" ] ],
+    [ "esp:2", "resistorLed:1", "green", [ "h-31", "v-52" ] ],
+    [ "resistorLed:2", "ledRede:A", "green", [ "v-17" ] ],
+    [ "ledRede:C", "esp:GND.1", "black", [ "h89", "v111" ] ]
+  ],
+  "serialMonitor": { "display": "auto", "newline": "lf" }
+}

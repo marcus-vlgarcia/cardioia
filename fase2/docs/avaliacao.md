@@ -1,93 +1,90 @@
-# Avaliação do classificador
+# Avaliação do classificador após a ampliação
 
-## Base e separação dos conjuntos
+## Dados e separação
 
-A base contém 288 frases simuladas, organizadas em 144 cenários com duas
-paráfrases. São 208 frases de treino, 24 de teste final e 56 de regressão. As
-duas frases do mesmo cenário ficam sempre no mesmo conjunto.
+A base principal contém 1.112 frases sintéticas balanceadas, sendo 556 por
+classe. A revisão anterior tinha 992 frases. Os 120 casos acrescentados agora
+foram redigidos individualmente para incluir fala cotidiana, erros de escrita,
+negações, apresentações menos típicas e situações leves e graves com palavras
+parecidas. Eles foram colocados exclusivamente no treino. As fontes que
+orientaram os cenários estão em [fontes_casos_adicionais.md](fontes_casos_adicionais.md).
 
-Os testes analisados nas versões anteriores foram preservados como regressão:
-os grupos A51–A60, B51–B60 e os oito grupos do teste inicial. Eles não entram
-no treino, mas seus resultados não são evidência independente porque seus erros
-já orientaram a revisão. O teste final é formado pelos grupos A67–A72 e B67–B72.
+| Partição | Frases | Grupos | Uso |
+| --- | ---: | ---: | --- |
+| Treino | 616 | 368 | seleção e ajuste do classificador |
+| Calibração | 88 | 44 | ajuste sigmoide das probabilidades |
+| Teste de 264 frases | 264 | 132 | acompanhamento histórico da revisão anterior |
+| Regressão | 144 | 72 | casos conhecidos de versões mais antigas |
 
-## Configuração e limiar escolhidos no treino
+As variações de uma mesma situação permanecem na mesma partição. Os 120 casos
+novos têm um grupo próprio por frase. As 264 frases de teste vêm de apenas 22
+famílias de situações; esse conjunto já foi examinado na versão anterior e não
+é mais uma medida inédita de desempenho.
 
-O classificador usa TF-IDF e Regressão Logística. Antes de consultar o teste
-final, a validação cruzada por cenário comparou quatro configurações: n-gramas
-(1,2) ou (1,3), com C=1 ou C=4. A seleção por F1 macro escolheu bigramas e C=4.
-As acurácias das quatro divisões foram 96,15%, 92,31%, 96,15% e 92,31%, com média
-de 94,23%. Esses valores ajudam a escolher o modelo, mas podem ser otimistas.
+Criamos ainda duas avaliações fora da base principal: `auditoria_nova.csv`
+tem 80 frases individuais balanceadas; `auditoria_contrastiva.csv` tem 20 pares
+de relatos leves e graves com vocabulário semelhante. Essas 120 frases não
+entram no treino, na calibração nem na seleção de parâmetros. Foram elaboradas
+com apoio de IA no mesmo projeto e seus rótulos são didáticos, sem validação
+clínica.
 
-Também marcamos cinco negações comuns antes da vetorização, como “não sinto dor
-no peito” e “sem falta de ar”. O procedimento é limitado: não compreende toda a
-estrutura da frase, ironia, dupla negação ou relato indireto complexo.
+## Como o modelo foi escolhido
 
-O limiar de decisão foi escolhido por previsões fora da divisão no treino:
+Comparamos TF-IDF de palavras com unigramas e bigramas, palavras até
+trigramas e uma combinação de palavras e caracteres. A validação cruzada
+agrupada por família utilizou apenas o treino. O melhor F1 macro médio nessa
+comparação foi 0,963, com unigramas/bigramas e Regressão Logística `C=8`.
+A opção com caracteres foi avaliada, mas não venceu.
 
-| Limiar para alto risco | Precisão alto risco | Recall alto risco | Falsos negativos | Falsos positivos |
-| ---: | ---: | ---: | ---: | ---: |
-| 0,35 | 77,61% | 100% | 0 | 30 |
-| 0,40 | 81,60% | 98,08% | 2 | 23 |
-| 0,45 | 87,18% | 98,08% | 2 | 15 |
-| 0,50 | 91,82% | 97,12% | 3 | 9 |
+Para uma comparação direta, reproduzimos o modelo anterior com sua configuração
+publicada, treinando-o somente nas 496 frases que compunham o treino antigo e
+usando as mesmas 88 frases para calibração. O modelo ampliado foi treinado nas
+616 frases. Ambos foram aplicados às duas auditorias novas.
 
-Para esta simulação de triagem, foi selecionado 0,35: é o menor limiar com
-precisão de alto risco acima de 75% e o maior recall. Isso privilegia evitar
-falsos negativos e, como consequência, pode aumentar falsos positivos.
+## Resultados
 
-O código prioriza recall, depois F1 macro e, em caso de empate, o menor limiar
-entre os elegíveis. Se nenhum atingir a precisão mínima, usa 0,50 e informa a
-ressalva. As probabilidades não foram calibradas clinicamente. Como a escolha de
-parâmetros e limiar reutiliza divisões do treino, esses resultados podem ser
-otimistas; são critérios de desenvolvimento, não uma avaliação independente.
+| Avaliação | Modelo anterior | Modelo ampliado | Leitura |
+| --- | ---: | ---: | --- |
+| Conjunto conhecido de 264 frases | 89,0% (235/264) | 94,7% (250/264) | melhora no acompanhamento histórico |
+| Auditoria nova de 80 frases | 97,5% (78/80) | 97,5% (78/80) | empate; dois falsos positivos em ambos |
+| Vinte pares novos | 97,5% (39/40) | 97,5% (39/40) | empate; um falso negativo em ambos |
 
-## Resultado no teste final
+No conjunto conhecido, a matriz de confusão atual é `[[124, 8], [6, 126]]`
+na ordem baixo/alto risco. Os falsos positivos caíram de 23 para oito; os
+falsos negativos permaneceram em seis. A precisão de alto risco foi 94,0%, o
+recall foi 95,5% e o F1 macro foi 0,947. O conjunto possui 44 frases com erro
+ortográfico e 44 coloquiais; a acurácia foi 95,5% em cada tipo.
 
-| Medida | Resultado |
-| --- | ---: |
-| Acurácia | 91,7% (22/24) |
-| Baseline | 50% |
-| Precisão de alto risco | 85,7% |
-| Recall de alto risco | 100% |
-| F1 de alto risco | 0,923 |
-| Falsos negativos | 0 |
-| Falsos positivos | 2 |
+As auditorias novas somam 120 frases e tiveram 117 acertos nos dois modelos.
+Os mesmos erros persistiram: uma frase sobre uma notícia de televisão e outra
+sobre recuperar o fôlego após carregar compras foram classificadas como alto
+risco; uma frase que combina pulso acelerado em repouso e quase desmaio foi
+classificada como baixo risco. As previsões completas estão em
+`outputs/predicoes_auditoria_nova.csv` e
+`outputs/predicoes_auditoria_contrastiva.csv`. Esses erros não foram usados
+para ajustar o modelo desta versão.
 
-A matriz de confusão tem 10 acertos de baixo risco, dois falsos positivos,
-nenhum falso negativo e 12 acertos de alto risco. Os dois falsos positivos são
-as paráfrases do cenário B69: suor após exercício que cessou com descanso. O
-erro sugere uma associação lexical com o suor, apesar do contexto de recuperação;
-essa interpretação é uma hipótese, não uma explicação causal validada.
+Os conjuntos complementares mais antigos também foram recalculados: 96,9% nas
+32 frases baseadas em fontes públicas, 93,8% nos 32 pares de gravidade
+anteriores e 97,9% na regressão de 144 frases. A auditoria sintética de
+subgrupos permaneceu em 48/48; isso não demonstra equidade entre populações.
 
-O resultado é promissor para o exercício, mas o teste tem somente 12 cenários e
-cada erro altera a acurácia em 4,17 pontos percentuais. Todos os exemplos são
-sintéticos e produzidos no mesmo projeto. A métrica não representa desempenho
-clínico nem valida uso em atendimento.
+## O que a acurácia permite concluir
 
-A revisão de outubro reexecutou a configuração existente, sem trocar os exemplos,
-os rótulos ou os parâmetros para elevar a pontuação. O teste já foi observado no
-desenvolvimento anterior, portanto sua reprodução não constitui um novo teste
-independente. A próxima melhoria orientada por esses erros exigirá outra avaliação.
+O aumento de 89,0% para 94,7% no conjunto conhecido mostra que as frases
+adicionais ajudaram a lidar com situações semelhantes às dificuldades já
+observadas. O empate nas duas auditorias novas não mostra ganho de
+generalização. Mesmo 97,5% deve ser lido com cautela: são textos curtos,
+escritos pela equipe, com rótulos artificiais e prevalência equilibrada por
+construção. Nenhuma métrica estima a segurança em pacientes reais.
 
-## Regressão e desafios
+A calibração foi ajustada em 88 frases separadas. No conjunto histórico, o
+Brier score caiu de 0,077 para 0,048 e o log loss de 0,290 para 0,172 após
+calibração. Esses números medem a coerência das probabilidades com os rótulos
+deste corpus; uma probabilidade de 0,80 não significa 80% de risco clínico.
 
-O conjunto de regressão teve 48 acertos em 56 frases (85,7%). Os 12 desafios
-adicionais tiveram 12 acertos, inclusive os exemplos de negação que antes eram
-classificados como alto risco. A revisão combinou ampliação de cenários, marcação
-de negações e mudança de limiar; o experimento não isola a contribuição de cada
-mudança. Ainda há falhas em frases mais longas ou fora do vocabulário da base.
-
-Os arquivos `predicoes_teste.csv`, `predicoes_regressao.csv` e
-`resultados_desafios.csv` guardam cada previsão. `comparacao_limiares.csv`
-mostra a escolha do limiar e `metricas.json` registra a seed, versões, hashes e
-métricas da execução.
-
-## Continuidade planejada
-
-O teste final atual deve permanecer sem alterações enquanto esta versão existir.
-Se seus erros forem usados para treinar outra revisão, ele será apenas regressão
-e um novo conjunto reservado ou externo deverá ser criado. Para fases futuras,
-o grupo pretende buscar revisão clínica independente dos rótulos, diversidade
-de linguagem e dados, avaliação externa e critérios explícitos para o custo de
-falsos negativos e falsos positivos.
+O próximo ganho mensurável exige material com origem independente e revisão dos
+rótulos. Enquanto isso não estiver disponível, os erros das auditorias podem
+orientar novos experimentos, mas uma avaliação posterior precisará ser
+reservada antes de novos ajustes. Não seria correto anunciar 94,7% como
+acurácia clínica ou como melhora comprovada em dados inéditos.
