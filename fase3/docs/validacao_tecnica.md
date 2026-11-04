@@ -61,8 +61,7 @@ clínica nem com uma publicação física do sensor.
 ## Limites da validação
 
 A compilação e a demonstração comprovam este protótipo acadêmico, não a
-confiabilidade de um dispositivo médico. A captura do modo offline e da
-sincronização após reconexão ainda deve ser adicionada à pasta `evidencias/`
-para documentar visualmente esse cenário. Em produto real, seriam necessários
+confiabilidade de um dispositivo médico. As [capturas da execução](../evidencias/)
+documentam o modo offline e a retomada das publicações. Em produto real, seriam necessários
 sensores validados, persistência física, confirmação de entrega pelo servidor,
 TLS, autenticação e avaliação clínica.

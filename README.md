@@ -27,10 +27,8 @@ clínicos e os alertas não devem ser usados para decisões de saúde.
 | Roteiro de evidências | [Guia de demonstração](fase3/docs/roteiro_evidencias.md) |
 | Registro da execução integrada | [Resultados observados](fase3/docs/registro_execucao.md) |
 
-O export do Node-RED atende à opção de entrega prevista no enunciado. As
-capturas reais do circuito, da fila offline e do dashboard ainda devem ser
-adicionadas a [evidências](fase3/evidencias/) para documentar visualmente a
-demonstração.
+O export do Node-RED e as [capturas da demonstração](fase3/evidencias/)
+permitem consultar o circuito, a fila offline, a sincronização e o dashboard.
 
 ## Fase 2 — Diagnóstico Automatizado: IA no Estetoscópio Digital
 
@@ -152,7 +150,7 @@ cardioia/
 │   ├── esp32-cardioia/           # Circuito e firmware do simulador
 │   ├── node-red/                 # Fluxo e instruções do dashboard
 │   ├── docs/                     # Relatórios e validação
-│   ├── evidencias/               # Guia e espaço para capturas reais
+│   ├── evidencias/               # Capturas da demonstração
 │   ├── output/pdf/               # Relatórios paginados
 │   └── README.md
 ├── fase2/
@@ -406,9 +404,11 @@ ECG.
 
 ## 🗃 Histórico de lançamentos
 
+- `0.3.1` — 04/11/2026: inclusão das capturas de execução e atualização do
+  registro das evidências da Fase 3.
 - `0.3.0` — 27/10/2026: protótipo da Fase 3 publicado no Wokwi, dashboard
   Node-RED integrado ao broker MQTT, relatórios e revisão de validação e
-  documentação. Capturas de tela da execução ainda serão anexadas.
+  documentação.
 - `0.2.1` — 07/10/2026: revisão de integridade e execução; proteção dos relatos
   interativos, validação do histórico, compatibilidade das dependências e correção
   do gerador sintético complementar. Teste reservado reproduzido sem ajuste de

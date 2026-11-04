@@ -48,10 +48,10 @@ os gauges. Esse é um teste deliberado de regra de interface; ele não constitui
 diagnóstico, validação clínica ou evidência de que o DHT22 mede uma temperatura
 corporal.
 
-## Evidência visual a completar
+## Evidências visuais
 
-As capturas devem ser feitas durante uma nova execução e salvas em
-`fase3/evidencias/`, seguindo o [roteiro de evidências](roteiro_evidencias.md).
-Em especial, ainda é importante registrar visualmente a fila crescendo no modo
-offline e a sincronização posterior. Essa etapa complementa a demonstração sem
-atribuir ao projeto uma persistência que o Wokwi não possui entre execuções.
+Em 04/11/2026, uma nova execução foi registrada em [evidências](../evidencias/):
+as imagens mostram leituras em modo offline, uma publicação após a reconexão
+com oito pendências estimadas e um registro posterior de fila vazia. Também
+mostram o dashboard sem alerta e em alerta por temperatura simulada. A fila em
+RAM permanece válida apenas durante a execução da simulação.

@@ -21,7 +21,7 @@ do fluxo em 27/10/2026.
 | Gráfico de sinal vital | Atendido | Gráfico temporal de BPM no fluxo Node-RED |
 | Gauge de outro parâmetro | Atendido | Gauges de temperatura e umidade |
 | Alerta automático | Atendido | BPM >= 120 ou temperatura simulada >= 38 °C |
-| Export ou prints do dashboard | Atendido pelo export; capturas recomendadas | `node-red/flows_cardioia.json` e roteiro de capturas |
+| Export ou prints do dashboard | Atendido | [Export do fluxo](../node-red/flows_cardioia.json) e [capturas](../evidencias/) |
 | Relatório MQTT/dashboard de pelo menos duas páginas | Atendido | Markdown em `docs/` e PDF de 2 páginas em `output/pdf/` |
 | Grafana Cloud | Não realizado; opcional | Node-RED atende integralmente ao item obrigatório |
 
@@ -41,8 +41,5 @@ do fluxo em 27/10/2026.
 - tratamento explícito de `0 BPM` como ausência de toques no botão, sem inferência clínica;
 - validação da origem e das faixas dos valores recebidos no broker público.
 
-## Próximo passo recomendado
-
-Salvar as capturas reais indicadas em `evidencias/` e registrá-las em um
-commit. Elas não substituem o export já entregue, mas oferecem evidência visual
-direta de sensores, fila offline, sincronização, painel normal e alerta.
+As capturas de 04/11/2026 complementam o export com registros do circuito,
+modo offline, retomada das publicações e dashboard em dois estados.

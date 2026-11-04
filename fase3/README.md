@@ -23,7 +23,7 @@ publica mensagens MQTT e as exibe em um dashboard Node-RED.
 | Checklist do enunciado | [checklist_enunciado.md](docs/checklist_enunciado.md) |
 | Segurança, privacidade e limites | [seguranca_privacidade.md](docs/seguranca_privacidade.md) |
 | Roteiro de evidências | [roteiro_evidencias.md](docs/roteiro_evidencias.md) |
-| Pasta para capturas reais | [evidencias](evidencias/) |
+| Capturas da demonstração | [evidencias](evidencias/) |
 | Registro da demonstração integrada | [registro_execucao.md](docs/registro_execucao.md) |
 | Verificação automática | `python fase3/scripts/verificar_fase3.py` |
 | Teste da regra do dashboard | `node fase3/scripts/testar_fluxo_nodered.js` |
@@ -172,11 +172,10 @@ tópico, atualizando gráfico, gauges, estado de alerta e indicador de fila. O
 [registro de execução](docs/registro_execucao.md) diferencia o que foi
 confirmado na integração dos testes locais de interface.
 
-O export do Node-RED já atende à alternativa de "prints ou export" do
-enunciado. Ainda assim, recomenda-se adicionar as capturas reais descritas em
-[roteiro de evidências](docs/roteiro_evidencias.md) antes da entrega, pois elas
-deixam o funcionamento mais fácil de avaliar. O
-[checklist do enunciado](docs/checklist_enunciado.md) registra essa situação.
+O export do Node-RED e as [capturas da demonstração](evidencias/) registram o
+circuito, as leituras offline, a retomada da publicação e os estados do painel.
+O [checklist do enunciado](docs/checklist_enunciado.md) relaciona cada requisito
+ao respectivo arquivo.
 
 Os PDFs podem ser regenerados depois de qualquer mudança nos textos com
 `pip install -r fase3/requirements-dev.txt` e
