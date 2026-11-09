@@ -60,12 +60,12 @@ def preparar_imagem(imagem):
     return torch.from_numpy(np.array(tela)).permute(2, 0, 1).float() / 255
 
 
-def indices_particao(rotulos, split):
+def indices_particao(rotulos, split, negativos_por_positivo=4):
     rng = np.random.default_rng(SEMENTE + PARTICOES.index(split))
     if split == "train":
         positivos = np.flatnonzero(rotulos == 1)
         negativos = np.flatnonzero(rotulos == 0)
-        indices = np.concatenate([positivos, rng.choice(negativos, 2 * len(positivos), replace=False)])
+        indices = np.concatenate([positivos, rng.choice(negativos, negativos_por_positivo * len(positivos), replace=False)])
     else:
         indices = rng.choice(len(rotulos), min(8000, len(rotulos)), replace=False)
     return rng.permutation(indices)
@@ -79,6 +79,11 @@ class Radiografias(torch.utils.data.Dataset):
         if imagens.shape != (len(rotulos), TAMANHO_ORIGEM, TAMANHO_ORIGEM) or not np.isin(rotulos, [0, 1]).all():
             raise ValueError("Formato ou rótulos incompatíveis com ChestMNIST 64.")
         self.indices = indices_particao(rotulos, split)
+        self.hashes_teste_anterior = set()
+        if split == "test":
+            # Exclui tanto os índices já avaliados como cópias exatas desses exames.
+            self.hashes_teste_anterior = {hash_imagem(img) for img in imagens[self.indices]}
+            self.indices = np.setdiff1d(np.arange(len(rotulos)), self.indices)
         self.imagens = imagens[self.indices]
         self.rotulos = rotulos[self.indices]
         self.total_oficial = len(rotulos)
@@ -91,13 +96,18 @@ class Radiografias(torch.utils.data.Dataset):
         return imagem, int(self.rotulos[idx])
 
 
+def hash_imagem(imagem):
+    return hashlib.sha256(imagem.tobytes()).digest()
+
+
 def carregar_particoes(arquivo):
     datasets = {split: Radiografias(arquivo, split) for split in PARTICOES}
     vistos = set()
     for ds in datasets.values():
+        vistos.update(ds.hashes_teste_anterior)
         manter = np.zeros(len(ds), dtype=bool)
         for i, img in enumerate(ds.imagens):
-            chave = hashlib.sha256(img.tobytes()).digest()
+            chave = hash_imagem(img)
             if chave not in vistos:
                 manter[i] = True
                 vistos.add(chave)

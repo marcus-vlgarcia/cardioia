@@ -15,7 +15,7 @@ def salvar_metricas(resultado, pasta=RESULTADOS):
     linhas = []
     for nome, modelo in resultado["modelos"].items():
         positiva = modelo["relatorio"]["1"]
-        linhas.append([nomes[nome], *[f"{v:.3f}" for v in (
+        linhas.append([nomes[nome], *[f"{v:.3f}".replace(".", ",") for v in (
             modelo["acuracia"], positiva["precision"], positiva["recall"],
             positiva["f1-score"], modelo["average_precision"])]])
     teste = resultado["contagens"]["test"]
@@ -24,7 +24,8 @@ def salvar_metricas(resultado, pasta=RESULTADOS):
     ax.axis("off")
     ax.text(0.02, 0.93, "CardioIA  |  Comparação no teste reservado",
             fontsize=19, weight="bold", color="#103e53", transform=ax.transAxes)
-    ax.text(0.02, 0.76, f'{teste["usadas"]:,} exames · {teste["positivas"]} com rótulo de cardiomegalia',
+    quantidade = f'{teste["usadas"]:,}'.replace(",", ".")
+    ax.text(0.02, 0.76, f'{quantidade} exames · {teste["positivas"]} com rótulo de cardiomegalia',
             fontsize=12, color="#385b6a", transform=ax.transAxes)
     tabela = ax.table(cellText=linhas, colLabels=["Modelo", "Acurácia", "Precisão¹",
                        "Recall¹", "F1¹", "AP"], colWidths=[.30, .14, .14, .14, .14, .14],
@@ -37,7 +38,8 @@ def salvar_metricas(resultado, pasta=RESULTADOS):
         if linha == 0:
             celula.get_text().set_color("white")
             celula.get_text().set_weight("bold")
-    ax.text(0.02, 0.14, f"¹ Classe com rótulo. AP = Average Precision. Acurácia da classe majoritária: {base:.3f}.",
+    base_pt = f"{base:.3f}".replace(".", ",")
+    ax.text(0.02, 0.14, f"¹ Classe com rótulo. AP = Average Precision. Acurácia da classe majoritária: {base_pt}.",
             fontsize=9.5, color="#385b6a", transform=ax.transAxes)
     fig.savefig(pasta / "metricas.png", dpi=170, bbox_inches="tight")
     plt.close(fig)

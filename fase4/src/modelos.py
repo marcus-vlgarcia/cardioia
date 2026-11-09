@@ -38,17 +38,45 @@ def classificador_resnet():
     return nn.Linear(512, 1)
 
 
-def carregar_prototipo(pasta, nome):
+def carregar_prototipo(pasta, nome, device="cpu"):
     checkpoint = torch.load(pasta / f"{nome}.pt", map_location="cpu", weights_only=True)
     if nome == "cnn":
         modelo = cnn_simples()
         modelo.load_state_dict(checkpoint["estado"])
-        return modelo.eval(), checkpoint["limiar"]
+        return modelo.to(device).eval(), checkpoint["limiar"]
+    if checkpoint.get("arquitetura") == "resnet18_adaptada":
+        modelo = ResNetAdaptada()
+        modelo.extrator.layer4.load_state_dict(checkpoint["estado"]["layer4"])
+        modelo.saida.load_state_dict(checkpoint["estado"]["saida"])
+        return modelo.to(device).eval(), checkpoint["limiar"]
     cabeca = classificador_resnet()
     cabeca.load_state_dict(checkpoint["estado"])
-    modelo = nn.Sequential(extrator_resnet(), cabeca).eval()
+    modelo = nn.Sequential(NormalizacaoImageNet(), extrator_resnet(), cabeca)
+    return modelo.to(device).eval(), checkpoint["limiar"]
 
-    def inferir(x):
-        return modelo(normalizar_imagenet(x))
 
-    return inferir, checkpoint["limiar"]
+class NormalizacaoImageNet(nn.Module):
+    def forward(self, x):
+        return normalizar_imagenet(x)
+
+
+class ResNetAdaptada(nn.Module):
+    """Mantém os primeiros blocos fixos e ajusta o último bloco e a saída."""
+
+    def __init__(self):
+        super().__init__()
+        self.extrator = extrator_resnet()
+        self.extrator.layer4.requires_grad_(True)
+        self.saida = classificador_resnet()
+
+    def train(self, mode=True):
+        super().train(mode)
+        self.extrator.eval()
+        self.extrator.layer4.train(mode)
+        return self
+
+    def forward(self, x):
+        return self.saida(self.extrator(normalizar_imagenet(x)))
+
+    def estado_adaptado(self):
+        return {"layer4": self.extrator.layer4.state_dict(), "saida": self.saida.state_dict()}
