@@ -43,18 +43,19 @@ def aumentar(x, rng):
     return (x * rng.uniform(0.9, 1.1)).clamp(0, 1)
 
 
-def ajustar(modelo, loaders, device, nome):
+def ajustar(modelo, loaders, device, nome, epocas=None):
+    epocas = EPOCAS[nome] if epocas is None else epocas
     if nome == "cnn":
         grupos = [{"params": modelo.parameters(), "lr": 0.001}]
     else:
         grupos = [{"params": modelo.extrator.layer4.parameters(), "lr": 0.0002},
                   {"params": modelo.saida.parameters(), "lr": 0.001}]
     otimizador = torch.optim.AdamW(grupos)
-    agenda = torch.optim.lr_scheduler.CosineAnnealingLR(otimizador, T_max=EPOCAS[nome])
+    agenda = torch.optim.lr_scheduler.CosineAnnealingLR(otimizador, T_max=epocas)
     rng = random.Random(SEMENTE)
     perda = nn.BCEWithLogitsLoss()
     melhor, estado, historico = -1, None, []
-    for epoca in range(EPOCAS[nome]):
+    for epoca in range(epocas):
         modelo.train()
         total = 0.0
         for x, y in loaders["train"]:

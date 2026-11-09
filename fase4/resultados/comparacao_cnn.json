@@ -1,0 +1,234 @@
+{
+  "auditoria": {
+    "pacientes_compartilhados_antes": 1,
+    "exames_excluidos_do_teste": 36,
+    "negativos_adicionados": 7800,
+    "particoes": {
+      "train": {
+        "exames": 17550,
+        "positivos": 1950,
+        "pacientes": 8718
+      },
+      "val": {
+        "exames": 7997,
+        "positivos": 179,
+        "pacientes": 2527
+      },
+      "test": {
+        "exames": 14396,
+        "positivos": 391,
+        "pacientes": 4776
+      }
+    }
+  },
+  "ap_validacao": {
+    "referencia": 0.17615847220576078,
+    "candidata": 0.18428837027829373
+  },
+  "escolha_validacao": "candidata",
+  "teste": {
+    "referencia": {
+      "limiar": 0.5083834528923035,
+      "acuracia": 0.9490830786329536,
+      "average_precision": 0.2124163922131997,
+      "acuracia_balanceada": 0.66306306388566,
+      "roc_auc": 0.8632603810659512,
+      "matriz_confusao": [
+        [
+          13522,
+          483
+        ],
+        [
+          250,
+          141
+        ]
+      ],
+      "relatorio": {
+        "0": {
+          "precision": 0.9818472262561719,
+          "recall": 0.9655123170296322,
+          "f1-score": 0.9736112611153113,
+          "support": 14005.0
+        },
+        "1": {
+          "precision": 0.22596153846153846,
+          "recall": 0.36061381074168797,
+          "f1-score": 0.27783251231527095,
+          "support": 391.0
+        },
+        "accuracy": 0.9490830786329536,
+        "macro avg": {
+          "precision": 0.6039043823588552,
+          "recall": 0.66306306388566,
+          "f1-score": 0.6257218867152912,
+          "support": 14396.0
+        },
+        "weighted avg": {
+          "precision": 0.9613171273448283,
+          "recall": 0.9490830786329536,
+          "f1-score": 0.9547136860402338,
+          "support": 14396.0
+        }
+      },
+      "historico": []
+    },
+    "candidata": {
+      "limiar": 0.5635742545127869,
+      "acuracia": 0.9661016949152542,
+      "average_precision": 0.22726855612663296,
+      "acuracia_balanceada": 0.6220871062673086,
+      "roc_auc": 0.8755155949966719,
+      "matriz_confusao": [
+        [
+          13807,
+          198
+        ],
+        [
+          290,
+          101
+        ]
+      ],
+      "relatorio": {
+        "0": {
+          "precision": 0.9794282471447826,
+          "recall": 0.9858621920742592,
+          "f1-score": 0.9826346879225678,
+          "support": 14005.0
+        },
+        "1": {
+          "precision": 0.3377926421404682,
+          "recall": 0.25831202046035806,
+          "f1-score": 0.2927536231884058,
+          "support": 391.0
+        },
+        "accuracy": 0.9661016949152542,
+        "macro avg": {
+          "precision": 0.6586104446426254,
+          "recall": 0.6220871062673086,
+          "f1-score": 0.6376941555554868,
+          "support": 14396.0
+        },
+        "weighted avg": {
+          "precision": 0.9620012173061686,
+          "recall": 0.9661016949152542,
+          "f1-score": 0.9638972958476124,
+          "support": 14396.0
+        }
+      },
+      "historico": [
+        {
+          "epoca": 1,
+          "loss_treino": 0.34498404021955964,
+          "ap_validacao": 0.05676391458249362
+        },
+        {
+          "epoca": 2,
+          "loss_treino": 0.31052930729341643,
+          "ap_validacao": 0.08179391177730892
+        },
+        {
+          "epoca": 3,
+          "loss_treino": 0.30249880904655513,
+          "ap_validacao": 0.1034716781804829
+        },
+        {
+          "epoca": 4,
+          "loss_treino": 0.29503075652652316,
+          "ap_validacao": 0.11267371469990475
+        },
+        {
+          "epoca": 5,
+          "loss_treino": 0.28177473799795166,
+          "ap_validacao": 0.12630342783877532
+        },
+        {
+          "epoca": 6,
+          "loss_treino": 0.27179950240500633,
+          "ap_validacao": 0.14739287597747525
+        },
+        {
+          "epoca": 7,
+          "loss_treino": 0.2656628509464427,
+          "ap_validacao": 0.14199757923692521
+        },
+        {
+          "epoca": 8,
+          "loss_treino": 0.2673029652246383,
+          "ap_validacao": 0.14053917442063538
+        },
+        {
+          "epoca": 9,
+          "loss_treino": 0.25764763198347174,
+          "ap_validacao": 0.15473175103538522
+        },
+        {
+          "epoca": 10,
+          "loss_treino": 0.25497023572099853,
+          "ap_validacao": 0.1697254822981142
+        },
+        {
+          "epoca": 11,
+          "loss_treino": 0.25153310226578995,
+          "ap_validacao": 0.1680429392040566
+        },
+        {
+          "epoca": 12,
+          "loss_treino": 0.24928789373816249,
+          "ap_validacao": 0.1712181949322758
+        },
+        {
+          "epoca": 13,
+          "loss_treino": 0.24474923377702718,
+          "ap_validacao": 0.18084223622940396
+        },
+        {
+          "epoca": 14,
+          "loss_treino": 0.2424640483521668,
+          "ap_validacao": 0.18332556599651673
+        },
+        {
+          "epoca": 15,
+          "loss_treino": 0.23919719450239443,
+          "ap_validacao": 0.17856753944285467
+        },
+        {
+          "epoca": 16,
+          "loss_treino": 0.24038678413272924,
+          "ap_validacao": 0.17926198998455653
+        },
+        {
+          "epoca": 17,
+          "loss_treino": 0.23849061004286817,
+          "ap_validacao": 0.18428837027829373
+        },
+        {
+          "epoca": 18,
+          "loss_treino": 0.23529403206969257,
+          "ap_validacao": 0.1830821667859113
+        }
+      ]
+    }
+  },
+  "epocas": 18,
+  "semente": 42,
+  "torch": "2.15.0",
+  "dispositivo": "mps",
+  "ic95_delta_bootstrap_por_paciente": {
+    "acuracia": [
+      0.013553267007627314,
+      0.020343806870575392
+    ],
+    "acuracia_balanceada": [
+      -0.05952144531716623,
+      -0.023588351889076983
+    ],
+    "recall_positivo": [
+      -0.1406305017605634,
+      -0.0680244228839077
+    ],
+    "f1_positivo": [
+      -0.021159364689600564,
+      0.048470812604056876
+    ]
+  }
+}

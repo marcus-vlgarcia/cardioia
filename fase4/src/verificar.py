@@ -15,6 +15,33 @@ def exigir(condicao, mensagem):
         raise ValueError(mensagem)
 
 
+def verificar_comparacao(indices):
+    comparacao = json.loads((RESULTADOS / "comparacao_cnn.json").read_text())
+    with (RESULTADOS / "predicoes_comparacao_cnn.csv").open(newline="") as arquivo:
+        linhas = list(csv.DictReader(arquivo))
+    usados = {int(linha["indice_oficial"]): int(linha["rotulo"]) for linha in linhas}
+    teste = comparacao["auditoria"]["particoes"]["test"]
+    exigir(len(usados) == len(linhas) == teste["exames"], "Tamanho da comparação divergente.")
+    exigir(usados.items() <= indices.items(), "Comparação fora dos exames do teste de referência.")
+    exigir(sum(usados.values()) == teste["positivos"], "Rótulos da comparação divergentes.")
+    exigir(comparacao["escolha_validacao"] == max(comparacao["ap_validacao"],
+                                                  key=comparacao["ap_validacao"].get),
+           "Escolha da CNN divergente da validação.")
+    rotulos = np.array([int(linha["rotulo"]) for linha in linhas])
+    for nome, metrica in comparacao["teste"].items():
+        scores = np.array([float(linha[nome]) for linha in linhas], dtype=np.float32)
+        previstos = scores >= metrica["limiar"]
+        exigir(np.isfinite(scores).all() and ((0 <= scores) & (scores <= 1)).all(),
+               f"Escore inválido na comparação de {nome}.")
+        exigir(confusion_matrix(rotulos, previstos, labels=[0, 1]).tolist() == metrica["matriz_confusao"],
+               f"Matriz divergente na comparação de {nome}.")
+        exigir(np.isclose(average_precision_score(rotulos, scores), metrica["average_precision"]),
+               f"AP divergente na comparação de {nome}.")
+    pesos = torch.load(RESULTADOS / "cnn_ampliada.pt", map_location="cpu", weights_only=True)
+    exigir(pesos["limiar"] == comparacao["teste"]["candidata"]["limiar"],
+           "Limiar divergente na CNN ampliada.")
+
+
 def executar():
     resumo = json.loads((RESULTADOS / "metricas.json").read_text())
     with (RESULTADOS / "predicoes_teste.csv").open(newline="") as arquivo:
@@ -40,6 +67,8 @@ def executar():
             pesos = torch.load(pasta / f"{nome}.pt", map_location="cpu", weights_only=True)
             exigir(pesos["limiar"] == metrica["limiar"], f"Limiar divergente em {coluna}.")
 
+    verificar_comparacao(indices)
+
     with np.load(RESULTADOS / "amostras_demo.npz", allow_pickle=False) as amostras:
         exigir(amostras["imagens"].shape == (6, 64, 64), "Amostras do protótipo inválidas.")
         exigir(all(indices.get(int(i)) == int(y) for i, y in zip(amostras["indices"], amostras["rotulos"])),
@@ -54,7 +83,7 @@ def executar():
                 exigir(celula["execution_count"] is not None, f"Célula não executada em {arquivo.name}.")
                 exigir(not any(o["output_type"] == "error" for o in celula["outputs"]),
                        f"Erro registrado em {arquivo.name}.")
-    for nome in ("metricas.png", "matrizes_confusao.png", "curva_precisao_recall.png"):
+    for nome in ("metricas.png", "matrizes_confusao.png", "curva_precisao_recall.png", "comparacao_cnn.png"):
         exigir((RESULTADOS / nome).read_bytes().startswith(b"\x89PNG\r\n\x1a\n"),
                f"Evidência inválida: {nome}.")
     exigir((RAIZ / "output/pdf/relatorio_preprocessamento.pdf").read_bytes().startswith(b"%PDF"),

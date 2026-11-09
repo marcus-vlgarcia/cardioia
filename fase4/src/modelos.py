@@ -40,7 +40,7 @@ def classificador_resnet():
 
 def carregar_prototipo(pasta, nome, device="cpu"):
     checkpoint = torch.load(pasta / f"{nome}.pt", map_location="cpu", weights_only=True)
-    if nome == "cnn":
+    if nome in ("cnn", "cnn_ampliada"):
         modelo = cnn_simples()
         modelo.load_state_dict(checkpoint["estado"])
         return modelo.to(device).eval(), checkpoint["limiar"]

@@ -13,6 +13,14 @@ de cardiomegalia da base pública ChestMNIST. A comparação inclui uma CNN
 treinada do zero e Transfer Learning com ResNet18. Os notebooks, o relatório,
 as métricas e o protótipo interativo estão reunidos no [guia da Fase 4](fase4/).
 
+| Entregável da Fase 4 | Acesso |
+| --- | --- |
+| Pré-processamento | [Notebook 01](fase4/notebooks/01_preprocessamento.ipynb) |
+| Relatório de preparação | [PDF](fase4/output/pdf/relatorio_preprocessamento.pdf) |
+| CNN do zero e Transfer Learning | [Notebook 02](fase4/notebooks/02_treinamento_avaliacao.ipynb) |
+| Prints das métricas | [Comparativo](fase4/resultados/metricas.png) · [Matrizes de confusão](fase4/resultados/matrizes_confusao.png) · [Precisão × recall](fase4/resultados/curva_precisao_recall.png) · [Comparação extra da CNN](fase4/resultados/comparacao_cnn.png) |
+| Protótipo interativo | [Notebook 03](fase4/notebooks/03_prototipo.ipynb) |
+
 ## Fase 3 — Monitoramento Contínuo: IoT no Pulso do Paciente
 
 Esta etapa adiciona um protótipo de monitoramento IoT com ESP32 no Wokwi,
