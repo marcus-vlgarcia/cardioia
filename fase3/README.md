@@ -163,7 +163,29 @@ validados, armazenamento persistente, autenticação, TLS, controle de acesso,
 monitoramento operacional e validação profissional. Consulte
 [segurança e privacidade](docs/seguranca_privacidade.md).
 
-## Situação da entrega
+## Revisão após a avaliação
+
+| Feedback | Ajuste |
+| --- | --- |
+| A comunicação podia interromper a aquisição | Wi-Fi e MQTT rodam em uma tarefa FreeRTOS separada. O botão de pulso é contado por interrupção. A fila só fica travada durante cópias e atualizações de índices. |
+| O BPM assumia uma janela de dez segundos | A janela tem duração nominal de dez segundos, e o cálculo usa o tempo efetivamente decorrido. Doze pulsos em doze segundos correspondem a 60 BPM. |
+| Leituras recuperadas apareciam como atuais | O gráfico usa o instante da coleta e separa as séries atuais e recuperadas. As recuperadas atualizam o gráfico e o indicador da fila, preservando os medidores e o alerta atuais. |
+| Uma falha no DHT22 descartava o BPM | A amostra mantém o BPM e usa `null` no campo indisponível. O painel sinaliza a falta do dado, conserva o último valor válido do respectivo medidor e avalia o alerta pelos dados disponíveis. |
+
+O ESP32 registra o instante monotônico da coleta em `instante_ms`. Na
+publicação, envia a idade da amostra em `idade_ms` e, quando o relógio foi
+sincronizado via SNTP, reconstrói o instante UTC em `coletada_em_ms`. Sem
+sincronização, o Node-RED estima a coleta subtraindo a idade do horário de
+recebimento e identifica a estimativa na legenda. A telemetria da entrega
+original continua compatível e usa o horário de recebimento.
+
+O link público do Wokwi, os relatórios e as capturas documentam a entrega
+avaliada. Para rodar a revisão, abra a pasta `fase3/esp32-cardioia` no VS Code,
+compile com PlatformIO e inicie a simulação pela extensão Wokwi usando
+`wokwi.toml`. Importe o fluxo desta branch no Node-RED. Use uma simulação por
+vez, pois ambas publicam no mesmo tópico MQTT.
+
+## Situação da entrega avaliada
 
 O circuito público, o firmware, o export do dashboard e os relatórios estão no
 repositório. A demonstração integrada foi executada em 19/10/2026: o Wokwi

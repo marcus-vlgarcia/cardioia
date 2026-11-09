@@ -115,4 +115,44 @@ for (const payload of [
 }
 assert.equal(avisos.length, 5, "Cada payload inválido deveria gerar um aviso.");
 
-console.log("Teste do fluxo Node-RED: 10 cenários aprovados.");
+const leituraRevisada = {
+  projeto: "CardioIA", origem: "edge_esp32", paciente_id: "TESTE_REVISAO",
+  sequencia: 1, temperatura_c: 36.7, umidade_pct: 55, bpm: 72,
+  idade_ms: 100, coletada_em_ms: Date.now() - 100, recuperada: false,
+};
+const atual = executar(leituraRevisada);
+assert.equal(atual[0].timestamp, leituraRevisada.coletada_em_ms);
+assert.equal(atual[0].topic, "Atual");
+assert.equal(atual[1].payload, 36.7);
+
+const coletaAnterior = Date.now() - 60000;
+const recuperada = executar({ ...leituraRevisada, sequencia: 2,
+  coletada_em_ms: coletaAnterior, idade_ms: 60000, recuperada: true,
+  bpm: 126, temperatura_c: 39.8 });
+assert.equal(recuperada[0].timestamp, coletaAnterior);
+assert.equal(recuperada[0].topic, "Recuperada");
+assert.deepEqual(recuperada.slice(1, 4), [null, null, null]);
+assert.match(recuperada[4].payload, /amostra recuperada/);
+
+const antesDaRecepcao = Date.now();
+const semRelogio = executar({ ...leituraRevisada, sequencia: 3,
+  coletada_em_ms: null, idade_ms: 30000 });
+assert.equal(semRelogio[0].topic, "Recuperada (horário estimado)");
+assert.ok(semRelogio[0].timestamp >= antesDaRecepcao - 30000);
+assert.ok(semRelogio[0].timestamp <= Date.now() - 30000);
+assert.deepEqual(semRelogio.slice(1, 4), [null, null, null]);
+
+const falhaDht = executar({ ...leituraRevisada, sequencia: 4,
+  temperatura_c: null, umidade_pct: null, bpm: 126 });
+assert.equal(falhaDht[0].payload, 126);
+assert.deepEqual(falhaDht.slice(1, 3), [null, null]);
+assert.match(falhaDht[3].payload, /ALERTA SIMULADO: 126 BPM.*temperatura indisponível.*umidade indisponível/);
+
+const falhaParcial = executar({ ...leituraRevisada, sequencia: 5, umidade_pct: null });
+assert.equal(falhaParcial[1].payload, 36.7);
+assert.equal(falhaParcial[2], null);
+assert.match(falhaParcial[3].payload, /umidade indisponível/);
+
+assert.equal(executar({ ...leituraRevisada, idade_ms: -1 }), null);
+
+console.log("Teste do fluxo Node-RED: 16 cenários aprovados.");
