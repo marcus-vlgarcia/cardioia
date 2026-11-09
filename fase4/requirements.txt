@@ -1,0 +1,8 @@
+torch>=2.6,<3
+torchvision>=0.21,<1
+numpy>=1.26,<3
+pillow>=10,<14
+matplotlib>=3.8,<4
+scikit-learn>=1.5,<2
+ipywidgets>=8.1,<9
+pandas>=2.1,<4

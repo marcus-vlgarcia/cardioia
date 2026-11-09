@@ -6,6 +6,13 @@
 
 # CardioIA — PulseIA
 
+## Fase 4 — Coração em Imagens
+
+A Fase 4 explora a classificação de radiografias de tórax usando o rótulo
+de cardiomegalia da base pública ChestMNIST. A comparação inclui uma CNN
+treinada do zero e Transfer Learning com ResNet18. Os notebooks, o relatório,
+as métricas e o protótipo interativo estão reunidos no [guia da Fase 4](fase4/).
+
 ## Fase 3 — Monitoramento Contínuo: IoT no Pulso do Paciente
 
 Esta etapa adiciona um protótipo de monitoramento IoT com ESP32 no Wokwi,
